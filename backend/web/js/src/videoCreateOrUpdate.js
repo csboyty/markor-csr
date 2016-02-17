@@ -1,0 +1,99 @@
+var videoCreateOrUpdate=(function(config,functions){
+    return{
+        submitForm:function(form){
+            var me=this;
+            functions.showLoading();
+            $(form).ajaxSubmit({
+                dataType:"json",
+                success:function(response){
+                    if(response.success){
+                        $().toastmessage("showSuccessToast",config.messages.optSuccess);
+                        setTimeout(function(){
+                            window.location.href="video/index";
+                        },3000);
+                    }else{
+                        functions.ajaxReturnErrorHandler(response.error_code);
+                    }
+                },
+                error:function(){
+                    functions.ajaxErrorHandler();
+                }
+            });
+        }
+    }
+})(config,functions);
+
+$(document).ready(function(){
+
+    functions.createQiNiuUploader({
+        maxSize:config.uploader.sizes.img,
+        filter:config.uploader.filters.img,
+        uploadBtn:"uploadBtn",
+        multiSelection:false,
+        multipartParams:null,
+        uploadContainer:"uploadContainer",
+        fileAddCb:null,
+        progressCb:null,
+        uploadedCb:function(info,file,up){
+            var path=info.url;
+            $.get(path+"?imageInfo",function(data){
+                //console.log(data);
+                if(data.width==500&&data.height==500){
+                    $("#imageUrl").val(path);
+
+                    $("#image").attr("src",path);
+
+                    $(".error[for='imageUrl']").remove();
+                }else{
+                    $().toastmessage("showErrorToast",config.messages.imageSizeError);
+                }
+            });
+        }
+    });
+    $("#myForm").validate({
+        ignore:[],
+        rules:{
+            image:{
+                required:true
+            },
+            create_at:{
+                required:true
+            },
+            video_url:{
+                required:true,
+                maxlength:128
+            },
+            title:{
+                required:true,
+                maxlength:32
+            },
+            excerpt:{
+                required:true,
+                maxlength:255
+            }
+        },
+        messages:{
+            image:{
+                required:config.validErrors.required
+            },
+            video_url:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",128)
+            },
+            create_at:{
+                required:config.validErrors.required
+            },
+            title:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
+            },
+            excerpt:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",255)
+            }
+        },
+        submitHandler:function(form) {
+            videoCreateOrUpdate.submitForm(form);
+        }
+    });
+});

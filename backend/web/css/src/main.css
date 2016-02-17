@@ -1,0 +1,221 @@
+html{
+    height: 100%;
+    width:100%;
+}
+body{
+    margin: 0px;
+    padding:0px;
+    height: 100%;
+    position: relative;
+    font-family: "Arail","微软雅黑","Heiti";
+    background: #f2f3ea!important;
+}
+ul{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+}
+a{
+    text-decoration: none!important;
+}
+label.error{
+    color: red;
+}
+.hidden{
+    display: none;
+}
+.left{
+    width: 180px;
+}
+.right{
+    border-left: 1px solid #ccccc8;
+    background: #efefef;
+    padding:50px 30px;
+    border-top:3px solid #5dc05f;
+    position: absolute;
+    left:180px;
+    top:70px;
+    bottom: 0px;
+    right: 0px;
+    overflow: auto;
+}
+.main{
+    width: 90%;
+    margin: 0px auto 0px auto;
+}
+.hasRightBorder{
+    border-right:1px solid #ccc;
+}
+.hasLeftBorder{
+    border-left:1px solid #ccc;
+}
+.header{
+    position: relative;
+    background: #373737;
+    height: 70px;
+}
+
+/**
+*logo
+*/
+.logo{
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    display: inline-block;
+    color: #fff;
+    line-height: 70px;
+    padding-left: 20px;
+}
+.logout{
+    position: absolute;
+    right:20px;
+    bottom:30px;
+    font-size: 12px;
+    color: #efefef;
+}
+.logout:hover{
+    color: #efefef;
+}
+/**
+*menu
+*/
+.menu{
+
+}
+.menu .separate{
+    height: 10px;
+    background: #fff;
+}
+.menu .item {
+    min-height: 40px;
+    width: 100%;
+    border: 1px solid #edece3;
+    line-height: 40px;
+    position: relative;
+}
+.menu .item .glyphicon{
+    padding: 0px 10px;
+}
+.menu .item .rightIcon{
+    margin-left: 100px;
+}
+.menu .item .link{
+    font-size: 16px;
+    color: #727171;
+    border-left: 1px solid #edece3;
+    display: inline-block;
+    position: absolute;
+    left:34px;
+    top:0px;
+    bottom: 0px;
+    right:0px;
+    height: 100%;
+    padding-left: 5px;
+}
+.menu .item:hover{
+    background: #f9f9f2;
+}
+.menu .item:hover .link{
+    color: #5dc05f;
+}
+.menu .item:hover .subMenu{
+    display: block;
+}
+.subMenu{
+    background: #f9f9f2;
+    display: none;
+}
+.subMenu .sItem{
+    height: 35px;
+    position: relative;
+}
+.subMenu .sItem .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #edece3;
+    font-size: 0px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.subMenu .sItem .sLink{
+    font-size: 12px;
+    color: #727171;
+    display: inline-block;
+    position: absolute;
+    left:34px;
+    top:0px;
+    bottom: 0px;
+    right:0px;
+    height: 100%;
+    padding-left: 25px;
+}
+.subMenu .sItem:hover .circle {
+    background: #5dc05f;
+}
+.subMenu .sItem:hover .sLink{
+    color: #5dc05f;
+}
+
+/**
+*复写datatable
+*/
+.tableSearchContainer{
+    margin: 10px 0px;
+}
+table.dataTable{
+    margin-top: 20px;
+    width: 100%;
+}
+table.dataTable thead {
+    background: #f5f5f5;
+}
+table.dataTable thead th{
+    color: #00A67F;
+    border: none;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+    line-height: 30px!important;
+}
+table.dataTable tr{
+    line-height: 25px!important;
+}
+table.dataTable td {
+    padding: 5px!important;
+    text-align: center;
+}
+table.dataTable .thumb{
+    width: 100px;
+    height: auto;
+}
+.dataTables_paginate,.dataTables_info{
+    margin-top: 15px;
+}
+/********覆写bootstrap的table*************/
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+
+/**
+*loading
+*/
+.loading{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    opacity: .5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    background: #000;
+}
+.loading .text{
+    position: absolute;
+    left:50%;
+    top:50%;
+    color:#fff;
+}

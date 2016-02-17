@@ -1,0 +1,89 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0px;
+    padding:0px;
+    height: 100%;
+    position: relative;
+    font-family: "Arail","微软雅黑","Heiti";
+    background: #373737;
+    border-top:3px solid #5dc05f;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.pCenter{
+    position: absolute;
+    height: 350px;
+    width: 410px;
+    background:#fff;
+    left:50%;
+    top:50%;
+    margin: -175px 0px 0px -205px;
+    box-shadow:2px 2px 6px rgba(0,0,0,0.3);
+}
+.tCenter{
+    text-align: center;
+}
+.loginIcon{
+    display: block;
+    font-size: 0px;
+    background: url(../../images/login/iconLogin.png) no-repeat;
+    width: 120px;
+    height: 119px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -234px 0px 0px -60px;
+}
+.logo{
+    text-align: center;
+    margin: 70px 0px 50px 0px;
+}
+.row{
+    width: 80%;
+    margin: 10px auto 10px auto;
+}
+.ctrlLabel{
+    color: #727171;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.ctrlInput{
+    width: 250px;
+    height: 32px;
+    border: #abacb3 solid 1px;
+    border-radius: 4px;
+    padding-left: 24px;
+}
+.ctrlBtn{
+    width: 250px;
+    height: 36px;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #4cae4c;
+    background: #5cb85c;
+    border-radius: 4px;
+    margin-left: 46px;
+}
+.ctrlBtn:hover{
+    background: #4cae4c;
+    cursor: pointer;
+}
+.icon1{
+    background: url(../../images/login/iconEmail.png) no-repeat;
+}
+.icon2{
+    background: url(../../images/login/iconPwd.png) no-repeat;
+}
+.bgLc{
+    background-position: 3px 8px;
+}
+label.error{
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-left: 46px;
+}
