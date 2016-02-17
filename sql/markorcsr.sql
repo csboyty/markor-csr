@@ -3,13 +3,18 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES */;
 /*!40103 SET SQL_NOTES='ON' */;
 
+
+DROP DATABASE IF EXISTS `markorcsr`;
+CREATE DATABASE `markorcsr` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `markorcsr`;
+DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL DEFAULT '',
   `slug` varchar(32) NOT NULL DEFAULT '',
   `parent` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 INSERT INTO `category` VALUES (1,'艺术家.成果','艺术家.成果',0);
 INSERT INTO `category` VALUES (2,'艺术家.动态','艺术家.动态',0);
@@ -36,6 +41,7 @@ INSERT INTO `category` VALUES (22,'历年活动','历年活动',7);
 INSERT INTO `category` VALUES (23,'实习生风采','实习生风采',10);
 INSERT INTO `category` VALUES (24,'招募岗位','招募岗位',10);
 INSERT INTO `category` VALUES (25,'视频','视频',0);
+DROP TABLE IF EXISTS `post`;
 CREATE TABLE `post` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(32) NOT NULL DEFAULT '',
@@ -54,6 +60,7 @@ CREATE TABLE `post` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO `post` VALUES (1,'xxxx','','<p>xxxxxx</p>','2016-02-15','','http://7xqx6h.com1.z0.glb.clouddn.com/1455503259529.jpg','','',8,1);
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(32) NOT NULL DEFAULT '',
