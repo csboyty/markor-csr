@@ -6,6 +6,7 @@ use Yii;
 use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
+use common\models\User;
 use common\models\Category;
 
 class ActivityController extends \yii\web\Controller
@@ -14,7 +15,21 @@ class ActivityController extends \yii\web\Controller
     public function behaviors()
     {
         return [
-
+            'access' => [
+                'class' => AccessControl::className(),
+                // We will override the default rule config with the new AccessRule class
+                'ruleConfig' => [
+                    'class' => AccessRule::className(),
+                ],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => [
+                            User::ROLE_ADMIN
+                        ],
+                    ]
+                ],
+            ]
         ];
     }
 
@@ -58,10 +73,14 @@ class ActivityController extends \yii\web\Controller
     }
 
 
-    public function actionCreate(){
+    /**
+     * @param $category_id 路径上的参数
+     * @return string
+     */
+    public function actionCreate($category_id){
 
         $model=new Post();
-        $category=Category::findOne($_GET["category_id"]);
+        $category=Category::findOne($category_id);
         $parentCategory=Category::findOne($category->parent);
         return $this->render('createOrUpdate',[
             "parentCategory"=>$parentCategory,

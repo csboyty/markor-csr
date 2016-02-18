@@ -47,4 +47,15 @@ class SiteController extends \yii\web\Controller
     public function actionHandle(){
         return $this->render("handle");
     }
+
+    /**
+     * 获取加密的密码
+     * @param $password
+     * @return string
+     */
+    public function actionPassword($password){
+        $model=new User();
+        $model->setPassword($password);
+        return $model->password;
+    }
 }

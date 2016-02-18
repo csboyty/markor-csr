@@ -8,8 +8,6 @@
  */
 namespace common\components;
 
-use common\models\User;
-
 class AccessRule extends \yii\filters\AccessRule{
 
     /**

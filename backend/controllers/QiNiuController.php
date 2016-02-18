@@ -5,8 +5,8 @@ namespace backend\controllers;
 use Yii;
 use yii\web\Controller;
 use yii\filters\AccessControl;
-use app\components\AccessRule;
-use app\models\User;
+use common\components\AccessRule;
+use common\models\User;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -20,7 +20,21 @@ class QiNiuController extends Controller
     public function behaviors()
     {
         return [
-
+            'access' => [
+                'class' => AccessControl::className(),
+                // We will override the default rule config with the new AccessRule class
+                'ruleConfig' => [
+                    'class' => AccessRule::className(),
+                ],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => [
+                            User::ROLE_ADMIN
+                        ],
+                    ]
+                ],
+            ]
         ];
     }
 

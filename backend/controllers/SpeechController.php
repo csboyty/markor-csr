@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
 use common\models\Category;
+use common\models\User;
 
 class SpeechController extends \yii\web\Controller
 {
@@ -14,7 +15,21 @@ class SpeechController extends \yii\web\Controller
     public function behaviors()
     {
         return [
-
+            'access' => [
+                'class' => AccessControl::className(),
+                // We will override the default rule config with the new AccessRule class
+                'ruleConfig' => [
+                    'class' => AccessRule::className(),
+                ],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => [
+                            User::ROLE_ADMIN
+                        ],
+                    ]
+                ],
+            ]
         ];
     }
 
@@ -61,10 +76,10 @@ class SpeechController extends \yii\web\Controller
     }
 
 
-    public function actionCreate(){
+    public function actionCreate($category_id){
 
         $model=new Post();
-        $category=Category::findOne($_GET["category_id"]);
+        $category=Category::findOne($category_id);
         $parentCategory=Category::findOne($category->parent);
         return $this->render('createOrUpdate',[
             "parentCategory"=>$parentCategory,
