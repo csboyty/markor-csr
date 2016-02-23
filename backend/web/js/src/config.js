@@ -15,7 +15,9 @@ var config={
     },
     ajaxUrls:{
         postGetAll:"post/list",
-        postDelete:"post/delete"
+        postDelete:"post/delete",
+        categoryGetAll:"category/list",
+        categoryDelete:"category/delete"
     },
     dataTable:{
         langUrl:"lang/de_DE.txt"
@@ -83,4 +85,11 @@ $(document).ready(function(){
             return false;
         }
     });
+
+    $(".link,.glyphicon").click(function(){
+        var subMenu=$(this).parent().find(".subMenu");
+        if(subMenu){
+            subMenu.toggle();
+        }
+    })
 });

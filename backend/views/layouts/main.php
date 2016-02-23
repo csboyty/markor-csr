@@ -29,6 +29,18 @@ AppAsset::register($this);
 
 <div class="left">
     <ul class="menu">
+        <?php
+        if(isset(Yii::$app->user->identity)&&Yii::$app->user->identity->role=="SUPER_ADMIN"){
+        ?>
+            <li class="item">
+                <span class="glyphicon glyphicon-flag"></span>
+                <a class="link" href="category/index">分类</a>
+            </li>
+
+        <?php
+            }else{
+        ?>
+
         <li class="item">
             <span class="glyphicon glyphicon-flag"></span>
             <a class="link" href="award/index">大学奖学金活动</a>
@@ -86,7 +98,7 @@ AppAsset::register($this);
 
         <li class="item">
             <span class="glyphicon glyphicon-flag"></span>
-            <a class="link" href="video/index">视频</a>
+            <a class="link" href="video/index">首页视频</a>
         </li>
 
         <div class="separate"></div>
@@ -136,7 +148,7 @@ AppAsset::register($this);
                 </li>
                 <li class="sItem">
                     <span class="circle">原点</span>
-                    <a class="sLink" href="result/child-product">以往产品</a>
+                    <a class="sLink" href="result/child-product">爱心产品</a>
                 </li>
                 <li class="sItem">
                     <span class="circle">原点</span>
@@ -157,10 +169,16 @@ AppAsset::register($this);
                     <span class="circle">原点</span>
                     <a class="sLink" href="activity/teacher-train">历年活动</a>
                 </li>
+                <li class="sItem">
+                    <span class="circle">原点</span>
+                    <a class="sLink" href="result/teacher">教师作品</a>
+                </li>
             </ul>
         </li>
 
-
+        <?php
+        }
+        ?>
     </ul>
 </div>
 

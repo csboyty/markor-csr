@@ -3,7 +3,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=markorcsr',
+            'dsn' => 'mysql:host=localhost;dbname=markor-csr',
             'username' => 'root',
             'password' => 'root',
             'charset' => 'utf8',

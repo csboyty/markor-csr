@@ -35,7 +35,7 @@ class ResultController extends \yii\web\Controller
 
     public function actionLove(){
         $category=Category::findOne(11);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -43,7 +43,16 @@ class ResultController extends \yii\web\Controller
     }
     public function actionStudent(){
         $category=Category::findOne(12);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render("index",[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category
+        ]);
+    }
+
+    public function actionTeacher(){
+        $category=Category::findOne(26);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -55,7 +64,7 @@ class ResultController extends \yii\web\Controller
      */
     public function actionChildProduct(){
         $category=Category::findOne(19);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -66,7 +75,7 @@ class ResultController extends \yii\web\Controller
      */
     public function actionChildDraw(){
         $category=Category::findOne(20);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -78,7 +87,7 @@ class ResultController extends \yii\web\Controller
     public function actionCreate($category_id){
         $model=new Post();
         $category=Category::findOne($category_id);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render('createOrUpdate',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
@@ -91,7 +100,7 @@ class ResultController extends \yii\web\Controller
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
         $category=Category::findOne($model->category_id);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render('createOrUpdate',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,

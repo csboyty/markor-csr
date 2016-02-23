@@ -96,6 +96,7 @@ label.error{
 }
 .menu .item .glyphicon{
     padding: 0px 10px;
+    cursor: pointer;
 }
 .menu .item .rightIcon{
     margin-left: 100px;
@@ -112,6 +113,7 @@ label.error{
     right:0px;
     height: 100%;
     padding-left: 5px;
+    cursor: pointer;
 }
 .menu .item:hover{
     background: #f9f9f2;
@@ -119,9 +121,9 @@ label.error{
 .menu .item:hover .link{
     color: #5dc05f;
 }
-.menu .item:hover .subMenu{
+/*.menu .item:hover .subMenu{
     display: block;
-}
+}*/
 .subMenu{
     background: #f9f9f2;
     display: none;

@@ -23,7 +23,8 @@ class AccountController extends \yii\web\Controller
                     [
                         'allow' => true,
                         'roles' => [
-                            User::ROLE_ADMIN
+                            User::ROLE_ADMIN,
+                            User::ROLE_SUPER_ADMIN
                         ],
                     ]
                 ],

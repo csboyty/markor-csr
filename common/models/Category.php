@@ -30,7 +30,7 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['parent'], 'integer'],
+            [['parent_id'], 'integer'],
             [['name', 'slug'], 'string', 'max' => 32]
         ];
     }
@@ -44,7 +44,7 @@ class Category extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'slug' => 'Slug',
-            'parent' => 'Parent',
+            'parent_id' => 'Parent',
         ];
     }
 
@@ -54,5 +54,9 @@ class Category extends \yii\db\ActiveRecord
     public function getPosts()
     {
         return $this->hasMany(Post::className(), ['category_id' => 'id']);
+    }
+
+    public function getParent(){
+        return $this->hasOne(Category::className(), ['parent_id' => 'id']);
     }
 }

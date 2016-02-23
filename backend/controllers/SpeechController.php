@@ -44,7 +44,7 @@ class SpeechController extends \yii\web\Controller
      */
     public function actionPupil(){
         $category=Category::findOne(18);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -56,7 +56,7 @@ class SpeechController extends \yii\web\Controller
      */
     public function actionActivity(){
         $category=Category::findOne(14);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -68,7 +68,7 @@ class SpeechController extends \yii\web\Controller
      */
     public function actionTeacherTrain(){
         $category=Category::findOne(21);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
@@ -80,7 +80,7 @@ class SpeechController extends \yii\web\Controller
 
         $model=new Post();
         $category=Category::findOne($category_id);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render('createOrUpdate',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
@@ -93,7 +93,7 @@ class SpeechController extends \yii\web\Controller
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
         $category=Category::findOne($model->category_id);
-        $parentCategory=Category::findOne($category->parent);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render('createOrUpdate',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
