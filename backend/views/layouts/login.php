@@ -16,7 +16,7 @@ LoginAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <base href="http://localhost/markor-csr/backend/web/">
+    <base href="<?php echo Yii::$app->homeUrl; ?>">
     <?php $this->head() ?>
 </head>
 <body>

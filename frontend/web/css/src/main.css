@@ -1,0 +1,29 @@
+html,body {
+    height: 100%;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background: #fff;
+    font-family:Arail,"微软雅黑","黑体","宋体";
+    font-size: 14px;
+}
+
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+
+
+/*****************修改面包屑************************/
+.breadcrumb > li + li:before{
+    content:"->"
+}

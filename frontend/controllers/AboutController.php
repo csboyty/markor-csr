@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Site controller
  */
-class SiteController extends Controller
+class AboutController extends Controller
 {
     /**
      * @inheritdoc
@@ -27,5 +27,15 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionNews()
+    {
+        return $this->render('news');
+    }
+
+    public function actionWorks()
+    {
+        return $this->render('works');
     }
 }
