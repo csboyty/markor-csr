@@ -15,7 +15,7 @@ $this->title = '新建/修改文化项目';
             <?php
         }
     ?>
-    <input type="hidden" value="3" name="category_id">
+    <input type="hidden" value="2" name="category_id">
     <div class="form-group">
         <label class="control-label col-md-2">封面图*</label>
         <div class="col-md-10" id="uploadContainer">

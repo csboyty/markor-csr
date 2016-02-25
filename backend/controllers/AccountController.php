@@ -7,6 +7,10 @@ use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\User;
 
+/**
+ * Class AccountController 账号控制器
+ * @package backend\controllers
+ */
 class AccountController extends \yii\web\Controller
 {
 

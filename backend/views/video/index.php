@@ -3,15 +3,15 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = "视频管理";
+$this->title = (isset($parentCategory)?$parentCategory->name."/":"").$category->name;
 
 ?>
     <script>
-        var category_id=25;
+        var category_id=<?php echo $category->id; ?>;;
     </script>
 
 
-    <a class="btn btn-success" href="video/create">
+    <a class="btn btn-success" href="video/create?category_id=<?php echo $category->id; ?>">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
     <table id="myTable" class="dataTable">

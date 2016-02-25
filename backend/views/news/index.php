@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '动态';
+$this->title = '艺术•家动态';
 ?>
     <script>
-        var category_id=2;
+        var category_id=1;
     </script>
 
     <a class="btn btn-success" href="news/create">

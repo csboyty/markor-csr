@@ -6,6 +6,10 @@ use Yii;
 use backend\models\LoginForm;
 use common\models\User;
 
+/**
+ * Class SiteController 网站控制器
+ * @package backend\controllers
+ */
 class SiteController extends \yii\web\Controller
 {
     public $layout = false;

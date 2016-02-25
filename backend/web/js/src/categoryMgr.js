@@ -15,7 +15,8 @@ var categoryMgr=(function(config,functions){
             "bFilter": false,
             "bSort":false,
             "bAutoWidth": false,
-            "iDisplayLength":config.perLoadCounts.table,
+            //"iDisplayLength":config.perLoadCounts.table,
+            "iDisplayLength":30,
             "sPaginationType":"full_numbers",
             "oLanguage": {
                 "sUrl":config.dataTable.langUrl

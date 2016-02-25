@@ -8,6 +8,11 @@ use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
 
+
+/**
+ * Class DonationController 捐赠小学名单控制器
+ * @package backend\controllers
+ */
 class DonationController extends \yii\web\Controller
 {
 
@@ -33,14 +38,14 @@ class DonationController extends \yii\web\Controller
     }
 
     public function actionList(){
-        return $this->render("list");
+        return $this->render("index");
     }
 
 
     public function actionListCreate(){
 
         $model=new Post();
-        return $this->render('listCreateOrUpdate',[
+        return $this->render('createOrUpdate',[
             'model' => $model,
         ]);
     }
@@ -50,7 +55,7 @@ class DonationController extends \yii\web\Controller
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
 
-        return $this->render('listCreateOrUpdate',[
+        return $this->render('createOrUpdate',[
             'model' => $model,
         ]);
     }

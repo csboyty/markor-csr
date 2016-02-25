@@ -8,6 +8,10 @@ use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
 
+/**
+ * Class CultureProgramController 传统项目控制器
+ * @package backend\controllers
+ */
 class CultureProgramController extends \yii\web\Controller
 {
 

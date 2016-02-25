@@ -6,7 +6,7 @@ use backend\assets\AppAsset;
 $this->title = '实习生风采';
 ?>
     <script>
-        var category_id=23;
+        var category_id=20;
     </script>
 
     <a class="btn btn-success" href="trainee/mien-create">

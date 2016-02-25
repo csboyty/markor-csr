@@ -9,7 +9,8 @@ use common\components\AccessRule;
 use common\models\User;
 
 /**
- * UserController implements the CRUD actions for User model.
+ * Class QiNiuController 七牛相关操作控制器
+ * @package backend\controllers
  */
 class QiNiuController extends Controller
 {

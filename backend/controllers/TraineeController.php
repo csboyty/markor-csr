@@ -8,6 +8,10 @@ use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
 
+/**
+ * Class TraineeController 志愿者控制器
+ * @package backend\controllers
+ */
 class TraineeController extends \yii\web\Controller
 {
 
@@ -35,21 +39,11 @@ class TraineeController extends \yii\web\Controller
     public function actionMien(){
         return $this->render("mien");
     }
-    public function actionRecruit(){
-        return $this->render("recruit");
-    }
-
 
     public function actionMienCreate(){
 
         $model=new Post();
         return $this->render('mienCreateOrUpdate',[
-            'model' => $model,
-        ]);
-    }
-    public function actionRecruitCreate(){
-        $model=new Post();
-        return $this->render('recruitCreateOrUpdate',[
             'model' => $model,
         ]);
     }

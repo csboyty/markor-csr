@@ -3,20 +3,20 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '招募岗位';
+$this->title = '捐赠小学名单';
 ?>
-
     <script>
-        var category_id=24;
+        var category_id=4;
     </script>
 
-    <a class="btn btn-success" href="trainee/recruit-create">
+    <a class="btn btn-success" href="donation/list-create">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
-            <th>标题</th>
+            <th>图像</th>
+            <th>名称</th>
             <th>时间</th>
             <th>操作</th>
         </tr>
@@ -36,5 +36,5 @@ $this->title = '招募岗位';
 
 
 <?php
-$this->registerJsFile("@web/js/src/recruitMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/listMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

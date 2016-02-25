@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = $parentCategory->name."/".$category->name;
+$this->title = (isset($parentCategory)?$parentCategory->name."/":"").$category->name;
 ?>
 <script>
     var category_id=<?php echo $category->id; ?>;

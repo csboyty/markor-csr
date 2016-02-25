@@ -9,6 +9,10 @@ use common\models\Post;
 use common\models\User;
 use common\models\Category;
 
+/**
+ * Class ActivityController 活动控制器
+ * @package backend\controllers
+ */
 class ActivityController extends \yii\web\Controller
 {
 
@@ -34,11 +38,11 @@ class ActivityController extends \yii\web\Controller
     }
 
     /**
-     * 美术教师捐赠历年活动
+     * 快乐美术教室历年活动
      * @return string
      */
     public function actionDonation(){
-        $category=Category::findOne(15);
+        $category=Category::findOne(5);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -51,7 +55,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionVolunteer(){
-        $category=Category::findOne(17);
+        $category=Category::findOne(12);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -64,7 +68,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionTeacherTrain(){
-        $category=Category::findOne(22);
+        $category=Category::findOne(8);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

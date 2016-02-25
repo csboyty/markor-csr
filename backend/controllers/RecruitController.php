@@ -6,14 +6,14 @@ use Yii;
 use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
+use common\models\Category;
 use common\models\User;
 
-
 /**
- * Class AwardController 高校奖学金活动控制器
+ * Class RecruitController 招聘/儿童画征集控制器
  * @package backend\controllers
  */
-class AwardController extends \yii\web\Controller
+class RecruitController extends \yii\web\Controller
 {
 
     public function behaviors()
@@ -36,17 +36,40 @@ class AwardController extends \yii\web\Controller
             ]
         ];
     }
-
-    public function actionIndex(){
-        return $this->render("index");
+    /**
+     * 实习生招聘
+     * @return string
+     */
+    public function actionTrainee(){
+        $category=Category::findOne(21);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render("index",[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category
+        ]);
+    }
+    /**
+     * 儿童画征集函
+     * @return string
+     */
+    public function actionChildDraw(){
+        $category=Category::findOne(16);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render("index",[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category
+        ]);
     }
 
 
-    public function actionCreate(){
+    public function actionCreate($category_id){
 
         $model=new Post();
-
+        $category=Category::findOne($category_id);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render('createOrUpdate',[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category,
             'model' => $model,
         ]);
     }
@@ -55,8 +78,11 @@ class AwardController extends \yii\web\Controller
 
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
-
+        $category=Category::findOne($model->category_id);
+        $parentCategory=Category::findOne($category->parent_id);
         return $this->render('createOrUpdate',[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category,
             'model' => $model,
         ]);
     }

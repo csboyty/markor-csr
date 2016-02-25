@@ -7,7 +7,7 @@ $this->title = '大学奖学金活动';
 ?>
 
     <script>
-        var category_id=8;
+        var category_id=17;
     </script>
 
     <a class="btn btn-success" href="award/create">

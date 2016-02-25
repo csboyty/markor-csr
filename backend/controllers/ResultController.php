@@ -9,6 +9,10 @@ use common\models\Post;
 use common\models\Category;
 use common\models\User;
 
+/**
+ * Class ResultController 产品控制器
+ * @package backend\controllers
+ */
 class ResultController extends \yii\web\Controller
 {
 
@@ -34,15 +38,15 @@ class ResultController extends \yii\web\Controller
     }
 
     public function actionLove(){
-        $category=Category::findOne(11);
+        $category=Category::findOne(15);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
         ]);
     }
-    public function actionStudent(){
-        $category=Category::findOne(12);
+    public function actionCollegeStudent(){
+        $category=Category::findOne(18);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -51,37 +55,13 @@ class ResultController extends \yii\web\Controller
     }
 
     public function actionTeacher(){
-        $category=Category::findOne(26);
+        $category=Category::findOne(9);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
         ]);
     }
-
-    /**
-     * 儿童画以往产品
-     */
-    public function actionChildProduct(){
-        $category=Category::findOne(19);
-        $parentCategory=Category::findOne($category->parent_id);
-        return $this->render("index",[
-            "parentCategory"=>$parentCategory,
-            "category"=>$category
-        ]);
-    }
-    /**
-     * 儿童画征集函&儿童画
-     */
-    public function actionChildDraw(){
-        $category=Category::findOne(20);
-        $parentCategory=Category::findOne($category->parent_id);
-        return $this->render("index",[
-            "parentCategory"=>$parentCategory,
-            "category"=>$category
-        ]);
-    }
-
 
 
     public function actionCreate($category_id){

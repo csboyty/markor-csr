@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '新建/修改视频';
+$this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name."/":"").$category->name;
 ?>
 
 <form class="form-horizontal" id="myForm" action="post/submit" method="post">
@@ -14,7 +14,7 @@ $this->title = '新建/修改视频';
             <?php
         }
     ?>
-    <input type="hidden" value="25" name="category_id">
+    <input type="hidden" value="<?php echo $category->id; ?>" name="category_id">
     <div class="form-group">
         <label class="control-label col-md-2">封面图*</label>
         <div class="col-md-10" id="uploadContainer">

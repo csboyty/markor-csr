@@ -8,6 +8,10 @@ use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
 
+/**
+ * Class PostController 文章控制器
+ * @package backend\controllers
+ */
 class PostController extends \yii\web\Controller
 {
 

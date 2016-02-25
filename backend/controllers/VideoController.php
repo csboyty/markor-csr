@@ -6,8 +6,13 @@ use Yii;
 use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
+use common\models\Category;
 use common\models\User;
 
+/**
+ * Class VideoController 视频控制器
+ * @package backend\controllers
+ */
 class VideoController extends \yii\web\Controller
 {
 
@@ -32,7 +37,18 @@ class VideoController extends \yii\web\Controller
         ];
     }
     public function actionIndex(){
-        return $this->render("index");
+        $category=Category::findOne(22);
+        return $this->render("index",[
+            "category"=>$category
+        ]);
+    }
+    public function actionChildDraw(){
+        $category=Category::findOne(14);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render("index",[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category
+        ]);
     }
 
 

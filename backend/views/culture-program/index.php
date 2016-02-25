@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '文化项目';
+$this->title = '传统文化项目';
 ?>
     <script>
-        var category_id=3;
+        var category_id=2;
     </script>
 
     <a class="btn btn-success" href="culture-program/create">

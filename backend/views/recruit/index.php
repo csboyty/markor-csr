@@ -3,20 +3,20 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '捐赠小学名单';
+$this->title = $parentCategory->name."/".$category->name;
 ?>
+
     <script>
-        var category_id=13;
+        var category_id=<?php echo $category->id; ?>;;
     </script>
 
-    <a class="btn btn-success" href="donation/list-create">
+    <a class="btn btn-success" href="recruit/create?category_id=<?php echo $category->id; ?>">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
-            <th>图像</th>
-            <th>名称</th>
+            <th>标题</th>
             <th>时间</th>
             <th>操作</th>
         </tr>
@@ -36,5 +36,5 @@ $this->title = '捐赠小学名单';
 
 
 <?php
-$this->registerJsFile("@web/js/src/listMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/recruitMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

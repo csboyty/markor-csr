@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '新建/修改招募岗位';
+$this->title = '新建/修改捐赠小学名单';
 ?>
 
 
@@ -15,9 +15,19 @@ $this->title = '新建/修改招募岗位';
         <?php
         }
         ?>
-        <input type="hidden" value="24" name="category_id">
+        <input type="hidden" value="4" name="category_id">
         <div class="form-group">
-            <label  class="control-label col-md-2">标题*</label>
+            <label class="control-label col-md-2">封面图*</label>
+            <div class="col-md-10" id="uploadContainer">
+                <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
+                <p class="help-block">请上传500x500的jpg，png</p>
+                <img  id="image"  style="width:100px"
+                      src="images/app/defaultPeopleImage.jpg"/>
+                <input type="hidden" id="imageUrl" name="image">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="control-label col-md-2">名称*</label>
             <div class="col-md-8">
                 <input type="text" class="form-control" value="<?php echo $model->title ?>" name="title">
             </div>
@@ -42,5 +52,5 @@ $this->title = '新建/修改招募岗位';
     </form>
 
 <?php
-$this->registerJsFile("@web/js/src/recruitCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/listCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

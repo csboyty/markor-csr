@@ -8,6 +8,10 @@ use common\components\AccessRule;
 use common\models\Category;
 use common\models\User;
 
+/**
+ * Class CategoryController 分类控制器
+ * @package backend\controllers
+ */
 class CategoryController extends \yii\web\Controller
 {
 
@@ -43,7 +47,7 @@ class CategoryController extends \yii\web\Controller
         $categories=Category::find()
             ->where(["parent_id"=>0])
             ->asArray()
-            ->all();;
+            ->all();
 
         return $this->render('createOrUpdate',[
             "categories"=>$categories,
@@ -55,8 +59,13 @@ class CategoryController extends \yii\web\Controller
 
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
+        $categories=Category::find()
+            ->where(["parent_id"=>0])
+            ->asArray()
+            ->all();
 
         return $this->render('createOrUpdate',[
+            "categories"=>$categories,
             'model' => $model,
         ]);
     }

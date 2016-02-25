@@ -8,6 +8,10 @@ use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
 
+/**
+ * Class NewsController 动态控制器
+ * @package backend\controllers
+ */
 class NewsController extends \yii\web\Controller
 {
 

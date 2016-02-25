@@ -9,6 +9,10 @@ use common\models\Post;
 use common\models\Category;
 use common\models\User;
 
+/**
+ * Class SpeechController 感言控制器
+ * @package backend\controllers
+ */
 class SpeechController extends \yii\web\Controller
 {
 
@@ -32,18 +36,12 @@ class SpeechController extends \yii\web\Controller
             ]
         ];
     }
-
-    public function actionCollegeStudent(){
-        return $this->render("index",[
-            "category"=>Category::findOne(9)
-        ]);
-    }
     /**
-     * 小学生感言
+     * 志愿者感言
      * @return string
      */
-    public function actionPupil(){
-        $category=Category::findOne(18);
+    public function actionVolunteer(){
+        $category=Category::findOne(11);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -51,23 +49,11 @@ class SpeechController extends \yii\web\Controller
         ]);
     }
     /**
-     * 美术教室活动感言
-     * @return string
-     */
-    public function actionActivity(){
-        $category=Category::findOne(14);
-        $parentCategory=Category::findOne($category->parent_id);
-        return $this->render("index",[
-            "parentCategory"=>$parentCategory,
-            "category"=>$category
-        ]);
-    }
-    /**
-     * 教师培训反馈
+     * 教师培训感言
      * @return string
      */
     public function actionTeacherTrain(){
-        $category=Category::findOne(21);
+        $category=Category::findOne(7);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
