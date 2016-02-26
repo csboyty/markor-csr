@@ -35,19 +35,15 @@ $(document).ready(function(){
         fileAddCb:null,
         progressCb:null,
         uploadedCb:function(info,file,up){
-            var path=info.url;
-            $.get(path+"?imageInfo",function(data){
-                //console.log(data);
-                if(data.width==500&&data.height==500){
-                    $("#imageUrl").val(path);
+            if(info.w==500&&info.h==500){
+                $("#imageUrl").val(info.url);
 
-                    $("#image").attr("src",path);
+                $("#image").attr("src",info.url);
 
-                    $(".error[for='imageUrl']").remove();
-                }else{
-                    $().toastmessage("showErrorToast",config.messages.imageSizeError);
-                }
-            });
+                $(".error[for='imageUrl']").remove();
+            }else{
+                $().toastmessage("showErrorToast",config.messages.imageSizeError);
+            }
         }
     });
     $("#myForm").validate({

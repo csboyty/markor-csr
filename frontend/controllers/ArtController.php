@@ -3,11 +3,12 @@ namespace frontend\controllers;
 
 use Yii;
 use yii\web\Controller;
+use commom\models\Post;
 
 /**
- * Site controller
+ * Art controller
  */
-class AboutController extends Controller
+class ArtController extends Controller
 {
     /**
      * @inheritdoc
@@ -24,9 +25,9 @@ class AboutController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionAbout()
     {
-        return $this->render('index');
+        return $this->render('about');
     }
 
     public function actionNews()

@@ -35,7 +35,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => '关于艺术家', 'url' => ['/about/index']],
+        ['label' => '关于艺术家', 'url' => ['/art/about']],
         ['label' => '传统文化', 'url' => ['/program/index']],
         ['label' => '艺术教育', 'url' => ['/art-education/index']],
         ['label' => '当代艺术', 'url' => ['/modern-art/index']],
