@@ -6,7 +6,7 @@ use backend\assets\AppAsset;
 $this->title = '传统文化项目';
 ?>
     <script>
-        var category_id=2;
+        var category_id=<?php echo Yii::$app->params["categories"]["cultureProgram"]; ?>;
     </script>
 
     <a class="btn btn-success" href="culture-program/create">

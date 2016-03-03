@@ -4,6 +4,7 @@ namespace backend\models;
 
 use Yii;
 use yii\base\Model;
+use linslin\yii2\curl;
 
 /**
  * LoginForm is the model behind the login form.
@@ -13,11 +14,15 @@ class QiNiu extends Model
     public $bucket;
     public $accessKey;
     public $secretKey;
+    public $handleHost;
+    public $handleUrl;
 
     public function __construct(){
         $this->bucket=Yii::$app->params["qiNiu"]['bucket'];
         $this->accessKey=Yii::$app->params["qiNiu"]['accessKey'];
         $this->secretKey=Yii::$app->params["qiNiu"]['secretKey'];
+        $this->handleHost=Yii::$app->params["qiNiu"]['handleHost'];
+        $this->handleUrl=Yii::$app->params["qiNiu"]['handleUrl'];
     }
     public function URLSafeBase64Encode($str) // URLSafeBase64Encode
     {
@@ -50,18 +55,78 @@ class QiNiu extends Model
         return json_encode($returnBody);
     }
 
+
+    /**
+     * 处理策略
+     * @param $urlString
+     * @param $body
+     * @param null $contentType
+     * @return string
+     */
+    public function createAccessToken($urlString,$body,$contentType=null){
+        $url = parse_url($urlString);
+        $data = '';
+        if (array_key_exists('path', $url)) {
+            $data = $url['path'];
+        }
+        if (array_key_exists('query', $url)) {
+            $data .= '?' . $url['query'];
+        }
+
+        $data .= "\n";
+
+        if ($body !== null && $contentType === 'application/x-www-form-urlencoded') {
+            $data .= $body;
+        }
+
+        $sign=hash_hmac('sha1', $data, $this->secretKey, true);
+        $encodedSign=$this->URLSafeBase64Encode($sign);
+        $accessToken = $this->accessKey.":".$encodedSign;
+        return $accessToken;
+    }
+
+    /**
+     * 图片处理接口
+     * @param $path
+     * @param $sizes
+     */
     public function handleImage($path,$sizes){
         $fileInfo=pathinfo($path);
         $extension=$fileInfo["extension"];
+        $key=$fileInfo["basename"];
         $filename=$fileInfo["filename"];
-        $saveName="";
-        $suffix="";
-        $handle=50;
+
+        $curl = new curl\Curl();
 
         foreach($sizes as $value){
             $suffix=$value["suffix"];
             $handle=$value["handle"];
-            $saveName=$this->bucket.":".$filename."-".$extension;
+            $saveName=$this->bucket.":".$filename.$suffix.".".$extension;
+            $fops=$handle."|saveas/".$this->URLSafeBase64Encode($saveName);
+
+            //post body
+            $data=http_build_query(array(
+                "bucket"=> $this->bucket,
+                "key"=>$key,
+                "fops"=>$fops
+            ));
+
+            $accessToken=$this->createAccessToken($this->handleUrl,$data,
+                "application/x-www-form-urlencoded");
+
+            $response = $curl->setOption(
+                CURLOPT_HTTPHEADER,
+                array(
+                    "Host: ".$this->handleHost,
+                    "Content-Type: application/x-www-form-urlencoded",
+                    "Authorization: QBox ".$accessToken
+                )
+            )
+            ->setOption(
+                CURLOPT_POSTFIELDS,
+                $data
+            )
+            ->post($this->handleUrl);
         }
     }
 

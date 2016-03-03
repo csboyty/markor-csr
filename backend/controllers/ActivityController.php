@@ -42,7 +42,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionDonation(){
-        $category=Category::findOne(5);
+        $category=Category::findOne(Yii::$app->params["categories"]["donationActivity"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -55,7 +55,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionVolunteer(){
-        $category=Category::findOne(12);
+        $category=Category::findOne(Yii::$app->params["categories"]["volunteerActivity"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -68,7 +68,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionTeacherTrain(){
-        $category=Category::findOne(8);
+        $category=Category::findOne(Yii::$app->params["categories"]["teacherTrainActivity"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

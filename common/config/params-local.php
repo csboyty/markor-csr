@@ -1,3 +1,30 @@
 <?php
 return [
+    "perShowCount"=>[
+        "default"=>10
+    ],
+    "categories"=>[
+        "artNews"=>1,
+        "cultureProgram"=>2,
+        "donation"=>3,
+        "donationList"=>4,
+        "donationActivity"=>5,
+        "teacherTrain"=>6,
+        "teacherTrainSpeech"=>7,
+        "teacherTrainActivity"=>8,
+        "teacherTrainResult"=>9,
+        "volunteer"=>10,
+        "volunteerSpeech"=>11,
+        "volunteerActivity"=>12,
+        "childDraw"=>13,
+        "childDrawVideo"=>14,
+        "childDrawResult"=>15,
+        "ChildDrawRecruit"=>16,
+        "award"=>17,
+        "collegeStudentResult"=>18,
+        "trainee"=>19,
+        "traineeMien"=>20,
+        "traineeRecruit"=>21,
+        "indexVideo"=>22
+    ]
 ];

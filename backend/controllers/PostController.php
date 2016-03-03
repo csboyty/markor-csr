@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
+use backend\models\QiNiu;
 
 /**
  * Class PostController 文章控制器
@@ -80,6 +81,16 @@ class PostController extends \yii\web\Controller
             $model = $this->findModel($params["id"]);
         }else{
             $model=new Post();
+        }
+
+        $qiNiu=new QiNiu();
+
+        if(isset($params["image"])){
+            $qiNiu->handleImage($params["image"],Yii::$app->params["imageSizes"]["thumbnail"]);
+        }
+
+        if(isset($params["bg_image"])){
+            $qiNiu->handleImage($params["image"],Yii::$app->params["imageSizes"]["bgImage"]);
         }
 
 

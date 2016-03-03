@@ -38,7 +38,7 @@ class ResultController extends \yii\web\Controller
     }
 
     public function actionLove(){
-        $category=Category::findOne(15);
+        $category=Category::findOne(Yii::$app->params["categories"]["childDrawResult"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -46,7 +46,7 @@ class ResultController extends \yii\web\Controller
         ]);
     }
     public function actionCollegeStudent(){
-        $category=Category::findOne(18);
+        $category=Category::findOne(Yii::$app->params["categories"]["collegeStudentResult"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -55,7 +55,7 @@ class ResultController extends \yii\web\Controller
     }
 
     public function actionTeacher(){
-        $category=Category::findOne(9);
+        $category=Category::findOne(Yii::$app->params["categories"]["teacherTrainResult"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

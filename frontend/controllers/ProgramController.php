@@ -26,6 +26,13 @@ class ProgramController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $query=Post::find();
+
+        $query->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]]);
+        $results = $query->all();
+
+        return $this->render('index',[
+            "results"=>$results
+        ]);
     }
 }

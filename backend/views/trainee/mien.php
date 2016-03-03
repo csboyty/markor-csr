@@ -6,7 +6,7 @@ use backend\assets\AppAsset;
 $this->title = '实习生风采';
 ?>
     <script>
-        var category_id=20;
+        var category_id=<?php echo Yii::$app->params["categories"]["traineeMien"]; ?>;
     </script>
 
     <a class="btn btn-success" href="trainee/mien-create">

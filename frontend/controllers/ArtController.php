@@ -3,7 +3,8 @@ namespace frontend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use commom\models\Post;
+use yii\data\Pagination;
+use common\models\Post;
 
 /**
  * Art controller
@@ -32,7 +33,17 @@ class ArtController extends Controller
 
     public function actionNews()
     {
-        return $this->render('news');
+        $query=Post::find();
+
+        $query->where(["category_id"=>Yii::$app->params["categories"]["artNews"]]);
+        $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
+            Yii::$app->params["perShowCount"]["default"]]);
+        $results = $query->offset($pages->offset)->limit($pages->limit)->all();
+
+        return $this->render('news',[
+            "pages"=>$pages,
+            "results"=>$results
+        ]);
     }
 
     public function actionWorks()

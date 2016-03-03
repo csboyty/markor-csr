@@ -7,7 +7,7 @@ $this->title = $parentCategory->name."/".$category->name;
 ?>
 
     <script>
-        var category_id=<?php echo $category->id; ?>;;
+        var category_id=<?php echo $category->id; ?>;
     </script>
 
     <a class="btn btn-success" href="recruit/create?category_id=<?php echo $category->id; ?>">

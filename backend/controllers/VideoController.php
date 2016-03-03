@@ -37,13 +37,13 @@ class VideoController extends \yii\web\Controller
         ];
     }
     public function actionIndex(){
-        $category=Category::findOne(22);
+        $category=Category::findOne(Yii::$app->params["categories"]["indexVideo"]);
         return $this->render("index",[
             "category"=>$category
         ]);
     }
     public function actionChildDraw(){
-        $category=Category::findOne(14);
+        $category=Category::findOne(Yii::$app->params["categories"]["childDrawVideo"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

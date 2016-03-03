@@ -26,6 +26,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $query=Post::find();
+
+        $query->where(["category_id"=>Yii::$app->params["categories"]["artNews"]]);
+        $results = $query->limit(3)->all();
+
+        return $this->render('index',[
+            "results"=>$results
+        ]);
+
     }
 }

@@ -6,7 +6,7 @@ use backend\assets\AppAsset;
 $this->title = '捐赠小学名单';
 ?>
     <script>
-        var category_id=4;
+        var category_id=<?php echo Yii::$app->params["categories"]["donationList"]; ?>;
     </script>
 
     <a class="btn btn-success" href="donation/list-create">

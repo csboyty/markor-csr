@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\widgets\LinkPager;
 $this->title = '美克CSR网站|艺术•家动态';
 $this->params=[
     "breadcrumbs"=>[
@@ -19,3 +19,7 @@ $this->params=[
 ]
 ?>
 这里是艺术家动态
+<?php
+    print_r($results);
+?>
+<?php echo LinkPager::widget(['pagination' => $pages]); ?>

@@ -46,7 +46,7 @@ class Post extends \yii\db\ActiveRecord
             }],
             [['category_id', 'user_id'], 'integer'],
             [['user_id'], 'default', 'value' => function ($model, $attribute) {
-                return Yii::$app->user->getId()?3:1;
+                return Yii::$app->user->getId()?Yii::$app->user->getId():1;
             }],
             [['title', 'author'], 'string', 'max' => 32],
             [['excerpt', 'image', 'bg_image', 'video_url'], 'string', 'max' => 255]

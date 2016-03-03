@@ -7,7 +7,7 @@ $this->title = '大学奖学金活动';
 ?>
 
     <script>
-        var category_id=17;
+        var category_id=<?php echo Yii::$app->params["categories"]["award"]; ?>;
     </script>
 
     <a class="btn btn-success" href="award/create">

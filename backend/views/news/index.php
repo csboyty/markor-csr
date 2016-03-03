@@ -6,7 +6,7 @@ use backend\assets\AppAsset;
 $this->title = '艺术•家动态';
 ?>
     <script>
-        var category_id=1;
+        var category_id=<?php echo Yii::$app->params["categories"]["artNews"]; ?>;
     </script>
 
     <a class="btn btn-success" href="news/create">

@@ -41,7 +41,7 @@ class RecruitController extends \yii\web\Controller
      * @return string
      */
     public function actionTrainee(){
-        $category=Category::findOne(21);
+        $category=Category::findOne(Yii::$app->params["categories"]["traineeRecruit"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -53,7 +53,7 @@ class RecruitController extends \yii\web\Controller
      * @return string
      */
     public function actionChildDraw(){
-        $category=Category::findOne(16);
+        $category=Category::findOne(Yii::$app->params["categories"]["ChildDrawRecruit"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

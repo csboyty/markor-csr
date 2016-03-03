@@ -41,7 +41,7 @@ class SpeechController extends \yii\web\Controller
      * @return string
      */
     public function actionVolunteer(){
-        $category=Category::findOne(11);
+        $category=Category::findOne(Yii::$app->params["categories"]["volunteerSpeech"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -53,7 +53,7 @@ class SpeechController extends \yii\web\Controller
      * @return string
      */
     public function actionTeacherTrain(){
-        $category=Category::findOne(7);
+        $category=Category::findOne(Yii::$app->params["categories"]["teacherTrainSpeech"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

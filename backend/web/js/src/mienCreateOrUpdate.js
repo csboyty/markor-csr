@@ -5,9 +5,9 @@ var mienCreateOrUpdate=(function(config,functions){
             functions.showLoading();
             $(form).ajaxSubmit({
                 dataType:"json",
-                data:{
+                /*data:{
                     content:tinyMCE.editors[0].getContent()
-                },
+                },*/
                 success:function(response){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
@@ -33,7 +33,12 @@ $(document).ready(function(){
         toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
         toolbar2: 'print preview media | forecolor backcolor emoticons',
         //image_advtab: true,
-        plugins : 'link image preview fullscreen table textcolor colorpicker code'
+        plugins : 'link image preview fullscreen table textcolor colorpicker code',
+        setup: function (ed) {
+            ed.on('blur', function (e) {
+                $("#content").val(ed.getContent());
+            });
+        }
 
     });
     functions.createQiNiuUploader({
