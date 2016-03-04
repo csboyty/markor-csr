@@ -10,20 +10,20 @@ return [
         "传统项目"=>"program/list",
         "艺术教育"=>"art-education",
         "快乐美术教室"=>[
-            "快乐美术教室"=>"art-education/art-room",
-            "捐赠小学名单"=>"art-education/art-room/list",
-            "历年活动"=>"art-education/art-room/activities"
+            "快乐美术教室"=>"education/art-room",
+            "捐赠小学名单"=>"education/art-room/list",
+            "历年活动"=>"education/art-room/activities"
         ],
         "教师培训"=>[
-            "教师培训"=>"art-education/teacher-train",
-            "教师感言"=>"art-education/teacher-train/speech",
-            "历年活动"=>"art-education/teacher-train/activities",
-            "教师作品"=>"art-education/teacher-train/works"
+            "教师培训"=>"education/teacher-train",
+            "教师感言"=>"education/teacher-train/speech",
+            "历年活动"=>"education/teacher-train/activities",
+            "教师作品"=>"education/teacher-train/works"
         ],
         "志愿者"=>[
-            "志愿者"=>"art-education/volunteer",
-            "志愿者感言"=>"art-education/volunteer/speech",
-            "志愿者活动"=>"art-education/volunteer/activities"
+            "志愿者"=>"education/volunteer",
+            "志愿者感言"=>"education/volunteer/speech",
+            "志愿者活动"=>"education/volunteer/activities"
         ],
         "儿童画"=>[
             "儿童画"=>"art-education/child-draw",

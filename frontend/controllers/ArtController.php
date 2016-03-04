@@ -48,6 +48,23 @@ class ArtController extends Controller
 
     public function actionWorks()
     {
-        return $this->render('works');
+        $childQuery=Post::find();
+        $loveQuery=clone $childQuery;
+        $collegeQuery= clone $childQuery;
+
+        $childQuery->where(["category_id"=>Yii::$app->params["categories"]["ChildDrawRecruit"]]);
+        $childResults=$childQuery->limit(4)->all();
+
+        $loveQuery->where(["category_id"=>Yii::$app->params["categories"]["childDrawResult"]]);
+        $loveResults=$childQuery->limit(4)->all();
+
+        $collegeQuery->where(["category_id"=>Yii::$app->params["categories"]["collegeStudentResult"]]);
+        $collegeResults=$childQuery->limit(4)->all();
+
+        return $this->render('works',[
+            "childResults"=>$childResults,
+            "loveResults"=>$loveResults,
+            "collegeResults"=>$childResults
+        ]);
     }
 }

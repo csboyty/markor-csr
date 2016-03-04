@@ -14,3 +14,8 @@ $this->params=[
 ]
 ?>
 这里是艺术教育
+
+<?php print_r($donationResults); ?>
+<?php print_r($teacherResults); ?>
+<?php print_r($volunteerResults); ?>
+<?php print_r($childDrawResults); ?>

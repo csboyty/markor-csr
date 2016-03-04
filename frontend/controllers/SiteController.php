@@ -36,4 +36,7 @@ class SiteController extends Controller
         ]);
 
     }
+    public function actionError(){
+        return $this->render("error");
+    }
 }

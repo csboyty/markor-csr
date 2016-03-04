@@ -14,4 +14,5 @@ $this->params=[
 ]
 ?>
 这里是传统项目
+<?php print_r($results); ?>
 

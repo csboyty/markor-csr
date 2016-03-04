@@ -19,3 +19,6 @@ $this->params=[
 ]
 ?>
 这里是艺术家成果
+<?php print_r($childResults); ?>
+<?php print_r($loveResults); ?>
+<?php print_r($collegeResults); ?>

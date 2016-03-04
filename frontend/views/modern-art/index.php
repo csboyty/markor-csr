@@ -14,3 +14,8 @@ $this->params=[
 ]
 ?>
 这里是当代艺术
+
+<?php print_r($awardResults); ?>
+<?php print_r($collegeResults); ?>
+<?php print_r($traineeResults); ?>
+
