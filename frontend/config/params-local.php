@@ -5,39 +5,39 @@ return [
         "艺术家介绍"=>"art/about",
         "艺术家成果"=>"art/works",
         "艺术家动态"=>"art/news",
-        "传统文化"=>"program",
-        "传统文化项目"=>"program/list",
-        "传统项目"=>"program/list",
-        "艺术教育"=>"art-education",
+        "传统文化"=>"programs",
+        "传统文化项目"=>"programs",
+        "传统项目"=>"programs",
+        "艺术教育"=>"arteducation",
         "快乐美术教室"=>[
-            "快乐美术教室"=>"education/art-room",
-            "捐赠小学名单"=>"education/art-room/list",
-            "历年活动"=>"education/art-room/activities"
+            "快乐美术教室"=>"arteducation/art-room",
+            "捐赠小学名单"=>"arteducation/art-room/list",
+            "历年活动"=>"arteducation/art-room/activities"
         ],
         "教师培训"=>[
-            "教师培训"=>"education/teacher-train",
-            "教师感言"=>"education/teacher-train/speech",
-            "历年活动"=>"education/teacher-train/activities",
-            "教师作品"=>"education/teacher-train/works"
+            "教师培训"=>"arteducation/teacher-train",
+            "教师感言"=>"arteducation/teacher-train/speech",
+            "历年活动"=>"arteducation/teacher-train/activities",
+            "教师作品"=>"arteducation/teacher-train/works"
         ],
         "志愿者"=>[
-            "志愿者"=>"education/volunteer",
-            "志愿者感言"=>"education/volunteer/speech",
-            "志愿者活动"=>"education/volunteer/activities"
+            "志愿者"=>"arteducation/volunteer",
+            "志愿者感言"=>"arteducation/volunteer/speech",
+            "志愿者活动"=>"arteducation/volunteer/activities"
         ],
         "儿童画"=>[
-            "儿童画"=>"art-education/child-draw",
-            "儿童画视频"=>"art-education/child-draw/video",
-            "爱心产品"=>"art-education/child-draw/works",
-            "历年征集函"=>"art-education/child-draw/recruit"
+            "儿童画"=>"arteducation/child-draw",
+            "儿童画视频"=>"arteducation/child-draw/videos",
+            "爱心产品"=>"arteducation/child-draw/works",
+            "历年征集函"=>"arteducation/child-draw/recruits"
         ],
-        "当代艺术"=>"modern-art",
-        "高校奖学金活动"=>"modern-art/award",
-        "大学生作品"=>"modern-art/college-student-works",
+        "当代艺术"=>"modernart",
+        "高校奖学金活动"=>"modernart/awards",
+        "大学生作品"=>"modernart/college-student-works",
         "实习生"=>[
-            "实习生"=>"modern-art/trainee",
-            "实习生风采"=>"modern-art/trainee/mien",
-            "实习生招聘"=>"modern-art/trainee/recruit"
+            "实习生"=>"modernart/trainee",
+            "实习生风采"=>"modernart/trainee/miens",
+            "实习生招聘"=>"modernart/trainee/recruits"
         ]
 
     ]

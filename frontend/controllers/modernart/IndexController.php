@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace frontend\controllers\modernart;
 
 use Yii;
 use yii\web\Controller;
@@ -8,7 +8,7 @@ use common\models\Post;
 /**
  * Site controller
  */
-class ModernArtController extends Controller
+class IndexController extends Controller
 {
     /**
      * @inheritdoc
@@ -20,11 +20,6 @@ class ModernArtController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
     public function actionIndex()
     {
         $awardQuery=Post::find();
@@ -45,6 +40,5 @@ class ModernArtController extends Controller
             "collegeResults"=>$collegeResults,
             "traineeResults"=>$traineeResults
         ]);
-
     }
 }

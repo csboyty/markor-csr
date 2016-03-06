@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers\education;
+namespace frontend\controllers\arteducation;
 
 use Yii;
 use yii\web\Controller;
@@ -22,28 +22,28 @@ class TeacherTrainController extends Controller
 
     public function actionIndex()
     {
-        return $this->render("/art-education/teacher-train/index");
+        return $this->render("index");
     }
 
     /**
      * 教室培训感言
      */
     public function actionSpeech(){
-        return $this->render("/art-education/teacher-train/speech");
+        return $this->render("speech");
     }
 
     /**
      * 教室培训活动
      */
-    public function actionActivity(){
-        return $this->render("/art-education/teacher-train/activity");
+    public function actionActivities(){
+        return $this->render("activities");
     }
 
     /**
      * 教室培训作品
      */
-    public function actionWork(){
-        return $this->render("/art-education/teacher-train/work");
+    public function actionWorks(){
+        return $this->render("works");
     }
 
 }

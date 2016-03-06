@@ -8,7 +8,7 @@ use common\models\Post;
 /**
  * Site controller
  */
-class ProgramController extends Controller
+class ProgramsController extends Controller
 {
     /**
      * @inheritdoc
@@ -25,8 +25,15 @@ class ProgramController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($id=0)
     {
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("detail",[
+                "model"=>$model
+            ]);
+        }
+
         $query=Post::find();
 
         $query->where(["category_id"=>Yii::$app->params["categories"]["artNews"]]);
@@ -34,13 +41,6 @@ class ProgramController extends Controller
 
         return $this->render('index',[
             "results"=>$results
-        ]);
-    }
-
-    public function actionDetail($id){
-        $model=Post::findOne($id);
-        return $this->render("detail",[
-            "model"=>$model
         ]);
     }
 }

@@ -31,8 +31,17 @@ class ArtController extends Controller
         return $this->render('about');
     }
 
-    public function actionNews()
+    public function actionNews($id=0)
     {
+        if($id!=0){
+            $model=Post::findOne($id);
+            //显示详情
+            return $this->render('newsDetail',[
+                "model"=>$model
+            ]);
+        }
+
+
         $query=Post::find();
 
         $query->where(["category_id"=>Yii::$app->params["categories"]["artNews"]]);
@@ -46,7 +55,7 @@ class ArtController extends Controller
         ]);
     }
 
-    public function actionWorks()
+    public function actionWorks($id)
     {
         $childQuery=Post::find();
         $loveQuery=clone $childQuery;

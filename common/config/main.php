@@ -26,7 +26,13 @@ return [
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
-            'showScriptName' => false
+            'showScriptName' => false,
+            'rules'=>array(
+                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<controller:\w+>/<id:\d+>'=>'<controller>/index',
+                "arteducation"=>"arteducation/index",
+                "modernart"=>"modernart/index"
+            ),
         ]
     ],
 ];

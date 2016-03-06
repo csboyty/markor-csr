@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace frontend\controllers\arteducation;
 
 use Yii;
 use yii\web\Controller;
@@ -8,7 +8,7 @@ use common\models\Post;
 /**
  * Site controller
  */
-class ArtEducationController extends Controller
+class IndexController extends Controller
 {
     /**
      * @inheritdoc
@@ -20,11 +20,6 @@ class ArtEducationController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
     public function actionIndex()
     {
         $donationQuery=Post::find();
