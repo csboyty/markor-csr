@@ -27,15 +27,36 @@ class VolunteerController extends Controller
 
     /**
      * 志愿者感言
+     * @param int $id
+     * @return string
      */
-    public function actionSpeech(){
+    public function actionSpeech($id=0)
+    {
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("speechDetail",[
+                "model"=>$model
+            ]);
+        }
+
         return $this->render("speech");
     }
 
     /**
      * 志愿者活动
+     * @param int $id
+     * @return string
      */
-    public function actionActivities(){
+    public function actionActivities($id=0)
+    {
+
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("activityDetail",[
+                "model"=>$model
+            ]);
+        }
+
         return $this->render("activities");
     }
 

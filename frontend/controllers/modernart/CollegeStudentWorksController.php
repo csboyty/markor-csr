@@ -20,8 +20,15 @@ class CollegeStudentWorksController extends Controller
         ];
     }
 
-    public function actionIndex()
+    public function actionIndex($id=0)
     {
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("detail",[
+                "model"=>$model
+            ]);
+        }
+
 
         return $this->render("index");
     }

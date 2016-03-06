@@ -27,20 +27,33 @@ class TraineeController extends Controller
 
     /**
      * 捐赠小学名单
+     * @param int $id
      * @return string
      */
-    public function actionMiens()
+    public function actionMiens($id=0)
     {
-
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("mienDetail",[
+                "model"=>$model
+            ]);
+        }
         return $this->render("miens");
     }
 
     /**
      * 捐赠历史活动
+     * @param int $id
      * @return string
      */
-    public function actionRecruits()
+    public function actionRecruits($id=0)
     {
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("recruitDetail",[
+                "model"=>$model
+            ]);
+        }
         return $this->render('recruits');
     }
 }

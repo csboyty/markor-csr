@@ -27,10 +27,19 @@ class ChildDrawController extends Controller
 
     /**
      * 儿童画视频
+     * @param int $id
      * @return string
      */
-    public function actionVideos()
+    public function actionVideos($id=0)
     {
+
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("videoDetail",[
+                "model"=>$model
+            ]);
+        }
+
         $query=Post::find();
         $query->where(["category_id"=>Yii::$app->params["categories"]["donationList"]]);
         $result=$query->limit(1)->all();
@@ -43,8 +52,18 @@ class ChildDrawController extends Controller
 
     /**
      * 爱心作品
+     * @param int $id
+     * @return string
      */
-    public function actionWorks(){
+    public function actionWorks($id=0){
+
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("workDetail",[
+                "model"=>$model
+            ]);
+        }
+
         $query=Post::find();
         $query->where(["category_id"=>Yii::$app->params["categories"]["donationList"]]);
         $result=$query->limit(1)->all();
@@ -56,9 +75,19 @@ class ChildDrawController extends Controller
 
     /**
      * 历年征集函
+     * @param int $id
      * @return string
      */
-    public function actionRecruits(){
+    public function actionRecruits($id=0)
+    {
+
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("recruitDetail",[
+                "model"=>$model
+            ]);
+        }
+
         $query=Post::find();
         $query->where(["category_id"=>Yii::$app->params["categories"]["donationActivity"]]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>

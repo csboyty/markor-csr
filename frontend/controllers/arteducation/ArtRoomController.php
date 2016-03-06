@@ -43,9 +43,18 @@ class ArtRoomController extends Controller
 
     /**
      * 捐赠历史活动
+     * @param int $id
      * @return string
      */
-    public function actionActivities(){
+    public function actionActivities($id=0){
+
+        if($id!=0){
+            $model=Post::findOne($id);
+            return $this->render("activityDetail",[
+                "model"=>$model
+            ]);
+        }
+
         $query=Post::find();
         $query->where(["category_id"=>Yii::$app->params["categories"]["donationActivity"]]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>

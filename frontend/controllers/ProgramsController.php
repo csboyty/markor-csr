@@ -20,11 +20,6 @@ class ProgramsController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
     public function actionIndex($id=0)
     {
         if($id!=0){
