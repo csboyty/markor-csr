@@ -49,6 +49,37 @@ $this->title = '新建/修改艺术•家动态';
         </div>
     </div>
     <div class="form-group">
+        <label for="name" class="control-label col-md-2">首页显示</label>
+        <div class="col-md-8">
+            <select name="enterprise_id" class="form-control">
+                <?php
+                $values=[
+                    [
+                        "name"=>"否",
+                        "value"=>0
+                    ],
+                    [
+                        "name"=>"是",
+                        "value"=>1
+                    ]
+                ];
+                foreach($values as $v){
+                    ?>
+
+                    <option
+                        <?php if($model->is_top==$v["value"]){
+                            echo "selected";
+                        } ?>
+                        value="<?php echo $v["value"]; ?>"><?php echo $v["name"]; ?>
+                    </option>
+
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
         <label  class="control-label col-md-2">时间</label>
         <div class="col-md-8">
             <input type="date" class="form-control" value="<?php echo $model->create_at ?>" name="create_at">

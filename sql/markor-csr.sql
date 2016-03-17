@@ -81,7 +81,7 @@ CREATE TABLE `post` (
   `user_id` int(11) NOT NULL DEFAULT '0',
   `organization` varchar(64) NOT NULL DEFAULT '',
   `job` varchar(32) NOT NULL DEFAULT '' COMMENT '岗位',
-  `isTop` int(11) NOT NULL DEFAULT '0' COMMENT '是否精选',
+  `is_top` int(11) NOT NULL DEFAULT '0' COMMENT '是否精选',
   `link` varchar(128) NOT NULL DEFAULT '' COMMENT '跳转地址',
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`),

@@ -39,6 +39,29 @@ return [
             "实习生风采"=>"modernart/trainee/miens",
             "实习生招聘"=>"modernart/trainee/recruits"
         ]
-
+    ],
+    "categoryUrls"=>[
+        1=>"art/news/",
+        2=>"programs/",
+        3=>"arteducation/art-room/",
+        4=>"arteducation/art-room/list/",
+        5=>"arteducation/art-room/activities/",
+        6=>"arteducation/teacher-train/",
+        7=>"arteducation/teacher-train/speech/",
+        8=>"arteducation/teacher-train/activities/",
+        9=>"arteducation/teacher-train/works/",
+        10=>"arteducation/volunteer/",
+        11=>"arteducation/volunteer/speech/",
+        12=>"arteducation/volunteer/activities/",
+        13=>"arteducation/child-draw/",
+        14=>"arteducation/child-draw/videos/",
+        15=>"arteducation/child-draw/works/",
+        16=>"arteducation/child-draw/recruits/",
+        17=>"modernart/awards/",
+        18=>"modernart/college-student-works/",
+        19=>"modernart/trainee/",
+        20=>"modernart/trainee/miens/",
+        21=>"modernart/trainee/recruits/",
+        22=>"videos/"
     ]
 ];

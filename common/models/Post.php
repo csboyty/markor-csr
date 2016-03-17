@@ -39,7 +39,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             [['title','content'], 'required'],
-            [['content'], 'string'],
+            [['content','organization','job'], 'string'],
             [['create_at'], 'safe'],
             [['create_at'], 'default', 'value' => function ($model, $attribute) {
                 return date('Y-m-d');
@@ -70,6 +70,9 @@ class Post extends \yii\db\ActiveRecord
             'video_url' => 'Video Url',
             'category_id' => 'Category ID',
             'user_id' => 'User ID',
+            'is_top' => '是否首页显示',
+            'organization'=>"单位",
+            "job"=>"工作"
         ];
     }
 
