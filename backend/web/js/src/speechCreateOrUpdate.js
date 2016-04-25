@@ -45,6 +45,9 @@ $(document).ready(function(){
         setup: function (ed) {
             ed.on('blur', function (e) {
                 $("#content").val(ed.getContent());
+                if(ed.getContent()){
+                    $(".error[for='content']").remove();
+                }
             });
         }
 
