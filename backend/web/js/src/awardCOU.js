@@ -1,4 +1,4 @@
-var mienCreateOrUpdate=(function(config,functions){
+var awardCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,7 +12,7 @@ var mienCreateOrUpdate=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="college-student-speech/index";
+                            window.location.href="award/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -42,8 +42,8 @@ $(document).ready(function(){
                 }
             });
         }
-
     });
+
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -68,31 +68,31 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
-                required:true
+            title:{
+                required:true,
+                maxlength:32
             },
             content:{
                 required:true
             },
-            author:{
-                required:true,
-                maxlength:32
+            image:{
+                required:true
             }
         },
         messages:{
-            image:{
-                required:config.validErrors.required
+            title:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
             content:{
                 required:config.validErrors.required
             },
-            author:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",32)
+            image:{
+                required:config.validErrors.required
             }
         },
         submitHandler:function(form) {
-            mienCreateOrUpdate.submitForm(form);
+            awardCOU.submitForm(form);
         }
     });
 });

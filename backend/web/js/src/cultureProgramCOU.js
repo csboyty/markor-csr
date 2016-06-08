@@ -1,4 +1,4 @@
-var cultureProgramCreateOrUpdate=(function(config,functions){
+var cultureProgramCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -124,7 +124,7 @@ $(document).ready(function(){
             }
         },
         submitHandler:function(form) {
-            cultureProgramCreateOrUpdate.submitForm(form);
+            cultureProgramCOU.submitForm(form);
         }
     });
 });

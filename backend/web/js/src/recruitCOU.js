@@ -1,4 +1,4 @@
-var resultCreateOrUpdate=(function(config,functions){
+var recruitCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,14 +12,7 @@ var resultCreateOrUpdate=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            switch(category_id){
-                                case 11:
-                                    window.location.href="result/love";
-                                    break;
-                                case 12:
-                                    window.location.href="result/student";
-                                    break;
-                            }
+                            window.location.href="college-student-speech/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -72,66 +65,28 @@ $(document).ready(function(){
             }
         }
     });
-    functions.createQiNiuUploader({
-        maxSize:config.uploader.sizes.img,
-        filter:config.uploader.filters.img,
-        uploadBtn:"uploadBgBtn",
-        multiSelection:false,
-        multipartParams:null,
-        uploadContainer:"uploadBgContainer",
-        fileAddCb:null,
-        progressCb:null,
-        uploadedCb:function(info,file,up){
-            if(info.w==1920&&info.h==600){
-                $("#bgImageUrl").val(info.url);
-
-                $("#bgImage").attr("src",info.url);
-
-                $(".error[for='bgImageUrl']").remove();
-            }else{
-                $().toastmessage("showErrorToast",config.messages.imageSizeError);
-            }
-        }
-    });
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
-                required:true
-            },
-            bg_image:{
-                required:true
-            },
-            create_at:{
-                required:true
+            title:{
+                required:true,
+                maxlength:32
             },
             content:{
                 required:true
-            },
-            excerpt:{
-                required:true,
-                maxlength:32
             }
         },
         messages:{
-            image:{
-                required:config.validErrors.required
-            },
-            bg_image:{
-                required:config.validErrors.required
-            },
-            create_at:{
-                required:config.validErrors.required
+            title:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
             content:{
-                required:config.validErrors.required
-            },
-            excerpt:{
                 required:config.validErrors.required
             }
         },
         submitHandler:function(form) {
-            resultCreateOrUpdate.submitForm(form);
+            recruitCOU.submitForm(form);
         }
     });
 });

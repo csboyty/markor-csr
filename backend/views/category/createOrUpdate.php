@@ -57,5 +57,5 @@ $this->title = '新建/修改分类';
 </form>
 
 <?php
-    $this->registerJsFile("@web/js/src/categoryCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+    $this->registerJsFile("@web/js/src/categoryCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

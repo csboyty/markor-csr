@@ -6,18 +6,16 @@ use backend\assets\AppAsset;
 $this->title = '捐赠小学名单';
 ?>
     <script>
-        var category_id=<?php echo Yii::$app->params["categories"]["donationList"]; ?>;
+        var category_id=<?php echo Yii::$app->params["categories"]["donation"]; ?>;
     </script>
 
-    <a class="btn btn-success" href="donation/list-create">
+    <a class="btn btn-success" href="donation/create">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
-            <th>图像</th>
-            <th>名称</th>
-            <th>时间</th>
+            <th>ID</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -36,5 +34,5 @@ $this->title = '捐赠小学名单';
 
 
 <?php
-$this->registerJsFile("@web/js/src/listMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/donationListMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

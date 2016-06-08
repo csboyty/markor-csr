@@ -1,4 +1,4 @@
-var newsMgr=(function(config,functions){
+var donationListMgr=(function(config,functions){
     var loadedData={};
     /**
      * 创建datatable
@@ -21,11 +21,10 @@ var newsMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
-                { "mDataProp": "title"},
-                { "mDataProp": "create_at"},
+                { "mDataProp": "id"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
-                        return '<a href="news/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
+                        return '<a href="donation/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
                             '<a class="delete" href="'+oObj.aData.id+'">删除</a>';
                     }
                 }
@@ -110,11 +109,11 @@ var newsMgr=(function(config,functions){
 
 $(document).ready(function(){
 
-    newsMgr.createTable();
+    donationListMgr.createTable();
 
     $("#myTable").on("click","a.delete",function(){
         if(confirm(config.messages.confirmDelete)){
-            newsMgr.delete($(this).attr("href"));
+            donationListMgr.delete($(this).attr("href"));
         }
         return false;
     })

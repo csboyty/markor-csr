@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '大学奖学金活动';
+$this->title = '分类管理';
 ?>
 
     <script>

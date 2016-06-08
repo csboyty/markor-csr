@@ -1,4 +1,4 @@
-var listMgr=(function(config,functions){
+var honorMgr=(function(config,functions){
     var loadedData={};
     /**
      * 创建datatable
@@ -21,16 +21,17 @@ var listMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
-                { "mDataProp": "image",
+                { "mDataProp": "thumb",
                     "fnRender":function(oObj){
-                        return '<img src="'+oObj.aData.image+'">';
-                    }
-                },
-                { "mDataProp": "title"},
-                { "mDataProp": "create_at"},
+                        return "<img class='thumb' src="+oObj.aData.thumb+">";
+                    }},
+                { "mDataProp": "excerpt",
+                    "fnRender":function(oObj){
+                        return "<span title='"+oObj.aData.excerpt+"'>"+oObj.aData.excerpt.substring(0,20)+"..."+"</span>"
+                    }},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
-                        return '<a href="donation/list-update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
+                        return '<a href="honor/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
                             '<a class="delete" href="'+oObj.aData.id+'">删除</a>';
                     }
                 }
@@ -115,11 +116,11 @@ var listMgr=(function(config,functions){
 
 $(document).ready(function(){
 
-    listMgr.createTable();
+    honorMgr.createTable();
 
     $("#myTable").on("click","a.delete",function(){
         if(confirm(config.messages.confirmDelete)){
-            listMgr.delete($(this).attr("href"));
+            honorMgr.delete($(this).attr("href"));
         }
         return false;
     })

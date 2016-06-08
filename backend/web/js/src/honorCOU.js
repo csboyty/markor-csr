@@ -1,4 +1,4 @@
-var recruitCreateOrUpdate=(function(config,functions){
+var honorCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,7 +12,7 @@ var recruitCreateOrUpdate=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="college-student-speech/index";
+                            window.location.href="honor/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -42,8 +42,8 @@ $(document).ready(function(){
                 }
             });
         }
-
     });
+
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -68,25 +68,25 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            title:{
+            excerpt:{
                 required:true,
-                maxlength:32
+                maxlength:255
             },
-            content:{
+            image:{
                 required:true
             }
         },
         messages:{
-            title:{
+            excerpt:{
                 required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",32)
+                maxlength:config.validErrors.maxLength.replace("${max}",255)
             },
-            content:{
+            image:{
                 required:config.validErrors.required
             }
         },
         submitHandler:function(form) {
-            recruitCreateOrUpdate.submitForm(form);
+            honorCOU.submitForm(form);
         }
     });
 });

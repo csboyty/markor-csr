@@ -1,4 +1,4 @@
-var activityCreateOrUpdate=(function(config,functions){
+var speechCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -13,16 +13,14 @@ var activityCreateOrUpdate=(function(config,functions){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
                             switch(category_id){
-                                case 15:
-                                    window.location.href="activity/donation";
+                                case 9:
+                                    window.location.href="speech/college-student";
                                     break;
-                                case 17:
-                                    window.location.href="result/volunteer";
-                                    break;
-                                case 22:
-                                    window.location.href="result/teacher-train";
+                                case 14:
+                                    window.location.href="speech/activity";
                                     break;
                             }
+
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -52,9 +50,8 @@ $(document).ready(function(){
                 }
             });
         }
+
     });
-
-
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -79,25 +76,37 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            title:{
-                required:true,
-                maxlength:32
+            image:{
+                required:true
+            },
+            create_at:{
+                required:true
             },
             content:{
                 required:true
+            },
+            author:{
+                required:true,
+                maxlength:32
             }
         },
         messages:{
-            title:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",32)
+            image:{
+                required:config.validErrors.required
+            },
+            create_at:{
+                required:config.validErrors.required
             },
             content:{
                 required:config.validErrors.required
+            },
+            author:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
             }
         },
         submitHandler:function(form) {
-            activityCreateOrUpdate.submitForm(form);
+            speechCOU.submitForm(form);
         }
     });
 });

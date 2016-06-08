@@ -1,4 +1,4 @@
-var speechCreateOrUpdate=(function(config,functions){
+var activityCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -13,14 +13,16 @@ var speechCreateOrUpdate=(function(config,functions){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
                             switch(category_id){
-                                case 9:
-                                    window.location.href="speech/college-student";
+                                case 4:
+                                    window.location.href="activity/teacher";
                                     break;
-                                case 14:
-                                    window.location.href="speech/activity";
+                                case 11:
+                                    window.location.href="activity/volunteer";
+                                    break;
+                                case 7:
+                                    window.location.href="activity/teacher-train";
                                     break;
                             }
-
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -50,8 +52,9 @@ $(document).ready(function(){
                 }
             });
         }
-
     });
+
+
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -76,37 +79,45 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
+            title:{
+                required:true,
+                maxlength:32
+            },
+            thumb:{
                 required:true
             },
-            create_at:{
+            date:{
                 required:true
+            },
+            excerpt:{
+                required:true,
+                maxlength:255
             },
             content:{
                 required:true
-            },
-            author:{
-                required:true,
-                maxlength:32
             }
         },
         messages:{
-            image:{
+            title:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
+            },
+            thumb:{
                 required:config.validErrors.required
             },
-            create_at:{
+            date:{
                 required:config.validErrors.required
+            },
+            excerpt:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",255)
             },
             content:{
                 required:config.validErrors.required
-            },
-            author:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",32)
             }
         },
         submitHandler:function(form) {
-            speechCreateOrUpdate.submitForm(form);
+            activityCOU.submitForm(form);
         }
     });
 });

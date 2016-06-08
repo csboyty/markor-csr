@@ -3,24 +3,24 @@
 namespace common\models;
 
 use Yii;
-
 use yii\web\IdentityInterface;
-use yii\base\NotSupportedException;
-use yii\db\ActiveRecord;
-use app\models\Enterprise;
+use common\models\Post;
+use common\models\Recruit;
+
 
 /**
  * This is the model class for table "user".
  *
- * @property integer $user_id
- * @property integer $enterprise_id
- * @property string $name
+ * @property integer $id
+ * @property string $email
  * @property string $password
  * @property string $role
- * @property string $wechat_open_id
  * @property string $auth_key
+ *
+ * @property Post[] $posts
+ * @property Recruit[] $recruits
  */
-class User extends ActiveRecord implements \yii\web\IdentityInterface
+class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
 
     const ROLE_USER = "USER";
@@ -41,10 +41,9 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['email', 'password'], 'string', 'max' => 255],
-            [['role'], 'string', 'max' => 12],
-            [['auth_key'], 'string', 'max' => 32]
+            [['email'], 'string', 'max' => 32],
+            [['password', 'auth_key'], 'string', 'max' => 255],
+            [['role'], 'string', 'max' => 15]
         ];
     }
 
@@ -54,10 +53,10 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     public function attributeLabels()
     {
         return [
-            'id' => '用户ID',
-            'email' => '邮箱',
-            'password' => '密码',
-            'role' => '角色',
+            'id' => 'ID',
+            'email' => 'Email',
+            'password' => 'Password',
+            'role' => 'Role',
             'auth_key' => 'Auth Key',
         ];
     }
@@ -173,4 +172,19 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         $this->password=$password;
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPosts()
+    {
+        return $this->hasMany(Post::className(), ['user_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRecruits()
+    {
+        return $this->hasMany(Recruit::className(), ['user_id' => 'id']);
+    }
 }

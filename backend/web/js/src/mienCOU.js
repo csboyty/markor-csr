@@ -1,4 +1,4 @@
-var newsCreateOrUpdate=(function(config,functions){
+var mienCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,7 +12,7 @@ var newsCreateOrUpdate=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="news/index";
+                            window.location.href="college-student-speech/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -65,75 +65,34 @@ $(document).ready(function(){
             }
         }
     });
-    functions.createQiNiuUploader({
-        maxSize:config.uploader.sizes.img,
-        filter:config.uploader.filters.img,
-        uploadBtn:"uploadBgBtn",
-        multiSelection:false,
-        multipartParams:null,
-        uploadContainer:"uploadBgContainer",
-        fileAddCb:null,
-        progressCb:null,
-        uploadedCb:function(info,file,up){
-            if(info.w==1920&&info.h==600){
-                $("#bgImageUrl").val(info.url);
-
-                $("#bgImage").attr("src",info.url);
-
-                $(".error[for='bgImageUrl']").remove();
-            }else{
-                $().toastmessage("showErrorToast",config.messages.imageSizeError);
-            }
-        }
-    });
     $("#myForm").validate({
         ignore:[],
         rules:{
             image:{
                 required:true
             },
-            bg_image:{
-                required:true
-            },
-            title:{
-                required:true,
-                maxlength:32
-            },
-            create_at:{
-                required:true
-            },
             content:{
                 required:true
             },
-            excerpt:{
+            author:{
                 required:true,
-                maxlength:255
+                maxlength:32
             }
         },
         messages:{
             image:{
                 required:config.validErrors.required
             },
-            bg_image:{
-                required:config.validErrors.required
-            },
-            create_at:{
-                required:config.validErrors.required
-            },
             content:{
                 required:config.validErrors.required
             },
-            title:{
+            author:{
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",32)
-            },
-            excerpt:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",255)
             }
         },
         submitHandler:function(form) {
-            newsCreateOrUpdate.submitForm(form);
+            mienCOU.submitForm(form);
         }
     });
 });

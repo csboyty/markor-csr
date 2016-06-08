@@ -1,4 +1,4 @@
-var listCreateOrUpdate=(function(config,functions){
+var donationListCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,7 +12,7 @@ var listCreateOrUpdate=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="donation/list";
+                            window.location.href="donation/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -44,55 +44,20 @@ $(document).ready(function(){
         }
 
     });
-    functions.createQiNiuUploader({
-        maxSize:config.uploader.sizes.img,
-        filter:config.uploader.filters.img,
-        uploadBtn:"uploadBtn",
-        multiSelection:false,
-        multipartParams:null,
-        uploadContainer:"uploadContainer",
-        fileAddCb:null,
-        progressCb:null,
-        uploadedCb:function(info,file,up){
-            if(info.w==500&&info.h==500){
-                $("#imageUrl").val(info.url);
-
-                $("#image").attr("src",info.url);
-
-                $(".error[for='imageUrl']").remove();
-            }else{
-                $().toastmessage("showErrorToast",config.messages.imageSizeError);
-            }
-        }
-    });
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
-                required:true
-            },
             content:{
                 required:true
-            },
-            title:{
-                required:true,
-                maxlength:32
             }
         },
         messages:{
-            image:{
-                required:config.validErrors.required
-            },
             content:{
                 required:config.validErrors.required
-            },
-            title:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",32)
             }
         },
         submitHandler:function(form) {
-            listCreateOrUpdate.submitForm(form);
+            donationListCOU.submitForm(form);
         }
     });
 });

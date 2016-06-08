@@ -10,10 +10,10 @@ use common\models\User;
 
 
 /**
- * Class DonationController 捐赠小学名单控制器
+ * Class AwardController 高校奖学金活动控制器
  * @package backend\controllers
  */
-class DonationController extends \yii\web\Controller
+class HonorController extends \yii\web\Controller
 {
 
     public function behaviors()
@@ -45,6 +45,7 @@ class DonationController extends \yii\web\Controller
     public function actionCreate(){
 
         $model=new Post();
+
         return $this->render('createOrUpdate',[
             'model' => $model,
         ]);
@@ -60,13 +61,6 @@ class DonationController extends \yii\web\Controller
         ]);
     }
 
-    /**
-     * Finds the Notice model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Notice the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Post::findOne($id)) !== null) {

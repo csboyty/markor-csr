@@ -1,4 +1,4 @@
-var videoCreateOrUpdate=(function(config,functions){
+var videoCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -89,7 +89,7 @@ $(document).ready(function(){
             }
         },
         submitHandler:function(form) {
-            videoCreateOrUpdate.submitForm(form);
+            videoCOU.submitForm(form);
         }
     });
 });

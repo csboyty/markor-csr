@@ -51,7 +51,7 @@ class PostController extends \yii\web\Controller
         $aaData=$query
             ->asArray()
             ->orderBy([
-                'create_at' => SORT_DESC,
+                'date' => SORT_DESC,
             ])
             ->limit($limit)
             ->offset($offset)
@@ -90,12 +90,14 @@ class PostController extends \yii\web\Controller
         }
 
         if(isset($params["bg_image"])){
-            $qiNiu->handleImage($params["image"],Yii::$app->params["imageSizes"]["bgImage"]);
+            $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
         }
 
 
 
         $data=array();
+
+        $params["user_id"]=Yii::$app->user->getId();
 
         //yii自动生成的form参数是Xxx["name"]这种形式，获取后就会是在一个Xxx中
         $data["Post"]=$params;

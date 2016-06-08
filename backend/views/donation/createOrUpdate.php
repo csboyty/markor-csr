@@ -15,29 +15,8 @@ $this->title = '新建/修改捐赠小学名单';
         <?php
         }
         ?>
-        <input type="hidden" value="<?php echo Yii::$app->params["categories"]["donationList"]; ?>" name="category_id">
-        <div class="form-group">
-            <label class="control-label col-md-2">封面图*</label>
-            <div class="col-md-10" id="uploadContainer">
-                <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
-                <p class="help-block">请上传500x500的jpg，png</p>
-                <img  id="image"  style="width:100px"
-                      src="images/app/defaultPeopleImage.jpg"/>
-                <input type="hidden" id="imageUrl" name="image">
-            </div>
-        </div>
-        <div class="form-group">
-            <label  class="control-label col-md-2">名称*</label>
-            <div class="col-md-8">
-                <input type="text" class="form-control" value="<?php echo $model->title ?>" name="title">
-            </div>
-        </div>
-        <div class="form-group">
-            <label  class="control-label col-md-2">时间*</label>
-            <div class="col-md-8">
-                <input type="date" class="form-control" value="<?php echo $model->create_at ?>" name="create_at">
-            </div>
-        </div>
+        <input type="hidden" value="<?php echo Yii::$app->params["categories"]["donation"]; ?>" name="category_id">
+
         <div class="form-group">
             <label  class="control-label col-md-2">内容*</label>
             <div class="col-md-8">
@@ -52,5 +31,5 @@ $this->title = '新建/修改捐赠小学名单';
     </form>
 
 <?php
-$this->registerJsFile("@web/js/src/listCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/donationListCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

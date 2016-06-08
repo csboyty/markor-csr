@@ -44,7 +44,7 @@ class Category extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'slug' => 'Slug',
-            'parent_id' => 'Parent',
+            'parent_id' => 'Parent ID',
         ];
     }
 

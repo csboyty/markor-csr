@@ -3,20 +3,21 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '艺术•家动态';
+$this->title = '艺术家荣誉';
 ?>
+
     <script>
-        var category_id=<?php echo Yii::$app->params["categories"]["artNews"]; ?>;
+        var category_id=<?php echo Yii::$app->params["categories"]["artHonor"]; ?>;
     </script>
 
-    <a class="btn btn-success" href="news/create">
+    <a class="btn btn-success" href="honor/create">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
-            <th>标题</th>
-            <th>时间</th>
+            <th>图片</th>
+            <th>内容</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -35,5 +36,5 @@ $this->title = '艺术•家动态';
 
 
 <?php
-$this->registerJsFile("@web/js/src/artNewsMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/honorMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

@@ -41,8 +41,8 @@ class ActivityController extends \yii\web\Controller
      * 快乐美术教室历年活动
      * @return string
      */
-    public function actionDonation(){
-        $category=Category::findOne(Yii::$app->params["categories"]["donationActivity"]);
+    public function actionTeacher(){
+        $category=Category::findOne(Yii::$app->params["categories"]["activityTeacher"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -55,7 +55,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionVolunteer(){
-        $category=Category::findOne(Yii::$app->params["categories"]["volunteerActivity"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["activityVolunteer"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -68,7 +68,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionTeacherTrain(){
-        $category=Category::findOne(Yii::$app->params["categories"]["teacherTrainActivity"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["activityTeacherTrain"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

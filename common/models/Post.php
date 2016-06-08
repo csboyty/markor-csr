@@ -3,21 +3,22 @@
 namespace common\models;
 
 use Yii;
+use common\models\User;
+use common\models\Category;
 
 /**
  * This is the model class for table "post".
  *
  * @property integer $id
- * @property string $title
- * @property string $excerpt
- * @property string $content
- * @property string $create_at
- * @property string $author
- * @property string $image
- * @property string $bg_image
- * @property string $video_url
  * @property integer $category_id
  * @property integer $user_id
+ * @property string $thumb
+ * @property string $title
+ * @property string $excerpt
+ * @property string $date
+ * @property string $author
+ * @property string $content
+ * @property string $memo
  *
  * @property Category $category
  * @property User $user
@@ -38,18 +39,13 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title','content'], 'required'],
-            [['content','organization','job'], 'string'],
-            [['create_at'], 'safe'],
-            [['create_at'], 'default', 'value' => function ($model, $attribute) {
-                return date('Y-m-d');
-            }],
             [['category_id', 'user_id'], 'integer'],
-            [['user_id'], 'default', 'value' => function ($model, $attribute) {
-                return Yii::$app->user->getId()?Yii::$app->user->getId():1;
-            }],
-            [['title', 'author'], 'string', 'max' => 32],
-            [['excerpt', 'image', 'bg_image', 'video_url'], 'string', 'max' => 255]
+            [['date'], 'safe'],
+            [['content'], 'string'],
+            [['thumb','bg_image'], 'string', 'max' => 128],
+            [['title'], 'string', 'max' => 32],
+            [['excerpt', 'memo'], 'string', 'max' => 255],
+            [['author'], 'string', 'max' => 8]
         ];
     }
 
@@ -60,19 +56,16 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'excerpt' => 'Excerpt',
-            'content' => 'Content',
-            'create_at' => 'Create At',
-            'author' => 'Author',
-            'image' => 'Image',
-            'bg_image' => 'Bg Image',
-            'video_url' => 'Video Url',
             'category_id' => 'Category ID',
             'user_id' => 'User ID',
-            'is_top' => '是否首页显示',
-            'organization'=>"单位",
-            "job"=>"工作"
+            'thumb' => 'Thumb',
+            'bg_image'=> 'Bg Image',
+            'title' => 'Title',
+            'excerpt' => 'Excerpt',
+            'date' => 'Date',
+            'author' => 'Author',
+            'content' => 'Content',
+            'memo' => 'Memo',
         ];
     }
 

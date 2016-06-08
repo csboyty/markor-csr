@@ -1,4 +1,4 @@
-var awardCreateOrUpdate=(function(config,functions){
+var artNewsCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,7 +12,7 @@ var awardCreateOrUpdate=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="award/index";
+                            window.location.href="news/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -42,8 +42,8 @@ $(document).ready(function(){
                 }
             });
         }
-    });
 
+    });
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -65,34 +65,75 @@ $(document).ready(function(){
             }
         }
     });
+    functions.createQiNiuUploader({
+        maxSize:config.uploader.sizes.img,
+        filter:config.uploader.filters.img,
+        uploadBtn:"uploadBgBtn",
+        multiSelection:false,
+        multipartParams:null,
+        uploadContainer:"uploadBgContainer",
+        fileAddCb:null,
+        progressCb:null,
+        uploadedCb:function(info,file,up){
+            if(info.w==1920&&info.h==600){
+                $("#bgImageUrl").val(info.url);
+
+                $("#bgImage").attr("src",info.url);
+
+                $(".error[for='bgImageUrl']").remove();
+            }else{
+                $().toastmessage("showErrorToast",config.messages.imageSizeError);
+            }
+        }
+    });
     $("#myForm").validate({
         ignore:[],
         rules:{
+            thumb:{
+                required:true
+            },
+            bg_image:{
+                required:true
+            },
             title:{
                 required:true,
                 maxlength:32
             },
+            date:{
+                required:true
+            },
             content:{
                 required:true
             },
-            image:{
-                required:true
+            excerpt:{
+                required:true,
+                maxlength:255
             }
         },
         messages:{
+            thumb:{
+                required:config.validErrors.required
+            },
+            bg_image:{
+                required:config.validErrors.required
+            },
+            date:{
+                required:config.validErrors.required
+            },
+            content:{
+                required:config.validErrors.required
+            },
             title:{
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
-            content:{
-                required:config.validErrors.required
-            },
-            image:{
-                required:config.validErrors.required
+            excerpt:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",255)
             }
         },
         submitHandler:function(form) {
-            awardCreateOrUpdate.submitForm(form);
+            artNewsCOU.submitForm(form);
         }
     });
 });
