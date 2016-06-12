@@ -7,12 +7,14 @@ use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
+use common\models\Category;
+
 
 /**
- * Class CultureProgramController 艺术传承控制器
+ * Class ChildDrawController 儿童画控制器
  * @package backend\controllers
  */
-class CultureProgramController extends \yii\web\Controller
+class ChildDrawController extends \yii\web\Controller
 {
 
     public function behaviors()
@@ -36,25 +38,36 @@ class CultureProgramController extends \yii\web\Controller
         ];
     }
 
-    public function actionIndex(){
-        return $this->render("index");
+    public function actionCollect(){
+        return $this->render("collect");
     }
 
 
-    public function actionCreate(){
-        $model=new Post();
+    public function actionCollectCreate(){
 
-        return $this->render('cOU',[
+        $model=new Post();
+        $categories=Category::find()
+            //->where(["parent_id"=>0])
+            ->where(["parent_id"=>Yii::$app->params["categories"]["childDrawCollect"]])
+            ->asArray()
+            ->all();
+        return $this->render('collectCOU',[
+            'categories'=>$categories,
             'model' => $model,
         ]);
     }
 
-    public function actionUpdate($id){
+    public function actionCollectUpdate($id){
 
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
-
-        return $this->render('cOU',[
+        $categories=Category::find()
+            //->where(["parent_id"=>0])
+            ->where(["parent_id"=>Yii::$app->params["categories"]["childDrawCollect"]])
+            ->asArray()
+            ->all();
+        return $this->render('collectCOU',[
+            'categories'=>$categories,
             'model' => $model,
         ]);
     }

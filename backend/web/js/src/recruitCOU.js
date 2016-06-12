@@ -5,14 +5,11 @@ var recruitCOU=(function(config,functions){
             functions.showLoading();
             $(form).ajaxSubmit({
                 dataType:"json",
-                /*data:{
-                    content:tinyMCE.editors[0].getContent()
-                },*/
                 success:function(response){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="college-student-speech/index";
+                            window.location.href="recruit/index";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -27,61 +24,47 @@ var recruitCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
-    tinymce.init({
-        selector: "#content",
-        height:300,
-        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-        toolbar2: 'print preview media | forecolor backcolor emoticons',
-        //image_advtab: true,
-        plugins : 'link image preview fullscreen table textcolor colorpicker code',
-        setup: function (ed) {
-            ed.on('blur', function (e) {
-                $("#content").val(ed.getContent());
-                if(ed.getContent()){
-                    $(".error[for='content']").remove();
-                }
-            });
-        }
-
-    });
-    functions.createQiNiuUploader({
-        maxSize:config.uploader.sizes.img,
-        filter:config.uploader.filters.img,
-        uploadBtn:"uploadBtn",
-        multiSelection:false,
-        multipartParams:null,
-        uploadContainer:"uploadContainer",
-        fileAddCb:null,
-        progressCb:null,
-        uploadedCb:function(info,file,up){
-            if(info.w==500&&info.h==500){
-                $("#imageUrl").val(info.url);
-
-                $("#image").attr("src",info.url);
-
-                $(".error[for='imageUrl']").remove();
-            }else{
-                $().toastmessage("showErrorToast",config.messages.imageSizeError);
-            }
-        }
-    });
     $("#myForm").validate({
         ignore:[],
         rules:{
-            title:{
+            job:{
                 required:true,
                 maxlength:32
             },
-            content:{
+            job_require:{
+                required:true,
+                maxlength:512
+            },
+            internship_require:{
+                required:true,
+                maxlength:512
+            },
+            address:{
+                required:true,
+                maxlength:64
+            },
+            date:{
                 required:true
             }
         },
         messages:{
-            title:{
+            job:{
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
-            content:{
+            job_require:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",512)
+            },
+            internship_require:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",512)
+            },
+            address:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",64)
+            },
+            date:{
                 required:config.validErrors.required
             }
         },

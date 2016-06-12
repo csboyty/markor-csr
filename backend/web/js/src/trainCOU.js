@@ -1,4 +1,4 @@
-var mienCOU=(function(config,functions){
+var trainCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this;
@@ -12,7 +12,7 @@ var mienCOU=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="college-student-speech/index";
+                            window.location.href="volunteer/train";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -68,31 +68,23 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
+            thumb:{
                 required:true
             },
             content:{
                 required:true
-            },
-            author:{
-                required:true,
-                maxlength:32
             }
         },
         messages:{
-            image:{
+            thumb:{
                 required:config.validErrors.required
             },
             content:{
                 required:config.validErrors.required
-            },
-            author:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",32)
             }
         },
         submitHandler:function(form) {
-            mienCOU.submitForm(form);
+            trainCOU.submitForm(form);
         }
     });
 });

@@ -9,7 +9,14 @@ var videoCOU=(function(config,functions){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="video/index";
+                            switch(category_id){
+                                case 26:
+                                    window.location.href="video/index";
+                                    break;
+                                case 17:
+                                    window.location.href="video/child-draw";
+                                    break;
+                            }
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -49,43 +56,35 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
+            thumb:{
                 required:true
             },
-            create_at:{
+            date:{
                 required:true
-            },
-            video_url:{
-                required:true,
-                maxlength:128
             },
             title:{
                 required:true,
                 maxlength:32
             },
-            excerpt:{
+            memo:{
                 required:true,
-                maxlength:255
+                maxlength:128
             }
         },
         messages:{
-            image:{
+            thumb:{
                 required:config.validErrors.required
             },
-            video_url:{
-                required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",128)
-            },
-            create_at:{
+            date:{
                 required:config.validErrors.required
             },
             title:{
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
-            excerpt:{
+            memo:{
                 required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",255)
+                maxlength:config.validErrors.maxLength.replace("${max}",128)
             }
         },
         submitHandler:function(form) {

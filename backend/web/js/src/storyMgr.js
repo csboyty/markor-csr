@@ -1,4 +1,4 @@
-var videoMgr=(function(config,functions){
+var storyMgr=(function(config,functions){
     var loadedData={};
     /**
      * 创建datatable
@@ -21,16 +21,11 @@ var videoMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
-                { "mDataProp": "thumb",
-                    "fnRender":function(oObj){
-                        return "<img src='"+oObj.aData.thumb+"'>";
-                    }
-                },
                 { "mDataProp": "title"},
-                { "mDataProp": "date"},
+                { "mDataProp": "author"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
-                        return '<a href="video/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
+                        return '<a href="story/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
                             '<a class="delete" href="'+oObj.aData.id+'">删除</a>';
                     }
                 }
@@ -115,11 +110,11 @@ var videoMgr=(function(config,functions){
 
 $(document).ready(function(){
 
-    videoMgr.createTable();
+    storyMgr.createTable();
 
     $("#myTable").on("click","a.delete",function(){
         if(confirm(config.messages.confirmDelete)){
-            videoMgr.delete($(this).attr("href"));
+            storyMgr.delete($(this).attr("href"));
         }
         return false;
     })

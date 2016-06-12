@@ -16,6 +16,8 @@ var config={
     ajaxUrls:{
         postGetAll:"post/list",
         postDelete:"post/delete",
+        recruitGetAll:"recruit/list",
+        recruitDelete:"recruit/delete",
         categoryGetAll:"category/list",
         categoryDelete:"category/delete"
     },

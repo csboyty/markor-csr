@@ -3,11 +3,8 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name."/":"").$category->name;
+$this->title = '新建/修改志愿者活动';
 ?>
-<script>
-    var category_id=<?php echo $category->id; ?>;
-</script>
 
 <form class="form-horizontal" id="myForm" action="post/submit" method="post">
     <?php
@@ -17,33 +14,33 @@ $this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name
             <?php
         }
     ?>
-    <input type="hidden" value="<?php echo $category->id; ?>" name="category_id">
+    <input type="hidden" value="<?php echo Yii::$app->params["categories"]["volunteerTrain"]; ?>" name="category_id">
     <div class="form-group">
         <label class="control-label col-md-2">封面图*</label>
         <div class="col-md-10" id="uploadContainer">
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
             <p class="help-block">请上传500x500的jpg，png</p>
             <img  id="image"  style="width:100px"
-                  src="images/app/defaultPeopleImage.jpg"/>
-            <input type="hidden" id="imageUrl" name="image">
+                  src="<?php echo $model->thumb?$model->thumb:'images/app/defaultThumb.png'; ?>"/>
+            <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">
         </div>
     </div>
     <div class="form-group">
-        <label  class="control-label col-md-2">时间*</label>
+        <label  class="control-label col-md-2">标题*</label>
         <div class="col-md-8">
-            <input type="date" class="form-control" value="<?php echo $model->create_at ?>" name="create_at">
+            <input type="text" class="form-control" value="<?php echo $model->title; ?>" name="title">
         </div>
     </div>
     <div class="form-group">
-        <label  class="control-label col-md-2">姓名*</label>
+        <label  class="control-label col-md-2">描述*</label>
         <div class="col-md-8">
-            <input type="text" class="form-control" value="<?php echo $model->author ?>" name="author">
+            <input type="text" class="form-control" value="<?php echo $model->excerpt; ?>" name="excerpt">
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">内容*</label>
         <div class="col-md-8">
-            <textarea class="form-control"  name="content" rows="3" id="content"><?php echo $model->content ?></textarea>
+            <textarea class="form-control"  name="excerpt" rows="3"><?php echo $model->excerpt; ?></textarea>
         </div>
     </div>
     <div class="form-group">
@@ -54,5 +51,5 @@ $this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name
 </form>
 
 <?php
-    $this->registerJsFile("@web/js/src/speechCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+    $this->registerJsFile("@web/js/src/trainCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

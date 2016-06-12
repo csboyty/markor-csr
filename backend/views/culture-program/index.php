@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '传统文化项目';
+$this->title = '艺术传承';
 ?>
     <script>
         var category_id=<?php echo Yii::$app->params["categories"]["cultureProgram"]; ?>;

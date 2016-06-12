@@ -1,8 +1,6 @@
 <?php
-
 use yii\helpers\Html;
 use backend\assets\AppAsset;
-
 $this->title = '捐赠小学名单';
 ?>
     <script>

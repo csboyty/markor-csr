@@ -21,13 +21,11 @@ var resultMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
-                { "mDataProp": "image",
+                { "mDataProp": "thumb",
                     "fnRender":function(oObj){
-                        return '<img src="'+oObj.aData.image+'">';
+                        return '<img class="thumb" src="'+oObj.aData.thumb+'">';
                     }
                 },
-                { "mDataProp": "title"},
-                { "mDataProp": "create_at"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
                         return '<a href="result/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +

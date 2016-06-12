@@ -3,20 +3,16 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = $parentCategory->name."/".$category->name;
+$this->title = "实习生招聘";
 ?>
 
-    <script>
-        var category_id=<?php echo $category->id; ?>;
-    </script>
-
-    <a class="btn btn-success" href="recruit/create?category_id=<?php echo $category->id; ?>">
+    <a class="btn btn-success" href="recruit/create">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
-            <th>标题</th>
+            <th>实习岗位</th>
             <th>时间</th>
             <th>操作</th>
         </tr>

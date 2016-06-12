@@ -13,11 +13,14 @@ var resultCOU=(function(config,functions){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
                             switch(category_id){
-                                case 11:
-                                    window.location.href="result/love";
+                                case 9:
+                                    window.location.href="result/teacher-train";
                                     break;
-                                case 12:
-                                    window.location.href="result/student";
+                                case 16:
+                                    window.location.href="result/child-draw";
+                                    break;
+                                case 19:
+                                    window.location.href="result/college-student";
                                     break;
                             }
                         },3000);
@@ -34,23 +37,6 @@ var resultCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
-    tinymce.init({
-        selector: "#content",
-        height:300,
-        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-        toolbar2: 'print preview media | forecolor backcolor emoticons',
-        //image_advtab: true,
-        plugins : 'link image preview fullscreen table textcolor colorpicker code',
-        setup: function (ed) {
-            ed.on('blur', function (e) {
-                $("#content").val(ed.getContent());
-                if(ed.getContent()){
-                    $(".error[for='content']").remove();
-                }
-            });
-        }
-
-    });
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -72,61 +58,15 @@ $(document).ready(function(){
             }
         }
     });
-    functions.createQiNiuUploader({
-        maxSize:config.uploader.sizes.img,
-        filter:config.uploader.filters.img,
-        uploadBtn:"uploadBgBtn",
-        multiSelection:false,
-        multipartParams:null,
-        uploadContainer:"uploadBgContainer",
-        fileAddCb:null,
-        progressCb:null,
-        uploadedCb:function(info,file,up){
-            if(info.w==1920&&info.h==600){
-                $("#bgImageUrl").val(info.url);
-
-                $("#bgImage").attr("src",info.url);
-
-                $(".error[for='bgImageUrl']").remove();
-            }else{
-                $().toastmessage("showErrorToast",config.messages.imageSizeError);
-            }
-        }
-    });
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
+            thumb:{
                 required:true
-            },
-            bg_image:{
-                required:true
-            },
-            create_at:{
-                required:true
-            },
-            content:{
-                required:true
-            },
-            excerpt:{
-                required:true,
-                maxlength:32
             }
         },
         messages:{
             image:{
-                required:config.validErrors.required
-            },
-            bg_image:{
-                required:config.validErrors.required
-            },
-            create_at:{
-                required:config.validErrors.required
-            },
-            content:{
-                required:config.validErrors.required
-            },
-            excerpt:{
                 required:config.validErrors.required
             }
         },

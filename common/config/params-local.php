@@ -9,6 +9,20 @@ return [
         "activityTeacher"=>4,
         "activityTeacherTrain"=>7,
         "activityVolunteer"=>11,
-        "donation"=>5
+        "donation"=>5,
+        "speechTeacherTrain"=>8,
+        "speechVolunteer"=>12,
+        "speechTrainee"=>21,
+        "resultTeacherTrain"=>9,
+        "resultChildDraw"=>16,
+        "resultCollegeStudent"=>19,
+        "volunteerTrain"=>13,
+        "childDraw"=>14,
+        "childDrawCollect"=>15,
+        "video"=>26,
+        "videoChildDraw"=>17,
+        "story"=>24,
+        "award"=>18,//高校奖学金
+        "cultureProgram"=>23//艺术传承
     ]
 ];

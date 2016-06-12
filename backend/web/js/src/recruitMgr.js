@@ -8,7 +8,7 @@ var recruitMgr=(function(config,functions){
 
         var ownTable=$("#myTable").dataTable({
             "bServerSide": true,
-            "sAjaxSource": config.ajaxUrls.postGetAll,
+            "sAjaxSource": config.ajaxUrls.recruitGetAll,
             "bInfo":true,
             "bProcessing":true,
             "bLengthChange": false,
@@ -21,19 +21,19 @@ var recruitMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
-                { "mDataProp": "title"},
-                { "mDataProp": "create_at"},
+                { "mDataProp": "job"},
+                { "mDataProp": "date"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
-                        return '<a href="trainee/recruit-update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
+                        return '<a href="recruit/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
                             '<a class="delete" href="'+oObj.aData.id+'">删除</a>';
                     }
                 }
             ] ,
             "fnServerParams": function ( aoData ) {
                 aoData.push({
-                    name:"category",
-                    value:category_id
+                    name:"xxx",
+                    value:"xxxx"
                 })
             },
             "fnServerData": function(sSource, aoData, fnCallback) {
@@ -87,7 +87,7 @@ var recruitMgr=(function(config,functions){
             functions.showLoading();
             var me=this;
             $.ajax({
-                url:config.ajaxUrls.postDelete+"?id="+id,
+                url:config.ajaxUrls.recruitDelete+"?id="+id,
                 type:"post",
                 dataType:"json",
                 success:function(response){

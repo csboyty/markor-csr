@@ -86,7 +86,7 @@ class ActivityController extends \yii\web\Controller
         $model=new Post();
         $category=Category::findOne($category_id);
         $parentCategory=Category::findOne($category->parent_id);
-        return $this->render('createOrUpdate',[
+        return $this->render('cOU',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
             'model' => $model
@@ -99,7 +99,7 @@ class ActivityController extends \yii\web\Controller
         $model = $this->findModel($id);
         $category=Category::findOne($model->category_id);
         $parentCategory=Category::findOne($category->parent_id);
-        return $this->render('createOrUpdate',[
+        return $this->render('cOU',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
             'model' => $model,

@@ -1,21 +1,17 @@
 <?php
-
 namespace backend\controllers;
-
 use Yii;
 use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\Post;
 use common\models\Category;
 use common\models\User;
-
 /**
  * Class VideoController 视频控制器
  * @package backend\controllers
  */
 class VideoController extends \yii\web\Controller
 {
-
     public function behaviors()
     {
         return [
@@ -37,40 +33,40 @@ class VideoController extends \yii\web\Controller
         ];
     }
     public function actionIndex(){
-        $category=Category::findOne(Yii::$app->params["categories"]["indexVideo"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["video"]);
         return $this->render("index",[
             "category"=>$category
         ]);
     }
     public function actionChildDraw(){
-        $category=Category::findOne(Yii::$app->params["categories"]["childDrawVideo"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["videoChildDraw"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
             "category"=>$category
         ]);
     }
-
-
-    public function actionCreate(){
-
+    public function actionCreate($category_id){
         $model=new Post();
-
-        return $this->render('createOrUpdate',[
+        $category=Category::findOne($category_id);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render('cOU',[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category,
             'model' => $model,
         ]);
     }
-
     public function actionUpdate($id){
-
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
-
-        return $this->render('createOrUpdate',[
+        $category=Category::findOne($model->category_id);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render('cOU',[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category,
             'model' => $model,
         ]);
     }
-
     /**
      * Finds the Notice model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -86,5 +82,4 @@ class VideoController extends \yii\web\Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
 }

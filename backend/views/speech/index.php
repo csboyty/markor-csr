@@ -17,8 +17,8 @@ $this->title = (isset($parentCategory)?$parentCategory->name."/":"").$category->
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
+            <th>头像</th>
             <th>姓名</th>
-            <th>时间</th>
             <th>操作</th>
         </tr>
         </thead>

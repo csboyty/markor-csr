@@ -9,10 +9,10 @@ use common\models\Post;
 use common\models\User;
 
 /**
- * Class TraineeController 志愿者控制器
+ * Class VolunteerController 志愿者控制器
  * @package backend\controllers
  */
-class TraineeController extends \yii\web\Controller
+class VolunteerController extends \yii\web\Controller
 {
 
     public function behaviors()
@@ -36,37 +36,27 @@ class TraineeController extends \yii\web\Controller
         ];
     }
 
-    public function actionMien(){
-        return $this->render("mien");
+    public function actionTrain(){
+        return $this->render("train");
     }
 
-    public function actionMienCreate(){
+    public function actionTrainCreate(){
 
         $model=new Post();
-        return $this->render('mienCreateOrUpdate',[
+        return $this->render('trainCOU',[
             'model' => $model,
         ]);
     }
 
-    public function actionMienUpdate($id){
+    public function actionTrainUpdate($id){
 
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
 
-        return $this->render('mienCreateOrUpdate',[
+        return $this->render('trainCOU',[
             'model' => $model,
         ]);
     }
-    public function actionRecruitUpdate($id){
-
-        //这样获取会将isNewRecord设置为false
-        $model = $this->findModel($id);
-
-        return $this->render('recruitCreateOrUpdate',[
-            'model' => $model,
-        ]);
-    }
-
     /**
      * Finds the Notice model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

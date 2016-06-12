@@ -8,6 +8,7 @@ use common\components\AccessRule;
 use common\models\Post;
 use common\models\User;
 use backend\models\QiNiu;
+use common\models\Category;
 
 /**
  * Class PostController 文章控制器
@@ -42,11 +43,26 @@ class PostController extends \yii\web\Controller
         $limit=$params["iDisplayLength"];
         $offset=$params["iDisplayStart"];
         $category=$params["category"];
+        $parentCategoryFlag=isset($params["parent_category"])?$params["parent_category"]:false;
         $sEcho = $params["sEcho"];
         $query=Post::find();
 
+        if($parentCategoryFlag){
+            //如果传过来的是父分类
+            $childCategoryIds=array();
+            $childCategories=Category::find()
+                ->where(["parent_id"=>$category])
+                ->select(["id"])
+                ->asArray()
+                ->all();
+            foreach($childCategories as $c){
+                array_push($childCategoryIds,$c["id"]);
+            }
+            $query->where(["category_id"=>$childCategoryIds]);
+        }else{
+            $query->where(["category_id"=>$category]);
+        }
 
-        $query->where(["category_id"=>$category]);
         $count=$query->count();
         $aaData=$query
             ->asArray()
@@ -58,7 +74,6 @@ class PostController extends \yii\web\Controller
             ->all();
 
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
 
         return [
             'success' => true,
@@ -83,17 +98,14 @@ class PostController extends \yii\web\Controller
             $model=new Post();
         }
 
+        //切图
         $qiNiu=new QiNiu();
-
-        if(isset($params["image"])){
-            $qiNiu->handleImage($params["image"],Yii::$app->params["imageSizes"]["thumbnail"]);
+        if(isset($params["thumb"])){
+            $qiNiu->handleImage($params["thumb"],Yii::$app->params["imageSizes"]["thumbnail"]);
         }
-
         if(isset($params["bg_image"])){
             $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
         }
-
-
 
         $data=array();
 

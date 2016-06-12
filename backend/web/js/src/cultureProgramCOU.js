@@ -65,37 +65,17 @@ $(document).ready(function(){
             }
         }
     });
-    functions.createQiNiuUploader({
-        maxSize:config.uploader.sizes.img,
-        filter:config.uploader.filters.img,
-        uploadBtn:"uploadBgBtn",
-        multiSelection:false,
-        multipartParams:null,
-        uploadContainer:"uploadBgContainer",
-        fileAddCb:null,
-        progressCb:null,
-        uploadedCb:function(info,file,up){
-            if(info.w==1920&&info.h==600){
-                $("#bgImageUrl").val(info.url);
-
-                $("#bgImage").attr("src",info.url);
-
-                $(".error[for='bgImageUrl']").remove();
-            }else{
-                $().toastmessage("showErrorToast",config.messages.imageSizeError);
-            }
-        }
-    });
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
+            thumb:{
                 required:true
             },
-            bg_image:{
-                required:true
+            title:{
+                required:true,
+                maxlength:32
             },
-            create_at:{
+            date:{
                 required:true
             },
             content:{
@@ -103,24 +83,34 @@ $(document).ready(function(){
             },
             excerpt:{
                 required:true,
-                maxlength:32
+                maxlength:512
+            },
+            memo:{
+                required:true,
+                maxlength:128
             }
         },
         messages:{
-            image:{
+            thumb:{
                 required:config.validErrors.required
             },
-            bg_image:{
-                required:config.validErrors.required
+            title:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
-            create_at:{
+            date:{
                 required:config.validErrors.required
             },
             content:{
                 required:config.validErrors.required
             },
             excerpt:{
-                required:config.validErrors.required
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",512)
+            },
+            memo:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",128)
             }
         },
         submitHandler:function(form) {

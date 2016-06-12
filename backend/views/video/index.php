@@ -7,7 +7,7 @@ $this->title = (isset($parentCategory)?$parentCategory->name."/":"").$category->
 
 ?>
     <script>
-        var category_id=<?php echo $category->id; ?>;;
+        var category_id=<?php echo $category->id; ?>;
     </script>
 
 

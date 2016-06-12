@@ -22,7 +22,7 @@ var cultureProgramMgr=(function(config,functions){
             },
             "aoColumns": [
                 { "mDataProp": "title"},
-                { "mDataProp": "create_at"},
+                { "mDataProp": "date"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
                         return '<a href="culture-program/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +

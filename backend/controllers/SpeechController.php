@@ -41,7 +41,7 @@ class SpeechController extends \yii\web\Controller
      * @return string
      */
     public function actionVolunteer(){
-        $category=Category::findOne(Yii::$app->params["categories"]["volunteerSpeech"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["speechVolunteer"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -53,7 +53,20 @@ class SpeechController extends \yii\web\Controller
      * @return string
      */
     public function actionTeacherTrain(){
-        $category=Category::findOne(Yii::$app->params["categories"]["teacherTrainSpeech"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["speechTeacherTrain"]);
+        $parentCategory=Category::findOne($category->parent_id);
+        return $this->render("index",[
+            "parentCategory"=>$parentCategory,
+            "category"=>$category
+        ]);
+    }
+
+    /**
+     * 实习生感言
+     * @return string
+     */
+    public function actionTrainee(){
+        $category=Category::findOne(Yii::$app->params["categories"]["speechTrainee"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,
@@ -67,7 +80,7 @@ class SpeechController extends \yii\web\Controller
         $model=new Post();
         $category=Category::findOne($category_id);
         $parentCategory=Category::findOne($category->parent_id);
-        return $this->render('createOrUpdate',[
+        return $this->render('cOU',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
             'model' => $model,
@@ -80,7 +93,7 @@ class SpeechController extends \yii\web\Controller
         $model = $this->findModel($id);
         $category=Category::findOne($model->category_id);
         $parentCategory=Category::findOne($category->parent_id);
-        return $this->render('createOrUpdate',[
+        return $this->render('cOU',[
             "parentCategory"=>$parentCategory,
             "category"=>$category,
             'model' => $model,

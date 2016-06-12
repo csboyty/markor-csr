@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '新建/修改文化项目';
+$this->title = '新建/修改艺术传承';
 ?>
 
 
@@ -22,42 +22,38 @@ $this->title = '新建/修改文化项目';
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
             <p class="help-block">请上传500x500的jpg，png</p>
             <img  id="image"  style="width:100px"
-                  src="images/app/defaultPeopleImage.jpg"/>
-            <input type="hidden" id="imageUrl" name="image">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-md-2">背景大图*</label>
-        <div class="col-md-10" id="uploadBgContainer">
-            <a href="#" class="btn btn-success" id="uploadBgBtn">上传</a>
-            <p class="help-block">请上传1920x600的jpg，png</p>
-            <img  id="bgImage"  style="width:100px"
-                  src="images/app/defaultPeopleImage.jpg"/>
-            <input type="hidden" id="bgImageUrl" name="bg_image">
+                  src="<?php echo $model->thumb?$model->thumb:'images/app/defaultThumb.png'; ?>"/>
+            <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">标题*</label>
         <div class="col-md-8">
-            <input type="text" class="form-control" value="<?php echo $model->title ?>" name="title">
+            <input type="text" class="form-control" value="<?php echo $model->title; ?>" name="title">
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">摘要*</label>
         <div class="col-md-8">
-            <input type="text" class="form-control" value="<?php echo $model->excerpt ?>" name="excerpt">
+            <textarea class="form-control"  name="excerpt" rows="3"><?php echo $model->excerpt; ?></textarea>
         </div>
     </div>
     <div class="form-group">
-        <label  class="control-label col-md-2">时间</label>
+        <label  class="control-label col-md-2">日期*</label>
         <div class="col-md-8">
-            <input type="date" class="form-control" value="<?php echo $model->create_at ?>" name="create_at">
+            <input type="date" class="form-control" value="<?php echo $model->date; ?>" name="date">
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-2">网址*</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" value="<?php echo $model->memo; ?>" name="memo">
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">内容*</label>
         <div class="col-md-8">
-            <textarea class="form-control"  name="content" rows="3" id="content"><?php echo $model->content ?></textarea>
+            <textarea class="form-control"  name="content" rows="3" id="content"><?php echo $model->content; ?></textarea>
         </div>
     </div>
     <div class="form-group">
@@ -68,5 +64,5 @@ $this->title = '新建/修改文化项目';
 </form>
 
 <?php
-    $this->registerJsFile("@web/js/src/cultureProgramCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+    $this->registerJsFile("@web/js/src/cultureProgramCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

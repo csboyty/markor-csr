@@ -46,7 +46,7 @@ class AwardController extends \yii\web\Controller
 
         $model=new Post();
 
-        return $this->render('createOrUpdate',[
+        return $this->render('cOU',[
             'model' => $model,
         ]);
     }
@@ -56,7 +56,7 @@ class AwardController extends \yii\web\Controller
         //这样获取会将isNewRecord设置为false
         $model = $this->findModel($id);
 
-        return $this->render('createOrUpdate',[
+        return $this->render('cOU',[
             'model' => $model,
         ]);
     }

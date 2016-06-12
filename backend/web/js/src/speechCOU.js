@@ -13,11 +13,11 @@ var speechCOU=(function(config,functions){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
                             switch(category_id){
-                                case 9:
-                                    window.location.href="speech/college-student";
+                                case 8:
+                                    window.location.href="speech/teacher-train";
                                     break;
-                                case 14:
-                                    window.location.href="speech/activity";
+                                case 12:
+                                    window.location.href="speech/volunteer";
                                     break;
                             }
 
@@ -35,23 +35,6 @@ var speechCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
-    tinymce.init({
-        selector: "#content",
-        height:300,
-        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-        toolbar2: 'print preview media | forecolor backcolor emoticons',
-        //image_advtab: true,
-        plugins : 'link image preview fullscreen table textcolor colorpicker code',
-        setup: function (ed) {
-            ed.on('blur', function (e) {
-                $("#content").val(ed.getContent());
-                if(ed.getContent()){
-                    $(".error[for='content']").remove();
-                }
-            });
-        }
-
-    });
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -76,14 +59,15 @@ $(document).ready(function(){
     $("#myForm").validate({
         ignore:[],
         rules:{
-            image:{
+            thumb:{
                 required:true
             },
-            create_at:{
+            excerpt:{
                 required:true
             },
-            content:{
-                required:true
+            memo:{
+                required:true,
+                maxlength:32
             },
             author:{
                 required:true,
@@ -91,14 +75,15 @@ $(document).ready(function(){
             }
         },
         messages:{
-            image:{
+            thumb:{
                 required:config.validErrors.required
             },
-            create_at:{
+            excerpt:{
                 required:config.validErrors.required
             },
-            content:{
-                required:config.validErrors.required
+            memo:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
             },
             author:{
                 required:config.validErrors.required,

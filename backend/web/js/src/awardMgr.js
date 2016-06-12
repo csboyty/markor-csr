@@ -21,8 +21,12 @@ var awardMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
+                { "mDataProp": "thumb",
+                    "fnRender":function(oObj){
+                        return '<img class="thumb" src="'+oObj.aData.thumb+'">';
+                    }
+                },
                 { "mDataProp": "title"},
-                { "mDataProp": "create_at"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
                         return '<a href="award/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +

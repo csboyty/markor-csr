@@ -75,11 +75,11 @@ AppAsset::register($this);
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">感言</a>
+                        <a class="sLink" href="speech/teacher-train">感言</a>
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">作品</a>
+                        <a class="sLink" href="result/teacher-train">作品</a>
                     </li>
                 </ul>
             </li>
@@ -94,11 +94,11 @@ AppAsset::register($this);
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">感言</a>
+                        <a class="sLink" href="speech/volunteer">感言</a>
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">培训</a>
+                        <a class="sLink" href="volunteer/train">培训</a>
                     </li>
                 </ul>
             </li>
@@ -109,15 +109,15 @@ AppAsset::register($this);
                 <ul class="subMenu">
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="trainee/mien">征集</a>
+                        <a class="sLink" href="child-draw/collect">征集</a>
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">爱心产品</a>
+                        <a class="sLink" href="result/child-draw">爱心产品</a>
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">视频</a>
+                        <a class="sLink" href="video/child-draw">视频</a>
                     </li>
                 </ul>
             </li>
@@ -139,11 +139,11 @@ AppAsset::register($this);
                 <ul class="subMenu">
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="trainee/mien">感言</a>
+                        <a class="sLink" href="speech/trainee">感言</a>
                     </li>
                     <li class="sItem">
                         <span class="circle">原点</span>
-                        <a class="sLink" href="recruit/trainee">招聘</a>
+                        <a class="sLink" href="recruit/index">招聘</a>
                     </li>
                 </ul>
             </li>
@@ -155,12 +155,13 @@ AppAsset::register($this);
                 <span class="glyphicon glyphicon-flag"></span>
                 <a class="link" href="culture-program/index">艺术传承</a>
             </li>
-
-            <div class="separate"></div>
-
             <li class="item">
                 <span class="glyphicon glyphicon-flag"></span>
-                <a class="link" href="video/index">人物故事</a>
+                <a class="link" href="story/index">人物故事</a>
+            </li>
+            <li class="item">
+                <span class="glyphicon glyphicon-flag"></span>
+                <a class="link" href="video/index">视频</a>
             </li>
 
 
