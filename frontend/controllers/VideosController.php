@@ -8,7 +8,7 @@ use common\models\Post;
 /**
  * Site controller
  */
-class sController extends Controller
+class VideosController extends Controller
 {
     /**
      * @inheritdoc
@@ -31,7 +31,7 @@ class sController extends Controller
 
         $query=Post::find();
 
-        $query->where(["category_id"=>Yii::$app->params["categories"]["indexVideo"]]);
+        $query->where(["category_id"=>Yii::$app->params["categories"]["video"]]);
         $results = $query->all();
 
         return $this->render('index',[

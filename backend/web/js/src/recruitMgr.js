@@ -53,7 +53,6 @@ var recruitMgr=(function(config,functions){
                             };
 
                             for (var i = 0, iLen = response.aaData.length; i < iLen; i++) {
-                                loadedData[response.aaData[i].notice_id]=response.aaData[i];
                                 response.aaData[i].opt="opt";
                             }
 

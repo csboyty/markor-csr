@@ -44,6 +44,7 @@ class PostController extends \yii\web\Controller
         $offset=$params["iDisplayStart"];
         $category=$params["category"];
         $parentCategoryFlag=isset($params["parent_category"])?$params["parent_category"]:false;
+        $filter=isset($params["filter"])?$params["filter"]:false;
         $sEcho = $params["sEcho"];
         $query=Post::find();
 
@@ -61,6 +62,11 @@ class PostController extends \yii\web\Controller
             $query->where(["category_id"=>$childCategoryIds]);
         }else{
             $query->where(["category_id"=>$category]);
+        }
+
+        //搜索条件
+        if($filter){
+            $query->andWhere($filter);
         }
 
         $count=$query->count();
@@ -99,13 +105,13 @@ class PostController extends \yii\web\Controller
         }
 
         //切图
-        $qiNiu=new QiNiu();
+        /*$qiNiu=new QiNiu();
         if(isset($params["thumb"])){
             $qiNiu->handleImage($params["thumb"],Yii::$app->params["imageSizes"]["thumbnail"]);
         }
         if(isset($params["bg_image"])){
             $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
-        }
+        }*/
 
         $data=array();
 

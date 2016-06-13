@@ -2,17 +2,37 @@
 
 /* @var $this yii\web\View */
 
-$this->title = '美克CSR网站|传统项目';
+$this->title = '视频';
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => '传统项目'
+            'label' => '视频'
             //'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]
     ]
 ]
 ?>
-这里是传统项目
-<?php print_r($results); ?>
+<div class="section">
+    <ul class="list5">
+        <?php
+            foreach($results as $r){
+                ?>
+                <li class="item">
+                    <a href="#">
+                        <div class="thumbContainer">
+                            <img class="thumb" src="<?= $r->thumb; ?>">
+                            <p class="icon">
+                                <span class="icon-play"></span>
+                            </p>
+                        </div>
+                        <p class="text"><?= $r->title; ?></p>
+                        <p class="text"><?= $r->date; ?></p>
+                    </a>
+                </li>
+                <?php
+            }
+        ?>
+    </ul>
+</div>
 

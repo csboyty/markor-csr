@@ -7,4 +7,3 @@
  * To change this template use File | Settings | File Templates.
  */
 ?>
-项目详情页

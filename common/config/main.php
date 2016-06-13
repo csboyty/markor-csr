@@ -28,10 +28,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules'=>array(
+                '<namespace:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<namespace>/<controller>/<action>',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-                '<controller:\w+>/<id:\d+>'=>'<controller>/index',
-                "arteducation"=>"arteducation/index",
-                "modernart"=>"modernart/index"
+                '<controller:\w+>/<id:\d+>'=>'<controller>/index'
             ),
         ]
     ],

@@ -42,7 +42,7 @@ class ActivityController extends \yii\web\Controller
      * @return string
      */
     public function actionTeacher(){
-        $category=Category::findOne(Yii::$app->params["categories"]["activityTeacher"]);
+        $category=Category::findOne(Yii::$app->params["categories"]["activityRoom"]);
         $parentCategory=Category::findOne($category->parent_id);
         return $this->render("index",[
             "parentCategory"=>$parentCategory,

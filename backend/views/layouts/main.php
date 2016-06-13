@@ -15,7 +15,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= Html::encode("MARKOR-CSR|".$this->title) ?></title>
     <base href="<?php echo Yii::$app->homeUrl; ?>">
     <?php $this->head() ?>
 </head>
@@ -158,6 +158,10 @@ AppAsset::register($this);
             <li class="item">
                 <span class="glyphicon glyphicon-flag"></span>
                 <a class="link" href="story/index">人物故事</a>
+            </li>
+            <li class="item">
+                <span class="glyphicon glyphicon-flag"></span>
+                <a class="link" href="wechat/index">微信头条</a>
             </li>
             <li class="item">
                 <span class="glyphicon glyphicon-flag"></span>

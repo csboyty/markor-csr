@@ -99,5 +99,5 @@ $this->title = '新建/修改艺术•家动态';
 </form>
 
 <?php
-    $this->registerJsFile("@web/js/src/artNewsCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+    $this->registerJsFile("@web/js/src/newsCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

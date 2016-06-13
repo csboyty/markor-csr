@@ -1,0 +1,442 @@
+.weChatList{
+    padding: 0px 15%;
+    border-top: 4px solid #ccc;
+    font-size:0px;
+    margin-left: -10px;
+}
+.weChatList .item{
+    width: 33.3%;
+    border-left:3px solid #ccc;
+    box-sizing: border-box;
+    padding:10px;
+    vertical-align: top;
+    position: relative;
+}
+.weChatList .item:first-child{
+    border: none;
+}
+.weChatList .item .link{
+
+}
+.weChatList .item .thumb{
+    width: 20%;
+    height: auto;
+}
+.weChatList .item .title{
+    color:#808080;
+    font-size: 16px;
+    position: absolute;
+    left:20%;
+    right:10px;
+    top:10px;
+    bottom:10px;
+    margin-left: 20px;
+}
+.weChatList .item:hover .title{
+    color: #000;
+}
+/**
+* list 上图下文字,一排3个元素 热点文章
+*/
+.list{
+    font-size: 0px;
+    padding:40px 0px 0px 0px;
+}
+.list .item{
+    width: 33%;
+    padding:2%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+.list .item .info{
+
+}
+.list .item .thumbContainer{
+    overflow: hidden;
+}
+.list .item .thumb{
+    width: 100%;
+    height: auto;
+    transition:all .5s linear;
+}
+.list .item .title{
+    font-size: 18px;
+    color: #666;
+    margin: 15px 0px;
+}
+.list .item .title a{
+    color: #666;
+}
+.list .item .excerpt{
+    font-size: 12px;
+    line-height:1.5em;
+    color: #808080;
+    margin: 10px 0px;
+}
+.list .item:hover{
+    border: 1px solid #000;
+}
+.list .item:hover .thumb{
+    transform:scale(1.05,1.05);
+}
+
+/**
+* list1 文字覆盖在图片上，hover时从内容从底部出来 首页人物故事，艺术教育
+*/
+.list1{
+    font-size:0;
+    padding:40px 0px 0px 0px;
+    margin-left: 2%;
+}
+.list1 .item{
+    box-sizing:border-box;
+    position:relative;
+    overflow:hidden;
+    width: 29.3%;
+    margin:2%;
+    vertical-align: top;
+}
+.list1 .item .thumbContainer{
+    overflow: hidden;
+}
+.list1 .item .thumb{
+    width:100%;
+    transition:all 0.4s ease-out;
+}
+.list1 .item .info{
+    width:100%;
+    height: 100%;
+    overflow:hidden;
+    box-sizing:border-box;
+    padding:20px 20px 30px 20px;
+    background:#fff;
+    position:absolute;
+    top:100%;
+    left:0;
+    transition:all 0.4s ease-out;
+    color: #666;
+}
+.list1 .item:hover .info{
+    top:0;
+}
+.list1 .item .title{
+    font-size: 18px;
+    text-align:center;
+    border-bottom: 2px solid #666;
+    padding: 5px 0px;
+}
+.list1 .item .title a{
+    color:#666;
+}
+.list1 .item .excerpt{
+    font-size:12px;
+    line-height:1.5em;
+    margin:auto;
+    color: #808080;
+}
+.list1 .item .author{
+    font-size:14px;
+    padding-top:8px;
+    position:static;
+    text-align:center;
+    display:block;
+}
+.list1 .item .tag{
+    margin:20px auto 0px auto;
+}
+.list1 .item .icon{
+    margin: 40px auto auto auto;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    width: 40px;
+}
+/**
+* list11 更改了内容的颜色 视频
+*/
+.list11{
+    padding:40px 10% 0px 10%;
+    margin-left: 0px;
+}
+.list11 .item{
+    width: 100%;
+}
+.list11 .item .info{
+    background: rgba(0,0,0,.3);
+}
+.list11 .item .title{
+    color: #fff;
+    margin-top: 15%;
+    border: none;
+    font-size: 24px;
+}
+/**
+* list12 在list1基础上更改动画 继承list1 快乐美术教室->历年活动
+*/
+.list12{
+
+}
+.list12 .item .info{
+    top:0px;
+    background: rgba(0,0,0,.5);
+    visibility: hidden;
+    transition:all 0.4s 0.4s ease-out;
+    color: #fff;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.list12 .item .title{
+    border-bottom: 1px solid #fff;
+}
+.list12 .item:hover .info{
+    visibility: visible;
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+.list12 .item:hover .thumb{
+    transform:scale(1.05,1.05);
+}
+
+/**
+* list2 上图下内容，图片居中,一排3个元素 艺术传承
+*/
+.list2{
+    font-size: 0px;
+}
+.list2 .item{
+    width: 33%;
+    padding:2%;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}
+.list2 .item .thumb{
+    display: block;
+    margin: auto;
+}
+.list2 .item .title{
+    color: #666;
+    font-size: 18px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #666;
+}
+.list2 .item .titleNoBd{
+    border: none;
+}
+.list2 .item .date{
+    margin: 15px 0px;
+    color: #666;
+}
+.list2 .item .excerpt{
+    color: #808080;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+}
+/**
+* list3 一个item里面3栏,一行1个元素 人物故事
+*/
+.list3{
+
+}
+.list3 .item{
+    display: block;
+    border-top: 1px solid #ccc;
+    font-size: 0px;
+    padding: 20px 0px;
+}
+.list3 .item a{
+    display: block;
+}
+.list3 .item:first-child{
+    border: none;
+}
+.list3 .item .date{
+    display: inline-block;
+    width: 20%;
+    padding: 0px 5% 0px 0px;
+    box-sizing: border-box;
+    color: #666;
+    font-style: italic;
+    vertical-align: top;
+}
+.list3 .item .date .top{
+    font-size: 18px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #ccc;
+}
+.list3 .item .date .bottom{
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: lighter;
+}
+.list3 .item .thumbContainer{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.list3 .item .thumb{
+    width:100%;
+    transition:all 0.4s ease-out;
+}
+.list3 .item .info{
+    display: inline-block;
+    width: 50%;
+    padding: 0px 5%;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.list3 .item .title{
+    font-size: 24px;
+    color: #666;
+}
+.list3 .item .author{
+    font-size: 18px;
+    margin: 10px 0px 15px 0px;
+    color: #666;
+}
+.list3 .item .excerpt{
+    font-size: 14px;
+    color: #808080;
+    line-height: 21px;
+}
+.list3 .item:hover .thumb{
+    transform:scale(1.05,1.05);
+}
+/****
+* list31只有两栏 继承list3 荣誉
+*/
+.list31 .item{
+    padding: 20px;
+}
+.list31 .item .thumbContainer{
+    vertical-align: middle;
+}
+.list31 .item .info{
+    width: 70%;
+    vertical-align: middle;
+}
+/**
+* list32只有两栏，继承list3 对内容进行了排版修改 感言
+*/
+.list32 .item{
+    padding: 20px;
+}
+.list32 .item .thumbContainer{
+    vertical-align: middle;
+}
+.list32 .item .info{
+    width: 70%;
+    vertical-align: middle;
+}
+.list32 .item .excerpt{
+    padding: 0px 30px;
+}
+.list32 .item .author{
+    margin: 20px 0px 50px 0px;
+}
+.list32 .hasQuotation:before{
+    font-size: 24px;
+    left:0px;
+    top:-5px;
+}
+.list32 .hasQuotation:after{
+    font-size: 24px;
+    right:0px;
+    bottom:0px;
+}
+.list32 .item:hover .thumb{
+    transform:none;
+}
+/**
+* list4 实习生招聘,直接显示内容
+*/
+.list4{
+
+}
+.list4 .item{
+    display: block;
+    padding: 20px;
+    position: relative;
+    background: #f7f7f7;
+    margin: 20px 0px;
+}
+.list4 .item .leftCorner{
+    position: absolute;
+    left: -60px;
+    top:20px;
+    width: 70px;
+    height: 50px;
+    background: #c2c2c2;
+    color: #fff;
+}
+.list4 .item .leftCorner .arrow{
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0px 25px 25px;
+    border-color: transparent transparent transparent #fff;
+}
+.list4 .item .leftCorner .text{
+    vertical-align: middle;
+    display: inline-block;
+}
+.list4 .item table{
+    color: #808080;
+}
+.list4 .item table tr td{
+    padding: 5px 20px;
+    vertical-align: top;
+}
+.list4 .item table tr td:first-child{
+    border-right: 1px solid #808080;
+    width: 60px;
+}
+/**
+* list5 一行三个，有播放按钮  视频
+*/
+.list5{
+    font-size: 0px;
+    padding:40px 0px 0px 0px;
+}
+.list5 .item{
+    width: 33%;
+    padding:2%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+.list5 .item .thumbContainer{
+    position: relative;
+}
+.list5 .item .icon{
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background: rgba(0,0,0,0.3);
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20%;
+    box-sizing: border-box;
+}
+.list5 .item .text{
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+.list5 .item .excerpt{
+
+}
+.list5 .item:hover .icon{
+    visibility: visible;
+    opacity: 1;
+}

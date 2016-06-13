@@ -27,13 +27,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $query=Post::find();
-
-        $query->where(["category_id"=>Yii::$app->params["categories"]["artNews"]]);
-        $results = $query->limit(3)->all();
+        $wechatResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["wechat"]])
+            ->limit(3)->all();
+        $rollResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["artNews"],
+                "memo"=>1
+            ])->limit(3)->all();
+        $storyResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["artNews"]])
+            ->limit(6)->all();
+        $videos=Post::find()->where(["category_id"=>[
+            Yii::$app->params["categories"]["video"],
+            Yii::$app->params["categories"]["videoChildDraw"]
+        ]])->limit(1)->all();
 
         return $this->render('index',[
-            "results"=>$results
+            "wechatResults"=>$wechatResults,
+            "rollResults"=>$rollResults,
+            "storyResults"=>$storyResults,
+            "videos"=>$videos
         ]);
 
     }

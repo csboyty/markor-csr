@@ -1,0 +1,252 @@
+@media screen and (max-width:1024px){
+    .header{
+        padding:20px 5% 10px 5%
+    }
+    .searchContainer{
+        right: 5%;
+    }
+    .weChatList{
+        padding:0 5%;
+    }
+    .section{
+        padding: 40px 5%;
+    }
+}
+@media screen and (max-width:768px){
+    .pageTop .info{
+        width: 100%;
+        top:50%;
+        left:0px;
+        transform:translateY(-50%);
+        margin-left: 0px;
+    }
+    .pageTop .excerpt{
+        margin-top: 20px;
+    }
+    .flexslider .detail{
+        width: 90%;
+        margin: -75px 0px 0px -45%;
+    }
+    .hasQuotation:before{
+        font-size: 24px;
+        top:-10px;
+        left:-25px;
+    }
+    .hasQuotation:after{
+        font-size: 24px;
+        bottom: -10px;
+        right: -25px;
+    }
+    .sectionMobile{
+        padding:5px 5%;
+    }
+    .section .contentText{
+        width: 90%;
+    }
+    .section .contentTable td{
+        vertical-align: top;
+    }
+    .displayInMobile{
+        display: block!important;
+    }
+    .displayNoneInMobile{
+        display: none!important;
+    }
+    .artItem .info{
+        top:0px;
+        bottom:0px;
+    }
+    .volunteerItem .info{
+        left:40%;
+    }
+    .volunteerItem .container{
+        border: none;
+    }
+    .volunteerItem .center{
+        position: static;
+        transform:none;
+        padding: 0px 10px;
+    }
+    .volunteerItem .excerpt{
+        width: 100%;
+    }
+    .list .item{
+        width: 100%;
+        border:none;
+        padding: 0px;
+        margin: 15px 0px;
+    }
+    .list .item .thumbContainer{
+        display: inline-block;
+        width: 30%;
+    }
+    .list .item .info{
+        display: inline-block;
+        width: 70%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+    .list .item .title{
+        margin: 0px;
+    }
+    .list .item .excerpt{
+        margin: 0px;
+    }
+    .list .item:hover{
+        border: none;
+    }
+    .list1{
+        margin-left: 0px;
+    }
+    .list1 .item{
+        width: 100%;
+        margin: 15px 0px;
+    }
+    .list1 .item .thumbContainer{
+        display: inline-block;
+        width: 30%;
+    }
+    .list1 .item .thumb{
+        width: 100%;
+    }
+    .list1 .item .info{
+        display: inline-block;
+        position: static;
+        width: 70%;
+        background: none;
+        vertical-align: top;
+        padding:0px 10px;
+    }
+    .list1 .item .title{
+        border:none;
+        text-align: left;
+        padding: 0px;
+    }
+    .list1 .item .author{
+        text-align: left;
+    }
+    .list1 .item .tag{
+        margin-left:0px;
+        margin-top: 5px;
+    }
+    .list11 .item .thumb{
+        width: 100%;
+    }
+    .list11 .item .info{
+        position: absolute;
+        width: 100%;
+        top:0px;
+    }
+    .list11 .item .title{
+        text-align: center;
+    }
+    .list11 .item .icon{
+        margin-top: 10px;
+    }
+    .list12 .item .info{
+        visibility: visible;
+        opacity: 1;
+    }
+    .list12 .item .title{
+        color: #808080;
+    }
+    .list1M{
+
+    }
+    .list1M .item{
+        width: 48%;
+        display: inline-block;
+        margin-right: 4%;
+    }
+    .list1M .item:nth-child(2n){
+        margin-right: 0px;
+    }
+    .list1M .item .thumbContainer{
+        display: block;
+        width: 100%;
+    }
+    .list1M .item .info{
+        padding: 0px;
+        font-size: 14px;
+        width: 100%;
+    }
+    .list1M .item .title{
+        text-align: center;
+        font-size: 16px;
+    }
+    .list1M .item .author{
+        display: block;
+        color: #808080;
+    }
+    .list1M1 .item:last-child{
+        display: none;
+    }
+    .list1 .bdCCC{
+         border: none;
+    }
+    .list2{
+
+    }
+    .list2 .item{
+        width: 100%;
+    }
+    .list2 .item .thumb{
+        width: 30%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .list2 .item .info{
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 10px;
+    }
+    .list2 .item .tCenter{
+        text-align: left!important;
+    }
+    .list2 .item .mB20{
+        margin-bottom: 0px !important;
+    }
+    .list3 .item .thumbContainer{
+        width: 40%;
+    }
+    .list3 .item .info{
+        width: 60%;
+    }
+    .list4 .item .leftCorner{
+        left: inherit;
+        top:inherit;
+        right: 10px;
+        bottom:-40px;
+        background: #808080;
+        width: 50px;
+        height: 70px;
+    }
+    .list4 .item .leftCorner .arrow{
+        border-width: 0px 25px 25px 25px;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        bottom:0px;
+        right: 0px;
+    }
+    .list4 .item .leftCorner .text{
+        width: 100%;
+        text-align: center;
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:480px){
+
+    .artItem .center{
+        position: static;
+        transform:none;
+        padding: 0px 10px;
+    }
+    .teacherTrainItem .info{
+        top:-20px;
+    }
+    .teacherTrainItem .excerpt{
+        width: 100%;
+    }
+}

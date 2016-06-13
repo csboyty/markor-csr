@@ -12,11 +12,23 @@ $this->title = '艺术•家动态';
     <a class="btn btn-success" href="news/create">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
+    <div class="tableSearchContainer">
+        <label style="float: left;line-height: 30px;">首页显示</label>
+        <div class="col-md-2">
+            <select class="form-control" id="filter">
+                <option value="">全部</option>
+                <option value="0">否</option>
+                <option value="1">是</option>
+            </select>
+        </div>
+        <button id="searchBtn" class="btn btn-default" type="button">搜索</button>
+    </div>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
             <th>标题</th>
             <th>时间</th>
+            <th>首页显示</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -35,5 +47,5 @@ $this->title = '艺术•家动态';
 
 
 <?php
-$this->registerJsFile("@web/js/src/artNewsMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
+$this->registerJsFile("@web/js/src/newsMgr.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

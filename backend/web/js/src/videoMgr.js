@@ -23,7 +23,7 @@ var videoMgr=(function(config,functions){
             "aoColumns": [
                 { "mDataProp": "thumb",
                     "fnRender":function(oObj){
-                        return "<img src='"+oObj.aData.thumb+"'>";
+                        return "<img class='thumb' src='"+oObj.aData.thumb+"'>";
                     }
                 },
                 { "mDataProp": "title"},
@@ -58,7 +58,6 @@ var videoMgr=(function(config,functions){
                             };
 
                             for (var i = 0, iLen = response.aaData.length; i < iLen; i++) {
-                                loadedData[response.aaData[i].notice_id]=response.aaData[i];
                                 response.aaData[i].opt="opt";
                             }
 

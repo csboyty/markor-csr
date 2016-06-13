@@ -6,7 +6,7 @@ use backend\assets\AppAsset;
 $this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name."/":"").$category->name;
 ?>
 <script>
-    var category_id=
+    var category_id=<?php echo $category->id; ?>;
 </script>
 
 <form class="form-horizontal" id="myForm" action="post/submit" method="post">
@@ -19,12 +19,12 @@ $this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name
     ?>
     <input type="hidden" value="<?php echo $category->id; ?>" name="category_id">
     <div class="form-group">
-        <label class="control-label col-md-2">头像*</label>
+        <label class="control-label col-md-2">缩略图*</label>
         <div class="col-md-10" id="uploadContainer">
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
-            <p class="help-block">请上传500x500的jpg，png</p>
+            <p class="help-block">请上传800x400的jpg，png</p>
             <img  id="image"  style="width:100px"
-                  src="<?php echo $model->thumb?$model->thumb:'images/app/defaultThumb.png'; ?>"/>
+                  src="<?php echo $model->thumb?$model->thumb:'images/app/defaultBgThumb.png'; ?>"/>
             <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">
         </div>
     </div>
