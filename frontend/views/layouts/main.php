@@ -60,24 +60,24 @@ AppAsset::register($this);
                 </ul>
             </li>
             <li class="item">
-                <a href="artEducation.html">艺术教育</a>
+                <a href="education/index">艺术教育</a>
                 <ul class="subMenu"  style="padding-left: 72%">
                     <li class="item">
-                        <a href="collegeAward.html">高校奖学金活动</a>
+                        <a href="education/awards">高校奖学金活动</a>
                     </li>
                     <li class="item">
-                        <a href="collegeWork.html">大学生作品</a>
+                        <a href="works/<?= Yii::$app->params["categories"]["resultCollegeStudent"];?>">大学生作品</a>
                     </li>
                     <li class="item">
-                        <a href="traineeRecruit.html">实习生招募</a>
+                        <a href="education/trainee">实习生招募</a>
                     </li>
                 </ul>
             </li>
             <li class="item">
-                <a href="artInherit.html">艺术传承</a>
+                <a href="culture-programs/index">艺术传承</a>
             </li>
             <li class="item">
-                <a href="artStory.html">人物·故事</a>
+                <a href="stories/index">人物·故事</a>
             </li>
         </ul>
         <div class="searchContainer displayNoneInMobile">
@@ -126,24 +126,24 @@ AppAsset::register($this);
                 </li>
                 <li class="item">
                     <span class="subMenuIcon plus"></span>
-                    <a href="artEducation.html">艺术教育</a>
-                    <ul class="subMenu">
+                    <a href="education/index">艺术教育</a>
+                    <ul class="subMenu"  style="padding-left: 72%">
                         <li class="item">
-                            <a href="collegeAward.html">高校奖学金活动</a>
+                            <a href="education/awards">高校奖学金活动</a>
                         </li>
                         <li class="item">
-                            <a href="collegeWork.html">大学生作品</a>
+                            <a href="works/<?= Yii::$app->params["categories"]["resultCollegeStudent"];?>">大学生作品</a>
                         </li>
                         <li class="item">
-                            <a href="traineeRecruit.html">实习生招募</a>
+                            <a href="education/trainee">实习生招募</a>
                         </li>
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="artInherit.html">艺术传承</a>
+                    <a href="culture-programs/index">艺术传承</a>
                 </li>
                 <li class="item">
-                    <a href="artStory.html">人物·故事</a>
+                    <a href="stories/index">人物·故事</a>
                 </li>
                 <li class="item">
                     <a href="#">

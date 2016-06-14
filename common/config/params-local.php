@@ -24,6 +24,7 @@ return [
         "videoChildDraw"=>17,//儿童画视频
         "story"=>24,//人物故事
         "award"=>18,//高校奖学金
+        "recruit"=>22,//实习生招募
         "cultureProgram"=>23//艺术传承
     ]
 ];

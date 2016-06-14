@@ -1,14 +1,14 @@
 <?php
-namespace frontend\controllers\enlightenment;
+namespace frontend\controllers\modernart;
 
 use Yii;
 use yii\web\Controller;
 use common\models\Post;
 
 /**
- * 艺术启蒙 controller
+ * Site controller
  */
-class IndexController extends Controller
+class CollegeStudentWorksController extends Controller
 {
     /**
      * @inheritdoc
@@ -22,7 +22,7 @@ class IndexController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index',[
+        return $this->render("index",[
 
         ]);
     }
