@@ -4,27 +4,32 @@ return [
         "default"=>10
     ],
     "categories"=>[
-        "wechat"=>27,
         "artHonor"=>1,
         "artNews"=>2,
+        "room"=>3,
         "activityRoom"=>4,
-        "activityTeacherTrain"=>7,
-        "activityVolunteer"=>11,
         "donation"=>5,//捐赠名单
+        "teacherTrain"=>6,
+        "activityTeacherTrain"=>7,
         "speechTeacherTrain"=>8,
-        "speechVolunteer"=>12,
-        "speechTrainee"=>21,
         "resultTeacherTrain"=>9,
-        "resultChildDraw"=>16,
-        "resultCollegeStudent"=>19,
+        "volunteer"=>10,//志愿者活动
+        "activityVolunteer"=>11,
+        "speechVolunteer"=>12,
         "volunteerTrain"=>13,
         "childDraw"=>14,//儿童画
         "childDrawCollect"=>15,//儿童画征集
-        "video"=>26,//视频
+        "resultChildDraw"=>16,
         "videoChildDraw"=>17,//儿童画视频
-        "story"=>24,//人物故事
         "award"=>18,//高校奖学金
+        "resultCollegeStudent"=>19,
+        "trainee"=>20,
+        "speechTrainee"=>21,
         "recruit"=>22,//实习生招募
-        "cultureProgram"=>23//艺术传承
+        "cultureProgram"=>23,//艺术传承
+        "story"=>24,//人物故事
+        "video"=>26,//视频
+        "wechat"=>27
+
     ]
 ];

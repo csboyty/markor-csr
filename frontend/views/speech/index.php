@@ -3,25 +3,33 @@
 /* @var $this yii\web\View */
 use yii\widgets\LinkPager;
 
-$this->title = '历年活动';
+$this->title = $category->name;
 $parentUrl="";
+$pPUrl="";
+$pPName="";
 $parentCategoryId=$parentCategory->id;
 switch($parentCategoryId){
-    case 4:
-        $parentUrl="room/index";
+    case Yii::$app->params["categories"]["teacherTrain"]:
+        $parentUrl="enlightenment/teacher-train/index";
+        $pPName="艺术启蒙";
+        $pPUrl="enlightenment/index";
         break;
-    case 7:
-        $parentUrl="teacher-train/index";
+    case Yii::$app->params["categories"]["volunteer"]:
+        $parentUrl="enlightenment/volunteer/index";
+        $pPName="艺术启蒙";
+        $pPUrl="enlightenment/index";
         break;
-    case 11:
-        $parentUrl="volunteer/index";
+    case Yii::$app->params["categories"]["trainee"]:
+        $parentUrl="education/trainee/index";
+        $pPName="艺术教育";
+        $pPUrl="education/index";
         break;
 }
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => '艺术启蒙',
-            'url' => ['enlightenment/index']
+            'label' => $pPName,
+            'url' => [$pPUrl]
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ],
         [
@@ -30,7 +38,7 @@ $this->params=[
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ],
         [
-            'label' => '历年活动'
+            'label' => $category->name
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]
     ]
@@ -38,30 +46,21 @@ $this->params=[
 ?>
 
     <div class="section">
-        <ul class="list3">
+        <ul class="list3 list32">
             <?php
                 foreach($results as $r){
-                    $date=$r->date;
-                    $year=substr($date,0,4);
-                    $month=substr($date,5);
                     ?>
                     <li class="item">
-                        <a href="activities/<?= $r->id; ?>">
-                            <div class="date displayNoneInMobile">
-                                <p class="top"><?= $year; ?></p>
-                                <p class="bottom"><?= $month; ?></p>
-                            </div>
-                            <div class="thumbContainer">
-                                <img class="thumb" src="<?= $r->thumb; ?>">
-                            </div>
-                            <div class="info">
-                                <h2 class="title ellipsis"><?= $r->title; ?></h2>
-                                <p class="author"><?= $r->author; ?></p>
-                                <p class="excerpt moreEllipsis" data-row="3">
-                                    <?= $r->excerpt; ?>
-                                </p>
-                            </div>
-                        </a>
+                        <div class="thumbContainer">
+                            <img class="thumb circle" src="<?= $r->thumb; ?>">
+                        </div>
+                        <div class="info">
+                            <h2 class="title ellipsis"><?= $r->author; ?></h2>
+                            <p class="author"><?= $r->memo; ?></p>
+                            <p class="excerpt hasQuotation">
+                                <?= $r->excerpt; ?>
+                            </p>
+                        </div>
                     </li>
                     <?php
                 }

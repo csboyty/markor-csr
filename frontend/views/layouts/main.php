@@ -69,7 +69,7 @@ AppAsset::register($this);
                         <a href="works/<?= Yii::$app->params["categories"]["resultCollegeStudent"];?>">大学生作品</a>
                     </li>
                     <li class="item">
-                        <a href="education/trainee">实习生招募</a>
+                        <a href="education/trainee">实习生</a>
                     </li>
                 </ul>
             </li>
@@ -135,7 +135,7 @@ AppAsset::register($this);
                             <a href="works/<?= Yii::$app->params["categories"]["resultCollegeStudent"];?>">大学生作品</a>
                         </li>
                         <li class="item">
-                            <a href="education/trainee">实习生招募</a>
+                            <a href="education/trainee">实习生</a>
                         </li>
                     </ul>
                 </li>

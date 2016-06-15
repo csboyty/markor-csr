@@ -45,6 +45,7 @@ class ActivitiesController extends Controller
         $results = $query->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('index',[
             "parentCategory"=>$parentCategory,
+            "category"=>$category,
             "pages"=>$pages,
             "results"=>$results
         ]);

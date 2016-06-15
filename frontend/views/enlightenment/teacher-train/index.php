@@ -70,7 +70,7 @@ $this->params=[
         }
     ?>
 
-    <a class="more" href="speech/index?category_id=<?= Yii::$app->params["categories"]["activityTeacherTrain"]; ?>">更多</a>
+    <a class="more" href="speech/<?= Yii::$app->params["categories"]["speechTeacherTrain"]; ?>">更多</a>
 </div>
 
 <div class="section">

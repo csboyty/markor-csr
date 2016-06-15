@@ -2,11 +2,11 @@
 
 /* @var $this yii\web\View */
 
-$this->title = '视频';
+$this->title = $category->name;
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => '视频'
+            'label' => $category->name
             //'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]

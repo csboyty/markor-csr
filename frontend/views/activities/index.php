@@ -3,18 +3,18 @@
 /* @var $this yii\web\View */
 use yii\widgets\LinkPager;
 
-$this->title = '历年活动';
+$this->title = $category->name;
 $parentUrl="";
 $parentCategoryId=$parentCategory->id;
 switch($parentCategoryId){
-    case 4:
-        $parentUrl="room/index";
+    case Yii::$app->params["categories"]["room"]:
+        $parentUrl="enlightenment/room/index";
         break;
-    case 7:
-        $parentUrl="teacher-train/index";
+    case Yii::$app->params["categories"]["teacherTrain"]:
+        $parentUrl="enlightenment/teacher-train/index";
         break;
-    case 11:
-        $parentUrl="volunteer/index";
+    case Yii::$app->params["categories"]["volunteer"]:
+        $parentUrl="enlightenment/volunteer/index";
         break;
 }
 $this->params=[
@@ -30,7 +30,7 @@ $this->params=[
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ],
         [
-            'label' => '历年活动'
+            'label' => $category->name
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]
     ]

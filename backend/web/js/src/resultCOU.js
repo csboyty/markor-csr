@@ -63,11 +63,35 @@ $(document).ready(function(){
         rules:{
             thumb:{
                 required:true
+            },
+            title:{
+                required:true,
+                maxlength:32
+            },
+            author:{
+                required:true,
+                maxlength:32
+            },
+            excerpt:{
+                required:true,
+                maxlength:512
             }
         },
         messages:{
-            image:{
+            thumb:{
                 required:config.validErrors.required
+            },
+            title:{
+                required:true,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
+            },
+            author:{
+                required:true,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
+            },
+            excerpt:{
+                required:true,
+                maxlength:config.validErrors.maxLength.replace("${max}",512)
             }
         },
         submitHandler:function(form) {
