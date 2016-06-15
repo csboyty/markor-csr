@@ -29,6 +29,8 @@ return [
             'showScriptName' => false,
             'rules'=>array(
                 '<namespace:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<namespace>/<controller>/<action>',
+                '<controller:\w+>/<category_id:\d+>/<id:\d+>'=>'<controller>/index',
+                '<controller:\w+>/<category_id:\d+>'=>'<controller>/index',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                 '<controller:\w+>/<id:\d+>'=>'<controller>/index'
             ),

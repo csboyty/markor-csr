@@ -27,23 +27,42 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $wechatResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["wechat"]])
+        $baseQuery=Post::find();
+        $wechatResultsQuery=clone $baseQuery;
+        $rollResultsQuery=clone $baseQuery;
+        $storyResultsQuery=clone $baseQuery;
+        $videosQuery=clone $baseQuery;
+        $cPResultsQuery=clone $baseQuery;
+        $educationResultsQuery=clone $baseQuery;
+        $enlightenmentResultsQuery=clone $baseQuery;
+
+        $wechatResults=$wechatResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["wechat"]])
             ->limit(3)->all();
-        $rollResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["artNews"],
+        $rollResults=$rollResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["artNews"],
                 "memo"=>1
             ])->limit(3)->all();
-        $storyResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["artNews"]])
+        $storyResults=$storyResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["artNews"]])
             ->limit(6)->all();
-        $videos=Post::find()->where(["category_id"=>[
+        $videos=$videosQuery->where(["category_id"=>[
             Yii::$app->params["categories"]["video"],
             Yii::$app->params["categories"]["videoChildDraw"]
         ]])->limit(1)->all();
+
+        $cPResults=$cPResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]])
+            ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
+        $educationResults=$educationResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["award"]])
+            ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
+        $enlightenmentResults=$enlightenmentResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
+            ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
 
         return $this->render('index',[
             "wechatResults"=>$wechatResults,
             "rollResults"=>$rollResults,
             "storyResults"=>$storyResults,
-            "videos"=>$videos
+            "videos"=>$videos,
+            "cPResults"=>$cPResults,
+            "educationResults"=>$educationResults,
+            "enlightenmentResults"=>$enlightenmentResults
         ]);
 
     }

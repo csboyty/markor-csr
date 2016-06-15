@@ -44,45 +44,62 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
 <div class="section">
     <h2 class="sectionTitle titleFeature">热点</h2>
     <ul class="list">
-        <li class="item">
-            <div class="thumbContainer">
-                <img class="thumb" src="data/square/1.jpg">
-            </div>
-            <div class="info">
-                <h3 class="title"><a href="#">新通道三江源项目</a></h3>
-                <p class="excerpt moreEllipsis" data-row="3">
-                    展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
-                    一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
-                </p>
-                <a class="tag" href="artInherit.html" >艺术传承</a>
-            </div>
-        </li>
-        <li class="item">
-            <div class="thumbContainer">
-                <img class="thumb" src="data/square/1.jpg">
-            </div>
-            <div class="info">
-                <h3 class="title"><a href="#">新通道三江源项目</a></h3>
-                <p class="excerpt moreEllipsis" data-row="3">
-                    展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
-                    一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
-                </p>
-                <a class="tag" href="artInherit.html" >艺术传承</a>
-            </div>
-        </li>
-        <li class="item">
-            <div class="thumbContainer">
-                <img class="thumb" src="data/square/1.jpg">
-            </div>
-            <div class="info">
-                <h3 class="title"><a href="#">新通道三江源项目</a></h3>
-                <p class="excerpt moreEllipsis" data-row="3">
-                    展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
-                    一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
-                </p>
-                <a class="tag" href="#" >艺术传承</a>
-            </div>
-        </li>
+        <?php
+            foreach($enlightenmentResults as $er){
+                ?>
+                <li class="item">
+                    <div class="thumbContainer">
+                        <img class="thumb" src="<?= $er->thumb; ?>">
+                    </div>
+                    <div class="info">
+                        <h3 class="title"><a href="activities/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
+                        <p class="excerpt moreEllipsis" data-row="3">
+                            <?= $er->excerpt; ?>
+                        </p>
+                        <a class="tag" href="enlightenment/index" >艺术启蒙</a>
+                    </div>
+                </li>
+                <?php
+            }
+        ?>
+
+        <?php
+        foreach($educationResults as $er1){
+            ?>
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="<?= $er1->thumb; ?>">
+                </div>
+                <div class="info">
+                    <h3 class="title"><a href="education/awards/<?= $er1->id; ?>"><?= $er1->title; ?></a></h3>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        <?= $er1->excerpt; ?>
+                    </p>
+                    <a class="tag" href="education/index" >艺术教育</a>
+                </div>
+            </li>
+        <?php
+        }
+        ?>
+
+        <?php
+        foreach($cPResults as $cr){
+            ?>
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="<?= $cr->thumb; ?>">
+                </div>
+                <div class="info">
+                    <h3 class="title"><a href="culture-programs/<?= $cr->id; ?>"><?= $cr->title; ?></a></h3>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        <?= $cr->excerpt; ?>
+                    </p>
+                    <a class="tag" href="culture-programs/index" >艺术传承</a>
+                </div>
+            </li>
+        <?php
+        }
+        ?>
     </ul>
 </div>
 <div class="section bgf4f4f4">

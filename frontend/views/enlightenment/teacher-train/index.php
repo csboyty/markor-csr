@@ -33,7 +33,7 @@ $this->params=[
         foreach($activityResults as $ar){
             ?>
             <li class="item">
-                <a href="activities/<?= $ar->id; ?>">
+                <a href="activities/<?= $ar->category_id; ?>/<?= $ar->id; ?>">
                     <div class="thumbContainer">
                         <img class="thumb" src="<?= $ar->thumb; ?>">
                     </div>
@@ -52,7 +52,7 @@ $this->params=[
         }
         ?>
     </ul>
-    <a class="more" href="activities/index?category_id=<?= Yii::$app->params["categories"]["activityTeacherTrain"]; ?>">更多</a>
+    <a class="more" href="activities/<?= Yii::$app->params["categories"]["activityTeacherTrain"]; ?>">更多</a>
 </div>
 
 <div class="section bgf4f4f4">

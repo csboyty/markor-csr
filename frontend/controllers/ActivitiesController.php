@@ -22,10 +22,21 @@ class ActivitiesController extends Controller
         ];
     }
 
-    public function actionIndex($category_id)
+    public function actionIndex($category_id,$id=0)
     {
         $category=Category::findOne($category_id);
         $parentCategory=Category::findOne($category->parent_id);
+
+        if($id!=0){
+            if($id!=0){
+                $model=Post::findOne($id);
+                return $this->render("detail",[
+                    "model"=>$model,
+                    "category"=>$category,
+                    "parentCategory"=>$parentCategory
+                ]);
+            }
+        }
 
         $query=Post::find();
         $query->where(["category_id"=>$category_id]);
@@ -33,7 +44,7 @@ class ActivitiesController extends Controller
         Yii::$app->params["perShowCount"]["default"]]);
         $results = $query->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('index',[
-            "category"=>$parentCategory,
+            "parentCategory"=>$parentCategory,
             "pages"=>$pages,
             "results"=>$results
         ]);
