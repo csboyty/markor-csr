@@ -81,7 +81,7 @@ AppAsset::register($this);
             </li>
         </ul>
         <div class="searchContainer displayNoneInMobile">
-            <input class="input" type="text" placeholder="请输入您要搜索的内容">
+            <input class="input search" type="text" placeholder="请输入您要搜索的内容">
             <div class="ctrl">
                 <span class="icon-search"></span>
             </div>
@@ -157,7 +157,7 @@ AppAsset::register($this);
                 </li>
                 <li class="item">
                     <span class="searchIcon"><em class="icon-search"></em></span>
-                    <input type="text" class="searchInput" placeholder="search">
+                    <input type="text" class="searchInput search" placeholder="search">
                 </li>
             </ul>
         </div>

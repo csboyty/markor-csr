@@ -134,7 +134,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
             foreach($videos as $v){
                 ?>
                 <li class="item">
-                    <a target="_blank" href="<?= $v->memo; ?>">
+                    <a href="videos/<?= $v->id; ?>">
                         <img class="thumb" src="<?= $v->thumb; ?>">
                         <div class="info">
                             <h2 class="title"><?= $v->title; ?></h2>

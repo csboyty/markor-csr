@@ -20,9 +20,9 @@ class CultureProgramsController extends Controller
         ];
     }
 
-    public function actionIndex($id=0){
-        if($id!=0){
-            $model=Post::findOne($id);
+    public function actionIndex($paramId=0){
+        if($paramId!=0){
+            $model=Post::findOne($paramId);
             //显示详情
             return $this->render('detail',[
                 "model"=>$model

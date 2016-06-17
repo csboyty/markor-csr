@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '新建/修改志愿者活动';
+$this->title = '新建/修改志愿者培训';
 ?>
 
 <form class="form-horizontal" id="myForm" action="post/submit" method="post">

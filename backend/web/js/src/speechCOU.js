@@ -19,6 +19,9 @@ var speechCOU=(function(config,functions){
                                 case 12:
                                     window.location.href="speech/volunteer";
                                     break;
+                                case 21:
+                                    window.location.href="speech/trainee";
+                                    break;
                             }
 
                         },3000);

@@ -33,7 +33,7 @@ $this->title = '新建/修改艺术•家动态';
             <p class="help-block">请上传1920x600的jpg，png</p>
             <img  id="bgImage"  style="width:100px"
                   src="<?php echo $model->bg_image?$model->bg_image:'images/app/defaultBg.png'; ?>"/>
-            <input type="hidden" id="bgImageUrl" name="bg_image">
+            <input type="hidden" id="bgImageUrl" name="bg_image" value="<?php echo $model->bg_image; ?>">
         </div>
     </div>
     <div class="form-group">
@@ -99,5 +99,5 @@ $this->title = '新建/修改艺术•家动态';
 </form>
 
 <?php
-    $this->registerJsFile("@web/js/src/newsCreateOrUpdate.js",['depends' => [backend\assets\AppAsset::className()]]);
+    $this->registerJsFile("@web/js/src/newsCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

@@ -22,9 +22,9 @@ class ActivitiesController extends Controller
         ];
     }
 
-    public function actionIndex($category_id,$id=0)
+    public function actionIndex($paramId,$id=0)
     {
-        $category=Category::findOne($category_id);
+        $category=Category::findOne($paramId);
         $parentCategory=Category::findOne($category->parent_id);
 
         if($id!=0){
@@ -39,7 +39,7 @@ class ActivitiesController extends Controller
         }
 
         $query=Post::find();
-        $query->where(["category_id"=>$category_id]);
+        $query->where(["category_id"=>$paramId]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
         Yii::$app->params["perShowCount"]["default"]]);
         $results = $query->offset($pages->offset)->limit($pages->limit)->all();

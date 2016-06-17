@@ -47,6 +47,7 @@
     padding:2%;
     box-sizing: border-box;
     border: 1px solid #fff;
+    vertical-align: top;
 }
 .list .item .info{
 

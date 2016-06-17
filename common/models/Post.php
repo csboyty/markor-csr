@@ -45,7 +45,7 @@ class Post extends \yii\db\ActiveRecord
             [['thumb','bg_image'], 'string', 'max' => 128],
             [['title'], 'string', 'max' => 32],
             [['excerpt', 'memo'], 'string', 'max' => 512],
-            [['author'], 'string', 'max' => 8]
+            [['author'], 'string', 'max' => 32]
         ];
     }
 

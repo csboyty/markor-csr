@@ -36,10 +36,10 @@ class AboutController extends Controller
         ]);
     }
 
-    public function actionNews($id=0)
+    public function actionNews($paramId=0)
     {
-        if($id!=0){
-            $model=Post::findOne($id);
+        if($paramId!=0){
+            $model=Post::findOne($paramId);
             //显示详情
             return $this->render('newsDetail',[
                 "model"=>$model

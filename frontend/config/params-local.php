@@ -1,67 +1,34 @@
 <?php
 return [
     "searchParams"=>[
-        "关于艺术家"=>"art/about",
-        "艺术家介绍"=>"art/about",
-        "艺术家成果"=>"art/works",
-        "艺术家动态"=>"art/news",
-        "传统文化"=>"programs",
-        "传统文化项目"=>"programs",
-        "传统项目"=>"programs",
-        "艺术教育"=>"arteducation",
-        "快乐美术教室"=>[
-            "快乐美术教室"=>"arteducation/art-room",
-            "捐赠小学名单"=>"arteducation/art-room/list",
-            "历年活动"=>"arteducation/art-room/activities"
-        ],
-        "教师培训"=>[
-            "教师培训"=>"arteducation/teacher-train",
-            "教师感言"=>"arteducation/teacher-train/speech",
-            "历年活动"=>"arteducation/teacher-train/activities",
-            "教师作品"=>"arteducation/teacher-train/works"
-        ],
-        "志愿者"=>[
-            "志愿者"=>"arteducation/volunteer",
-            "志愿者感言"=>"arteducation/volunteer/speech",
-            "志愿者活动"=>"arteducation/volunteer/activities"
-        ],
-        "儿童画"=>[
-            "儿童画"=>"arteducation/child-draw",
-            "儿童画视频"=>"arteducation/child-draw/videos",
-            "爱心产品"=>"arteducation/child-draw/works",
-            "历年征集函"=>"arteducation/child-draw/recruits"
-        ],
-        "当代艺术"=>"modernart",
-        "高校奖学金活动"=>"modernart/awards",
-        "大学生作品"=>"modernart/college-student-works",
-        "实习生"=>[
-            "实习生"=>"modernart/trainee",
-            "实习生风采"=>"modernart/trainee/miens",
-            "实习生招聘"=>"modernart/trainee/recruits"
-        ]
-    ],
-    "categoryUrls"=>[
-        1=>"art/news/",
-        2=>"programs/",
-        3=>"arteducation/art-room/",
-        4=>"arteducation/art-room/list/",
-        5=>"arteducation/art-room/activities/",
-        6=>"arteducation/teacher-train/",
-        7=>"arteducation/teacher-train/speech/",
-        8=>"arteducation/teacher-train/activities/",
-        9=>"arteducation/teacher-train/works/",
-        10=>"arteducation/volunteer/",
-        11=>"arteducation/volunteer/speech/",
-        12=>"arteducation/volunteer/activities/",
-        13=>"arteducation/child-draw/",
-        14=>"arteducation/child-draw/videos/",
-        15=>"arteducation/child-draw/works/",
-        16=>"arteducation/child-draw/recruits/",
-        17=>"modernart/awards/",
-        18=>"modernart/college-student-works/",
-        19=>"modernart/trainee/",
-        20=>"modernart/trainee/miens/",
-        21=>"modernart/trainee/recruits/",
-        22=>"videos/"
+        "关于艺术家"=>"about/index",
+        "艺术家荣誉"=>"about/honor",
+        "艺术家动态"=>"about/news",
+        "艺术启蒙"=>"enlightenment/index",
+        "快乐美术教室"=>"enlightenment/room",
+        "教师培训"=>"enlightenment/teacher-train",
+        "志愿者活动"=>"enlightenment/volunteer",
+        "儿童画征集与产品开发"=>"enlightenment/child-draw",
+        "艺术教育"=>"education/index",
+        "高校奖学金活动"=>"education/awards",
+        "大学生作品"=>"works/19",
+        "实习生"=>"education/trainee",
+        "艺术传承"=>"culture-programs/index",
+        "人文故事"=>"stories/index",
+
+        "历年活动/快乐美术教室"=>"activities/4",
+        "历年活动/教师培训"=>"activities/7",
+        "历年活动/志愿者活动"=>"activities/11",
+
+        "教师作品"=>"works/9",
+        "爱心作品"=>"works/16",
+
+        "教师感言"=>"speech/8",
+        "志愿者感言"=>"speech/12",
+        "志愿者培训"=>"volunteer/train",
+
+        "儿童画征集"=>"enlightenment/child-draw/collect",
+        "实习生感言"=>"speech/21",
+        "实习生招募"=>"education/trainee/recruits"
     ]
 ];

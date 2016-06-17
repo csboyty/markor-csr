@@ -16,38 +16,29 @@ $this->params=[
             'label' => "儿童画征集"
         ]
     ]
-]
+];
 ?>
 <div class="section">
-    <p class="contentText">第四届“我的童话世界”儿童绘画作品征集活动“美丽家乡”</p>
-    <ul class="list2">
-        <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
-            <h3 class="title titleNoBd">新通道三江源项目</h3>
-        </li>
-        <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
-            <h3 class="title titleNoBd">新通道三江源项目</h3>
-        </li>
-        <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
-            <h3 class="title titleNoBd">新通道三江源项目</h3>
-        </li>
-        <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
-            <h3 class="title titleNoBd">新通道三江源项目</h3>
-        </li>
-    </ul>
-    <hr>
-    <p class="contentText">第四届“我的童话世界”儿童绘画作品征集活动“美丽家乡”</p>
-    <ul class="list2">
-        <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
-            <h3 class="title titleNoBd">新通道三江源项目</h3>
-        </li>
-        <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
-            <h3 class="title titleNoBd">新通道三江源项目</h3>
-        </li>
-    </ul>
+    <?php
+        foreach($results as $key=>$value){
+            ?>
+            <p class="contentText"><?= $key; ?></p>
+            <ul class="list2">
+                <?php
+                    foreach($value as $v){
+                        ?>
+                        <li class="item">
+                            <img class="thumb" src="<?= $v->thumb; ?>">
+                            <h3 class="title titleNoBd"><?= $v->title; ?></h3>
+                        </li>
+                        <?php
+                    }
+                ?>
+            </ul>
+
+            <hr>
+
+            <?php
+        }
+    ?>
 </div>

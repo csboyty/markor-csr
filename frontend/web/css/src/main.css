@@ -303,6 +303,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 14px;
     display: table-cell;
     transition:all 0.5s ease-in;
+    padding-left: 5px;
 }
 .searchContainer .ctrl{
     border-left:1px solid #808080;

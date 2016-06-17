@@ -29,7 +29,7 @@ $this->title = '新建/修改儿童画征集';
         <div class="form-group">
             <label  class="control-label col-md-2">分类*</label>
             <div class="col-md-8">
-                <select name="category" class="form-control">
+                <select name="category_id" class="form-control">
                     <?php
                     foreach($categories as $en){
                         ?>

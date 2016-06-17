@@ -2,11 +2,11 @@
 
 /* @var $this yii\web\View */
 
-$this->title = $category->name;
+$this->title = "视频";
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => $category->name
+            'label' => "视频"
             //'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]
@@ -19,7 +19,7 @@ $this->params=[
             foreach($results as $r){
                 ?>
                 <li class="item">
-                    <a href="#">
+                    <a href="videos/<?= $r->id; ?>">
                         <div class="thumbContainer">
                             <img class="thumb" src="<?= $r->thumb; ?>">
                             <p class="icon">

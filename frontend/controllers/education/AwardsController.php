@@ -23,8 +23,10 @@ class AwardsController extends Controller
 
     public function actionIndex()
     {
+        $results=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["award"]])
+            ->orderBy(["id"=>SORT_DESC])->all();
         return $this->render("index",[
-
+            "results"=>$results
         ]);
     }
 }

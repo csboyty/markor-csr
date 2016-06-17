@@ -73,7 +73,7 @@ class PostController extends \yii\web\Controller
         $aaData=$query
             ->asArray()
             ->orderBy([
-                'date' => SORT_DESC,
+                'id' => SORT_DESC,
             ])
             ->limit($limit)
             ->offset($offset)
