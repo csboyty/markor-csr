@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use backend\assets\AppAsset;
 
 $this->title ='新建/修改实习生招聘';
+
+$this->registerCssFile("@web/css/lib/date_input.css");
 ?>
 
 
@@ -42,7 +44,7 @@ $this->title ='新建/修改实习生招聘';
         <div class="form-group">
             <label  class="control-label col-md-2">日期*</label>
             <div class="col-md-8">
-                <input type="date" class="form-control" value="<?php echo $model->date; ?>" name="date">
+                <input type="text" class="form-control" id="date" value="<?php echo $model->date; ?>" name="date">
             </div>
         </div>
         <div class="form-group">
@@ -53,5 +55,6 @@ $this->title ='新建/修改实习生招聘';
     </form>
 
 <?php
+$this->registerJsFile("@web/js/lib/jquery.date_input.js",['depends' => [backend\assets\AppAsset::className()]]);
 $this->registerJsFile("@web/js/src/recruitCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

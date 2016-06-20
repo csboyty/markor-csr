@@ -22,6 +22,7 @@ a{
 }
 img{
     border: none;
+    outline: none;
     max-width: 100%;
 }
 p{
@@ -187,7 +188,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 14px;
     color: #808080;
     line-height: 53px;
-    height: 53px;
+    height: 63px;
     display: block;
 }
 .menu .subMenu{
@@ -202,6 +203,15 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
     box-sizing: border-box;
     z-index: 2;
+}
+.menu .subMenu.sp1{
+    padding-left: 60%;
+}
+.menu .subMenu.sp2{
+    padding-left: 65%;
+}
+.menu .subMenu.sp3{
+    padding-left: 72%;
 }
 .menu .subMenu>.item{
     padding: 0px 10px;
@@ -301,6 +311,7 @@ h1,h2,h3,h4,h5,h6{
     width: 0px;
     height: 100%;
     font-size: 14px;
+    line-height: 40px;
     display: table-cell;
     transition:all 0.5s ease-in;
     padding-left: 5px;

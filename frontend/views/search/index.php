@@ -2,24 +2,25 @@
 use common\models\Category;
 $this->title = $param;
 
-
 ?>
 <div class="section">
     <h2>搜索：<?= $param; ?></h2>
-
+    <hr>
     <ul>
         <?php
             foreach($pageResults as $key=>$value){
                 ?>
 
-                <li><a href="<?= $value; ?>"><?= $key; ?></a></li>
+                <li style="display: block;padding:5px 5px 5px 20px;font-size: 20px;">
+                    <a target="_blank" href="<?= $value; ?>"><?= $key; ?></a>
+                </li>
 
                 <?php
             }
         ?>
     </ul>
 
-    <ul>
+    <ul class="list3 list31">
         <?php
         foreach($results as $r){
             $url="";
@@ -69,7 +70,18 @@ $this->title = $param;
             }
             ?>
 
-            <li><a href="<?= $url; ?>"><?= $r->title; ?></a></li>
+            <li class="item">
+                <a target="_blank"  href="<?= $url; ?>">
+                    <div class="thumbContainer">
+                        <img class="thumb" src="<?= $r->thumb; ?>">
+                    </div>
+                    <div class="info">
+                        <p class="excerpt">
+                            <?= $content; ?>
+                        </p>
+                    </div>
+                </a>
+            </li>
 
         <?php
         }

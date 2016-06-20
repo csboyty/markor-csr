@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use backend\assets\AppAsset;
 
 $this->title = '新建/修改----'.$parentCategory->name."/".$category->name;
+
+$this->registerCssFile("@web/css/lib/date_input.css");
 ?>
     <script>
         var category_id=<?php echo $category->id; ?>;
@@ -35,9 +37,9 @@ $this->title = '新建/修改----'.$parentCategory->name."/".$category->name;
             </div>
         </div>
         <div class="form-group">
-            <label  class="control-label col-md-2">时间*</label>
+            <label  class="control-label col-md-2">日期*</label>
             <div class="col-md-8">
-                <input type="date" class="form-control" value="<?php echo $model->date; ?>" name="date">
+                <input type="text" class="form-control" id="date" value="<?php echo $model->date; ?>" name="date">
             </div>
         </div>
         <div class="form-group">
@@ -61,5 +63,6 @@ $this->title = '新建/修改----'.$parentCategory->name."/".$category->name;
     </form>
 
 <?php
+$this->registerJsFile("@web/js/lib/jquery.date_input.js",['depends' => [backend\assets\AppAsset::className()]]);
 $this->registerJsFile("@web/js/src/activityCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>

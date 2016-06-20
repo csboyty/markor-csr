@@ -24,6 +24,8 @@ var recruitCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
+    $("#date").date_input();
+
     $("#myForm").validate({
         ignore:[],
         rules:{

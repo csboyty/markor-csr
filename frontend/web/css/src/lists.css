@@ -146,7 +146,7 @@
     margin:20px auto 0px auto;
 }
 .list1 .item .icon{
-    margin: 40px auto auto auto;
+    margin: 10px auto auto auto;
     color: #fff;
     font-size: 32px;
     text-align: center;
@@ -164,7 +164,9 @@
     width: 100%;
 }
 .list11 .item .info{
-    background: rgba(0,0,0,.3);
+    background: #000;
+    filter:alpha(opacity=50);
+    background: rgba(0,0,0,0.3);
 }
 .list11 .item .title{
     color: #fff;
@@ -180,11 +182,11 @@
 }
 .list12 .item .info{
     top:0px;
+    background: #000;
     background: rgba(0,0,0,.5);
     visibility: hidden;
     transition:all 0.4s 0.4s ease-out;
     color: #fff;
-    opacity: 0;
     filter:alpha(opacity=0);
 }
 .list12 .item .title{
@@ -192,8 +194,7 @@
 }
 .list12 .item:hover .info{
     visibility: visible;
-    opacity: 1;
-    filter:alpha(opacity=100);
+    filter:alpha(opacity=70);
 }
 .list12 .item:hover .thumb{
     transform:scale(1.05,1.05);
@@ -211,6 +212,7 @@
     box-sizing: border-box;
     font-size: 14px;
     text-align: center;
+    vertical-align: top;
 }
 .list2 .item .thumb{
     display: block;

@@ -31,6 +31,7 @@ var videoCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
+    $("#date").date_input();
 
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,

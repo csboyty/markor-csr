@@ -1,0 +1,24 @@
+.menu .subMenu.sp1{
+    padding-left: 40%;
+}
+.menu .subMenu.sp2{
+    padding-left: 45%;
+}
+.menu .subMenu.sp3{
+    padding-left: 52%;
+}
+.searchContainer .input{
+    display: none;
+}
+.searchContainer:hover .input{
+    display: table-cell;
+}
+.artItem .center{
+    top: 10%;
+    left:10%;
+    width: 70%;
+}
+.volunteerItem .center{
+    width: 40%;
+    left:50%;
+}

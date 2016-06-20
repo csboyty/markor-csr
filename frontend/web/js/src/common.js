@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     $(".search").keydown(function(e){
         if(e.keyCode==13){
-            window.location.href="search/"+$(this).val();
+            window.location.href=document.getElementsByTagName("base")[0].getAttribute("href")+"search/"+$(this).val();
         }
     });
 });

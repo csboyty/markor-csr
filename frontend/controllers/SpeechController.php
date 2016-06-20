@@ -22,13 +22,13 @@ class SpeechController extends Controller
         ];
     }
 
-    public function actionIndex($category_id)
+    public function actionIndex($paramId)
     {
-        $category=Category::findOne($category_id);
+        $category=Category::findOne($paramId);
         $parentCategory=Category::findOne($category->parent_id);
 
         $query=Post::find();
-        $query->where(["category_id"=>$category_id]);
+        $query->where(["category_id"=>$paramId]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
         Yii::$app->params["perShowCount"]["default"]]);
         $results = $query->offset($pages->offset)->limit($pages->limit)->all();

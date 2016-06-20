@@ -27,6 +27,9 @@ var storyCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
+
+    $("#date").date_input();
+
     tinymce.init({
         selector: "#content",
         height:300,

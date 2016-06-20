@@ -17,8 +17,11 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode("MARKOR-CSR|".$this->title) ?></title>
-    <base href="<?php echo Yii::$app->homeUrl; ?>">
-    <?php $this->head() ?>
+    <base href="<?php echo Yii::$app->request->hostInfo.Yii::$app->homeUrl; ?>">
+    <?php $this->head(); ?>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/src/ie.css">
+    <![endif]-->
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -33,7 +36,7 @@ AppAsset::register($this);
             </li>
             <li class="item">
                 <a href="about/index">关于艺术·家</a>
-                <ul class="subMenu" style="padding-left: 60%;">
+                <ul class="subMenu sp1">
                     <li class="item">
                         <a href="about/honor">艺术·家荣誉</a>
                     </li>
@@ -44,7 +47,7 @@ AppAsset::register($this);
             </li>
             <li class="item">
                 <a href="enlightenment/index">艺术启蒙</a>
-                <ul class="subMenu" style="padding-left: 65%">
+                <ul class="subMenu sp2">
                     <li class="item">
                         <a href="enlightenment/room">快乐美术教室</a>
                     </li>
@@ -61,7 +64,7 @@ AppAsset::register($this);
             </li>
             <li class="item">
                 <a href="education/index">艺术教育</a>
-                <ul class="subMenu"  style="padding-left: 72%">
+                <ul class="subMenu sp3">
                     <li class="item">
                         <a href="education/awards">高校奖学金活动</a>
                     </li>
@@ -127,7 +130,7 @@ AppAsset::register($this);
                 <li class="item">
                     <span class="subMenuIcon plus"></span>
                     <a href="education/index">艺术教育</a>
-                    <ul class="subMenu"  style="padding-left: 72%">
+                    <ul class="subMenu">
                         <li class="item">
                             <a href="education/awards">高校奖学金活动</a>
                         </li>
