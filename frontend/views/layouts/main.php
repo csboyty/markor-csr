@@ -158,7 +158,7 @@ AppAsset::register($this);
                         <img src="images/app/weiboGray.png" style="vertical-align: middle">&nbsp;&nbsp;我爱艺术家
                     </a>
                 </li>
-                <li class="item">
+                <li class="item" style="white-space: nowrap">
                     <span class="searchIcon"><em class="icon-search"></em></span>
                     <input type="text" class="searchInput search" placeholder="search">
                 </li>

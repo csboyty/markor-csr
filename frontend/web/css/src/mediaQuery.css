@@ -237,7 +237,19 @@
 }
 
 @media screen and (max-width:480px){
-
+    .flexslider .detail{
+        top:10%;
+        left:0px;
+        height: auto;
+        margin: 0px;
+        width: 100%;
+    }
+    .flexslider .detail .title{
+        font-size: 20px;
+    }
+    .flexslider .detail .excerpt{
+        display: none;
+    }
     .artItem .center{
         position: static;
         transform:none;
@@ -248,5 +260,26 @@
     }
     .teacherTrainItem .excerpt{
         width: 100%;
+    }
+    .list11 .item .title{
+        font-size: 16px;
+    }
+    .breadcrumb{
+        padding: 0px 2%;
+    }
+    .breadcrumb>li{
+        font-size: 12px;
+    }
+    .pageTop .excerpt{
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 5px;
+    }
+    .artItem .title{
+        font-size: 16px;
+    }
+    .artItem .excerpt{
+        font-size: 12px;
+        line-height: 18px;
     }
 }

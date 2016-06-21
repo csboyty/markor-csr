@@ -52,7 +52,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                         <img class="thumb" src="<?= $er->thumb; ?>">
                     </div>
                     <div class="info">
-                        <h3 class="title"><a href="activities/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
+                        <h3 class="title ellipsis"><a href="activities/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
                         <p class="excerpt moreEllipsis" data-row="3">
                             <?= $er->excerpt; ?>
                         </p>
@@ -71,7 +71,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                     <img class="thumb" src="<?= $er1->thumb; ?>">
                 </div>
                 <div class="info">
-                    <h3 class="title"><a href="education/awards/<?= $er1->id; ?>"><?= $er1->title; ?></a></h3>
+                    <h3 class="title ellipsis"><a href="education/awards/<?= $er1->id; ?>"><?= $er1->title; ?></a></h3>
                     <p class="excerpt moreEllipsis" data-row="3">
                         <?= $er1->excerpt; ?>
                     </p>
