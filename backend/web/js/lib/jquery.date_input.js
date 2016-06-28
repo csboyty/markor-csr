@@ -47,15 +47,16 @@ DateInput = (function($) { // Localise the $ function
 
             this.dateSelector = this.rootLayers = $('<div class="date_selector"></div>').append(nav, tableShell).insertAfter(this.input);
 
-            /*if ($.browser.msie && $.browser.version < 7) {
-             // The ieframe is a hack which works around an IE <= 6 bug where absolutely positioned elements
-             // appear behind select boxes. Putting an iframe over the top of the select box prevents this.
-             this.ieframe = $('<iframe class="date_selector_ieframe" frameborder="0" src="#"></iframe>').insertBefore(this.dateSelector);
-             this.rootLayers = this.rootLayers.add(this.ieframe);
-             // IE 6 only does :hover on A elements
-             $(".button", nav).mouseover(function() { $(this).addClass("hover") });
-             $(".button", nav).mouseout(function() { $(this).removeClass("hover") });
-             };*/
+            if ($.browser&&$.browser.msie && $.browser.version < 7) {
+                // The ieframe is a hack which works around an IE <= 6 bug where absolutely positioned elements
+                // appear behind select boxes. Putting an iframe over the top of the select box prevents this.
+                this.ieframe = $('<iframe class="date_selector_ieframe" frameborder="0" src="#"></iframe>').insertBefore(this.dateSelector);
+                this.rootLayers = this.rootLayers.add(this.ieframe);
+
+                // IE 6 only does :hover on A elements
+                $(".button", nav).mouseover(function() { $(this).addClass("hover") });
+                $(".button", nav).mouseout(function() { $(this).removeClass("hover") });
+            };
 
             this.tbody = $("tbody", this.dateSelector);
 
@@ -155,14 +156,15 @@ DateInput = (function($) { // Localise the $ function
 
         // Returns true if the given event occurred inside the date selector
         insideSelector: function(event) {
-            var offset = this.dateSelector.position();
+            /*var offset = this.dateSelector.position();
             offset.right = offset.left + this.dateSelector.outerWidth();
             offset.bottom = offset.top + this.dateSelector.outerHeight();
 
             return event.pageY < offset.bottom &&
                 event.pageY > offset.top &&
                 event.pageX < offset.right &&
-                event.pageX > offset.left;
+                event.pageX > offset.left;*/
+            return this.dateSelector.find($(event.target)).length==0?false:true;
         },
 
         // Respond to various different keyboard events
@@ -305,30 +307,42 @@ DateInput = (function($) { // Localise the $ function
         /*
          changeDayTo: Given a date, move along the date line in the given direction until we reach the
          desired day of week.
+
          The maths is a bit complex, here's an explanation.
+
          Think of a continuous repeating number line like:
+
          .. 5 6 0 1 2 3 4 5 6 0 1 2 3 4 5 6 0 1 ..
+
          We are essentially trying to find the difference between two numbers
          on the line in one direction (dictated by the sign of direction variable).
          Unfortunately Javascript's modulo operator works such that -5 % 7 = -5,
          instead of -5 % 7 = 2, so we need to only work with the positives.
+
          To find the difference between 1 and 4, going backwards, we can treat 1
          as (1 + 7) = 8, so the different is |8 - 4| = 4. If we don't cross the
          boundary between 0 and 6, for instance to find the backwards difference
          between 5 and 2, |(5 + 7) - 2| = |12 - 2| = 10. And 10 % 7 = 3.
+
          Going forwards, to find the difference between 4 and 1, we again treat 1
          as (1 + 7) = 8, and the difference is |4 - 8| = 4. If we don't cross the
          boundary, the difference between 2 and 5 is |2 - (5 + 7)| = |2 - 12| = 10.
          And 10 % 7 = 3.
+
          Once we have the positive difference in either direction represented as a
          absolute value, we can multiply it by the direction variable to get the difference
          in the desired direction.
+
          We can condense the two methods into a single equation:
+
          backwardsDifference = direction * (|(currentDayNum + 7) - dayOfWeek| % 7)
-         = direction * (|currentDayNum - dayOfWeek + 7| % 7)
+         = direction * (|currentDayNum - dayOfWeek + 7|  % 7)
+
          forwardsDifference = direction * (|currentDayNum - (dayOfWeek + 7)| % 7)
          = direction * (|currentDayNum - dayOfWeek - 7| % 7)
+
          (The two equations now differ only by the +/- 7)
+
          difference = direction * (|currentDayNum - dayOfWeek - (direction * 7)| % 7)
          */
         changeDayTo: function(dayOfWeek, date, direction) {
