@@ -633,6 +633,29 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
     font-weight: lighter;
 }
+/*************************分页********************/
+.pagination{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pagination li a{
+    font-size: 20px;
+    color: #888;
+    display: block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+.pagination li span{
+    font-size: 20px;
+}
+.pagination li a:hover{
+    color: #000;
+}
+.pagination>.active>a{
+    color: #000;
+}
 /************************详情**********************/
 .post{
     width: 70%;
