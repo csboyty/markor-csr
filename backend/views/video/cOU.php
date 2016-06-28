@@ -45,7 +45,7 @@ $this->registerCssFile("@web/css/lib/date_input.css");
     <div class="form-group">
         <label  class="control-label col-md-2">视频地址*</label>
         <div class="col-md-8">
-            <input type="text" class="form-control" value="<?php echo $model->memo; ?>" name="memo">
+            <input type="text" class="form-control" value="<?php echo Html::encode($model->memo); ?>" name="memo">
         </div>
     </div>
     <div class="form-group">
