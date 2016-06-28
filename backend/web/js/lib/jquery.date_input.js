@@ -217,12 +217,11 @@ DateInput = (function($) { // Localise the $ function
         },
 
         setPosition: function() {
-            var offset = this.input.offset();
+            //var offset = this.input.offset();
+            var offset = this.input.position();
             this.rootLayers.css({
-                //top: offset.top + this.input.outerHeight(),
-                //left: offset.left
-                top:34,
-                left:15
+                top: offset.top + this.input.outerHeight(),
+                left: offset.left
             });
 
             if (this.ieframe) {
