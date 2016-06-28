@@ -18,9 +18,9 @@ $this->params=[
     <div class="info">
         <h2 class="title">艺术启蒙</h2>
         <p class="excerpt">
-            从2009年“艺术·家”项目启动至今，美克美家先后在西安、沈阳、武汉等20多个城市的小学捐赠50间“快乐美术教室”
-            组织受捐小学的骨干美术教师来北京参加为期一周的专业培训，累计超过100,000名学生受益
-            美克美家还招募爱心大使在90所受捐小学开展“美术欣赏课”艺术支教活动，累计参与人数超过200人
+            从2009年“艺术·家”项目启动至今，美克美家先后在西安、沈阳、武汉等20多个城市的小学捐赠150间“快乐美术教室”，
+            组织受捐小学的骨干美术教师来北京参加为期一周的专业培训，累计超过100,000名学生受益。
+            美克美家还招募爱心大使在90所受捐小学开展“美术欣赏课”艺术支教活动，累计参与人数超过200人。
         </p>
     </div>
 </div>
@@ -34,7 +34,7 @@ $this->params=[
                 <span class="icon displayNoneInMobile"></span>
                 <div class="container">
                     <div class="center">
-                        <h3 class="title">这里是标题</h3>
+                        <h3 class="title">快乐美术教室</h3>
                         <p class="excerpt">
                             对受捐小学的骨干美术教师进行培训
                             提升受捐物资的利用效率
@@ -55,11 +55,12 @@ $this->params=[
 
                 <div class="container noBorder">
                     <div class="center">
-                        <h3 class="title">这里是标题</h3>
+                        <h3 class="title">教师培训</h3>
                         <p class="excerpt">
-                            对受捐小学的骨干美术教师进行培训
+                            运用便利的电教设备、美术教材、图书和光盘
+                            全面配置独立的美术教室，为孩子们创造艺术空间
+                            通过对受捐小学的骨干美术教师进行培训
                             提升受捐物资的利用效率
-                            帮助小学学生接受到更专业的美学教育
                         </p>
                     </div>
                 </div>
@@ -75,11 +76,11 @@ $this->params=[
                 <span class="icon displayNoneInMobile"></span>
                 <div class="container">
                     <div class="center">
-                        <h3 class="title">这里是标题</h3>
+                        <h3 class="title">志愿者活动</h3>
                         <p class="excerpt">
-                            对受捐小学的骨干美术教师进行培训
-                            提升受捐物资的利用效率
-                            帮助小学学生接受到更专业的美学教育
+                            招募爱心大使在近百所受捐小学
+                            开展“美术欣赏课”艺术支教活动
+                            切实帮助改善儿童艺术教育水平
                         </p>
                     </div>
                 </div>
@@ -95,11 +96,11 @@ $this->params=[
                 <span class="icon displayNoneInMobile"></span>
                 <div class="container noBorder">
                     <div class="center">
-                        <h3 class="title">这里是标题</h3>
+                        <h3 class="title">儿童画征集与产品开发</h3>
                         <p class="excerpt">
-                            对受捐小学的骨干美术教师进行培训
-                            提升受捐物资的利用效率
-                            帮助小学学生接受到更专业的美学教育
+                            针对受捐小学
+                            开展“我的童画世界”图片征集评选活动
+                            为小学生搭建展示艺术才华平台
                         </p>
                     </div>
                 </div>
