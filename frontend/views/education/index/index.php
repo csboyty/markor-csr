@@ -43,8 +43,8 @@ $this->params=[
                 <li class="item">
                     <div class="thumbContainer">
                         <picture>
-                            <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
-                            <img class="thumb" src="<?= $r->thumb; ?>" >
+                            <source srcset="<?= Helper::getSuffixFile($cr->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $cr->thumb; ?>" >
                         </picture>
                     </div>
                     <div class="info">

@@ -87,7 +87,6 @@ $this->params=[
         foreach($trainResults as $tr){
             ?>
             <li class="item">
-                <img class="thumb" src="<?= $tr->thumb; ?>">
                 <picture>
                     <source srcset="<?= Helper::getSuffixFile($tr->thumb); ?>" media="(max-width: 768px)">
                     <img class="thumb" src="<?= $tr->thumb; ?>" >
