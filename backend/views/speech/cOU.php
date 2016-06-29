@@ -22,7 +22,7 @@ $this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name
         <label class="control-label col-md-2">头像*</label>
         <div class="col-md-10" id="uploadContainer">
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
-            <p class="help-block">请上传500x500的jpg，png</p>
+            <p class="help-block">请上传1:1的jpg，png,宽度在400px-600px之间</p>
             <img  id="image"  style="width:100px"
                   src="<?php echo $model->thumb?$model->thumb:'images/app/defaultThumb.png'; ?>"/>
             <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">

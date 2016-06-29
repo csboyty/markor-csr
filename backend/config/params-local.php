@@ -1,20 +1,5 @@
 <?php
 return [
-    "imageSizes"=>[
-        "thumbnail"=>[
-            [
-                "suffix"=>"-half",
-                "handle"=>"imageMogr2/thumbnail/!50p"
-            ]
-        ],
-        "bgImage"=>[
-            [
-                "suffix"=>"-half",
-                "handle"=>"imageMogr2/thumbnail/!50p"
-            ]
-        ]
-
-    ],
     "qiNiu"=>[
         "handleHost"=>"api.qiniu.com",
         "handleUrl"=>"http://api.qiniu.com/pfop/",

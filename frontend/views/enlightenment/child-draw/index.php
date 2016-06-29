@@ -1,4 +1,6 @@
 <?php
+use frontend\models\Helper;
+
     $this->title = '儿童画征集与产品开发';
     $this->params=[
         "breadcrumbs"=>[
@@ -32,7 +34,10 @@
                 ?>
                 <li class="item">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $cr->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($cr->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $cr->thumb; ?>" >
+                        </picture>
                     </div>
 
                     <div class="info">
@@ -53,7 +58,10 @@
             foreach($workResults as $wr){
                 ?>
                 <li class="item">
-                    <img class="thumb" src="<?= $wr->thumb; ?>">
+                    <picture>
+                        <source srcset="<?= Helper::getSuffixFile($wr->thumb); ?>" media="(max-width: 768px)">
+                        <img class="thumb" src="<?= $wr->thumb; ?>" >
+                    </picture>
                 </li>
                 <?php
             }
@@ -70,7 +78,10 @@
                 <li class="item">
                     <a href="videos/<?= $vr->id; ?>">
                         <div class="thumbContainer">
-                            <img class="thumb" src="<?= $vr->thumb; ?>">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($vr->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $vr->thumb; ?>" >
+                            </picture>
                         </div>
 
                         <div class="info">

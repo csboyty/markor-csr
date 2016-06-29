@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
+use frontend\models\Helper;
 
 $this->title = "视频";
 $this->params=[
@@ -21,7 +22,11 @@ $this->params=[
                 <li class="item">
                     <a href="videos/<?= $r->id; ?>">
                         <div class="thumbContainer">
-                            <img class="thumb" src="<?= $r->thumb; ?>">
+
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $r->thumb; ?>" >
+                            </picture>
                             <p class="icon">
                                 <span class="icon-play"></span>
                             </p>

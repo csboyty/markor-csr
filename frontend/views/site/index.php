@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use frontend\models\Helper;
+
 $this->title = '首页';
 $this->registerCssFile("@web/css/lib/flexslider.css");
 ?>
@@ -49,11 +51,14 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                 ?>
                 <li class="item">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $er->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($er->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $er->thumb; ?>" >
+                        </picture>
                     </div>
                     <div class="info">
                         <h3 class="title ellipsis"><a href="activities/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
-                        <p class="excerpt moreEllipsis" data-row="3">
+                        <p class="excerpt gradient">
                             <?= $er->excerpt; ?>
                         </p>
                         <a class="tag" href="enlightenment/index" >艺术启蒙</a>
@@ -68,11 +73,14 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
             ?>
             <li class="item">
                 <div class="thumbContainer">
-                    <img class="thumb" src="<?= $er1->thumb; ?>">
+                    <picture>
+                        <source srcset="<?= Helper::getSuffixFile($er1->thumb); ?>" media="(max-width: 768px)">
+                        <img class="thumb" src="<?= $er1->thumb; ?>" >
+                    </picture>
                 </div>
                 <div class="info">
                     <h3 class="title ellipsis"><a href="education/awards/<?= $er1->id; ?>"><?= $er1->title; ?></a></h3>
-                    <p class="excerpt moreEllipsis" data-row="3">
+                    <p class="excerpt gradient">
                         <?= $er1->excerpt; ?>
                     </p>
                     <a class="tag" href="education/index" >艺术教育</a>
@@ -87,11 +95,14 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
             ?>
             <li class="item">
                 <div class="thumbContainer">
-                    <img class="thumb" src="<?= $cr->thumb; ?>">
+                    <picture>
+                        <source srcset="<?= Helper::getSuffixFile($cr->thumb); ?>" media="(max-width: 768px)">
+                        <img class="thumb" src="<?= $cr->thumb; ?>" >
+                    </picture>
                 </div>
                 <div class="info">
                     <h3 class="title"><a href="culture-programs/<?= $cr->id; ?>"><?= $cr->title; ?></a></h3>
-                    <p class="excerpt moreEllipsis" data-row="3">
+                    <p class="excerpt gradient">
                         <?= $cr->excerpt; ?>
                     </p>
                     <a class="tag" href="culture-programs/index" >艺术传承</a>
@@ -110,7 +121,10 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                 ?>
                 <li class="item">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $sr->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($sr->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $sr->thumb; ?>" >
+                        </picture>
                     </div>
 
                     <div class="info">
@@ -135,7 +149,10 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                 ?>
                 <li class="item">
                     <a href="videos/<?= $v->id; ?>">
-                        <img class="thumb" src="<?= $v->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($v->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $v->thumb; ?>" >
+                        </picture>
                         <div class="info">
                             <h2 class="title"><?= $v->title; ?></h2>
                             <p class="icon">

@@ -105,11 +105,11 @@ class PostController extends \yii\web\Controller
         }
 
         //切图
-        /*$qiNiu=new QiNiu();
+        $qiNiu=new QiNiu();
         if(isset($params["thumb"])){
             $qiNiu->handleImage($params["thumb"],Yii::$app->params["imageSizes"]["thumbnail"]);
         }
-        if(isset($params["bg_image"])){
+        /*if(isset($params["bg_image"])){
             $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
         }*/
 

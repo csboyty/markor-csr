@@ -1,4 +1,6 @@
 <?php
+use frontend\models\Helper;
+
 $this->title = '儿童画征集';
 $this->params=[
     "breadcrumbs"=>[
@@ -23,12 +25,17 @@ $this->params=[
         foreach($results as $key=>$value){
             ?>
             <p class="contentText"><?= $key; ?></p>
-            <ul class="list2">
+            <ul class="list1 list1M list12">
                 <?php
                     foreach($value as $v){
                         ?>
                         <li class="item">
-                            <img class="thumb" src="<?= $v->thumb; ?>">
+                            <div class="thumbContainer">
+                                <picture>
+                                    <source srcset="<?= Helper::getSuffixFile($v->thumb); ?>" media="(max-width: 768px)">
+                                    <img class="thumb" src="<?= $v->thumb; ?>" >
+                                </picture>
+                            </div>
                             <h3 class="title titleNoBd"><?= $v->title; ?></h3>
                         </li>
                         <?php

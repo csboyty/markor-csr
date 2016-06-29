@@ -6,6 +6,8 @@
  * Time: 上午11:19
  * To change this template use File | Settings | File Templates.
  */
+use frontend\models\Helper;
+
 $this->title = '艺术•家荣誉';
 $this->params=[
     "breadcrumbs"=>[
@@ -38,7 +40,10 @@ $this->params=[
         ?>
                 <li class="item">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $r->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $r->thumb; ?>" >
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="excerpt">

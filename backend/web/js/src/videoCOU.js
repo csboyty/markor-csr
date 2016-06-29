@@ -43,7 +43,7 @@ $(document).ready(function(){
         fileAddCb:null,
         progressCb:null,
         uploadedCb:function(info,file,up){
-            if(info.w==800&&info.h==400){
+            if(info.w==800&&info.h==400&&800<=info.w&&info.w<=1000){
                 $("#imageUrl").val(info.url);
 
                 $("#image").attr("src",info.url);

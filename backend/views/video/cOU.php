@@ -24,7 +24,7 @@ $this->registerCssFile("@web/css/lib/date_input.css");
         <label class="control-label col-md-2">缩略图*</label>
         <div class="col-md-10" id="uploadContainer">
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
-            <p class="help-block">请上传800x400的jpg，png</p>
+            <p class="help-block">请上传16:9的jpg，png，宽度800px-1000px</p>
             <img  id="image"  style="width:100px"
                   src="<?php echo $model->thumb?$model->thumb:'images/app/defaultBg.png'; ?>"/>
             <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">

@@ -56,7 +56,7 @@ $(document).ready(function(){
         fileAddCb:null,
         progressCb:null,
         uploadedCb:function(info,file,up){
-            if(info.w==500&&info.h==500){
+            if(info.w/info.h==4/3&&info.w>=400&&info.w<=600){
                 $("#imageUrl").val(info.url);
 
                 $("#image").attr("src",info.url);

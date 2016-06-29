@@ -1,5 +1,6 @@
 <?php
 use yii\widgets\LinkPager;
+use frontend\models\Helper;
 
 $this->title = '志愿者培训';
 $this->params=[
@@ -30,9 +31,13 @@ $this->params=[
                 ?>
                 <li class="item">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $r->thumb; ?>">
+
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $r->thumb; ?>" >
+                        </picture>
                     </div>
-                    <div class="info" style="width: 70%">
+                    <div class="info">
                         <h2 class="title ellipsis"><?= $r->title; ?></h2>
                         <p class="excerpt">
                             <?= $r->excerpt; ?>

@@ -1,5 +1,7 @@
 <?php
 use common\models\Category;
+use frontend\models\Helper;
+
 $this->title = $param;
 
 ?>
@@ -73,7 +75,11 @@ $this->title = $param;
             <li class="item">
                 <a target="_blank"  href="<?= $url; ?>">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $r->thumb; ?>">
+
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $r->thumb; ?>" >
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="excerpt">

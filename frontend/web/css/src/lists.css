@@ -70,9 +70,10 @@
 }
 .list .item .excerpt{
     font-size: 12px;
-    line-height:1.5em;
+    line-height:18px;
     color: #808080;
     margin: 10px 0px;
+    height: 4.5em;
 }
 .list .item:hover{
     border: 1px solid #000;
@@ -196,6 +197,9 @@
     visibility: visible;
     filter:alpha(opacity=70);
 }
+.list12 .item .excerpt{
+    color: #fff;
+}
 .list12 .item:hover .thumb{
     transform:scale(1.05,1.05);
 }
@@ -234,8 +238,15 @@
 .list2 .item .excerpt{
     color: #808080;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 1.5em;
     text-align: left;
+    height: 4.5em;
+}
+/*
+*继承list2
+*/
+.list21{
+
 }
 /**
 * list3 一个item里面3栏,一行1个元素 人物故事

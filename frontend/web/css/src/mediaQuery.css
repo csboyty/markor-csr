@@ -190,6 +190,7 @@
     }
     .list2 .item{
         width: 100%;
+        font-size: 0px;
     }
     .list2 .item .thumb{
         width: 30%;
@@ -200,12 +201,18 @@
         display: inline-block;
         vertical-align: middle;
         padding-left: 10px;
+        width: 70%;
+        box-sizing: border-box;
+        font-size: 14px;
     }
     .list2 .item .tCenter{
         text-align: left!important;
     }
     .list2 .item .mB20{
         margin-bottom: 0px !important;
+    }
+    .list21 .item .thumb{
+        width: 100%;
     }
     .list3 .item .thumbContainer{
         width: 40%;

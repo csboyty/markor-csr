@@ -1,4 +1,5 @@
 <?php
+use frontend\models\Helper;
 
 $this->title = '快乐美术教室';
 $this->params=[
@@ -34,7 +35,10 @@ $this->params=[
                     <li class="item">
                         <a href="activities/<?= $ar->category_id; ?>/<?= $ar->id; ?>">
                             <div class="thumbContainer">
-                                <img class="thumb" src="<?= $ar->thumb; ?>">
+                                <picture>
+                                    <source srcset="<?= Helper::getSuffixFile($ar->thumb); ?>" media="(max-width: 768px)">
+                                    <img class="thumb" src="<?= $ar->thumb; ?>" >
+                                </picture>
                             </div>
 
                             <div class="info">

@@ -1,4 +1,6 @@
 <?php
+use frontend\models\Helper;
+
 $this->title = '艺术传承';
 $this->params=[
     "breadcrumbs"=>[
@@ -19,16 +21,20 @@ $this->params=[
     </div>
 </div>
 <div class="section">
-    <ul class="list2">
+    <ul class="list2 list21">
         <?php
             foreach($results as $r){
                 ?>
                 <li class="item">
                     <a class="info" href="culture-programs/<?= $r->id; ?>">
-                        <img class="thumb" src="<?= $r->thumb; ?>">
-                        <h3 class="title"><?= $r->title; ?></h3>
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $r->thumb; ?>" >
+                        </picture>
+
+                        <h3 class="title ellipsis"><?= $r->title; ?></h3>
                         <p class="date"><?= $r->date; ?></p>
-                        <p class="excerpt">
+                        <p class="excerpt gradient">
                             <?= $r->excerpt; ?>
                         </p>
                     </a>

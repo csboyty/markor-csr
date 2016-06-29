@@ -1,4 +1,6 @@
 <?php
+use frontend\models\Helper;
+
 $this->title = '高校奖学金活动';
 $this->params=[
     "breadcrumbs"=>[
@@ -33,7 +35,10 @@ $this->params=[
                     ?>
                     <li class="item">
                         <div class="thumbContainer">
-                            <img class="thumb" src="<?= $r->thumb; ?>">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $r->thumb; ?>" >
+                            </picture>
                         </div>
                         <div class="info">
                             <p class="excerpt">
@@ -51,7 +56,10 @@ $this->params=[
                             </p>
                         </div>
                         <div class="thumbContainer">
-                            <img class="thumb" src="<?= $r->thumb; ?>">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $r->thumb; ?>" >
+                            </picture>
                         </div>
                     </li>
                     <?php

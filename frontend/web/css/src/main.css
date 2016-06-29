@@ -97,6 +97,19 @@ h1,h2,h3,h4,h5,h6{
 .bg474747{
     background-color: #474747!important;
 }
+.gradient{
+    position: relative;
+    overflow: hidden;
+}
+.gradient:after{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(to top,rgba(255,255,255,1),rgba(255,255,255,0));
+}
 /**
 * 文本内容添加引号
 */
@@ -680,6 +693,8 @@ h1,h2,h3,h4,h5,h6{
     line-height: 21px;
     text-align: left;
     margin-bottom: 30px;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 .post .content img{
     display: block;

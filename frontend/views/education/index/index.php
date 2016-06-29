@@ -1,6 +1,6 @@
 <?php
 
-/* @var $this yii\web\View */
+use frontend\models\Helper;
 
 $this->title = '艺术教育';
 $this->params=[
@@ -42,7 +42,10 @@ $this->params=[
                 ?>
                 <li class="item">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $cr->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $r->thumb; ?>" >
+                        </picture>
                     </div>
                     <div class="info">
                         <h2 class="title ellipsis"><a href="works/<?= $cr->id; ?>/<?= $cr->category_id; ?>"><?= $cr->title; ?></a></h2>

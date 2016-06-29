@@ -1,4 +1,5 @@
 <?php
+use frontend\models\Helper;
 
 $this->title = '实习生';
 $this->params=[
@@ -68,7 +69,10 @@ $this->params=[
             foreach($speechResults as $sr){
                 ?>
                 <li class="item">
-                    <img class="thumb mB20 circle" src="<?= $sr->thumb; ?>">
+                    <picture>
+                        <source srcset="<?= Helper::getSuffixFile($sr->thumb); ?>" media="(max-width: 768px)">
+                        <img class="thumb mB20 circle" src="<?= $sr->thumb; ?>" >
+                    </picture>
                     <div class="info">
                         <p class="tCenter">姓名：<?= $sr->author; ?></p>
                         <!--<p class="tCenter">专业：四川美院视觉传达</p>-->

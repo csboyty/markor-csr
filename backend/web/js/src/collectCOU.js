@@ -38,7 +38,7 @@ $(document).ready(function(){
         fileAddCb:null,
         progressCb:null,
         uploadedCb:function(info,file,up){
-            if(info.w==500&&info.h==500){
+            if(info.w/info.h==4/3&&info.w>=400&&info.w<=600){
                 $("#imageUrl").val(info.url);
 
                 $("#image").attr("src",info.url);
@@ -59,8 +59,12 @@ $(document).ready(function(){
             content:{
                 required:true
             },
-            image:{
+            thumb:{
                 required:true
+            },
+            author:{
+                required:true,
+                maxlength:32
             }
         },
         messages:{
@@ -71,8 +75,12 @@ $(document).ready(function(){
             content:{
                 required:config.validErrors.required
             },
-            image:{
+            thumb:{
                 required:config.validErrors.required
+            },
+            author:{
+                required:config.validErrors.required,
+                maxlength:config.validErrors.maxLength.replace("${max}",32)
             }
         },
         submitHandler:function(form) {

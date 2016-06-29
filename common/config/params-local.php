@@ -1,5 +1,20 @@
 <?php
 return [
+    "imageSizes"=>[
+        "thumbnail"=>[
+            [
+                "suffix"=>"-320x",
+                "handle"=>"imageMogr2/thumbnail/320x"
+            ]
+        ],
+        "bgImage"=>[
+            [
+                "suffix"=>"-half",
+                "handle"=>"imageMogr2/thumbnail/!50p"
+            ]
+        ]
+
+    ],
     "perShowCount"=>[
         "default"=>10
     ],

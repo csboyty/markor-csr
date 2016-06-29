@@ -1,4 +1,5 @@
 <?php
+use frontend\models\Helper;
 
 $this->title = '教师培训';
 $this->params=[
@@ -35,7 +36,10 @@ $this->params=[
             <li class="item">
                 <a href="activities/<?= $ar->category_id; ?>/<?= $ar->id; ?>">
                     <div class="thumbContainer">
-                        <img class="thumb" src="<?= $ar->thumb; ?>">
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($ar->thumb); ?>" media="(max-width: 768px)">
+                            <img class="thumb" src="<?= $ar->thumb; ?>" >
+                        </picture>
                     </div>
 
                     <div class="info">
@@ -60,7 +64,10 @@ $this->params=[
     <?php
         foreach($speechResults as $sr){
             ?>
-            <img class="circle pCenter" style="width: 100px;" src="<?= $sr->thumb; ?>">
+            <picture>
+                <source srcset="<?= Helper::getSuffixFile($sr->thumb); ?>" media="(max-width: 768px)">
+                <img class="circle pCenter" style="width: 100px;" src="<?= $sr->thumb; ?>" >
+            </picture>
             <p class="contentText" style="margin: 10px auto"><?= $sr->author; ?></p>
             <p class="contentText" style="margin: 10px auto"><?=$sr->memo; ?></p>
             <p class="contentText hasQuotation">
@@ -80,7 +87,10 @@ $this->params=[
         foreach($workResults as $wr){
             ?>
             <li class="item">
-                <img class="thumb" src="<?= $wr->thumb; ?>">
+                <picture>
+                    <source srcset="<?= Helper::getSuffixFile($wr->thumb); ?>" media="(max-width: 768px)">
+                    <img class="thumb" src="<?= $wr->thumb; ?>" >
+                </picture>
             </li>
         <?php
         }

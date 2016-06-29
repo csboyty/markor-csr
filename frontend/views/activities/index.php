@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 use yii\widgets\LinkPager;
+use frontend\models\Helper;
 
 $this->title = $category->name;
 $parentUrl="";
@@ -52,7 +53,10 @@ $this->params=[
                                 <p class="bottom"><?= $month; ?></p>
                             </div>
                             <div class="thumbContainer">
-                                <img class="thumb" src="<?= $r->thumb; ?>">
+                                <picture>
+                                    <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                                    <img class="thumb" src="<?= $r->thumb; ?>" >
+                                </picture>
                             </div>
                             <div class="info">
                                 <h2 class="title ellipsis"><?= $r->title; ?></h2>
