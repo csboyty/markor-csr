@@ -20,7 +20,7 @@ $this->title = '新建/修改微信头条';
         <label class="control-label col-md-2">封面图*</label>
         <div class="col-md-10" id="uploadContainer">
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
-            <p class="help-block">请上传4:3的jpg，png，宽度400px-600px</p>
+            <p class="help-block">请上传4:3的jpg，png，宽度400px-800px</p>
             <img  id="image"  style="width:100px"
                   src="<?php echo $model->thumb?$model->thumb:'images/app/defaultThumb.png'; ?>"/>
             <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">
