@@ -218,13 +218,13 @@ h1,h2,h3,h4,h5,h6{
     z-index: 2;
 }
 .menu .subMenu.sp1{
-    padding-left: 60%;
+    padding-left: 40%;
 }
 .menu .subMenu.sp2{
-    padding-left: 65%;
+    padding-left: 42%;
 }
 .menu .subMenu.sp3{
-    padding-left: 72%;
+    padding-left: 42%;
 }
 .menu .subMenu>.item{
     padding: 0px 10px;

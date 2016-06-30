@@ -31,7 +31,7 @@ $this->params=[
                                 <span class="icon-play"></span>
                             </p>
                         </div>
-                        <p class="text"><?= $r->title; ?></p>
+                        <p class="text ellipsis"><?= $r->title; ?></p>
                         <p class="text"><?= $r->date; ?></p>
                     </a>
                 </li>
