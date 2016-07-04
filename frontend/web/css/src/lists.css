@@ -24,7 +24,7 @@
 }
 .weChatList .item .title{
     color:#808080;
-    font-size: 16px;
+    font-size: 18px;
     position: absolute;
     left:20%;
     right:10px;
@@ -40,7 +40,6 @@
 */
 .list{
     font-size: 0px;
-    padding:40px 0px 0px 0px;
 }
 .list .item{
     width: 33%;
@@ -63,20 +62,26 @@
 .list .item .title{
     font-size: 18px;
     color: #666;
-    margin: 15px 0px;
+    margin: 40px 0px 20px 0px;
 }
 .list .item .title a{
     color: #666;
 }
 .list .item .excerpt{
-    font-size: 12px;
-    line-height:18px;
+    font-size: 14px;
+    line-height:1.5em;
     color: #808080;
     margin: 10px 0px;
     height: 4.5em;
 }
+.list .item .tag{
+    margin: 40px 0px 40px 0px;
+}
 .list .item:hover{
     border: 1px solid #000;
+}
+.list .item:hover a{
+    color: #000;
 }
 .list .item:hover .thumb{
     transform:scale(1.05,1.05);
@@ -87,7 +92,6 @@
 */
 .list1{
     font-size:0;
-    padding:40px 0px 0px 0px;
     margin-left: 2%;
 }
 .list1 .item{
@@ -111,12 +115,14 @@
     overflow:hidden;
     box-sizing:border-box;
     padding:20px 20px 30px 20px;
-    background:#fff;
+    filter:alpha(opacity=20);
+    background: #000;
+    background: rgba(0,0,0,0.2);
     position:absolute;
     top:100%;
     left:0;
     transition:all 0.4s ease-out;
-    color: #666;
+    color: #fff;
 }
 .list1 .item:hover .info{
     top:0;
@@ -124,27 +130,29 @@
 .list1 .item .title{
     font-size: 18px;
     text-align:center;
-    border-bottom: 2px solid #666;
-    padding: 5px 0px;
+    border-bottom: 2px solid #fff;
+    padding: 5px 0px 10px 0px;
 }
 .list1 .item .title a{
-    color:#666;
+    color:#fff;
 }
 .list1 .item .excerpt{
-    font-size:12px;
+    font-size:14px;
     line-height:1.5em;
     margin:auto;
-    color: #808080;
+    color: #fff;
 }
 .list1 .item .author{
     font-size:14px;
-    padding-top:8px;
+    margin: 10px 0px;
     position:static;
     text-align:center;
     display:block;
 }
 .list1 .item .tag{
     margin:20px auto 0px auto;
+    color: #fff;
+    border: 1px solid #fff;
 }
 .list1 .item .icon{
     margin: 10px auto auto auto;
@@ -158,11 +166,12 @@
 * list11 更改了内容的颜色 首页视频
 */
 .list11{
-    padding:40px 10% 0px 10%;
+    padding:0px 10%;
     margin-left: 0px;
 }
 .list11 .item{
     width: 100%;
+    margin: 0px;
 }
 .list11 .item .info{
     background: #000;
@@ -326,7 +335,7 @@
 .list3 .item .excerpt{
     font-size: 14px;
     color: #808080;
-    line-height: 21px;
+    line-height: 1.5em;
 }
 .list3 .item:hover .thumb{
     transform:scale(1.05,1.05);

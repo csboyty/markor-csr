@@ -156,7 +156,7 @@ h1,h2,h3,h4,h5,h6{
 .more{
     display: block;
     color: #666;
-    margin: 50px auto;
+    margin: 60px auto 0px auto;
     width: 60px;
     padding: 5px;
     text-align: center;
@@ -198,11 +198,14 @@ h1,h2,h3,h4,h5,h6{
     color: #808080;
 }
 .menu>.item>a{
-    font-size: 14px;
+    font-size: 16px;
     color: #808080;
     line-height: 53px;
     height: 63px;
     display: block;
+}
+.menu>.item>a:hover,.menu>.item>a.active{
+    color: #000;
 }
 .menu .subMenu{
     background: #eaeaea;
@@ -211,7 +214,7 @@ h1,h2,h3,h4,h5,h6{
     height: 0px;
     left:0px;
     top:100%;
-    line-height: 30px;
+    line-height: 40px;
     transition:all .5s linear;
     overflow: hidden;
     box-sizing: border-box;
@@ -232,9 +235,13 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu .subMenu>.item>a{
     color: #808080;
+    font-size: 16px;
+}
+.menu .subMenu>.item>a:hover,.menu .subMenu>.item>a.active{
+    color: #000;
 }
 .menu .item:hover .subMenu{
-    height: 30px;
+    height: 40px;
 }
 .menuMContainer{
     position: relative;
@@ -344,14 +351,15 @@ h1,h2,h3,h4,h5,h6{
 * breadcrumb
 */
 .breadcrumb{
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background: #eaeaea;
     padding:0px 16%;
     color: #808080;
 }
 .breadcrumb>li+li:before{
     content: ">";
+    margin: 0px 10px;
 }
 .breadcrumb>li>a{
     color: #808080;
@@ -363,18 +371,18 @@ h1,h2,h3,h4,h5,h6{
 * sections
 */
 .section{
-  padding: 40px 15%;
+  padding: 80px 15%;
 }
 .section .sectionTitle{
     font-size: 0px;
     height: 68px;
     background-repeat: no-repeat;
-    background-position: center center;
-    padding:40px 0px;
+    background-position: top center;
+    padding:0px 0px 60px 0px;
 }
 .section .contentText{
     font-size: 14px;
-    line-height: 21px;
+    line-height: 1.5em;
     margin: 40px auto;
     text-align: center;
     width: 70%;
@@ -552,7 +560,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .pageTop .excerpt{
     font-size: 14px;
-    line-height: 21px;
+    line-height: 1.5em;
     margin-top: 50px;
 }
 
@@ -591,9 +599,10 @@ h1,h2,h3,h4,h5,h6{
 }
 .contactInfo td .content{
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.5em;
     vertical-align: middle;
-    margin-left: 4px;
+    margin-left: 15px;
     text-align: left;
 }
 .footer .copyRight{
@@ -624,7 +633,7 @@ h1,h2,h3,h4,h5,h6{
 .flexslider .detail{
     position: absolute;
     width: 50%;
-    height: 150px;
+    height: 156px;
     left:50%;
     top:50%;
     margin: -75px 0px 0px -25%;
@@ -632,6 +641,7 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
     word-break: break-all;
     word-wrap: break-word;
+    overflow: hidden;
 }
 .flexslider .detail .title{
     font-size: 36px;
@@ -640,11 +650,13 @@ h1,h2,h3,h4,h5,h6{
     font-weight: lighter;
 }
 .flexslider .detail .excerpt{
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 1.5em;
     margin: 20px 0px;
     color: #fff;
     font-weight: lighter;
+    height: 3em;
+    overflow: hidden;
 }
 /*************************分页********************/
 .pagination{
@@ -690,7 +702,7 @@ h1,h2,h3,h4,h5,h6{
 .post .content{
     color: #808080;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 1.5em;
     text-align: left;
     margin-bottom: 30px;
     word-break: break-all;
@@ -763,7 +775,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .artItem .excerpt{
     font-size: 14px;
-    line-height: 21px;
+    line-height: 1.5em;
     color: #808080;
 }
 .artItem .imageContainer{

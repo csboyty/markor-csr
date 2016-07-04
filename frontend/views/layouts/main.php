@@ -150,12 +150,12 @@ AppAsset::register($this);
                 </li>
                 <li class="item">
                     <a href="#">
-                        <img src="images/app/weixinGray.png" style="vertical-align: middle">&nbsp;&nbsp;美克美家
+                        <img src="images/app/weixinGray.png" style="vertical-align: middle">美克美家
                     </a>
                 </li>
                 <li class="item">
                     <a href="#">
-                        <img src="images/app/weiboGray.png" style="vertical-align: middle">&nbsp;&nbsp;我爱艺术家
+                        <img src="images/app/weiboGray.png" style="vertical-align: middle">我爱艺术家
                     </a>
                 </li>
                 <li class="item" style="white-space: nowrap">
@@ -203,8 +203,8 @@ AppAsset::register($this);
                     </p>
                 </td>
                 <td>
-                    <p><img src="images/app/weixin.png" class="iconWeb">&nbsp;&nbsp;美克美家</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/app/weibo.png" class="iconWeb">&nbsp;&nbsp;我爱艺术家</p>
+                    <p><img src="images/app/weixin.png" class="iconWeb"><span style="margin-left: 15px;">美克美家</span></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/app/weibo.png" class="iconWeb"><span style="margin-left: 15px;">我爱艺术家</span></p>
                 </td>
             </tr>
         </table>
