@@ -467,7 +467,10 @@ h1,h2,h3,h4,h5,h6{
 * sections
 */
 .section{
-  padding: 80px 15%;
+    padding: 80px 0;
+    width:970px;
+    margin: auto;
+    box-sizing: border-box;
 }
 .section .sectionTitle{
     font-size: 0px;

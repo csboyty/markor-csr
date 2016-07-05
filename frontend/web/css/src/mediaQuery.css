@@ -12,7 +12,8 @@
         width: 100%;
     }
     .section{
-        padding: 40px 5%;
+        padding: 40px 20px;
+        width: 100%;
     }
 }
 @media screen and (max-width:768px){
