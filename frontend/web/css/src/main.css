@@ -36,6 +36,10 @@ h1,h2,h3,h4,h5,h6{
 /**
 * 公用类
 */
+.header-wrapper{
+    width:100%;
+    border-bottom: 1px solid #ccc;
+}
 .header{
     margin: auto;
     width:970px;
@@ -43,7 +47,6 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
     box-sizing: border-box;
     height: 90px;
-    border-bottom: 1px solid #ccc;
 }
 .circle{
     border-radius: 50%;
