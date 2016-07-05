@@ -38,9 +38,10 @@ h1,h2,h3,h4,h5,h6{
 .header{
     margin: auto;
     width:100%;
-    padding: 10px 20px;
+    padding: 0;
     position: relative;
     box-sizing: border-box;
+    height: 70px;
 }
 .circle{
     border-radius: 50%;
@@ -178,6 +179,9 @@ h1,h2,h3,h4,h5,h6{
     display: inline-block;
     margin: 0px;
     vertical-align: top;
+    position: absolute;
+    top:10px;
+    left: 20px;
 }
 .logo a{
     display: block;
@@ -193,9 +197,8 @@ h1,h2,h3,h4,h5,h6{
 * menu
 */
 .menu{
-    position: absolute;
-    top:0;
-    right:70px;
+    float: right;
+    margin-right: 70px;
 }
 .menu>.item{
     display: inline-block;
