@@ -37,8 +37,8 @@ h1,h2,h3,h4,h5,h6{
 */
 .header{
     margin: auto;
-    width:970px;
-    padding: 10px;
+    width:100%;
+    padding: 10px 20px;
     position: relative;
     box-sizing: border-box;
 }
@@ -182,7 +182,7 @@ h1,h2,h3,h4,h5,h6{
 .logo a{
     display: block;
     width: 110px;
-    height: 53px;
+    height: 50px;
     background-image: url(../../images/app/logo.png);
     background-image: -webkit-image-set(url(../../images/app/logo.png) 1x,url(../../images/app/logo@2x.png) 2x);
     background-repeat: no-repeat;
@@ -193,8 +193,9 @@ h1,h2,h3,h4,h5,h6{
 * menu
 */
 .menu{
-    float: right;
-    margin-right: 65px;
+    position: absolute;
+    top:0;
+    right:70px;
 }
 .menu>.item{
     display: inline-block;
@@ -204,8 +205,8 @@ h1,h2,h3,h4,h5,h6{
 .menu>.item>a{
     font-size: 16px;
     color: #808080;
-    line-height: 53px;
-    height: 63px;
+    line-height: 70px;
+    height: 70px;
     display: block;
 }
 .menu>.item>a:hover,.menu>.item>a.active{
@@ -326,7 +327,7 @@ h1,h2,h3,h4,h5,h6{
 */
 .searchContainer{
     position: absolute;
-    right:0;
+    right:20px;
     bottom:15px;
     height: 41px;
     display: table;
@@ -340,7 +341,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 14px;
     line-height: 40px;
     display: table-cell;
-    transition:all 0.5s ease-in;
+    transition:all 0.5s ease-out;
     padding-left: 5px;
 }
 .searchContainer .ctrl{
