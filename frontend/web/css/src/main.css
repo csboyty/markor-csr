@@ -677,7 +677,8 @@ h1,h2,h3,h4,h5,h6{
 * footer
 */
 .footer{
-
+    font-size:14px;
+    font-size:1.4rem;
 }
 .contactInfo{
     background: #808080;
@@ -705,13 +706,34 @@ h1,h2,h3,h4,h5,h6{
     width: 25px;
     height: auto;
 }
-.contactInfo td .content{
+.contactInfo td .address{
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.5em;
     vertical-align: middle;
     margin-left: 15px;
     text-align: left;
+    letter-spacing: 0.5em;
+}
+.contactInfo td .contact{
+    display: inline-block;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    vertical-align: middle;
+    margin-left: 15px;
+    text-align: left;
+    letter-spacing: 0.5em;
+}
+.contactInfo td .social-media{
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    vertical-align: middle;
+    margin: 0 0 10px 15px;
+    text-align: left;
+    letter-spacing: 0.5em;
 }
 .footer .copyRight{
     background: #474747;
