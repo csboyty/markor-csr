@@ -269,9 +269,9 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top: 0;
     right: 0;
-    width: 70px;
-    height: 70px;
-    padding: 10px;
+    width: 90px;
+    height: 90px;
+    padding: 20px;
     box-sizing: border-box;
     line-height: 50px;
     text-align: center;
@@ -284,7 +284,7 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     right:-5.5%;
     left:-5.5%;
-    top:70px;
+    top:90px;
     background: #fff;
     border-top:1px solid #ccc;
     display: none;
