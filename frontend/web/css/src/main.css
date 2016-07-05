@@ -347,7 +347,7 @@ h1,h2,h3,h4,h5,h6{
     border: 1px solid #eaeaea;
     opacity: 0;
     color: #ccc;
-    width: 0px;
+    width: 570px;
     height: 50px;
     font-size: 14px;
     line-height: 40px;
@@ -372,7 +372,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 .searchContainer:hover .input{
-    width:570px;
+/*    width:570px;*/
     opacity: 1;
     transform: rotateX(0);
 }
