@@ -208,7 +208,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu>.item>a{
     font-size: 15px;
-    font-size: 15rem;
+    font-size: 1.5rem;
     color: #808080;
     line-height: 70px;
     height: 70px;
