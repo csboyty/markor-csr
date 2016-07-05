@@ -1,8 +1,10 @@
 .weChatList{
-    padding: 10px 15%;
+    padding: 10px;
     border-top: 1px solid #ccc;
+    width: 970px;
+    margin: auto;
     font-size:0px;
-    margin-left: -10px;
+    box-sizing: border-box;
 }
 .weChatList .item{
     width: 33.3%;
