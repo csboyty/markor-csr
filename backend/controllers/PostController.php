@@ -107,7 +107,12 @@ class PostController extends \yii\web\Controller
         //切图
         $qiNiu=new QiNiu();
         if(isset($params["thumb"])){
-            $qiNiu->handleImage($params["thumb"],Yii::$app->params["imageSizes"]["thumbnail"]);
+
+            //如果是修改的时候，没有更新图片不需要切图
+            if($model->thumb!=$params["thumb"]){
+                $qiNiu->handleImage($params["thumb"],Yii::$app->params["imageSizes"]["thumbnail"]);
+            }
+
         }
         /*if(isset($params["bg_image"])){
             $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
