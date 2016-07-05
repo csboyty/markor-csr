@@ -166,7 +166,10 @@ AppAsset::register($this);
             </ul>
         </div>
     </div>
-</div>    
+</div> 
+    <div class="breadcrumb-wrapper">
+        
+       
        <?= Breadcrumbs::widget([
         'itemTemplate' => "<li>{link}</li>", // template for all links
         'activeItemTemplate'=>"<li>{link}</li>",
@@ -176,7 +179,7 @@ AppAsset::register($this);
         ],
         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
     ]) ?>
-
+    </div>
     <?= $content ?>
 
     <div class="footer">

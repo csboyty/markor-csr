@@ -446,11 +446,15 @@ h1,h2,h3,h4,h5,h6{
 /**
 * breadcrumb
 */
+.breadcrumb-wrapper{
+    width: 100%;
+    background: #eaeaea;
+}
 .breadcrumb{
     height: 40px;
     line-height: 40px;
-    background: #eaeaea;
-    padding:0px 16%;
+    width:970px;
+    margin: auto;
     color: #808080;
 }
 .breadcrumb>li+li:before{
