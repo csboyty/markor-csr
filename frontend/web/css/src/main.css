@@ -184,6 +184,7 @@ h1,h2,h3,h4,h5,h6{
     display: inline-block;
     margin: 0px;
     vertical-align: top;
+    float:left;
     margin-top:20px;
     
 }
@@ -201,7 +202,7 @@ h1,h2,h3,h4,h5,h6{
 * menu
 */
 .menu{
-    float: right;
+    float:right;
 }
 .menu>.item{
     display: inline-block;
@@ -399,6 +400,7 @@ h1,h2,h3,h4,h5,h6{
     padding: 20px;
     box-sizing: border-box;
     min-width: 70px;
+    float: right;
 }
 .searchContainer .input{
     position: absolute;
