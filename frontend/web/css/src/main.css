@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6{
 */
 .header{
     margin: auto;
-    width:100%;
+    width:970px;
     padding: 0;
     position: relative;
     box-sizing: border-box;
