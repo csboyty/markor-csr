@@ -714,7 +714,7 @@ h1,h2,h3,h4,h5,h6{
     vertical-align: middle;
     margin-left: 15px;
     text-align: left;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.1em;
 }
 .contactInfo td .contact{
     display: inline-block;
@@ -724,16 +724,17 @@ h1,h2,h3,h4,h5,h6{
     vertical-align: middle;
     margin-left: 15px;
     text-align: left;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.1em;
 }
 .contactInfo td .social-media{
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1.5em;
     vertical-align: middle;
-    margin: 0 0 10px 15px;
+    margin: 0 auto 5px auto;
     text-align: left;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    width:130px;
 }
 .footer .copyRight{
     background: #474747;
