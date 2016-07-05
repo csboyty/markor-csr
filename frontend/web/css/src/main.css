@@ -305,7 +305,7 @@ h1,h2,h3,h4,h5,h6{
     color: #808080;
     display: block;
     width: 100%;
-    box-shadow: border-box;
+    box-sizing: border-box;
     height: 50px;
 }
 .menuM>.item>a>img{
