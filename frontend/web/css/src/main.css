@@ -347,12 +347,13 @@ h1,h2,h3,h4,h5,h6{
 .menuM>.item>.searchIcon{
     font-size: 24px;
     vertical-align: middle;
-    border-left:1px solid #808080;
+    border-right:1px solid #808080;
     position: absolute;
     top:10px;
     bottom: 10px;
-    width:50px;
+    width:30px;
     text-align: center;
+    line-height: 30px;
 }
 .menuM>.item>.searchInput{
     font-size: 14px;
@@ -360,7 +361,7 @@ h1,h2,h3,h4,h5,h6{
     outline: none;
     border: none;
     
-    padding-left: 60px;
+    padding-left: 50px;
     vertical-align: middle;
     width:100%;
 }
