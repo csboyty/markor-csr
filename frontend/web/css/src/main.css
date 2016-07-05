@@ -347,15 +347,22 @@ h1,h2,h3,h4,h5,h6{
 .menuM>.item>.searchIcon{
     font-size: 24px;
     vertical-align: middle;
+    border-left:1px solid #808080;
+    position: absolute;
+    top:10px;
+    bottom: 10px;
+    width:50px;
+    text-align: center;
 }
 .menuM>.item>.searchInput{
     font-size: 14px;
     line-height: 24px;
     outline: none;
     border: none;
-    border-left:1px solid #808080;
-    padding-left: 5px;
+    
+    padding-left: 60px;
     vertical-align: middle;
+    width:100%;
 }
 /**
 * search
