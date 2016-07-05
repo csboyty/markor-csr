@@ -209,7 +209,7 @@ AppAsset::register($this);
                 </td>
                 <td>
                     <p class="social-media"><img src="images/app/weixin.png" class="iconWeb"><span style="margin-left: 15px;">美克美家</span></p>
-                    <p class="social-media">&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/app/weibo.png" class="iconWeb"><span style="margin-left: 15px;">我爱艺术家</span></p>
+                    <p class="social-media"><img src="images/app/weibo.png" class="iconWeb"><span style="margin-left: 15px;">我爱艺术家</span></p>
                 </td>
             </tr>
         </table>
