@@ -184,6 +184,7 @@ h1,h2,h3,h4,h5,h6{
     background-image: -webkit-image-set(url(../../images/app/logo.png) 1x,url(../../images/app/logo@2x.png) 2x);
     background-repeat: no-repeat;
     font-size:0px;
+    background-size: contain;
 }
 /**
 * menu
@@ -342,6 +343,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 24px;
     display: table-cell;
     vertical-align: middle;
+    color: #808080;
 }
 .searchContainer:hover .input{
     width:500px;
