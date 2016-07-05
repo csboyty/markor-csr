@@ -2,11 +2,14 @@
     .header{
         width: 100%;
     }
+    .logo{
+        margin-left:20px;
+    }
     .searchContainer{
 /*        right: 5%;*/
     }
     .weChatList{
-        padding:10px 5%;
+        width: 100%;
     }
     .section{
         padding: 40px 5%;
