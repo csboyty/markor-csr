@@ -24,13 +24,15 @@
 }
 .weChatList .item .title{
     color:#808080;
-    font-size: 18px;
+    font-size: 16px;
     position: absolute;
     left:20%;
     right:10px;
-    top:10px;
-    bottom:10px;
+    top:0;
+    bottom:0;
     margin-left: 20px;
+    line-height: 1.3em;
+    font-style: italic;
 }
 .weChatList .item:hover .title{
     color: #000;
