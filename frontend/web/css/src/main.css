@@ -250,13 +250,13 @@ h1,h2,h3,h4,h5,h6{
     margin-top:1px;
 }
 .menu .subMenu.sp1{
-    padding-right: 350px;
+    padding-right: 40%;
 }
 .menu .subMenu.sp2{
-    padding-right: 100px;
+    padding-right: 20%;
 }
 .menu .subMenu.sp3{
-    padding-right: 100px;
+    padding-right: 20%;
 }
 .menu .subMenu>.item{
     padding: 0px 10px;
