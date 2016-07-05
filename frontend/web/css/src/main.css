@@ -408,7 +408,7 @@ h1,h2,h3,h4,h5,h6{
     right:50px;
     border: 1px solid #ccc;
     opacity: 0;
-    color: #ccc;
+    color: #808080;
     width: 0px;
     height: 50px;
     font-size: 14px;
@@ -432,7 +432,7 @@ h1,h2,h3,h4,h5,h6{
     box-sizing: border-box;
     line-height: 50px;
     text-align: center;
-    background: #ccc;
+    border: #ccc 1px solid;
 }
 .searchContainer:hover .input{
     width:570px;
