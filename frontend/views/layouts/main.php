@@ -25,7 +25,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<div class="header-wrapper">
     <div class="header">
         <h1 class="logo">
             <a href="<?php echo Yii::$app->homeUrl; ?>">MARKOR-CSR</a>
@@ -165,7 +165,8 @@ AppAsset::register($this);
             </ul>
         </div>
     </div>
-    <?= Breadcrumbs::widget([
+</div>    
+       <?= Breadcrumbs::widget([
         'itemTemplate' => "<li>{link}</li>", // template for all links
         'activeItemTemplate'=>"<li>{link}</li>",
         'homeLink'=>[
