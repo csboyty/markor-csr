@@ -455,7 +455,8 @@ h1,h2,h3,h4,h5,h6{
     line-height: 40px;
     width:970px;
     margin: auto;
-    color: #808080;
+    color: #333;
+    box-sizing: border-box;
 }
 .breadcrumb>li+li:before{
     content: ">";
