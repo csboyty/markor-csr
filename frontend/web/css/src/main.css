@@ -39,12 +39,12 @@ h1,h2,h3,h4,h5,h6{
 .header-wrapper{
     width:100%;
     border-bottom: 1px solid #ccc;
+    position: relative;
 }
 .header{
     margin: auto;
     width:970px;
     padding: 0;
-    position: relative;
     box-sizing: border-box;
     height: 90px;
 }
