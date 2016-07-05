@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .header{
     margin: auto;
-    width:100%;
+    width:970px;
     padding: 0;
     position: relative;
     box-sizing: border-box;
@@ -184,9 +184,8 @@ h1,h2,h3,h4,h5,h6{
     display: inline-block;
     margin: 0px;
     vertical-align: top;
-    position: absolute;
-    top:20px;
-    left: 20px;
+    margin-top:20px;
+    
 }
 .logo a{
     display: block;
@@ -203,7 +202,6 @@ h1,h2,h3,h4,h5,h6{
 */
 .menu{
     float: right;
-    margin-right: 70px;
 }
 .menu>.item{
     display: inline-block;
@@ -395,9 +393,8 @@ h1,h2,h3,h4,h5,h6{
 * search
 */
 .searchContainer{
-    position: absolute;
-    right:0;
-    bottom:0;
+    position: relative;
+    z-index: 99;
     height: 100%;
     padding: 20px;
     box-sizing: border-box;

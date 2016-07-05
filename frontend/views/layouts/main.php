@@ -30,6 +30,12 @@ AppAsset::register($this);
         <h1 class="logo">
             <a href="<?php echo Yii::$app->homeUrl; ?>">MARKOR-CSR</a>
         </h1>
+        <div class="searchContainer displayNoneInMobile">
+            <input class="input search" type="text" placeholder="请输入您要搜索的内容">
+            <div class="ctrl">
+                <span class="icon-search"></span>
+            </div>
+        </div>
         <ul class="menu displayNoneInMobile">
             <li class="item">
                 <a href="<?php echo Yii::$app->homeUrl; ?>">首页</a>
@@ -83,12 +89,7 @@ AppAsset::register($this);
                 <a href="stories/index">人物·故事</a>
             </li>
         </ul>
-        <div class="searchContainer displayNoneInMobile">
-            <input class="input search" type="text" placeholder="请输入您要搜索的内容">
-            <div class="ctrl">
-                <span class="icon-search"></span>
-            </div>
-        </div>
+        
         <div class="menuMContainer displayInMobile">
             <span class="menuIcon" id="menuIcon">
                 <em class="icon-menu"></em>
