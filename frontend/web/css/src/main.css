@@ -1,6 +1,7 @@
 
 html{
     height: 100%;
+    font-size: 62.5%;
 }
 body{
     margin: 0px;
@@ -206,7 +207,8 @@ h1,h2,h3,h4,h5,h6{
     color: #808080;
 }
 .menu>.item>a{
-    font-size: 16px;
+    font-size: 15px;
+    font-size: 15rem;
     color: #808080;
     line-height: 70px;
     height: 70px;
@@ -261,31 +263,41 @@ h1,h2,h3,h4,h5,h6{
     z-index: 100;
 }
 .menuMContainer .menuIcon{
-    font-size: 48px;
-    color:#808080;
+    font-size: 40px;
+    color: #808080;
     position: absolute;
-    top:-48px;
-    right:0px;
+    top: -70px;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
 }
 .menuM{
     position: absolute;
     right:-5.5%;
     left:-5.5%;
-    top:10px;
+    top:70px;
     background: #fff;
     border-top:1px solid #808080;
     display: none;
 }
 .menuM>.item{
     display: block;
-    padding: 10px 0px 10px 5px;
-    width: 60%;
+    padding: 15px 5px;
+    width: 70%;
     margin: auto;
     border-bottom:1px solid #808080;
     color: #808080;
 }
+.menuM>.item:last-child{
+    border-bottom: none;
+}
 .menuM>.item>a{
-    font-size: 14px;
+    font-size: 18px;
     color: #808080;
     display: block;
     width: 60%;
