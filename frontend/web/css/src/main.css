@@ -284,6 +284,7 @@ h1,h2,h3,h4,h5,h6{
     background: #fff;
     border-top:1px solid #808080;
     display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 .menuM>.item{
     display: block;
@@ -304,6 +305,9 @@ h1,h2,h3,h4,h5,h6{
     display: block;
     width: 60%;
     height: 50px;
+}
+.menuM>.item>a>img{
+    margin-right:10px;
 }
 .menuM>.item.active>a{
     color: #000;
@@ -331,12 +335,14 @@ h1,h2,h3,h4,h5,h6{
 }
 .menuM .subMenu>.item{
     display: block;
-    padding:0px 0px 5px 40px;
-    margin: 5px 0px;
+    
 }
 .menuM .subMenu>.item>a{
     color: #808080;
     font-size: 14px;
+    height:50px;
+    display: inline-block;
+    padding-left: 40px;
 }
 .menuM>.item>.searchIcon{
     font-size: 24px;
