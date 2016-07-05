@@ -207,8 +207,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .menu>.item>a{
-    font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     color: #808080;
     line-height: 90px;
     height: 90px;
@@ -260,13 +260,14 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu .subMenu>.item>a{
     color: #808080;
-    font-size: 16px;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 .menu .subMenu>.item>a:hover,.menu .subMenu>.item>a.active{
     color: #000;
 }
 .menu>.item:hover>a::before{
-    height:10px;
+    height:5px;
 }
 .menu .item:hover .subMenu{
     height: 40px;

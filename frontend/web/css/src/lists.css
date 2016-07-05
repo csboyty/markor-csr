@@ -12,8 +12,8 @@
     vertical-align: top;
     position: relative;
 }
-.weChatList .item:first-child{
-    border: none;
+.weChatList .item:last-child{
+    border-right:1px solid #ccc;
 }
 .weChatList .item .link{
 
