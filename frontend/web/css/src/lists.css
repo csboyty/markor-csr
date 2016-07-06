@@ -101,6 +101,8 @@
     color: #808080;
     margin: 10px 0px;
     height: 4.5em;
+    position: relative;
+    overflow: hidden;
 }
 .list .item .tag{
     margin: 30px 0px;

@@ -112,7 +112,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                 </div>
                 <div class="info">
                     <h3 class="title"><a href="culture-programs/<?= $cr->id; ?>"><?= $cr->title; ?></a></h3>
-                    <p class="excerpt gradient">
+                    <p class="excerpt">
                         <?= $cr->excerpt; ?>
                     </p>
                     <a class="tag" href="culture-programs/index" >艺术传承</a>
