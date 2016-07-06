@@ -189,7 +189,7 @@ AppAsset::register($this);
                     <p class="icon">
                         <span class="icon-tel"></span>
                     </p>
-                    <p class="contact">
+                    <p class="contact line-text">
                         TEL:010-63862727
                         <br>
                         csr@markorhome.com
@@ -199,7 +199,7 @@ AppAsset::register($this);
                     <p class="icon">
                         <span class="icon-address"></span>
                     </p>
-                    <p class="address">
+                    <p class="address line-text">
                         www.markorhome.com/csr
                         <br>
                         北京市丰台区西三环南路57号
@@ -208,8 +208,8 @@ AppAsset::register($this);
                     </p>
                 </td>
                 <td>
-                    <p class="social-media"><img src="images/app/weixin.png" class="iconWeb"><span style="margin-left: 15px;">美克美家</span></p>
-                    <p class="social-media"><img src="images/app/weibo.png" class="iconWeb"><span style="margin-left: 15px;">我爱艺术家</span></p>
+                    <p class="social-media"><img src="images/app/weixin.png" class="iconWeb"><span class="line-text">美克美家</span></p>
+                    <p class="social-media"><img src="images/app/weibo.png" class="iconWeb"><span class="line-text">我爱艺术家</span></p>
                 </td>
             </tr>
         </table>
