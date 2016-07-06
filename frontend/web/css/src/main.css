@@ -780,6 +780,46 @@ h1,h2,h3,h4,h5,h6{
     height: 3em;
     overflow: hidden;
 }
+.swiper-pagination-bullet-active{
+    background: #fff;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom:40px;
+}
+.swiper-button-next, .swiper-button-prev {
+    background: none;
+    width:40px;
+    height: 40px;
+    margin-top:-20px;
+    font-weight: normal;
+}
+.swiper-button-next::before{
+    font-family: 'markoricon' !important;
+    content:"\e904";
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 32px;
+    
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.swiper-button-prev::before{
+    font-family: 'markoricon' !important;
+    content:"\e903";
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 32px;
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
 /*************************分页********************/
 .pagination{
     text-align: center;
