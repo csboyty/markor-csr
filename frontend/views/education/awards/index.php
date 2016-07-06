@@ -16,7 +16,7 @@ $this->params=[
 ]
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/collegeAward.jpg" srcset="images/app/pageTop/collegeAward@2x.jpg">
+    <img class="image" src="images/app/pageTop/collegeAward.jpg" srcset="images/app/pageTop/collegeAward@2x.jpg 2x">
     <div class="info">
         <h2 class="title">高校奖学金活动</h2>
         <p class="excerpt">

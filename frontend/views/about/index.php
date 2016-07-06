@@ -14,7 +14,7 @@ $this->params=[
 ]
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/about.jpg" srcset="images/app/pageTop/about@2x.jpg">
+    <img class="image" src="images/app/pageTop/about.jpg" srcset="images/app/pageTop/about@2x.jpg 2x">
     <div class="info">
         <h2 class="title">这里是标题</h2>
         <p class="excerpt">

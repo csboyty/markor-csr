@@ -17,7 +17,7 @@ $this->params=[
 
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/volunteer.jpg" srcset="images/app/pageTop/volunteer@2x.jpg">
+    <img class="image" src="images/app/pageTop/volunteer.jpg" srcset="images/app/pageTop/volunteer@2x.jpg 2x">
     <div class="info">
         <h2 class="title">志愿者活动</h2>
         <p class="excerpt">

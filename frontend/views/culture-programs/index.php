@@ -11,7 +11,7 @@ $this->params=[
 ]
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/artInherit.jpg" srcset="images/app/pageTop/artInherit@2x.jpg">
+    <img class="image" src="images/app/pageTop/artInherit.jpg" srcset="images/app/pageTop/artInherit@2x.jpg 2x">
     <div class="info">
         <h2 class="title">艺术传承</h2>
         <p class="excerpt">

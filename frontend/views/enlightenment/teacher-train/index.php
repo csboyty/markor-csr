@@ -17,7 +17,7 @@ $this->params=[
 
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/teacherTrain.jpg" srcset="images/app/pageTop/teacherTrain@2x.jpg">
+    <img class="image" src="images/app/pageTop/teacherTrain.jpg" srcset="images/app/pageTop/teacherTrain@2x.jpg 2x">
     <div class="info">
         <h2 class="title">教师培训</h2>
         <p class="excerpt">

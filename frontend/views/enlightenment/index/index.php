@@ -14,7 +14,7 @@ $this->params=[
 ]
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/enlightenment.jpg" srcset="images/app/pageTop/enlightenment@2x.jpg">
+    <img class="image" src="images/app/pageTop/enlightenment.jpg" srcset="images/app/pageTop/enlightenment@2x.jpg 2x">
     <div class="info">
         <h2 class="title">艺术启蒙</h2>
         <p class="excerpt">
@@ -28,7 +28,7 @@ $this->params=[
     <div class="artRoomItem artItem">
         <a href="enlightenment/room">
             <div class="imageContainer">
-                <img class="image" src="images/app/artRoom.jpg" srcset="images/app/artRoom@2x.jpg">
+                <img class="image" src="images/app/artRoom.jpg" srcset="images/app/artRoom@2x.jpg 2x">
             </div>
             <div class="info">
                 <span class="icon displayNoneInMobile"></span>
@@ -48,7 +48,7 @@ $this->params=[
     <div class="teacherTrainItem artItem">
         <a href="enlightenment/teacher-train">
             <div class="imageContainer">
-                <img class="image" src="images/app/teacherTrain.jpg" srcset="images/app/teacherTrain@2x.jpg">
+                <img class="image" src="images/app/teacherTrain.jpg" srcset="images/app/teacherTrain@2x.jpg 2x">
             </div>
             <div class="info">
                 <span class="icon displayNoneInMobile"></span>
@@ -70,7 +70,7 @@ $this->params=[
     <div class="volunteerItem artItem">
         <a href="enlightenment/volunteer">
             <div class="imageContainer">
-                <img class="image" src="images/app/volunteer.jpg" srcset="images/app/volunteer@2x.jpg">
+                <img class="image" src="images/app/volunteer.jpg" srcset="images/app/volunteer@2x.jpg 2x">
             </div>
             <div class="info">
                 <span class="icon displayNoneInMobile"></span>
@@ -90,7 +90,7 @@ $this->params=[
     <div class="childDrawItem artItem">
         <a href="enlightenment/child-draw">
             <div class="imageContainer">
-                <img class="image" src="images/app/childDraw.jpg" srcset="images/app/childDraw@2x.jpg">
+                <img class="image" src="images/app/childDraw.jpg" srcset="images/app/childDraw@2x.jpg 2x">
             </div>
             <div class="info">
                 <span class="icon displayNoneInMobile"></span>

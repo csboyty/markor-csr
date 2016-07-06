@@ -16,7 +16,7 @@ use frontend\models\Helper;
     ]
 ?>
 <div class="pageTop">
-    <img class="image" src="images/app/pageTop/childDraw.jpg" srcset="images/app/pageTop/childDraw@2x.jpg">
+    <img class="image" src="images/app/pageTop/childDraw.jpg" srcset="images/app/pageTop/childDraw@2x.jpg 2x">
     <div class="info">
         <h2 class="title">儿童画征集与产品开发</h2>
         <p class="excerpt">

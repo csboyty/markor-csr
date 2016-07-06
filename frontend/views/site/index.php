@@ -176,37 +176,37 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
         <tr>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/industry-design.png" srcset="images/app/partners/industry-design@2x.png">
+                    <img src="images/app/partners/industry-design.png" srcset="images/app/partners/industry-design@2x.png 2x">
                 </a>
             </td>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/hnu.png" srcset="images/app/partners/hnu@2x.png">
+                    <img src="images/app/partners/hnu.png" srcset="images/app/partners/hnu@2x.png 2x">
                 </a>
             </td>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/tj.png" srcset="images/app/partners/tj@2x.png">
+                    <img src="images/app/partners/tj.png" srcset="images/app/partners/tj@2x.png 2x">
                 </a>
             </td>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/desis-china.png" srcset="images/app/partners/desis-china@2x.png">
+                    <img src="images/app/partners/desis-china.png" srcset="images/app/partners/desis-china@2x.png 2x">
                 </a>
             </td>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/youth.png" srcset="images/app/partners/youth@2x.png">
+                    <img src="images/app/partners/youth.png" srcset="images/app/partners/youth@2x.png 2x">
                 </a>
             </td>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/china-academy.png" srcset="images/app/partners/china-academy@2x.png">
+                    <img src="images/app/partners/china-academy.png" srcset="images/app/partners/china-academy@2x.png 2x">
                 </a>
             </td>
             <td>
                 <a href="#">
-                    <img src="images/app/partners/sc.png" srcset="images/app/partners/sc@2x.png">
+                    <img src="images/app/partners/sc.png" srcset="images/app/partners/sc@2x.png 2x">
                 </a>
             </td>
         </tr>
