@@ -168,6 +168,10 @@
     color: #fff;
     border: 1px solid #fff;
 }
+.list1 .item .tag:hover{
+    background: #fff;
+    color: #808080;
+}
 .list1 .item .icon{
     margin: 10px auto auto auto;
     color: #fff;
