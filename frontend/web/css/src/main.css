@@ -471,9 +471,8 @@ h1,h2,h3,h4,h5,h6{
 * sections
 */
 .section{
-    padding: 80px 0;
+    padding: 80px 10%;
     width:100%;
-    padding:0 10%;
     margin: auto;
     box-sizing: border-box;
 }
@@ -685,7 +684,7 @@ h1,h2,h3,h4,h5,h6{
     table-layout: fixed;
 }
 .contactInfo td{
-    color: #ccc;
+    color: #fff;
     border-left:1px solid #ccc;
     vertical-align: top;
 }

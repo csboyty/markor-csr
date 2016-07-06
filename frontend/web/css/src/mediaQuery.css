@@ -1,6 +1,6 @@
 @media screen and (max-width:1024px){
     .header{
-        width: 100%;
+        padding:0 5%;
     }
     .logo{
         margin-left:20px;
@@ -9,7 +9,7 @@
 /*        right: 5%;*/
     }
     .weChatList{
-        width: 100%;
+        padding:0 5%;
     }
     .breadcrumb{
         padding:0 20px;
