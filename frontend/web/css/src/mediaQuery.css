@@ -3,10 +3,13 @@
         padding:0 5%;
     }
     .logo{
-        margin-left:20px;
+        
+    }
+    .menu>.item>a{
+        min-width: 50px;
     }
     .searchContainer{
-/*        right: 5%;*/
+        min-width: 50px;
     }
     .weChatList{
         padding:10px 5%;
