@@ -783,9 +783,6 @@ h1,h2,h3,h4,h5,h6{
 .swiper-pagination-bullet-active{
     background: #fff;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-    bottom:40px;
-}
 .swiper-button-next, .swiper-button-prev {
     background: none;
     width:40px;
