@@ -746,26 +746,11 @@ h1,h2,h3,h4,h5,h6{
     margin: 0px;
     font-size: 12px;
     font-size: 1.2rem;
-    line-height: 1.5em;
 }
 
-/*****************************修改flexslider**********************/
-.flexslider .flex-control-nav{
-    z-index: 5;
-    bottom:20px;
-}
-.flexslider .flex-control-paging li a{
-    background: transparent;
-    border:1px solid #fff;
-    box-shadow:none;
-}
-.flexslider .flex-control-paging li a:hover{
-    background: #fff;
-}
-.flexslider .flex-control-paging li a.flex-active{
-    background: #fff;
-}
-.flexslider .detail{
+/*****************************修改swiper**********************/
+
+.swiper-slide .detail{
     position: absolute;
     width: 50%;
     height: 156px;
@@ -778,13 +763,13 @@ h1,h2,h3,h4,h5,h6{
     word-wrap: break-word;
     overflow: hidden;
 }
-.flexslider .detail .title{
+.swiper-slide .detail .title{
     font-size: 36px;
     margin: 0px;
     color: #fff;
     font-weight: lighter;
 }
-.flexslider .detail .excerpt{
+.swiper-slide .detail .excerpt{
     font-size: 14px;
     line-height: 1.5em;
     margin: 20px 0px;
