@@ -35,6 +35,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                         <img src="<?= $rr->bg_image; ?>" />
                         <div class="detail">
                             <h2 class="title"><?= $rr->title; ?></h2>
+                            <p class="date"><?= $rr->date; ?></p>
                             <p class="excerpt"><?= $rr->excerpt; ?></p>
                         </div>
                     </a>
