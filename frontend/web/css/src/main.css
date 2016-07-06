@@ -152,8 +152,8 @@ h1,h2,h3,h4,h5,h6{
     padding: 5px;
     text-align: center;
     font-size: 12px;
-    border: 1px solid #666;
-    transition: all 0.5s linear;
+    border: 1px solid #808080;
+    transition: all 0.3s ease-out;
 }
 .tag:hover{
     color: #fff;
@@ -168,7 +168,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     font-size: 14px;
     border: 1px solid #808080;
-    transition: all 0.5s linear;
+    transition: all 0.3s ease-out;
 }
 .more:hover{
     color: #fff;

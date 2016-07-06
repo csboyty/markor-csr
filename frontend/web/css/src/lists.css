@@ -35,6 +35,11 @@
     line-height: 1.3em;
     font-style: italic;
 }
+.weChatList .item .title .date{
+    font-size: 14px;
+    font-size: 1.4rem;
+    color:#999;
+}
 .weChatList .item:hover .title{
     color: #000;
 }
