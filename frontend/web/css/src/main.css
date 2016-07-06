@@ -511,6 +511,9 @@ h1,h2,h3,h4,h5,h6{
 .section .contentTable1 td{
     padding: 0px 20px;
 }
+
+
+
 .section .titleFeature{
     background-image: url(../../images/app/sectionTitles/feature.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/feature.png) 1x,
@@ -741,7 +744,7 @@ h1,h2,h3,h4,h5,h6{
     background: #474747;
     color: #bbb;
     letter-spacing: 0.2em;
-    padding: 15px 0px;
+    padding: 15px;
     text-align: center;
     margin: 0px;
     font-size: 12px;

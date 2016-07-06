@@ -49,6 +49,19 @@
 .weChatList .item:hover .title{
     color: #000;
 }
+
+.partnerList{
+    width: 100%;
+}
+.partnerList li{
+    width:12.3%;
+    margin:0 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+.partnerList li img{
+    width:100%;
+}
 /**
 * list 上图下文字,一排3个元素 热点文章
 */

@@ -181,45 +181,45 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
 </div>
 <div class="section bgf4f4f4 sectionMobile">
     <h2 class="sectionTitle titlePartner displayNoneInMobile">合作伙伴</h2>
-    <table class="contentTable">
-        <tr>
-            <td>
+    <ul class="partnerList">
+        
+            <li>
                 <a href="#">
                     <img src="images/app/partners/industry-design.png" srcset="images/app/partners/industry-design@2x.png 2x">
                 </a>
-            </td>
-            <td>
+            </li>
+            <li>
                 <a href="#">
                     <img src="images/app/partners/hnu.png" srcset="images/app/partners/hnu@2x.png 2x">
                 </a>
-            </td>
-            <td>
+            </li>
+            <li>
                 <a href="#">
                     <img src="images/app/partners/tj.png" srcset="images/app/partners/tj@2x.png 2x">
                 </a>
-            </td>
-            <td>
+            </li>
+            <li>
                 <a href="#">
                     <img src="images/app/partners/desis-china.png" srcset="images/app/partners/desis-china@2x.png 2x">
                 </a>
-            </td>
-            <td>
+            </li>
+            <li>
                 <a href="#">
                     <img src="images/app/partners/youth.png" srcset="images/app/partners/youth@2x.png 2x">
                 </a>
-            </td>
-            <td>
+            </li>
+            <li>
                 <a href="#">
                     <img src="images/app/partners/china-academy.png" srcset="images/app/partners/china-academy@2x.png 2x">
                 </a>
-            </td>
-            <td>
+            </li>
+            <li>
                 <a href="#">
                     <img src="images/app/partners/sc.png" srcset="images/app/partners/sc@2x.png 2x">
                 </a>
-            </td>
-        </tr>
-    </table>
+            </li>
+        
+    </ul>
 </div>
 
 
