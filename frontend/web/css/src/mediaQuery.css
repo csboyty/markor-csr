@@ -116,8 +116,8 @@
         width: 100%;
     }
     .partnerList li{
-        width:23%;
-        margin:10px 1%;
+        width: 21%;
+        margin: 10px 2%;
     }
     
     .list .item{
@@ -288,6 +288,10 @@
     .list3 .item .info{
         width: 60%;
     }
+    .list3 .item .title{
+        font-size: 18px;
+        font-size:1.8rem;
+    }
     .list4 .item .leftCorner{
         left: inherit;
         top:inherit;
@@ -346,7 +350,7 @@
         line-height: 18px;
     }
     .partnerList li{
-        width:48%;
-        margin:10px 1%;
+        width: 30%;
+        margin: 20px 10%;
     }
 }

@@ -334,10 +334,11 @@
     color: #666;
     font-style: italic;
     vertical-align: top;
+    font-family: Georgia;
 }
 .list3 .item .date .top{
     font-size: 18px;
-    padding: 0px 0px 10px 0px;
+    padding: 0px 0px 4px 0px;
     border-bottom: 1px solid #ccc;
 }
 .list3 .item .date .bottom{
@@ -375,6 +376,7 @@
     font-size: 14px;
     color: #808080;
     line-height: 1.5em;
+    text-align: justify;
 }
 .list3 .item:hover .thumb{
     transform:scale(1.05,1.05);
