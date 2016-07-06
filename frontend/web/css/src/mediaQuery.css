@@ -201,6 +201,7 @@
     }
     .list11 .item .title{
         text-align: center;
+        margin:15% auto 20px auto;
     }
     .list11 .item .icon{
         margin-top: 10px;
