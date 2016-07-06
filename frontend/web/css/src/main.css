@@ -746,6 +746,7 @@ h1,h2,h3,h4,h5,h6{
     margin: 0px;
     font-size: 12px;
     font-size: 1.2rem;
+    line-height: 1.5em;
 }
 
 /*****************************修改swiper**********************/
