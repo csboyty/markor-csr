@@ -163,7 +163,9 @@
         margin: 0 0 20px 0;
         color: #808080;
     }
-    
+    .list1 .item .title a{
+        color: #808080;
+    }
     .list1 .item .author{
         text-align: left;
     }
