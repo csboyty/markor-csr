@@ -16,7 +16,7 @@ $this->params=[
 <div class="pageTop">
     <img class="image" src="images/app/pageTop/about.jpg" srcset="images/app/pageTop/about@2x.jpg 2x">
     <div class="info">
-        <h2 class="title">这里是标题</h2>
+        <h2 class="title">艺术·家</h2>
         <p class="excerpt">
             美克美家“艺术·家”企业社会责任重点关注视觉艺术领域，包括艺术的认知、发展和保护
             通过对艺术教育欠发达地区的教育、青年艺术家的培养、非物质文化遗产的保护、爱心志愿者团队的支持等模式
