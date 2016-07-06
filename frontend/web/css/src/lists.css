@@ -95,7 +95,7 @@
     border: 1px solid #000;
 }
 .list .item:hover a{
-    color: #000;
+    /*color: #000;*/
 }
 .list .item:hover .thumb{
     transform:scale(1.05,1.05);
