@@ -37,12 +37,12 @@ class SiteController extends Controller
         $enlightenmentResultsQuery=clone $baseQuery;
 
         $wechatResults=$wechatResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["wechat"]])
-            ->limit(3)->all();
+            ->limit(3)->orderBy(["date"=>SORT_DESC])->all();
         $rollResults=$rollResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["artNews"],
                 "memo"=>1
-            ])->limit(3)->all();
+            ])->limit(3)->orderBy(["date"=>SORT_DESC])->all();
         $storyResults=$storyResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["story"]])
-            ->limit(6)->orderBy("date",SORT_DESC)->all();
+            ->limit(6)->orderBy(["date"=>SORT_DESC])->all();
         $videos=$videosQuery->where(["category_id"=>[
             Yii::$app->params["categories"]["video"],
             Yii::$app->params["categories"]["videoChildDraw"]

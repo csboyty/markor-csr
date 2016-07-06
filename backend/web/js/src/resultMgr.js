@@ -26,6 +26,7 @@ var resultMgr=(function(config,functions){
                         return '<img class="thumb" src="'+oObj.aData.thumb+'">';
                     }
                 },
+                { "mDataProp":"title" },
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
                         return '<a href="result/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +

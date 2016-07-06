@@ -16,6 +16,7 @@ $this->title = (isset($parentCategory)?$parentCategory->name."/":"").$category->
         <thead>
         <tr>
             <th>图片</th>
+            <th>标题</th>
             <th>操作</th>
         </tr>
         </thead>

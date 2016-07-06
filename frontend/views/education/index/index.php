@@ -49,12 +49,8 @@ $this->params=[
                     </div>
                     <div class="info">
                         <h2 class="title ellipsis"><a href="works/<?= $cr->id; ?>/<?= $cr->category_id; ?>"><?= $cr->title; ?></a></h2>
-                        <p class="author">杨媛媛</p>
-                        <p class="excerpt moreEllipsis" data-row="3">
-                            展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、
-                            及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
-                            一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
-                        </p>
+                        <p class="author"><?= $cr->title; ?></p>
+                        <p class="excerpt moreEllipsis" data-row="3"><?= $cr->author; ?></p>
                     </div>
                 </li>
                 <?php
