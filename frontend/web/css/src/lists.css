@@ -63,6 +63,27 @@
 .partnerList li img{
     width:100%;
 }
+.contentList{
+    width:100%;
+    font-size: 0;
+}
+.contentList li{
+    width:33.3%;
+    box-sizing: border-box;
+    padding:0 10px;
+    text-align:center;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+.contentList li h3{
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #666;
+    margin:0 0 20px 0;
+}
+.contentList li p{
+    line-height: 1.5em;
+}
 /**
 * list 上图下文字,一排3个元素 热点文章
 */
