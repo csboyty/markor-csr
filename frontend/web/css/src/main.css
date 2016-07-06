@@ -707,7 +707,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 1.2rem;
     line-height: 1.5em;
     vertical-align: middle;
-    margin-left: 15px;
+    margin-left: 10px;
     text-align: left;
     letter-spacing: 0.1em;
 }
@@ -724,6 +724,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .contactInfo td .social-media{
     width:130px;
+    margin: 5px auto;
 }
 .footer .copyRight{
     background: #474747;
