@@ -108,7 +108,7 @@
     margin: 30px 0px;
 }
 .list .item:hover{
-    border: 1px solid #000;
+    border: 1px solid #808080;
 }
 .list .item:hover a{
     /*color: #000;*/

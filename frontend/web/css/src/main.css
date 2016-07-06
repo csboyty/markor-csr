@@ -777,6 +777,7 @@ h1,h2,h3,h4,h5,h6{
 .swiper-slide .detail .date{
     margin: 10px;
     letter-spacing: 0.2em;
+    font-weight: lighter;
 }
 .swiper-slide .detail .excerpt{
     font-size: 14px;
