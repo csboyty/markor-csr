@@ -186,20 +186,22 @@ AppAsset::register($this);
         <table class="contactInfo displayNoneInMobile">
             <tr>
                 <td>
-                    <p class="icon">
-                        <span class="icon-tel"></span>
-                    </p>
+                    
                     <p class="contact line-text">
+                       <span class="icon">
+                        <span class="icon-tel"></span>
+                        </span>
                         TEL:010-63862727
                         <br>
                         csr@markorhome.com
                     </p>
                 </td>
                 <td>
-                    <p class="icon">
-                        <span class="icon-address"></span>
-                    </p>
+                    
                     <p class="address line-text">
+                        <span class="icon">
+                            <span class="icon-address"></span>
+                        </span>
                         www.markorhome.com/csr
                         <br>
                         北京市丰台区西三环南路57号

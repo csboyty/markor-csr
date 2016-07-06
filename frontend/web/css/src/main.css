@@ -698,16 +698,23 @@ h1,h2,h3,h4,h5,h6{
 }
 .contactInfo td .icon{
     display: inline-block;
-    vertical-align: middle;
-    font-size: 32px;
+    width:30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    font-size: 3rem;
 }
 .contactInfo td .line-text{
+    position: relative;
     display: inline-block;
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1.5em;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 40px;
     text-align: left;
     letter-spacing: 0.1em;
 }
