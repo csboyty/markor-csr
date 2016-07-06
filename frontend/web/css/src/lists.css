@@ -66,14 +66,22 @@
 .contentList{
     width:100%;
     font-size: 0;
+    
 }
 .contentList li{
+    display: inline-block;
     width:33.3%;
     box-sizing: border-box;
     padding:0 10px;
     text-align:center;
     font-size: 14px;
     font-size: 1.4rem;
+    vertical-align: top;
+}
+.contentList li .icon{
+    margin:0 0 20px 0;
+    font-size: 40px;
+    color: #808080;
 }
 .contentList li h3{
     font-size: 16px;
@@ -83,6 +91,7 @@
 }
 .contentList li p{
     line-height: 1.5em;
+    color: #808080;
 }
 /**
 * list 上图下文字,一排3个元素 热点文章
