@@ -14,7 +14,11 @@
     .weChatList{
         padding:10px 5%;
     }
-    .weChatList .item .title .date{
+    .weChatList .item .title{
+        display: inline;
+        white-space: normal;
+    }
+    .weChatList .item .date{
         display: inline;
         margin:0 0 0 1em;
     }

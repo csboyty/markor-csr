@@ -34,13 +34,16 @@
     margin-left: 20px;
     line-height: 1.3em;
     font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.weChatList .item .title .date{
+.weChatList .item .date{
     display: block;
     font-size: 13px;
     font-size: 1.3rem;
     color:#aaa;
-    margin: 1.5em 0 0 0;
+    margin: 0.5em 0 0 0;
 }
 .weChatList .item:hover .title{
     color: #000;
