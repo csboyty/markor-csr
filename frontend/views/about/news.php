@@ -4,16 +4,16 @@
 use yii\widgets\LinkPager;
 use frontend\models\Helper;
 
-$this->title = '关于艺术•家';
+$this->title = '关于艺术·家';
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => '关于艺术•家',
+            'label' => '关于艺术·家',
             'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ],
         [
-            'label' => '艺术•家动态'
+            'label' => '艺术·家动态'
             //'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]

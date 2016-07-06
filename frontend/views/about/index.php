@@ -2,11 +2,11 @@
 
 /* @var $this yii\web\View */
 
-$this->title = '关于艺术•家';
+$this->title = '关于艺术·家';
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => '关于艺术•家',
+            'label' => '关于艺术·家',
             //'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]

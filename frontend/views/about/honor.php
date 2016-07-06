@@ -8,16 +8,16 @@
  */
 use frontend\models\Helper;
 
-$this->title = '艺术•家荣誉';
+$this->title = '艺术·家荣誉';
 $this->params=[
     "breadcrumbs"=>[
         [
-            'label' => '关于艺术•家',
+            'label' => '关于艺术·家',
             'url' => ['about/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ],
         [
-            'label' => "艺术•家荣誉"
+            'label' => "艺术·家荣誉"
         ]
     ]
 ]
