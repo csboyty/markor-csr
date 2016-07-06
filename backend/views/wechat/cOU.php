@@ -3,6 +3,9 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
+
+$this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name."/":"").$category->name;
+
 $this->title = '新建/修改微信头条';
 ?>
 
@@ -33,7 +36,7 @@ $this->title = '新建/修改微信头条';
         </div>
     </div>
     <div class="form-group">
-        <label for="name" class="control-label col-md-2">标题*</label>
+        <label for="name" class="control-label col-md-2">日期*</label>
         <div class="col-md-8">
             <input type="text" id="date" class="form-control" value="<?php echo $model->date; ?>" name="date">
         </div>
