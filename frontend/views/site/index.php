@@ -25,12 +25,12 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
     ?>
 </ul>
 <!--滚动图片-->
-<div id="slider" class="flexslider">
-    <ul class="slides">
+<div id="slider" class="swiper-container">
+    <ul class="swiper-wrapper">
         <?php
             foreach($rollResults as $rr){
                 ?>
-                <li>
+                <li class="swiper-slide">
                     <a href="about/news/<?= $rr->id; ?>">
                         <img src="<?= $rr->bg_image; ?>" />
                         <div class="detail">
@@ -43,6 +43,9 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
             }
         ?>
     </ul>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>
 
 <div class="section">
