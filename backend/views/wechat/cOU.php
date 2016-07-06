@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use backend\assets\AppAsset;
 
 
-$this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name."/":"").$category->name;
+$this->registerCssFile("@web/css/lib/date_input.css");
 
 $this->title = '新建/修改微信头条';
 ?>
