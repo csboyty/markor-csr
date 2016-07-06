@@ -115,6 +115,11 @@
     .volunteerItem .excerpt{
         width: 100%;
     }
+    .partnerList li{
+        width:23%;
+        margin:10px 1%;
+    }
+    
     .list .item{
         width: 100%;
         border:none;
@@ -307,19 +312,7 @@
 }
 
 @media screen and (max-width:480px){
-    .flexslider .detail{
-        top:10%;
-        left:0px;
-        height: auto;
-        margin: 0px;
-        width: 100%;
-    }
-    .flexslider .detail .title{
-        font-size: 20px;
-    }
-    .flexslider .detail .excerpt{
-        display: none;
-    }
+    
     .artItem .center{
         position: static;
         transform:none;
@@ -351,5 +344,9 @@
     .artItem .excerpt{
         font-size: 12px;
         line-height: 18px;
+    }
+    .partnerList li{
+        width:48%;
+        margin:10px 1%;
     }
 }
