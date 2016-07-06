@@ -40,7 +40,7 @@
     font-size: 13px;
     font-size: 1.3rem;
     color:#aaa;
-    margin-left: 1em;
+    margin: 1.5em 0 0 0;
 }
 .weChatList .item:hover .title{
     color: #000;

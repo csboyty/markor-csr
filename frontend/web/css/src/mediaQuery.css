@@ -16,6 +16,7 @@
     }
     .weChatList .item .title .date{
         display: inline;
+        margin:0 0 0 1em;
     }
     .breadcrumb{
         padding:0 20px;
