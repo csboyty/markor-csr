@@ -46,7 +46,8 @@ class CategoryController extends \yii\web\Controller
         $model=new Category();
         $categories=Category::find()
             //->where(["parent_id"=>0])
-            ->where("parent_id=:id or id=:id1",[":id"=>0,":id1"=>["parent_id"=>Yii::$app->params["categories"]["childDrawCollect"]]])
+            ->where("parent_id=:id or id=:id1",[":id"=>0,
+                ":id1"=>["parent_id"=>Yii::$app->params["categories"]["childDrawCollect"]]])
             ->asArray()
             ->all();
 

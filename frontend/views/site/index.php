@@ -16,6 +16,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                 <a class="link" target="_blank" href="<?= $wr->memo; ?>">
                     <img class="thumb" src="<?= $wr->thumb; ?>">
                     <h3 class="title"><?= $wr->title; ?></h3>
+                    <p class="date"><?= $wr->date; ?></p>
                 </a>
             </li>
             <?php

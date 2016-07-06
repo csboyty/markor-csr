@@ -27,6 +27,8 @@ var wechatCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
+    $("#date").date_input();
+
     tinymce.init({
         selector: "#content",
         height:300,
@@ -76,6 +78,9 @@ $(document).ready(function(){
                 required:true,
                 maxlength:512
             },
+            date:{
+                required:true
+            },
             thumb:{
                 required:true
             }
@@ -88,6 +93,9 @@ $(document).ready(function(){
             memo:{
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",512)
+            },
+            date:{
+                required:config.validErrors.required
             },
             thumb:{
                 required:config.validErrors.required
