@@ -690,8 +690,8 @@ h1,h2,h3,h4,h5,h6{
 }
 .contactInfo td{
     color: #fff;
-    border-left:2px solid #fff;
-    padding:5px 0px;
+    border-left:1px solid #ccc;
+    vertical-align: top;
 }
 .contactInfo td:first-child{
     border: none;
@@ -704,8 +704,8 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 25px;
+    font-size: 2.5rem;
 }
 .contactInfo td .line-text{
     position: relative;
@@ -729,14 +729,18 @@ h1,h2,h3,h4,h5,h6{
     left: 10px;
 }
 .contactInfo td .address{
-    
+    width:250px;
 }
 .contactInfo td .contact{
-    
+    width:250px;
 }
 .contactInfo td .social-media{
     width:130px;
     margin: 5px auto;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 45px;
+    display: block;
 }
 .footer .copyRight{
     background: #474747;
