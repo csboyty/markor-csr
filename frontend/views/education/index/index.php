@@ -49,8 +49,8 @@ $this->params=[
                     </div>
                     <div class="info">
                         <h2 class="title ellipsis"><a href="works/<?= $cr->id; ?>/<?= $cr->category_id; ?>"><?= $cr->title; ?></a></h2>
-                        <p class="author"><?= $cr->title; ?></p>
-                        <p class="excerpt moreEllipsis" data-row="3"><?= $cr->author; ?></p>
+                        <p class="author"><?= $cr->author; ?></p>
+                        <p class="excerpt moreEllipsis" data-row="3"><?= $cr->excerpt; ?></p>
                     </div>
                 </li>
                 <?php
