@@ -5,7 +5,7 @@
 use frontend\models\Helper;
 
 $this->title = '首页';
-//$this->registerCssFile("@web/css/lib/flexslider.css");
+/*$this->registerCssFile("@web/css/lib/flexslider.css");*/
 $this->registerCssFile("@web/css/lib/swiper.min.css");
 ?>
 <!--微信推荐文章--->
@@ -25,12 +25,12 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
     ?>
 </ul>
 <!--滚动图片-->
-<div id="slider" class="siwper-container">
-    <ul class="swiper-wrapper">
+<div id="slider" class="flexslider">
+    <ul class="slides">
         <?php
             foreach($rollResults as $rr){
                 ?>
-                <li class="swiper-slide">
+                <li>
                     <a href="about/news/<?= $rr->id; ?>">
                         <img src="<?= $rr->bg_image; ?>" />
                         <div class="detail">
@@ -43,9 +43,6 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
             }
         ?>
     </ul>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
 </div>
 
 <div class="section">
@@ -219,7 +216,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
 
 
 <?php
-//    $this->registerJsFile("@web/js/lib/jquery.flexslider-min.js",['depends' => [frontend\assets\AppAsset::className()]]);
-    $this->registerJsFile("@web/js/lib/jquery.swiper.jquery.min.js",['depends' => [frontend\assets\AppAsset::className()]]);
+    /*$this->registerJsFile("@web/js/lib/jquery.flexslider-min.js",['depends' => [frontend\assets\AppAsset::className()]]);*/
+    $this->registerJsFile("@web/js/lib/swiper.jquery.min.js",['depends' => [frontend\assets\AppAsset::className()]]);
     $this->registerJsFile("@web/js/src/index.js",['depends' => [frontend\assets\AppAsset::className()]]);
 ?>
