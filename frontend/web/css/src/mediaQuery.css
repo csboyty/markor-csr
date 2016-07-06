@@ -41,13 +41,16 @@
         margin-top:-50px;
     }
     .swiper-slide .detail .title{
-        margin:0;
-        line-height: 100px;
+        margin:10px 0;
+        line-height: 50px;
         white-space: nowrap;
-        font-size: 18px;
-        font-size: 1.8rem;
+        font-size: 20px;
+        font-size: 2rem;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .swiper-slide .detail .date{
+        margin: 0;
     }
     .swiper-slide .detail .excerpt{
         display: none;
