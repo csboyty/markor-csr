@@ -47,7 +47,7 @@ $this->params=[
                     $month=substr($date,5);
                     ?>
                     <li class="item">
-                        <a href="activities/<?= $r->id; ?>">
+                        <a href="activities/<?= $r->category_id; ?>/<?= $r->id; ?>">
                             <div class="date displayNoneInMobile">
                                 <p class="top"><?= $year; ?></p>
                                 <p class="bottom"><?= $month; ?></p>
