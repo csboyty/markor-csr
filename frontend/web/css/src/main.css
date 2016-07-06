@@ -39,9 +39,8 @@ h1,h2,h3,h4,h5,h6{
 .header{
     position: relative;
     margin: auto;
-    padding:0 15%;
+    padding:0 10%;
     width:100%;
-    padding: 0;
     box-sizing: border-box;
     height: 90px;
     border-bottom: 1px solid #ccc;
@@ -456,7 +455,7 @@ h1,h2,h3,h4,h5,h6{
     color: #333;
     box-sizing: border-box;
     background: #eaeaea;
-    padding:0 15%;
+    padding:0 10%;
 }
 .breadcrumb>li+li:before{
     content: ">";
@@ -474,7 +473,7 @@ h1,h2,h3,h4,h5,h6{
 .section{
     padding: 80px 0;
     width:100%;
-    padding:0 15%;
+    padding:0 10%;
     margin: auto;
     box-sizing: border-box;
 }
