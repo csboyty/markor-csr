@@ -155,6 +155,8 @@
     line-height:1.5em;
     margin:auto;
     color: #fff;
+    max-height: 4.5em;
+    overflow: hidden;
 }
 .list1 .item .author{
     font-size:14px;
@@ -170,7 +172,7 @@
 }
 .list1 .item .tag:hover{
     background: #fff;
-    color: #808080;
+    color: #666;
 }
 .list1 .item .icon{
     margin: 10px auto auto auto;
