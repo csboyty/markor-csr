@@ -68,7 +68,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                     </div>
                     <div class="info">
                         <h3 class="title ellipsis"><a href="activities/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
-                        <p class="excerpt gradient">
+                        <p class="excerpt">
                             <?= $er->excerpt; ?>
                         </p>
                         <a class="tag" href="enlightenment/index" >艺术启蒙</a>
@@ -90,7 +90,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                 </div>
                 <div class="info">
                     <h3 class="title ellipsis"><a href="education/awards/<?= $er1->id; ?>"><?= $er1->title; ?></a></h3>
-                    <p class="excerpt gradient">
+                    <p class="excerpt">
                         <?= $er1->excerpt; ?>
                     </p>
                     <a class="tag" href="education/index" >艺术教育</a>
