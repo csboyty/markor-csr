@@ -71,7 +71,7 @@
 .list .item .thumb{
     width: 100%;
     height: auto;
-    transition:all .5s linear;
+    transition:all .3s ease-out;
 }
 .list .item .title{
     font-size: 18px;
@@ -89,7 +89,7 @@
     height: 4.5em;
 }
 .list .item .tag{
-    margin: 40px 0px 40px 0px;
+    margin: 30px 0px;
 }
 .list .item:hover{
     border: 1px solid #000;

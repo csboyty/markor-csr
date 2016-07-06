@@ -213,7 +213,7 @@ h1,h2,h3,h4,h5,h6{
     line-height: 90px;
     height: 90px;
     display: block;
-    min-width: 60px;
+    min-width: 40px;
     text-align: center;
     padding: 0px 10px;
     position: relative;
