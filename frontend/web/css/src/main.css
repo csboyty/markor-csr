@@ -702,7 +702,7 @@ h1,h2,h3,h4,h5,h6{
     height: 30px;
     line-height: 30px;
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 10px;
     font-size: 25px;
     font-size: 2.5rem;
@@ -725,7 +725,7 @@ h1,h2,h3,h4,h5,h6{
     width: 25px;
     height: auto;
     position: absolute;
-    top:10px;
+    top:0px;
     left: 10px;
 }
 .contactInfo td .address{
