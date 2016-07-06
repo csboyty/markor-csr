@@ -22,6 +22,9 @@
         padding: 40px 20px;
         width: 100%;
     }
+    .list1 .item .excerpt{
+        display: none;
+    }
 }
 @media screen and (max-width:768px){
     .pageTop .info{
