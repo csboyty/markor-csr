@@ -752,11 +752,11 @@ h1,h2,h3,h4,h5,h6{
 
 .swiper-slide .detail{
     position: absolute;
-    width: 50%;
-    height: 156px;
-    left:50%;
+    height: 150px;
+    left:60px;
+    right:60px;
     top:50%;
-    margin: -75px 0px 0px -25%;
+    margin-top: -75px;
     text-align: center;
     color: #fff;
     word-break: break-all;
