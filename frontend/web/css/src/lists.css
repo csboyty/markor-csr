@@ -79,7 +79,7 @@
     margin: 40px 0px 20px 0px;
 }
 .list .item .title a{
-    color: #666;
+    color: #333;
 }
 .list .item .excerpt{
     font-size: 14px;
@@ -203,6 +203,11 @@
     margin-top: 15%;
     border: none;
     font-size: 24px;
+    font-size: 2.4rem;
+    white-space: nowrap;
+    width:80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /**
 * list12 在list1基础上更改动画 继承list1 子栏目的历年活动、儿童画征集

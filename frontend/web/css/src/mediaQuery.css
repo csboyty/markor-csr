@@ -31,6 +31,11 @@
     .list1 .item .tag{
         margin: 20px auto 0px auto;
     }
+    
+    .list11 .item .title{
+        margin-top:15%;
+        color: #fff;
+    }
 }
 @media screen and (max-width:768px){
     .pageTop .info{
@@ -62,6 +67,9 @@
         margin: 0;
     }
     .swiper-slide .detail .excerpt{
+        display: none;
+    }
+    .swiper-button-next, .swiper-button-prev{
         display: none;
     }
     .hasQuotation:before{
@@ -164,7 +172,7 @@
         color: #808080;
     }
     .list1 .item .title a{
-        color: #808080;
+        color: #333;
     }
     .list1 .item .author{
         text-align: left;
