@@ -38,6 +38,12 @@
         width: 90%;
         margin: -75px 0px 0px -45%;
     }
+    .swiper-slide .detail .title{
+        margin-top:40px;
+    }
+    .swiper-slide .detail .excerpt{
+        display: none;
+    }
     .hasQuotation:before{
         font-size: 24px;
         top:-10px;
@@ -49,7 +55,7 @@
         right: -25px;
     }
     .sectionMobile{
-        padding:20px 5%;
+        padding:5px 5%;
     }
     .section .contentText{
         width: 90%;

@@ -247,7 +247,7 @@ h1,h2,h3,h4,h5,h6{
     margin-top:1px;
 }
 .menu .subMenu.sp1{
-    padding-right: 40%;
+    padding-right: 50%;
 }
 .menu .subMenu.sp2{
     padding-right: 20%;
@@ -765,9 +765,11 @@ h1,h2,h3,h4,h5,h6{
 }
 .swiper-slide .detail .title{
     font-size: 36px;
+    font-size: 3.6rem;
     margin: 0px;
     color: #fff;
     font-weight: lighter;
+    line-height: 1.2em
 }
 .swiper-slide .detail .excerpt{
     font-size: 14px;

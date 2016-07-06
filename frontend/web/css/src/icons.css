@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'icomoon';
-    src:    url('fonts/icomoon.eot?lfzzg6');
-    src:    url('fonts/icomoon.eot?lfzzg6#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?lfzzg6') format('truetype'),
-        url('fonts/icomoon.woff?lfzzg6') format('woff'),
-        url('fonts/icomoon.svg?lfzzg6#icomoon') format('svg');
+    font-family: 'markoricon';
+    src:    url('fonts/markoricon.eot?lfzzg6');
+    src:    url('fonts/markoricon.eot?lfzzg6#iefix') format('embedded-opentype'),
+        url('fonts/markoricon.ttf?lfzzg6') format('truetype'),
+        url('fonts/markoricon.woff?lfzzg6') format('woff'),
+        url('fonts/markoricon.svg?lfzzg6#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'markoricon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
