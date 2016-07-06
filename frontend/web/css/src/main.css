@@ -753,8 +753,8 @@ h1,h2,h3,h4,h5,h6{
 .swiper-slide .detail{
     position: absolute;
     height: 150px;
-    left:60px;
-    right:60px;
+    left:90px;
+    right:90px;
     top:50%;
     margin-top: -75px;
     text-align: center;
@@ -766,7 +766,7 @@ h1,h2,h3,h4,h5,h6{
 .swiper-slide .detail .title{
     font-size: 36px;
     font-size: 3.6rem;
-    margin: 0px;
+    margin: 0px 40px;
     color: #fff;
     font-weight: lighter;
     line-height: 1.2em
