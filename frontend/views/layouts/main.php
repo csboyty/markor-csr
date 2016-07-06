@@ -25,7 +25,6 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="header-wrapper">
     <div class="header">
         <h1 class="logo">
             <a href="<?php echo Yii::$app->homeUrl; ?>">MARKOR-CSR</a>
@@ -166,8 +165,7 @@ AppAsset::register($this);
             </ul>
         </div>
     </div>
-</div> 
-    <div class="breadcrumb-wrapper">
+
         
        
        <?= Breadcrumbs::widget([
@@ -179,7 +177,6 @@ AppAsset::register($this);
         ],
         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
     ]) ?>
-    </div>
     <?= $content ?>
 
     <div class="footer">

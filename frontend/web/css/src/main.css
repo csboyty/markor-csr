@@ -36,17 +36,15 @@ h1,h2,h3,h4,h5,h6{
 /**
 * 公用类
 */
-.header-wrapper{
-    width:100%;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-}
 .header{
+    position: relative;
     margin: auto;
-    width:970px;
+    padding:0 15%;
+    width:100%;
     padding: 0;
     box-sizing: border-box;
     height: 90px;
+    border-bottom: 1px solid #ccc;
 }
 .circle{
     border-radius: 50%;
@@ -450,17 +448,15 @@ h1,h2,h3,h4,h5,h6{
 /**
 * breadcrumb
 */
-.breadcrumb-wrapper{
-    width: 100%;
-    background: #eaeaea;
-}
 .breadcrumb{
     height: 40px;
     line-height: 40px;
-    width:970px;
+    width:100%;
     margin: auto;
     color: #333;
     box-sizing: border-box;
+    background: #eaeaea;
+    padding:0 15%;
 }
 .breadcrumb>li+li:before{
     content: ">";
@@ -477,7 +473,8 @@ h1,h2,h3,h4,h5,h6{
 */
 .section{
     padding: 80px 0;
-    width:970px;
+    width:100%;
+    padding:0 15%;
     margin: auto;
     box-sizing: border-box;
 }
@@ -689,7 +686,7 @@ h1,h2,h3,h4,h5,h6{
     table-layout: fixed;
 }
 .contactInfo td{
-    color: #fff;
+    color: #ccc;
     border-left:1px solid #ccc;
     vertical-align: top;
 }
@@ -744,11 +741,13 @@ h1,h2,h3,h4,h5,h6{
 }
 .footer .copyRight{
     background: #474747;
-    color: #fff;
+    color: #bbb;
+    letter-spacing: 0.2em;
     padding: 15px 0px;
     text-align: center;
     margin: 0px;
     font-size: 12px;
+    font-size: 1.2rem;
 }
 
 /*****************************修改flexslider**********************/

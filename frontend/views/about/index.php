@@ -31,6 +31,8 @@ $this->params=[
         <br>
         2009年，美克美家设立“艺术·家”企业社会责任项目，致力于从艺术角度增强人们对生活的美好感受</p>
 </div>
+    
+
 <div class="section sectionConcern">
     <h2 class="sectionTitle titleConcern">关注</h2>
     <table class="contentTable">
@@ -53,6 +55,7 @@ $this->params=[
         </tr>
     </table>
 </div>
+
 <div class="section">
     <h2 class="sectionTitle titleProgram">项目</h2>
     <table class="contentTable contentTable1">
