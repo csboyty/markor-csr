@@ -36,9 +36,9 @@
     font-style: italic;
 }
 .weChatList .item .title .date{
-    font-size: 14px;
-    font-size: 1.4rem;
-    color:#999;
+    font-size: 13px;
+    font-size: 1.3rem;
+    color:#000;
 }
 .weChatList .item:hover .title{
     color: #000;
