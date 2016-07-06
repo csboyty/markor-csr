@@ -16,7 +16,11 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
             <li class="item">
                 <a class="link" target="_blank" href="<?= $wr->memo; ?>">
                     <img class="thumb" src="<?= $wr->thumb; ?>">
-                    <h3 class="title"><?= $wr->title; ?><span class="date"><?= $wr->date; ?></span></h3>
+                    <p class="line-text">
+                        <span class="title"><?= $wr->title; ?></span>
+                        <span class="date"><?= $wr->date; ?></span>
+                    </p>
+                    
                     
                 </a>
             </li>

@@ -23,24 +23,27 @@
     width: 20%;
     height: auto;
 }
-.weChatList .item .title{
-    color:#808080;
-    font-size: 16px;
+.weChatList .item .line-text{
     position: absolute;
     left:20%;
     right:10px;
     top:0;
     bottom:0;
     margin-left: 20px;
+}
+.weChatList .item .title{
+    color:#808080;
+    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.3em;
     font-style: italic;
+    margin-right: 1em;
 }
-.weChatList .item .title .date{
+.weChatList .item .date{
     display: inline-block;
     font-size: 13px;
     font-size: 1.3rem;
     color:#aaa;
-    margin-left: 1em;
 }
 .weChatList .item:hover .title{
     color: #000;
