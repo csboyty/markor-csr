@@ -52,12 +52,13 @@
 
 .partnerList{
     width: 100%;
+    font-size: 0;
 }
 .partnerList li{
     width:12.3%;
     margin:0 1%;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 .partnerList li img{
     width:100%;
