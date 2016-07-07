@@ -68,8 +68,8 @@ $this->params=[
                 <source srcset="<?= Helper::getSuffixFile($sr->thumb); ?>" media="(max-width: 768px)">
                 <img class="circle pCenter" style="width: 100px;" src="<?= $sr->thumb; ?>" >
             </picture>
-            <p class="contentText" style="margin: 10px auto"><?= $sr->author; ?></p>
-            <p class="contentText" style="margin: 10px auto"><?=$sr->memo; ?></p>
+            <p class="contentText author"><?= $sr->author; ?></p>
+            <p class="contentText memo"><?=$sr->memo; ?></p>
             <p class="contentText hasQuotation">
                 <?= $sr->excerpt; ?>
             </p>

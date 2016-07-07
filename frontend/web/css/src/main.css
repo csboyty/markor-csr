@@ -492,6 +492,14 @@ h1,h2,h3,h4,h5,h6{
     box-sizing: border-box;
     color: #808080;
 }
+.section .contentText.author{
+    margin: 10px auto;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+.section .contentText.memo{
+    margin: 10px auto;
+}
 .section .contentTable{
     width: 100%;
     text-align: center;
