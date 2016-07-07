@@ -39,11 +39,8 @@
 }
 @media screen and (max-width:768px){
     .pageTop .info{
-        width: 100%;
-        top:50%;
-        left:0px;
-        transform:translateY(-50%);
-        margin-left: 0px;
+        width: 80%;
+        margin-left: -40%;
     }
     .pageTop .title{
         font-size:20px;
@@ -319,7 +316,9 @@
 }
 
 @media screen and (max-width:480px){
-    
+    .post{
+        width:84%;
+    }
     .artItem .center{
         position: static;
         transform:none;

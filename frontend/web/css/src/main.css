@@ -855,16 +855,21 @@ h1,h2,h3,h4,h5,h6{
     padding-top: 40px;
     text-align: center;
     position: relative;
+    
 }
 .post .title{
-    font-size: 18px;
+    font-size: 24px;
+    font-size: 2.4rem;
     color: #666;
-    font-weight: lighter;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
 }
 .post .subTitle{
     margin: 20px auto 40px auto;
     font-size: 14px;
-    color: #666;
+    color: #999;
+    letter-spacing: 0.2em;
+    line-height: 2em;
 }
 .post .content{
     color: #808080;
@@ -875,11 +880,18 @@ h1,h2,h3,h4,h5,h6{
     word-break: break-all;
     word-wrap: break-word;
 }
+.post .content p{
+    line-height: 2em;
+    text-indent: 2em;
+}
 .post .content img{
     display: block;
     max-width: 100%;
     height:auto;
-    margin:auto;
+    margin:20px auto;
+}
+.post .content .imgcap{
+    font-style: italic;
 }
 .post .link{
     position: absolute;
