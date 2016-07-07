@@ -26,7 +26,7 @@ $this->params=[
 </div>
 <div class="section">
     <h2 class="sectionTitle titleScholarship">高校奖学金活动</h2>
-    <img src="images/app/scholarship.jpg" srcset="images/app/scholarship@2x.jpg 2x">
+    <img src="images/app/scholarship.jpg" style="margin: auto" srcset="images/app/scholarship@2x.jpg 2x">
     <p class="contentText">
         美克美家每年向每所合作高校捐赠，资助5-10名优秀的在读大学生
         与五所国内艺术设计学院达成奖学金项目战略合作，超过100名优秀大学生获得“艺术·家”奖学金
