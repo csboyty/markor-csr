@@ -283,10 +283,11 @@
         width: 100%;
     }
     .list3 .item .thumbContainer{
-        width: 40%;
+        width: 30%;
+        vertical-align: top;
     }
     .list3 .item .info{
-        width: 60%;
+        width: 70%;
     }
     .list3 .item .title{
         font-size: 18px;
@@ -357,6 +358,25 @@
     .partnerList li{
         width: 30%;
         margin: 20px 10%;
+    }
+    .list3 .item .thumbContainer{
+        width: 30%;
+        vertical-align: top;
+        display: block;
+        margin: 10px auto
+    }
+    .list3 .item .info{
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    .list3 .item .title{
+        text-align: center;
+        margin:10px;
+    }
+    .list3 .item .author{
+        text-align: center;
+        margin:10px;
     }
     .footer .copyRight{
         padding:20px;

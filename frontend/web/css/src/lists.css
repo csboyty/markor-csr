@@ -359,6 +359,7 @@
     border-top: 1px solid #ccc;
     font-size: 0px;
     padding: 20px 0px;
+    position: relative;
 }
 .list3 .item a{
     display: block;
@@ -452,6 +453,7 @@
 }
 .list32 .item .author{
     margin: 20px 0px 50px 0px;
+    line-height: 1.5em;
 }
 .list32 .hasQuotation:before{
     font-size: 24px;
