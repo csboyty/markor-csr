@@ -781,11 +781,11 @@ h1,h2,h3,h4,h5,h6{
 .swiper-slide .detail .excerpt{
     font-size: 14px;
     line-height: 1.5em;
-    margin: 20px 0px;
+    margin: 20px auto;
     color: #fff;
     font-weight: lighter;
     height: 3em;
-    overflow: hidden;
+    max-width: 600px;
 }
 .swiper-pagination-bullet-active{
     background: #fff;

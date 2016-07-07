@@ -46,7 +46,7 @@
         margin-left: 0px;
     }
     .pageTop .excerpt{
-        margin-top: 20px;
+        margin: 20px;
     }
     .swiper-slide .detail{
         height: 100px;
@@ -355,5 +355,8 @@
     .partnerList li{
         width: 30%;
         margin: 20px 10%;
+    }
+    .footer .copyRight{
+        padding:20px;
     }
 }
