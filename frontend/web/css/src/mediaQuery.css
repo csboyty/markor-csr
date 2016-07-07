@@ -49,10 +49,12 @@
         margin: 20px;
     }
     .swiper-slide .detail{
+/*
         height: 100px;
         left:60px;
         right:60px;
         margin-top:-50px;
+*/
     }
     .swiper-slide .detail .title{
         margin:10px 0;
