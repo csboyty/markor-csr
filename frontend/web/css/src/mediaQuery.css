@@ -45,8 +45,16 @@
         transform:translateY(-50%);
         margin-left: 0px;
     }
+    .pageTop .title{
+        font-size:20px;
+        font-size: 2rem;
+        padding:20px;
+        border:#fff solid 1px;
+            
+    }
     .pageTop .excerpt{
         margin: 20px;
+        display: none;
     }
     .swiper-slide .detail{
         width: 80%;
