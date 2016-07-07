@@ -38,20 +38,20 @@ $this->params=[
     <ul class="contentList contentConcern">
         <li>
             <h3>愿景</h3>
-            <p class="line-text">通过艺术的力量<br>
-                引导人们趋向美好的生活<br>
+            <p class="line-text">通过艺术的力量，
+                引导人们趋向美好的生活，
                 促进社会和谐</p>
         </li>
         <li>
             <h3>使命</h3>
-            <p class="line-text">为身处艺术启蒙、艺术教育<br>
-                以及艺术传承阶段的人群<br>
+            <p class="line-text">为身处艺术启蒙、艺术教育
+                以及艺术传承阶段的人群，
                 提供全面发展的机会</p>
         </li>
         <li>
             <h3>核心价值观</h3>
-            <p class="line-text">长期的、系统的、以普及教育<br>
-                和提升社会整体艺术修养为目的的<br>
+            <p class="line-text">长期的、系统的、以普及教育
+                和提升社会整体艺术修养为目的的
                 企业社会责任项目</p>
         </li>
     </ul>

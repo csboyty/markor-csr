@@ -88,10 +88,12 @@
     font-size: 1.6rem;
     color: #666;
     margin:0 0 20px 0;
+    font-weight: bold;
 }
 .contentList li p{
     line-height: 2em;
     color: #808080;
+    margin-bottom: 20px;
 }
 .contentList.contentConcern li h3{
     color:#333;
