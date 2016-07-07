@@ -66,13 +66,13 @@ $this->params=[
     <h2 class="sectionTitle titleTraineeRecruit">实习生招聘</h2>
     <ul class="list1 list1M list1M1">
         <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
+            <img class="thumb" src="data/recruit/1.jpg" srcset="data/recruit/1@2x.jpg 2x">
         </li>
         <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
+            <img class="thumb" src="data/recruit/1.jpg" srcset="data/recruit/2@2x.jpg 2x">
         </li>
         <li class="item">
-            <img class="thumb" src="data/square/1.jpg">
+            <img class="thumb" src="data/recruit/1.jpg" srcset="data/recruit/3@2x.jpg 2x">
         </li>
     </ul>
 
