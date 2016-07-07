@@ -518,6 +518,7 @@ h1,h2,h3,h4,h5,h6{
     padding: 0px 10px;
     box-sizing: border-box;
     color: #808080;
+    line-height: 1.5em;
 }
 .section .contentTable img{
     max-width: 100%;

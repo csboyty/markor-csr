@@ -74,9 +74,9 @@ $this->params=[
                         <img class="thumb mB20 circle" src="<?= $sr->thumb; ?>" >
                     </picture>
                     <div class="info">
-                        <p class="tCenter">姓名：<?= $sr->author; ?></p>
+                        <p class="tCenter contentText author">姓名：<?= $sr->author; ?></p>
                         <!--<p class="tCenter">专业：四川美院视觉传达</p>-->
-                        <p class="tCenter">岗位：<?= $sr->memo; ?></p>
+                        <p class="tCenter contentText memo">岗位：<?= $sr->memo; ?></p>
                     </div>
                 </li>
                 <?php
