@@ -32,7 +32,7 @@ $this->registerCssFile("@web/css/lib/date_input.css");
         <label class="control-label col-md-2">背景大图*</label>
         <div class="col-md-10" id="uploadBgContainer">
             <a href="#" class="btn btn-success" id="uploadBgBtn">上传</a>
-            <p class="help-block">请上传1920x600的jpg，png</p>
+            <p class="help-block">请上传1920x830的jpg，png</p>
             <img  id="bgImage"  style="width:100px"
                   src="<?php echo $model->bg_image?$model->bg_image:'images/app/defaultBg.png'; ?>"/>
             <input type="hidden" id="bgImageUrl" name="bg_image" value="<?php echo $model->bg_image; ?>">

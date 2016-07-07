@@ -77,7 +77,7 @@ $(document).ready(function(){
         fileAddCb:null,
         progressCb:null,
         uploadedCb:function(info,file,up){
-            if(info.w==1920&&info.h==600){
+            if(info.w==1920&&info.h==830){
                 $("#bgImageUrl").val(info.url);
 
                 $("#bgImage").attr("src",info.url);
