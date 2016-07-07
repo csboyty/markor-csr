@@ -124,7 +124,7 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
 }
 .hasQuotation:before{
-    font-family: 'icomoon' !important;
+    font-family: 'markoricon' !important;
     content: "\e90b";
     font-size: 48px;
     position: absolute;
@@ -133,7 +133,7 @@ h1,h2,h3,h4,h5,h6{
     color: #808080;
 }
 .hasQuotation:after{
-    font-family: 'icomoon' !important;
+    font-family: 'markoricon' !important;
     content: "\e90a";
     font-size: 48px;
     position: absolute;
@@ -893,7 +893,7 @@ h1,h2,h3,h4,h5,h6{
 .post .content .caption{
     font-style: italic;
     text-indent: 0;
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
     text-align: center;
 }
 .post .link{
