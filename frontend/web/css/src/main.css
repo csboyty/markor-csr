@@ -667,7 +667,7 @@ h1,h2,h3,h4,h5,h6{
 .pageTop .excerpt{
     font-size: 14px;
     line-height: 1.5em;
-    margin-top: 50px;
+    margin-top: 20px;
     padding:20px;
     border: #fff 1px solid;
 }
@@ -758,11 +758,10 @@ h1,h2,h3,h4,h5,h6{
 
 .swiper-slide .detail{
     position: absolute;
-    height: 170px;
-    left:90px;
-    right:90px;
+    left:50%;
     top:50%;
-    margin-top: -85px;
+    margin-top: -25%;
+    transform: translateY(-50%);
     text-align: center;
     color: #fff;
     word-break: break-all;
