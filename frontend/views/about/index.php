@@ -61,7 +61,7 @@ $this->params=[
     <h2 class="sectionTitle titleProgram">项目</h2>
     <ul class="contentList">
         <li>
-            <p class="icon"><span class="icon-art-education"></span></p>
+            <div class="icon"><span class="icon-art-education"></span></div>
             <h3>艺术启蒙</h3>
             <p class="line-text">在艺术教育欠发达区域，推进艺术教育工
                 作，以捐赠艺术类书籍、音像资料等物品
@@ -69,7 +69,7 @@ $this->params=[
                 形式提升青少年的艺术欣赏力。</p>
         </li>
         <li>
-            <p class="icon"><span class="icon-modern-art"></span></p>
+            <div class="icon"><span class="icon-modern-art"></span></div>
             <h3>艺术教育</h3>
             <p class="line-text">
                 美克美家高等艺术院校设立“艺术·家”奖学
@@ -79,9 +79,9 @@ $this->params=[
             </p>
         </li>
         <li>
-            <p class="icon">
+            <div class="icon">
                     <span class="icon-tradition-art"></span>
-                </p>
+                </div>
             <h3>
                 艺术传承
             </h3>
