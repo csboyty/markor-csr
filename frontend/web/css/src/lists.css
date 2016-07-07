@@ -90,8 +90,14 @@
     margin:0 0 20px 0;
 }
 .contentList li p{
-    line-height: 1.5em;
+    line-height: 2em;
     color: #808080;
+}
+.contentList.contentConcern li h3{
+    color:#333;
+}
+.contentList.contentConcern li p{
+    color:#666;
 }
 /**
 * list 上图下文字,一排3个元素 热点文章

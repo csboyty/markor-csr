@@ -35,7 +35,7 @@ $this->params=[
 
 <div class="section sectionConcern">
     <h2 class="sectionTitle titleConcern">关注</h2>
-    <ul class="contentList">
+    <ul class="contentList contentConcern">
         <li>
             <h3>愿景</h3>
             <p class="line-text">通过艺术的力量<br>
