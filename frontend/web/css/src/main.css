@@ -493,12 +493,21 @@ h1,h2,h3,h4,h5,h6{
     color: #808080;
 }
 .section .contentText.author{
-    margin: 10px auto;
+    margin: 20px auto 10px;
     font-size: 18px;
     font-size: 1.8rem;
+    color: #666;
 }
 .section .contentText.memo{
     margin: 10px auto;
+}
+.section .contentText.donationLink{
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin:20px auto;
+}
+.section .contentText.donationSummary{
+    line-height: 2em;
 }
 .section .contentTable{
     width: 100%;

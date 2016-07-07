@@ -93,8 +93,8 @@ $this->params=[
 
             <a href="enlightenment/room/donation/<?= $dr->id; ?>"
                style="width: 70%;text-align: center;color: #808080;display: block;margin: auto">
-                <p style="font-size: 18px;margin-bottom: 15px;">捐赠小学名单></p>
-                <p>
+                <p class="contentText donationLink">捐赠小学名单></p>
+                <p class="contentText donationSummary">
                     从2009年“艺术·家”项目启动至2015年底
                     美克美家先后在西安、沈阳、武汉等21个城市的小学捐赠150间“快乐美术教室”
                 </p>
