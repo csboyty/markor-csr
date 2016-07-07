@@ -69,10 +69,10 @@ $this->params=[
             <img class="thumb" src="data/recruit/1.jpg" srcset="data/recruit/1@2x.jpg 2x">
         </li>
         <li class="item">
-            <img class="thumb" src="data/recruit/1.jpg" srcset="data/recruit/2@2x.jpg 2x">
+            <img class="thumb" src="data/recruit/2.jpg" srcset="data/recruit/2@2x.jpg 2x">
         </li>
         <li class="item">
-            <img class="thumb" src="data/recruit/1.jpg" srcset="data/recruit/3@2x.jpg 2x">
+            <img class="thumb" src="data/recruit/3.jpg" srcset="data/recruit/3@2x.jpg 2x">
         </li>
     </ul>
 
