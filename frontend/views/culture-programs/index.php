@@ -34,7 +34,7 @@ $this->params=[
 
                         <h3 class="title ellipsis"><?= $r->title; ?></h3>
                         <p class="date"><?= $r->date; ?></p>
-                        <p class="excerpt gradient">
+                        <p class="excerpt">
                             <?= $r->excerpt; ?>
                         </p>
                     </a>

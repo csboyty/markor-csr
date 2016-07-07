@@ -23,7 +23,7 @@
         width: 100%;
     }
     .list1 .item .title{
-        margin-top:30px;
+        margin-top:10px;
     }
     .list1 .item .excerpt{
         display: none;
@@ -358,6 +358,10 @@
     .partnerList li{
         width: 30%;
         margin: 20px 10%;
+    }
+    .list2 .item .info{
+        width:80%;
+        margin: 20px auto;
     }
     .list3 .item .thumbContainer{
         width: 30%;
