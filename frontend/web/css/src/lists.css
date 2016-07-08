@@ -577,7 +577,7 @@
 }
 .searchCategoryList li{
     display: inline-block;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
 }
 .searchCategoryList li a{
     display: inline-block;
@@ -590,6 +590,9 @@
 }
 .searchPageList{
     
+}
+.searchPageList .item{
+    padding: 20px 0;
 }
 .searchPageList .item .thumbContainer{
     width:20%;

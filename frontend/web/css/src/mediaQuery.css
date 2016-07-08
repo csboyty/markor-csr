@@ -385,6 +385,14 @@
         text-align: center;
         margin:10px;
     }
+    .searchPageList .item .thumbContainer{
+        display: inline-block;
+        margin: 0;
+    }
+    .searchPageList .item .info{
+        display: inline-block;
+        width:70%;
+    }
     .footer .copyRight{
         padding:20px;
     }

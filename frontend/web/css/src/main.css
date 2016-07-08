@@ -662,16 +662,16 @@ h1,h2,h3,h4,h5,h6{
     
 }
 .section.searchResults>h2{
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     margin:0 0 10px 0;
 }
 .section.searchResults>h3{
     padding:10px;
     background:#eaeaea;
     margin:20px 0;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 /**
