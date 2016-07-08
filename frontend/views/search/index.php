@@ -31,8 +31,14 @@ $this->title = $param;
             $parentCategory=Category::findOne($category->parent_id);
 
             switch($r->category_id){
+                case Yii::$app->params["categories"]["artHonor"]:
+                    $url="about/honor";
+                    break;
                 case Yii::$app->params["categories"]["artNews"]:
                     $url="about/news/".$r->id;
+                    break;
+                case Yii::$app->params["categories"]["activityRoom"]:
+                    $url="activities/".$r->category_id."/".$r->id;
                     break;
                 case Yii::$app->params["categories"]["donation"]:
                     $url="enlightenment/room/donation".$r->id;
@@ -40,14 +46,38 @@ $this->title = $param;
                 case Yii::$app->params["categories"]["activityTeacherTrain"]:
                     $url="activities/".$r->category_id."/".$r->id;
                     break;
-                case Yii::$app->params["categories"]["activityRoom"]:
-                    $url="activities/".$r->category_id."/".$r->id;
+                case Yii::$app->params["categories"]["speechTeacherTrain"]:
+                    $url="speech/".$r->category_id;
+                    break;
+                case Yii::$app->params["categories"]["resultTeacherTrain"]:
+                    $url="works/".$r->category_id;
                     break;
                 case Yii::$app->params["categories"]["activityVolunteer"]:
                     $url="activities/".$r->category_id."/".$r->id;
                     break;
+                case Yii::$app->params["categories"]["speechVolunteer"]:
+                    $url="speech/".$r->category_id;
+                    break;
+                case Yii::$app->params["categories"]["volunteerTrain"]:
+                    $url="education/volunteer/train";
+                    break;
+                case Yii::$app->params["categories"]["childDrawCollect"]:
+                    $url="enlightenment/child-draw/collect";
+                    break;
+                case Yii::$app->params["categories"]["resultChildDraw"]:
+                    $url="works/".$r->category_id;
+                    break;
                 case Yii::$app->params["categories"]["videoChildDraw"]:
                     $url="videos/".$r->id;
+                    break;
+                case Yii::$app->params["categories"]["resultCollegeStudent"]:
+                    $url="works/".$r->category_id;
+                    break;
+                case Yii::$app->params["categories"]["speechTrainee"]:
+                    $url="speech/".$r->category_id;
+                    break;
+                case Yii::$app->params["categories"]["recruit"]:
+                    $url="education/trainee/recruits";
                     break;
                 case Yii::$app->params["categories"]["cultureProgram"]:
                     $url="culture-programs/".$r->id;
@@ -61,9 +91,6 @@ $this->title = $param;
                 case Yii::$app->params["categories"]["wechat"]:
                     $url=$r->memo;
                     break;
-                case Yii::$app->params["categories"]["volunteerTrain"]:
-                    $url="education/volunteer/train";
-                    break;
                 default:
                     if(isset($parentCategory)&&$parentCategory->id==Yii::$app->params["categories"]["childDrawCollect"]){
                         $url="enlightenment/child-draw/collect";
@@ -73,14 +100,8 @@ $this->title = $param;
             ?>
 
             <li class="item">
-                <?php
-                    if($url!=""){
-                    ?>
-                        <a target="_blank"  href="<?= $url; ?>">
-                    <?php
-                    }
-                ?>
 
+                <a target="_blank"  href="<?= $url; ?>">
                     <div class="thumbContainer">
 
                         <picture>
@@ -93,13 +114,7 @@ $this->title = $param;
                             <?= $content; ?>
                         </p>
                     </div>
-                    <?php
-                        if($url!=""){
-                    ?>
-                        </a>
-                    <?php
-                    }
-                    ?>
+                </a>
             </li>
 
         <?php
