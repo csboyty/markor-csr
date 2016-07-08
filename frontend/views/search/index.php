@@ -22,7 +22,7 @@ $this->title = $param;
             }
         ?>
     </ul>
-    <h3>相关页面：</h3>
+    <h3>相关数据：</h3>
     <ul class="list3 list31 searchPageList">
         <?php
         foreach($results as $r){
@@ -30,6 +30,8 @@ $this->title = $param;
             $content=$r->title?$r->title:$r->excerpt;
             $category=Category::findOne($r->category_id);
             $parentCategory=Category::findOne($category->parent_id);
+
+            print_r($r->category_id);
 
             switch($r->category_id){
                 case Yii::$app->params["categories"]["artNews"]:
@@ -74,7 +76,14 @@ $this->title = $param;
             ?>
 
             <li class="item">
-                <a target="_blank"  href="<?= $url; ?>">
+                <?php
+                    if($url!=""){
+                    ?>
+                        <a target="_blank"  href="<?= $url; ?>">
+                    <?php
+                    }
+                ?>
+
                     <div class="thumbContainer">
 
                         <picture>
@@ -87,7 +96,13 @@ $this->title = $param;
                             <?= $content; ?>
                         </p>
                     </div>
-                </a>
+                    <?php
+                        if($url!=""){
+                    ?>
+                        </a>
+                    <?php
+                    }
+                    ?>
             </li>
 
         <?php
