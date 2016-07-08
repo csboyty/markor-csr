@@ -65,7 +65,7 @@ $this->title = $param;
                     $url="education/volunteer/train";
                     break;
                 default:
-                    if($parentCategory->id==Yii::$app->params["categories"]["childDrawCollect"]){
+                    if(isset($parentCategory)&&$parentCategory->id==Yii::$app->params["categories"]["childDrawCollect"]){
                         $url="enlightenment/child-draw/collect";
                     }
                     break;
