@@ -1,107 +1,3 @@
-.weChatList{
-    padding: 10px 10%;
-    width: 100%;
-    margin: auto;
-    font-size:0px;
-    box-sizing: border-box;
-}
-.weChatList .item{
-    width: 33.3%;
-    border-left:1px solid #ccc;
-    box-sizing: border-box;
-    padding:0 10px;
-    vertical-align: top;
-    position: relative;
-}
-.weChatList .item:last-child{
-    border-right:1px solid #ccc;
-}
-.weChatList .item .link{
-
-}
-.weChatList .item .thumb{
-    width: 20%;
-    height: auto;
-}
-.weChatList .item .line-text{
-    position: absolute;
-    left:20%;
-    right:10px;
-    top:0;
-    bottom:0;
-    margin-left: 20px;
-}
-.weChatList .item .title{
-    color:#808080;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 1.3em;
-    font-style: italic;
-    margin-right: 1em;
-}
-.weChatList .item .date{
-    display: inline-block;
-    font-size: 13px;
-    font-size: 1.3rem;
-    color:#aaa;
-    line-height: 2em;
-}
-.weChatList .item:hover .title{
-    color: #000;
-}
-
-.partnerList{
-    width: 100%;
-    font-size: 0;
-}
-.partnerList li{
-    width:12.28%;
-    margin:0 1%;
-    display: inline-block;
-    vertical-align: middle;
-}
-.partnerList li img{
-    width:100%;
-}
-.contentList{
-    width:100%;
-    font-size: 0;
-    
-}
-.contentList li{
-    display: inline-block;
-    width:33.3%;
-    box-sizing: border-box;
-    padding:0 10px;
-    text-align:center;
-    font-size: 14px;
-    font-size: 1.4rem;
-    vertical-align: top;
-}
-.contentList li .icon{
-    font-size: 40px;
-    color: #808080;
-    margin-bottom: 10px;
-}
-.contentList li h3{
-    font-size: 16px;
-    font-size: 1.6rem;
-    color: #666;
-    margin:0 0 20px 0;
-    font-weight: bold;
-}
-.contentList li p{
-    line-height: 2em;
-    color: #808080;
-    margin-bottom: 20px;
-}
-.contentList.contentConcern li h3{
-    color:#333;
-}
-.contentList.contentConcern li p{
-    color:#666;
-}
-
 
 /**
 * list 上图下文字,一排3个元素 热点文章
@@ -572,3 +468,139 @@
     visibility: visible;
     opacity: 1;
 }
+.weChatList{
+    padding: 10px 10%;
+    width: 100%;
+    margin: auto;
+    font-size:0px;
+    box-sizing: border-box;
+}
+.weChatList .item{
+    width: 33.3%;
+    border-left:1px solid #ccc;
+    box-sizing: border-box;
+    padding:0 10px;
+    vertical-align: top;
+    position: relative;
+}
+.weChatList .item:last-child{
+    border-right:1px solid #ccc;
+}
+.weChatList .item .link{
+
+}
+.weChatList .item .thumb{
+    width: 20%;
+    height: auto;
+}
+.weChatList .item .line-text{
+    position: absolute;
+    left:20%;
+    right:10px;
+    top:0;
+    bottom:0;
+    margin-left: 20px;
+}
+.weChatList .item .title{
+    color:#808080;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.3em;
+    font-style: italic;
+    margin-right: 1em;
+}
+.weChatList .item .date{
+    display: inline-block;
+    font-size: 13px;
+    font-size: 1.3rem;
+    color:#aaa;
+    line-height: 2em;
+}
+.weChatList .item:hover .title{
+    color: #000;
+}
+
+.partnerList{
+    width: 100%;
+    font-size: 0;
+}
+.partnerList li{
+    width:12.28%;
+    margin:0 1%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.partnerList li img{
+    width:100%;
+}
+.contentList{
+    width:100%;
+    font-size: 0;
+    
+}
+.contentList li{
+    display: inline-block;
+    width:33.3%;
+    box-sizing: border-box;
+    padding:0 10px;
+    text-align:center;
+    font-size: 14px;
+    font-size: 1.4rem;
+    vertical-align: top;
+}
+.contentList li .icon{
+    font-size: 40px;
+    color: #808080;
+    margin-bottom: 10px;
+}
+.contentList li h3{
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #666;
+    margin:0 0 20px 0;
+    font-weight: bold;
+}
+.contentList li p{
+    line-height: 2em;
+    color: #808080;
+    margin-bottom: 20px;
+}
+.contentList.contentConcern li h3{
+    color:#333;
+}
+.contentList.contentConcern li p{
+    color:#666;
+}
+
+.searchCategoryList{
+    
+}
+.searchCategoryList li{
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+}
+.searchCategoryList li a{
+    display: inline-block;
+    padding:10px;
+    background: #808080;
+    color: #ccc;
+}
+.searchCategoryList li a:hover{
+    color:#fff;
+}
+.searchPageList{
+    
+}
+.searchPageList .item{
+    padding: 20px 0;
+}
+.searchPageList .item .thumbContainer{
+    width:20%;
+}
+.searchPageList .item .info{
+    width: 80%;
+    vertical-align: top;
+}
+
+
+

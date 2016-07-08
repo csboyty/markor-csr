@@ -658,6 +658,22 @@ h1,h2,h3,h4,h5,h6{
         url(../../images/app/concernBg@2x.jpg) 2x);
     background-size: cover;
 }
+.section.searchResults{
+    
+}
+.section.searchResults>h2{
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin:0 0 10px 0;
+}
+.section.searchResults>h3{
+    padding:10px;
+    background:#eaeaea;
+    margin:20px 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
 /**
 * pageTop 子页的顶部图片
 */

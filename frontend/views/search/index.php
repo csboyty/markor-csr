@@ -5,10 +5,9 @@ use frontend\models\Helper;
 $this->title = $param;
 
 ?>
-<div class="section searchResult">
+<div class="section searchResults">
     <h2>搜索：<?= $param; ?></h2>
-    <hr>
-    <h3>相关栏目：</h3>
+    <h3>相关栏目</h3>
     <ul class="searchCategoryList">
         <?php
             foreach($pageResults as $key=>$value){
@@ -30,8 +29,6 @@ $this->title = $param;
             $content=$r->title?$r->title:$r->excerpt;
             $category=Category::findOne($r->category_id);
             $parentCategory=Category::findOne($category->parent_id);
-
-            print_r($r->category_id);
 
             switch($r->category_id){
                 case Yii::$app->params["categories"]["artNews"]:
