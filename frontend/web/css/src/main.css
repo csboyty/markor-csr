@@ -1115,11 +1115,19 @@ h1,h2,h3,h4,h5,h6{
     padding-top: 40px;
     position: relative;
 }
+.site-error h2{
+    font-size: 2.4rem;
+    color: #666;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-align: left;
+}
 .site-error p{
     line-height: 2em;
 }
 .site-error p a{
     text-decoration: underline;
-    color: #666;
 }
-
+.site-error p a:hover{
+    color: #000;
+}

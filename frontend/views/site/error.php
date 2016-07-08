@@ -16,7 +16,7 @@ $this->title = $name;
     <div class="alert alert-danger">
         <?= nl2br(Html::encode($message)) ?>
     </div>
-
+    <h2>…(⊙_⊙;)… 出错了！</h2>
     <p>
         抱歉，您查看的这个页面出了点小问题，我们会尽快修复。
     </p>
