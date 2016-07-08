@@ -18,10 +18,9 @@ $this->title = $name;
     </div>
 
     <p>
-        The above error occurred while the Web server was processing your request.
+        抱歉，您查看的这个页面出了点小问题，我们会尽快修复。
     </p>
     <p>
-        Please contact us if you think this is a server error. Thank you.
+        返回<a href="<?php echo Yii::$app->homeUrl; ?>">首页</a>看看其他页面。
     </p>
-
 </div>

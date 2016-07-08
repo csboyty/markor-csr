@@ -1109,6 +1109,17 @@ h1,h2,h3,h4,h5,h6{
     height:480px!important;
 }
 
-
-
+.site-error{
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+    position: relative;
+}
+.site-error p{
+    line-height: 2em;
+}
+.site-error p a{
+    text-decoration: underline;
+    color: #666;
+}
 
