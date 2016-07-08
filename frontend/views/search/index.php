@@ -21,7 +21,7 @@ $this->title = $param;
             }
         ?>
     </ul>
-    <h3>相关数据：</h3>
+    <h3>相关页面</h3>
     <ul class="list3 list31 searchPageList">
         <?php
         foreach($results as $r){
