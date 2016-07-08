@@ -1112,7 +1112,7 @@ h1,h2,h3,h4,h5,h6{
 .site-error{
     width: 70%;
     margin: auto;
-    padding-top: 40px;
+    padding: 40px 0;
     position: relative;
 }
 .site-error h2{
@@ -1127,6 +1127,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .site-error p a{
     text-decoration: underline;
+    color: #808080;
 }
 .site-error p a:hover{
     color: #000;
