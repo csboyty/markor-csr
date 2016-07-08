@@ -5,15 +5,15 @@ use frontend\models\Helper;
 $this->title = $param;
 
 ?>
-<div class="section">
+<div class="section searchResult">
     <h2>搜索：<?= $param; ?></h2>
     <hr>
-    <ul>
+    <ul class="searchCategoryList">
         <?php
             foreach($pageResults as $key=>$value){
                 ?>
 
-                <li style="display: block;padding:5px 5px 5px 20px;font-size: 20px;">
+                <li>
                     <a target="_blank" href="<?= $value; ?>"><?= $key; ?></a>
                 </li>
 
@@ -22,7 +22,7 @@ $this->title = $param;
         ?>
     </ul>
 
-    <ul class="list3 list31">
+    <ul class="list3 list31 searchPageList">
         <?php
         foreach($results as $r){
             $url="";
