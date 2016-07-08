@@ -275,13 +275,16 @@
     background: #000;
     background: rgba(0,0,0,.5);
     visibility: hidden;
-    transition:all 0.4s ease-out;
+/*    transition:all 0.4s ease-out;*/
     color: #fff;
     opacity: 0;
     filter:alpha(opacity=0);
 }
 .list12 .item .title{
     border-bottom: 1px solid #fff;
+}
+.list12 .item .thumbContainer{
+    perspective: 1000px;
 }
 .list12 .item:hover .info{
     visibility: visible;
@@ -292,7 +295,8 @@
     color: #fff;
 }
 .list12 .item:hover .thumb{
-    transform:scale(1.05,1.05);
+/*    transform:scale(1.05,1.05);*/
+    transform: translateZ(100px);
 }
 /**
 * list1M 继承list1,显示两个，主要用于用于小屏幕
