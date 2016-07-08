@@ -28,7 +28,7 @@ use frontend\models\Helper;
 </div>
 <div class="section">
     <h2 class="sectionTitle titleChildDraw">儿童画征集</h2>
-    <ul class="list1 list1M list12">
+    <ul class="list1 list1M list12 list1M1">
         <?php
             foreach($collectResults as $cr){
                 ?>
@@ -71,7 +71,7 @@ use frontend\models\Helper;
 </div>
 <div class="section">
     <h2 class="sectionTitle titleChildDrawVideo">儿童画视频</h2>
-    <ul class="list1 list12 list1M">
+    <ul class="list1 list12 list1M list1M1">
         <?php
             foreach($videoResults as $vr){
                 ?>
