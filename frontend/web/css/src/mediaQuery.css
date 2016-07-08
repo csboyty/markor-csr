@@ -24,6 +24,7 @@
     }
     .list1 .item .title{
         margin-top:10px;
+        padding: 0;
     }
     .list1 .item .excerpt{
         display: none;

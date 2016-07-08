@@ -286,6 +286,9 @@
 .list12 .item .thumbContainer{
     perspective: 1000px;
 }
+.list12 .item .thumb{
+    transform: translateZ(0);
+}
 .list12 .item:hover .info{
     visibility: visible;
     opacity: .7;
