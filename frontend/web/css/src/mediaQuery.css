@@ -243,10 +243,12 @@
     .list1M .item .title{
         text-align: center;
         font-size: 16px;
+        margin: 10px auto 0;
     }
     .list1M .item .author{
         display: block;
         color: #808080;
+        text-align: center;
     }
     .list1M1 .item:last-child{
         display: none;
