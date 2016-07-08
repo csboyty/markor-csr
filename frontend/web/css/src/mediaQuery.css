@@ -15,12 +15,15 @@
         padding:10px 5%;
     }
     .breadcrumb{
-        padding:0 20px;
+        padding:0 5%;
         width:100%;
     }
     .section{
         padding: 40px 20px;
         width: 100%;
+    }
+    .youkuBox iframe{
+        width:90%!important;
     }
     .list1 .item .title{
         margin-top:10px;

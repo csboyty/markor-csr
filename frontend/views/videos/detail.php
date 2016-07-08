@@ -28,6 +28,6 @@ if($category->id==Yii::$app->params["categories"]["video"]){
 }
 ?>
 
-<div style="display: block;margin: 20px auto;text-align: center;">
+<div class="youkuBox">
     <?= $model->memo; ?>
 </div>
