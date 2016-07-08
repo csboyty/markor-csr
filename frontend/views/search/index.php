@@ -5,10 +5,9 @@ use frontend\models\Helper;
 $this->title = $param;
 
 ?>
-<div class="section searchResult">
+<div class="section searchResults">
     <h2>搜索：<?= $param; ?></h2>
-    <hr>
-    <h3>相关栏目：</h3>
+    <h3>相关栏目</h3>
     <ul class="searchCategoryList">
         <?php
             foreach($pageResults as $key=>$value){
@@ -22,7 +21,7 @@ $this->title = $param;
             }
         ?>
     </ul>
-    <h3>相关页面：</h3>
+    <h3>相关页面</h3>
     <ul class="list3 list31 searchPageList">
         <?php
         foreach($results as $r){
