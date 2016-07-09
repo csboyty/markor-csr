@@ -19,7 +19,7 @@ AppAsset::register($this);
     <link rel="icon" href="images/app/logo_title_32X32.ico" type="image/x-icon" />
     <link rel="icon" href="images/app/logo_title.png" type=" image/png" >
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode("美克美家CSR公益|".$this->title) ?></title>
+    <title><?= Html::encode("美克美家CSR公益 | ".$this->title) ?></title>
     <base href="<?php echo Yii::$app->request->hostInfo.Yii::$app->homeUrl; ?>">
     <?php $this->head(); ?>
     <!--[if IE 8]>
