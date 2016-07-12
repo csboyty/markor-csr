@@ -143,6 +143,8 @@
     }
     .list .item .title{
         margin: 0 0 20px 0;
+        color: #333;
+        font-weight: bold;
     }
     .list .item .excerpt{
         margin: 0px;
@@ -178,7 +180,8 @@
         text-align: left;
         padding: 0px;
         margin: 0 0 20px 0;
-        color: #808080;
+        color: #333;
+        font-weight: bold;
     }
     .list1 .item .title a{
         color: #333;
