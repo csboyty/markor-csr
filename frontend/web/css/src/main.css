@@ -465,6 +465,8 @@ h1,h2,h3,h4,h5,h6{
 }
 .breadcrumb>li>a{
     color: #808080;
+    display: inline-block;
+    height: 100%;
 }
 .breadcrumb>li>a:hover{
     color: #000;
@@ -699,6 +701,7 @@ h1,h2,h3,h4,h5,h6{
 .pageTop .title{
    font-size: 36px;
     font-size: 3.6rem;
+    font-weight: bold;
 }
 .pageTop .excerpt{
     font-size: 14px;
