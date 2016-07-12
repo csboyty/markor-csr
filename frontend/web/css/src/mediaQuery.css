@@ -185,6 +185,7 @@
     }
     .list1 .item .author{
         text-align: left;
+        color: #333;
     }
     .list1 .item .excerpt{
         display: block;
