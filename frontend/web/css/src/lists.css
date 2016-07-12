@@ -99,6 +99,7 @@
     border-bottom: 2px solid #fff;
     padding: 5px 0px 10px 0px;
     line-height: 1.5em;
+    color: #fff;
 }
 .list1 .item .title a{
     color:#fff;
@@ -117,6 +118,7 @@
     position:static;
     text-align:center;
     display:block;
+    color: #fff;
 }
 .list1 .item .tag{
     margin:10px auto 0px auto;
