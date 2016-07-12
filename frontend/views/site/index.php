@@ -60,6 +60,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
             foreach($enlightenmentResults as $er){
                 ?>
                 <li class="item">
+                   <a href="activities/<?= $er->category_id; ?>/<?= $er->id; ?>">
                     <div class="thumbContainer">
                         <picture>
                             <source srcset="<?= Helper::getSuffixFile($er->thumb); ?>" media="(max-width: 768px)">
@@ -67,12 +68,15 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                         </picture>
                     </div>
                     <div class="info">
-                        <h3 class="title ellipsis"><a href="activities/<?= $er->category_id; ?>/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
+                        <h3 class="title ellipsis">
+                            <?= $er->title; ?></h3>
                         <p class="excerpt">
+                           
                             <?= $er->excerpt; ?>
                         </p>
                         <a class="tag" href="enlightenment/index" >艺术启蒙</a>
                     </div>
+                    </a>
                 </li>
                 <?php
             }
@@ -82,6 +86,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
         foreach($educationResults as $er1){
             ?>
             <li class="item">
+               <a href="education/awards/<?= $er1->id; ?>">
                 <div class="thumbContainer">
                     <picture>
                         <source srcset="<?= Helper::getSuffixFile($er1->thumb); ?>" media="(max-width: 768px)">
@@ -89,12 +94,13 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                     </picture>
                 </div>
                 <div class="info">
-                    <h3 class="title ellipsis"><a href="education/awards/<?= $er1->id; ?>"><?= $er1->title; ?></a></h3>
+                    <h3 class="title ellipsis"><?= $er1->title; ?></h3>
                     <p class="excerpt">
                         <?= $er1->excerpt; ?>
                     </p>
                     <a class="tag" href="education/index" >艺术教育</a>
                 </div>
+                </a>
             </li>
         <?php
         }
@@ -104,6 +110,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
         foreach($cPResults as $cr){
             ?>
             <li class="item">
+               <a href="culture-programs/<?= $cr->id; ?>">
                 <div class="thumbContainer">
                     <picture>
                         <source srcset="<?= Helper::getSuffixFile($cr->thumb); ?>" media="(max-width: 768px)">
@@ -111,12 +118,13 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                     </picture>
                 </div>
                 <div class="info">
-                    <h3 class="title"><a href="culture-programs/<?= $cr->id; ?>"><?= $cr->title; ?></a></h3>
+                    <h3 class="title"><?= $cr->title; ?></h3>
                     <p class="excerpt">
                         <?= $cr->excerpt; ?>
                     </p>
                     <a class="tag" href="culture-programs/index" >艺术传承</a>
                 </div>
+                </a>
             </li>
         <?php
         }

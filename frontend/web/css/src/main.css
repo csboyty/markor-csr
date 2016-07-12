@@ -263,6 +263,8 @@ h1,h2,h3,h4,h5,h6{
     color: #808080;
     font-size: 14px;
     font-size: 1.4rem;
+    display: inline-block;
+    height: 100%;
 }
 .menu .subMenu>.item>a:hover,.menu .subMenu>.item>a.active{
     color: #000;
