@@ -67,7 +67,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                         </picture>
                     </div>
                     <div class="info">
-                        <h3 class="title ellipsis"><a href="activities/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
+                        <h3 class="title ellipsis"><a href="activities/<?= $er->category_id; ?>/<?= $er->id; ?>"><?= $er->title; ?></a></h3>
                         <p class="excerpt">
                             <?= $er->excerpt; ?>
                         </p>
