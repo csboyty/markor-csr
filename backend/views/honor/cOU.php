@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use backend\assets\AppAsset;
 
 $this->title = '新建/修改艺术家荣誉';
+
+$this->registerCssFile("@web/css/lib/date_input.css");
 ?>
 
 
@@ -46,5 +48,6 @@ $this->title = '新建/修改艺术家荣誉';
 </form>
 
 <?php
+$this->registerJsFile("@web/js/lib/jquery.date_input.js",['depends' => [backend\assets\AppAsset::className()]]);
     $this->registerJsFile("@web/js/src/honorCOU.js",['depends' => [backend\assets\AppAsset::className()]]);
 ?>
