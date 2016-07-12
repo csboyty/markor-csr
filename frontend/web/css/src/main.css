@@ -794,7 +794,8 @@ h1,h2,h3,h4,h5,h6{
     top:-140px;
     width:130px;
     display: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    font-size: 0;
 }
 .contactInfo td .social-media.wechat .qrcode img{
     width:100%;
