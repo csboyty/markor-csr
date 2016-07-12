@@ -781,6 +781,22 @@ h1,h2,h3,h4,h5,h6{
     padding-left: 45px;
     display: block;
 }
+.contactInfo td .social-media.wechat{
+    position: relative;
+}
+.contactInfo td .social-media.wechat .qrcode{
+    position: absolute;
+    left: 0;
+    top:-130px;
+    width:130px;
+    display: none;
+}
+.contactInfo td .social-media.wechat .qrcode img{
+    width:100%;
+}
+.contactInfo td .social-media.wechat:hover .qrcode{
+    display: block;
+}
 .footer .copyRight{
     background: #474747;
     color: #bbb;

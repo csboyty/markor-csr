@@ -210,8 +210,8 @@ AppAsset::register($this);
                     </p>
                 </td>
                 <td>
-                    <p class="social-media line-text"><img src="images/app/weixin.png" class="iconWeb">美克美家</p>
-                    <p class="social-media line-text"><img src="images/app/weibo.png" class="iconWeb">我爱艺术家</p>
+                    <p class="social-media line-text wechat"><a href=""><img src="images/app/weixin.png" class="iconWeb">美克美家CSR工艺</a><span class="qrcode"><img src="images/app/qrcode_wechat.jpg" alt=""></span></p>
+                    <p class="social-media line-text"><a href=""><img src="images/app/weibo.png" class="iconWeb">我爱艺术·家</a></p>
                 </td>
             </tr>
         </table>
