@@ -770,6 +770,12 @@ h1,h2,h3,h4,h5,h6{
 .contactInfo td .address{
     width:250px;
 }
+.contactInfo td .address a{
+    color: #fff;
+}
+.contactInfo td .address a:hover{
+    text-decoration: underline;
+}
 .contactInfo td .contact{
     width:250px;
 }
@@ -783,6 +789,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .contactInfo td .social-media a{
     color: #fff;
+}
+.contactInfo td .social-media a:hover{
+    text-decoration: underline;
 }
 .contactInfo td .social-media.wechat{
     position: relative;
