@@ -138,7 +138,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                     </div>
 
                     <div class="info">
-                        <h2 class="title ellipsis"><a href="story/<?= $sr->id; ?>"><?= $sr->title; ?></a></h2>
+                        <h2 class="title ellipsis"><a href="stories/<?= $sr->id; ?>"><?= $sr->title; ?></a></h2>
                         <p class="author"><?= $sr->author; ?></p>
                         <p class="excerpt moreEllipsis" data-row="3">
                             <?= $sr->excerpt; ?>
