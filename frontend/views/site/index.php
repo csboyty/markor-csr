@@ -138,6 +138,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
             foreach($storyResults as $sr){
                 ?>
                 <li class="item">
+                   <a href="stories/<?= $sr->id; ?>">
                     <div class="thumbContainer">
                         <picture>
                             <source srcset="<?= Helper::getSuffixFile($sr->thumb); ?>" media="(max-width: 768px)">
@@ -146,13 +147,14 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                     </div>
 
                     <div class="info">
-                        <h2 class="title ellipsis"><a href="stories/<?= $sr->id; ?>"><?= $sr->title; ?></a></h2>
+                        <h2 class="title ellipsis"><?= $sr->title; ?></h2>
                         <p class="author"><?= $sr->author; ?></p>
                         <p class="excerpt moreEllipsis" data-row="3">
                             <?= $sr->excerpt; ?>
                         </p>
                         <a href="stories/index" class="tag">人物故事</a>
                     </div>
+                    </a>
                 </li>
                 <?php
             }
