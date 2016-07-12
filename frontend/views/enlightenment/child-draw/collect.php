@@ -36,7 +36,10 @@ $this->params=[
                                     <img class="thumb" src="<?= $v->thumb; ?>" >
                                 </picture>
                             </div>
-                            <h3 class="title titleNoBd"><?= $v->title; ?></h3>
+                            <div class="info">
+                                <h2 class="title"><?= $v->title; ?></h2>
+                                <p class="author"><?= $v->author; ?></p>
+                            </div>
                         </li>
                         <?php
                     }
