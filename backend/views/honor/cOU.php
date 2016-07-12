@@ -27,6 +27,12 @@ $this->title = '新建/修改艺术家荣誉';
         </div>
     </div>
     <div class="form-group">
+        <label  class="control-label col-md-2">日期*</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="date" value="<?php echo $model->date; ?>" name="date">
+        </div>
+    </div>
+    <div class="form-group">
         <label  class="control-label col-md-2">描述*</label>
         <div class="col-md-8">
             <textarea class="form-control"  name="excerpt" rows="3"><?php echo $model->excerpt; ?></textarea>

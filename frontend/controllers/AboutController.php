@@ -30,7 +30,7 @@ class AboutController extends Controller
     public function actionHonor(){
         $query=Post::find();
         $query->where(["category_id"=>Yii::$app->params["categories"]["artHonor"]]);
-        $results = $query->all();
+        $results = $query->orderBy(["date"=>SORT_DESC])->all();
         return $this->render('honor',[
             "results"=>$results
         ]);
@@ -51,7 +51,7 @@ class AboutController extends Controller
         $query->where(["category_id"=>Yii::$app->params["categories"]["artNews"]]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
             Yii::$app->params["perShowCount"]["default"]]);
-        $results = $query->offset($pages->offset)->limit($pages->limit)->all();
+        $results = $query->orderBy(["date"=>SORT_DESC])->offset($pages->offset)->limit($pages->limit)->all();
 
         return $this->render('news',[
             "pages"=>$pages,

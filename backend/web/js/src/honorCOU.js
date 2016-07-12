@@ -72,7 +72,10 @@ $(document).ready(function(){
                 required:true,
                 maxlength:255
             },
-            image:{
+            date:{
+                required:true
+            },
+            thumb:{
                 required:true
             }
         },
@@ -81,7 +84,10 @@ $(document).ready(function(){
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",255)
             },
-            image:{
+            date:{
+                required:config.validErrors.required
+            },
+            thumb:{
                 required:config.validErrors.required
             }
         },
