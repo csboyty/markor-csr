@@ -143,7 +143,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                         <p class="excerpt moreEllipsis" data-row="3">
                             <?= $sr->excerpt; ?>
                         </p>
-                        <a href="story/index" class="tag">人物故事</a>
+                        <a href="stories/index" class="tag">人物故事</a>
                     </div>
                 </li>
                 <?php
