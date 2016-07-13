@@ -443,6 +443,7 @@
 .list5 .item .thumbContainer{
     position: relative;
     perspective: 1000px;
+    overflow: hidden;
 }
 .list5 .item .thumb{
     transform: translateZ(0);
