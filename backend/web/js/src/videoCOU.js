@@ -69,7 +69,7 @@ $(document).ready(function(){
             },
             memo:{
                 required:true,
-                maxlength:128
+                maxlength:256
             }
         },
         messages:{
@@ -85,7 +85,7 @@ $(document).ready(function(){
             },
             memo:{
                 required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",128)
+                maxlength:config.validErrors.maxLength.replace("${max}",256)
             }
         },
         submitHandler:function(form) {
