@@ -442,6 +442,14 @@
 }
 .list5 .item .thumbContainer{
     position: relative;
+    perspective: 1000px;
+}
+.list5 .item .thumb{
+    transform: translateZ(0);
+    transition: all 0.4s ease-out;
+}
+.list5 .item:hover .thumb{
+    transform: translateZ(100px);
 }
 .list5 .item .icon{
     font-size: 24px;
@@ -457,6 +465,12 @@
     text-align: center;
     padding-top: 20%;
     box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+.list5 .item:hover .icon{
+    visibility: visible;
+    opacity: 1;
 }
 .list5 .item .text{
     text-align: center;
@@ -467,10 +481,9 @@
 .list5 .item .excerpt{
 
 }
-.list5 .item:hover .icon{
-    visibility: visible;
-    opacity: 1;
-}
+
+
+
 .weChatList{
     padding: 10px 10%;
     width: 100%;
