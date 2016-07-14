@@ -161,7 +161,6 @@
 .list11 .item .info{
     background: #000;
     filter:alpha(opacity=0);
-    background: rgba(0,0,0,0.3);
     opacity: 0;
     top:0;
 }
