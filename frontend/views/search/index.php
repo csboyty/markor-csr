@@ -110,6 +110,9 @@ $this->title = $param;
                         </picture>
                     </div>
                     <div class="info">
+                       <h2 class="title"><?= isset($r->title)?$r->title:""?></h2>
+                        <p class="author"><?= isset($r->author)?$r->author:""?></p>
+                        <p class="date"><?= isset($r->date)?$r->date:""?></p>
                         <p class="excerpt">
                             <?= $content; ?>
                         </p>
