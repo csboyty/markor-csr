@@ -4,7 +4,7 @@ $this->params=[
     "breadcrumbs"=>[
         [
             'label' => '艺术传承',
-            'url' => 'culture-program/index'
+            'url' => 'culture-programs/index'
         ]
     ]
 ]
