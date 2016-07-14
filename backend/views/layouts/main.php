@@ -14,8 +14,11 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/app/logo_title_32X32.ico" type="image/x-icon" />
+    <link rel="icon" href="images/app/logo_title_32X32.ico" type="image/x-icon" />
+    <link rel="icon" href="images/app/logo_title.png" type=" image/png" >
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode("MARKOR-CSR|".$this->title) ?></title>
+    <title><?= Html::encode("MARKOR-CSR | ".$this->title) ?></title>
     <base href="<?php echo Yii::$app->request->hostInfo.Yii::$app->homeUrl; ?>">
     <?php $this->head() ?>
 </head>
