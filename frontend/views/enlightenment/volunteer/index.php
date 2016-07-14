@@ -82,15 +82,23 @@ $this->params=[
 
 <div class="section">
     <h2 class="sectionTitle titleVolunteerTrain">培训</h2>
-    <ul class="list1 list1M list1M1">
+    <ul class="list1 list12 list1M list1M1">
         <?php
         foreach($trainResults as $tr){
             ?>
             <li class="item">
+               <div class="thumbContainer">
                 <picture>
                     <source srcset="<?= Helper::getSuffixFile($tr->thumb); ?>" media="(max-width: 768px)">
                     <img class="thumb" src="<?= $tr->thumb; ?>" >
                 </picture>
+                </div>
+                <div class="info">
+                            <h2 class="title ellipsis"><?= $tr->title; ?></h2>
+                            <p class="excerpt moreEllipsis" data-row="3">
+                                <?= $r->excerpt; ?>
+                            </p>
+                        </div>
             </li>
         <?php
         }
