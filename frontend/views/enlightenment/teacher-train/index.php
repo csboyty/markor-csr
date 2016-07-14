@@ -82,7 +82,7 @@ $this->params=[
 
 <div class="section">
     <h2 class="sectionTitle titleTeacherWorks">教师作品</h2>
-    <ul class="list1 list1M list1M1">
+    <ul class="list1 list12 list1M list1M1">
         <?php
         foreach($workResults as $wr){
             ?>
