@@ -133,7 +133,7 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
 </div>
 <div class="section bgf4f4f4">
     <h2 class="sectionTitle titleStory">人物·故事</h2>
-    <ul class="list1">
+    <ul class="list1 list12">
         <?php
             foreach($storyResults as $sr){
                 ?>
