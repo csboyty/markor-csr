@@ -169,10 +169,12 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
                 ?>
                 <li class="item">
                     <a href="videos/<?= $v->id; ?>">
+                       <div class="thumbContainer">
                         <picture>
                             <source srcset="<?= Helper::getSuffixFile($v->thumb); ?>" media="(max-width: 768px)">
                             <img class="thumb" src="<?= $v->thumb; ?>" >
                         </picture>
+                        </div>
                         <div class="info">
                             <h2 class="title"><?= $v->title; ?></h2>
                             <p class="icon">

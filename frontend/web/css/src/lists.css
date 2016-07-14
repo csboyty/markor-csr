@@ -148,10 +148,21 @@
     width: 100%;
     margin: 0px;
 }
+.list11 .item .thumbContainer{
+    perspective: 1000px;
+}
+.list11 .item .thumb{
+    transition: all 0.3s ease-out;
+    transform: translateZ(0);
+}
+.list11 .item:hover .thumb{
+    transform: translateZ(100px);
+}
 .list11 .item .info{
     background: #000;
-    filter:alpha(opacity=50);
+    filter:alpha(opacity=0);
     background: rgba(0,0,0,0.3);
+    opacity: 0;
 }
 .list11 .item .title{
     color: #fff;
@@ -163,6 +174,11 @@
     width:80%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.list11 .item:hover .info{
+    visibility: visible;
+    opacity: .7;
+    filter:alpha(opacity=70);
 }
 /**
 * list12 在list1基础上更改动画 继承list1 子栏目的历年活动、儿童画征集
