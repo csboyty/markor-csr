@@ -215,11 +215,11 @@ AppAsset::register($this);
                 </td>
             </tr>
         </table>
-        <p class="copyRight displayNoneInMobile">Copyright &copy;2007-2020 MARKOR FURNISHINGS</p>
+        <p class="copyRight displayNoneInMobile">Copyright &copy;2007-<?= date("Y") ?> MARKOR FURNISHINGS</p>
         <p class="copyRight displayInMobile">
             TEL: 010-63862727<br>
             地址：北京市丰台区三环南路57号丽江泽桥美克大厦3层<br>
-            Copyright &copy;2007-2020 MARKOR FURNISHINGS
+            Copyright &copy;2007-<?= date("Y") ?> MARKOR FURNISHINGS
         </p>
     </div>
 
