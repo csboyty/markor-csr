@@ -17,10 +17,12 @@
 }
 .list .item .thumbContainer{
     overflow: hidden;
+    perspective: 1000px;
 }
 .list .item .thumb{
     width: 100%;
     height: auto;
+    transform: translateZ(0);
     transition:all .3s ease-out;
 }
 .list .item .title{
@@ -50,7 +52,8 @@
     /*color: #000;*/
 }
 .list .item:hover .thumb{
-    transform:scale(1.05,1.05);
+    
+    transform: translateZ(100px);
 }
 
 /**
