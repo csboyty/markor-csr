@@ -87,10 +87,12 @@ $this->params=[
         foreach($workResults as $wr){
             ?>
             <li class="item">
+               <div class="thumbContainer">
                 <picture>
                     <source srcset="<?= Helper::getSuffixFile($wr->thumb); ?>" media="(max-width: 768px)">
                     <img class="thumb" src="<?= $wr->thumb; ?>" >
                 </picture>
+                </div>
             </li>
         <?php
         }
