@@ -36,7 +36,7 @@ $this->params=[
 
 <div class="section bgf4f4f4">
     <h2 class="sectionTitle titleCollegeWork">大学生作品</h2>
-    <ul class="list1">
+    <ul class="list1 list12">
         <?php
             foreach($collegeResults as $cr){
                 ?>
