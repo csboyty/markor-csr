@@ -58,10 +58,19 @@ use frontend\models\Helper;
             foreach($workResults as $wr){
                 ?>
                 <li class="item">
+                   <div class="thumbContainer">
                     <picture>
                         <source srcset="<?= Helper::getSuffixFile($wr->thumb); ?>" media="(max-width: 768px)">
                         <img class="thumb" src="<?= $wr->thumb; ?>" >
                     </picture>
+                    </div>
+                    <div class="info">
+                        <h2 class="title"><?= $wr->title; ?></h2>
+                        <p class="author"><?= $wr->author; ?></p>
+                        <p class="excerpt moreEllipsis" data-row="3">
+                                <?= $wr->excerpt; ?>
+                            </p>
+                    </div>
                 </li>
                 <?php
             }
