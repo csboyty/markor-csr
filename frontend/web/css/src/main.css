@@ -832,8 +832,7 @@ h1,h2,h3,h4,h5,h6{
     left:50%;
     top:50%;
     width:50%;
-    margin-left: -25%;
-    transform: translateY(-50%);
+    transform: translate(-50%,-50%);
     text-align: center;
     color: #fff;
     word-break: break-all;
