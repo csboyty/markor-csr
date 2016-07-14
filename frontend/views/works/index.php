@@ -61,7 +61,7 @@ if($category->id==Yii::$app->params["categories"]["resultCollegeStudent"]){
 ?>
 
     <div class="section">
-        <ul class="list1">
+        <ul class="list1 list12">
             <?php
                 foreach($results as $r){
                     ?>
