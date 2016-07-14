@@ -95,6 +95,7 @@ $this->params=[
                 </div>
                 <div class="info">
                             <h2 class="title ellipsis"><?= $tr->title; ?></h2>
+                            <p class="author"><?= $tr->author; ?></p>
                             <p class="excerpt moreEllipsis" data-row="3">
                                 <?= $tr->excerpt; ?>
                             </p>
