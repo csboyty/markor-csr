@@ -179,6 +179,7 @@
     visibility: visible;
     opacity: .7;
     filter:alpha(opacity=70);
+    top:0;
 }
 /**
 * list12 在list1基础上更改动画 继承list1 子栏目的历年活动、儿童画征集
