@@ -46,7 +46,7 @@ class SiteController extends Controller
         $videos=$videosQuery->where(["category_id"=>[
             Yii::$app->params["categories"]["video"],
             Yii::$app->params["categories"]["videoChildDraw"]
-        ]])->limit(1)->all();
+        ]])->orderBy(["date"=>SORT_DESC])->limit(1)->all();
 
         $cPResults=$cPResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();

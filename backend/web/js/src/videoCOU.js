@@ -43,7 +43,7 @@ $(document).ready(function(){
         fileAddCb:null,
         progressCb:null,
         uploadedCb:function(info,file,up){
-            if(info.w==800&&info.h==400&&800<=info.w&&info.w<=1000){
+            if(info.w/info.h==16/9&&800<=info.w&&info.w<=1000){
                 $("#imageUrl").val(info.url);
 
                 $("#image").attr("src",info.url);
@@ -69,7 +69,7 @@ $(document).ready(function(){
             },
             memo:{
                 required:true,
-                maxlength:256
+                maxlength:255
             }
         },
         messages:{
@@ -85,7 +85,7 @@ $(document).ready(function(){
             },
             memo:{
                 required:config.validErrors.required,
-                maxlength:config.validErrors.maxLength.replace("${max}",256)
+                maxlength:config.validErrors.maxLength.replace("${max}",255)
             }
         },
         submitHandler:function(form) {
