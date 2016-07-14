@@ -4,7 +4,7 @@ $this->params=[
     "breadcrumbs"=>[
         [
             'label' => '人物故事',
-            'url' => ['story/index']
+            'url' => ['stories/index']
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]
     ]
