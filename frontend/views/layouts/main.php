@@ -202,7 +202,7 @@ AppAsset::register($this);
                         <span class="icon">
                             <span class="icon-address"></span>
                         </span>
-                        <a href="http://www.markorhome.com/csr">www.markorhome.com/csr</a>
+                        <a href="http://csr.markorhome.com/">http://csr.markorhome.com/</a>
                         <br>
                         北京市丰台区西三环南路57号
                         <br>
