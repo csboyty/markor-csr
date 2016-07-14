@@ -114,7 +114,7 @@ $this->title = $param;
                         <p class="author"><?= isset($r->author)?$r->author:""?></p>
                         <p class="date"><?= isset($r->date)?$r->date:""?></p>
                         <p class="excerpt">
-                            <?= $content; ?>
+                            <?= isset($r->excerpt)?$r->excerpt:""?>
                         </p>
                     </div>
                 </a>
