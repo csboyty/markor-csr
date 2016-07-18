@@ -372,8 +372,12 @@
 /****
 * list311 启用了错位排序 继承list31 高校奖学金
 */
+.list311 .item {
+    clear: both;
+}
 .list311 .item .thumbContainer{
     float: left;
+    margin-bottom: 20px;
 }
 .list311 .item:nth-child(2n+1) .thumbContainer{
     float: right;
