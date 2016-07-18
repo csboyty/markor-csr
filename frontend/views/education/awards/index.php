@@ -28,7 +28,7 @@ $this->params=[
 </div>
 
 <div class="section">
-    <ul class="list3 list31">
+    <ul class="list3 list31 list311">
         <?php
             foreach($results as $key=>$r){
                 if($key%2==0){

@@ -369,6 +369,16 @@
     width: 70%;
     vertical-align: middle;
 }
+/****
+* list311 启用了错位排序 继承list31 高校奖学金
+*/
+.list311 .item .thumbContainer{
+    float: left;
+}
+.list311 .item:nth-child(2n+1) .thumbContainer{
+    float: right;
+}
+
 /**
 * list32只有两栏，继承list3 对内容进行了排版修改 感言
 */
