@@ -75,4 +75,6 @@
 .icon-video-divice:before {
     content: "\e90f";
 }
-
+.icon-broadcast:before {
+    content: "\e911";
+}
