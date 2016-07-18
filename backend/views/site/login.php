@@ -1,9 +1,9 @@
 <?php
-$this->title="登陆";
+$this->title="登录";
 ?>
 
 <form class="pCenter" id="myForm" method="post" action="site/login" name="login_user_form">
-    <span class="loginIcon">登陆图标</span>
+    <span class="loginIcon">登录图标</span>
     <h1 class="logo">美克美家CSR</h1>
     <div class="row">
         <label class="ctrlLabel">邮箱</label>
@@ -14,7 +14,7 @@ $this->title="登陆";
         <input id="password" class="ctrlInput icon2 bgLc" type="password" name="password">
     </div>
     <div class="row">
-        <input type="submit" class="ctrlBtn" value="登陆">
+        <input type="submit" class="ctrlBtn" value="登录">
     </div>
 
     <?php
