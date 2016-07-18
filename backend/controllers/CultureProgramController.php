@@ -40,6 +40,10 @@ class CultureProgramController extends \yii\web\Controller
         return $this->render("index");
     }
 
+    public function actionPosts(){
+        return $this->render("posts");
+    }
+
 
     public function actionCreate(){
         $model=new Post();
@@ -55,6 +59,24 @@ class CultureProgramController extends \yii\web\Controller
         $model = $this->findModel($id);
 
         return $this->render('cOU',[
+            'model' => $model,
+        ]);
+    }
+
+    public function actionPostsCreate(){
+        $model=new Post();
+
+        return $this->render('postsCOU',[
+            'model' => $model,
+        ]);
+    }
+
+    public function actionPostsUpdate($id){
+
+        //这样获取会将isNewRecord设置为false
+        $model = $this->findModel($id);
+
+        return $this->render('postsCOU',[
             'model' => $model,
         ]);
     }

@@ -37,7 +37,8 @@ var config={
         filters:{
             all:"*",
             zip:"zip,rar",
-            img:"jpg,JPG,jpeg,JPEG,png,PNG"
+            img:"jpg,JPG,jpeg,JPEG,png,PNG",
+            pdf:"pdf,PDF"
         }
     },
     validErrors:{

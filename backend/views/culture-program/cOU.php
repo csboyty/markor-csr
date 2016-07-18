@@ -3,9 +3,10 @@
 use yii\helpers\Html;
 use backend\assets\AppAsset;
 
-$this->title = '新建/修改艺术传承';
+$this->title = '新建/修改艺术传承项目';
 
 $this->registerCssFile("@web/css/lib/date_input.css");
+$content=$model->content?json_decode($model->content):"";
 ?>
 
 
@@ -18,6 +19,7 @@ $this->registerCssFile("@web/css/lib/date_input.css");
         }
     ?>
     <input type="hidden" value="<?php echo Yii::$app->params["categories"]["cultureProgram"]; ?>" name="category_id">
+    <input type="hidden" value="1" name="memo">
     <div class="form-group">
         <label class="control-label col-md-2">封面图*</label>
         <div class="col-md-10" id="uploadContainer">
@@ -37,7 +39,7 @@ $this->registerCssFile("@web/css/lib/date_input.css");
     <div class="form-group">
         <label  class="control-label col-md-2">摘要*</label>
         <div class="col-md-8">
-            <textarea class="form-control"  name="excerpt" rows="3"><?php echo $model->excerpt; ?></textarea>
+            <textarea id="excerpt" class="form-control"  name="excerpt" rows="3"><?php echo $model->excerpt; ?></textarea>
         </div>
     </div>
     <div class="form-group">
@@ -47,15 +49,38 @@ $this->registerCssFile("@web/css/lib/date_input.css");
         </div>
     </div>
     <div class="form-group">
-        <label  class="control-label col-md-2">网址*</label>
+        <label  class="control-label col-md-2">头部三篇文章</label>
         <div class="col-md-8">
-            <input type="text" class="form-control" value="<?php echo $model->memo; ?>" name="memo">
+            <input type="text" class="form-control ids" value="<?php echo $content?$content[0]:""; ?>">
+            <p class="help-block">视频、成果展示、项目计划，填写id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">
-        <label  class="control-label col-md-2">内容*</label>
+        <label  class="control-label col-md-2">栏目1文章</label>
         <div class="col-md-8">
-            <textarea class="form-control"  name="content" rows="3" id="content"><?php echo $model->content; ?></textarea>
+            <input type="text" class="form-control ids" value="<?php echo $content?$content[1]:""; ?>">
+            <p class="help-block">5篇，填写id，用英文逗号隔开</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-2">栏目2文章</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control ids" value="<?php echo $content?$content[2]:""; ?>">
+            <p class="help-block">6篇，填写id，用英文逗号隔开</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-2">栏目3文章</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control ids" value="<?php echo $content?$content[3]:""; ?>">
+            <p class="help-block">4篇，填写id，用英文逗号隔开</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-2">栏目4文章</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control ids" value="<?php echo $content?$content[4]:""; ?>">
+            <p class="help-block">4篇，填写id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">

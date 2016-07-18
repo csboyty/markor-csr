@@ -1,21 +1,15 @@
-var cultureProgramCOU=(function(config,functions){
+var cultureProgramPostsCOU=(function(config,functions){
     return{
         submitForm:function(form){
             var me=this,content=[];
             functions.showLoading();
-            $(".ids").each(function(index,el){
-                content.push($(this).val());
-            });
             $(form).ajaxSubmit({
                 dataType:"json",
-                data:{
-                    content:JSON.stringify(content)
-                },
                 success:function(response){
                     if(response.success){
                         $().toastmessage("showSuccessToast",config.messages.optSuccess);
                         setTimeout(function(){
-                            window.location.href="culture-program/index";
+                            window.location.href="culture-program/posts";
                         },3000);
                     }else{
                         functions.ajaxReturnErrorHandler(response.error_code);
@@ -33,7 +27,7 @@ $(document).ready(function(){
     $("#date").date_input();
 
     tinymce.init({
-        selector: "#excerpt",
+        selector: "#content",
         height:300,
         toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
         toolbar2: 'print preview media | forecolor backcolor emoticons',
@@ -41,9 +35,9 @@ $(document).ready(function(){
         plugins : 'link image preview fullscreen table textcolor colorpicker code',
         setup: function (ed) {
             ed.on('blur', function (e) {
-                $("#excerpt").val(ed.getContent());
+                $("#content").val(ed.getContent());
                 if(ed.getContent()){
-                    $(".error[for='excerpt']").remove();
+                    $(".error[for='content']").remove();
                 }
             });
         }
@@ -70,6 +64,21 @@ $(document).ready(function(){
             }
         }
     });
+    functions.createQiNiuUploader({
+        maxSize:config.uploader.sizes.all,
+        filter:config.uploader.filters.pdf,
+        uploadBtn:"uploadFileBtn",
+        multiSelection:false,
+        multipartParams:null,
+        uploadContainer:"uploadFileContainer",
+        fileAddCb:null,
+        progressCb:null,
+        uploadedCb:function(info,file,up){
+            $("#fileUrl").val(info.url);
+
+            $("#filename").text(file.name);
+        }
+    });
     $("#myForm").validate({
         ignore:[],
         rules:{
@@ -86,6 +95,9 @@ $(document).ready(function(){
             excerpt:{
                 required:true,
                 maxlength:512
+            },
+            content:{
+                required:true
             }
         },
         messages:{
@@ -102,10 +114,13 @@ $(document).ready(function(){
             excerpt:{
                 required:config.validErrors.required,
                 maxlength:config.validErrors.maxLength.replace("${max}",512)
+            },
+            content:{
+                required:config.validErrors.required
             }
         },
         submitHandler:function(form) {
-            cultureProgramCOU.submitForm(form);
+            cultureProgramPostsCOU.submitForm(form);
         }
     });
 });

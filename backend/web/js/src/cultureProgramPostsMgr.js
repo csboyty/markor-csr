@@ -1,4 +1,4 @@
-var videoMgr=(function(config,functions){
+var cultureProgramPostsMgr=(function(config,functions){
     var loadedData={};
     /**
      * 创建datatable
@@ -22,24 +22,27 @@ var videoMgr=(function(config,functions){
             },
             "aoColumns": [
                 { "mDataProp": "id"},
-                { "mDataProp": "thumb",
-                    "fnRender":function(oObj){
-                        return "<img class='thumb' src='"+oObj.aData.thumb+"'>";
-                    }
-                },
                 { "mDataProp": "title"},
                 { "mDataProp": "date"},
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
-                        return '<a href="video/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
+                        return '<a href="culture-program/posts-update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
                             '<a class="delete" href="'+oObj.aData.id+'">删除</a>';
                     }
                 }
             ] ,
             "fnServerParams": function ( aoData ) {
+                var searchContent=$("#searchContent").val();
+                var filter="memo=2";
+                if(searchContent){
+                    filter+=(" and (id='"+searchContent+"' or title like '%"+searchContent+"%')");
+                }
                 aoData.push({
                     name:"category",
                     value:category_id
+                },{
+                    name:"filter",
+                    value:filter
                 })
             },
             "fnServerData": function(sSource, aoData, fnCallback) {
@@ -115,11 +118,16 @@ var videoMgr=(function(config,functions){
 
 $(document).ready(function(){
 
-    videoMgr.createTable();
+    cultureProgramPostsMgr.createTable();
+
+    $("#searchBtn").click(function(e){
+        cultureProgramPostsMgr.tableRedraw();
+    });
+
 
     $("#myTable").on("click","a.delete",function(){
         if(confirm(config.messages.confirmDelete)){
-            videoMgr.delete($(this).attr("href"));
+            cultureProgramPostsMgr.delete($(this).attr("href"));
         }
         return false;
     })

@@ -155,8 +155,19 @@ AppAsset::register($this);
             <div class="separate"></div>
 
             <li class="item">
-                <span class="glyphicon glyphicon-flag"></span>
-                <a class="link" href="culture-program/index">艺术传承</a>
+                <span class="glyphicon glyphicon-th-list"></span>
+                <a class="link">艺术传承</a>
+                <span class="glyphicon glyphicon-chevron-down rightIcon"></span>
+                <ul class="subMenu">
+                    <li class="sItem">
+                        <span class="circle">原点</span>
+                        <a class="sLink" href="culture-program/index">项目</a>
+                    </li>
+                    <li class="sItem">
+                        <span class="circle">原点</span>
+                        <a class="sLink" href="culture-program/posts">项目文章</a>
+                    </li>
+                </ul>
             </li>
             <li class="item">
                 <span class="glyphicon glyphicon-flag"></span>

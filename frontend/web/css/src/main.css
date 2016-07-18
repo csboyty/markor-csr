@@ -965,21 +965,7 @@ h1,h2,h3,h4,h5,h6{
     margin: 0 auto 40px;
     text-align: center;
 }
-.post .link{
-    position: absolute;
-    right:0px;
-    top:45px;
-    font-size:0px;
-    width: 105px;
-    height: 22px;
-    background: url(../../images/app/programLinkBg.png);
-    background-image: -webkit-image-set(url(../../images/app/programLinkBg.png) 1x,url(../../images/app/programLinkBg@2x.png) 2x);
-}
-.post .link:hover{
-    background: url(../../images/app/programLinkBgHover.png);
-    background-image: -webkit-image-set(url(../../images/app/programLinkBgHover.png) 1x,url(../../images/app/programLinkBgHover@2x.png) 2x);
-}
-.post.postProgram .title,.post.postProgram .subTitle{
+.post.postProgram>.title,.post.postProgram>.subTitle{
     text-align:left;
 }
 
