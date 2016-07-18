@@ -401,6 +401,12 @@
         text-align: center;
         margin:10px;
     }
+    .list311 .item .thumbContainer{
+        margin:0 0 10px 10px;
+    }
+    .list311 .item:nth-child(2n+1) .thumbContainer{
+        margin:0 10px 10px 0;
+    }
     .searchPageList .item .thumbContainer{
         display: inline-block;
         margin: 0;
