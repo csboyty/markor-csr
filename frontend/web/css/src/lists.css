@@ -387,6 +387,7 @@
 .list311 .item .info{
     margin: 0;
     display: block;
+    width:auto;
 }
 /**
 * list32只有两栏，继承list3 对内容进行了排版修改 感言
