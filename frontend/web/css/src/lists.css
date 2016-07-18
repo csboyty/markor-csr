@@ -374,15 +374,18 @@
 */
 .list311 .item {
     clear: both;
+    padding: 20px 0;
 }
 .list311 .item .thumbContainer{
     float: left;
-    margin-bottom: 20px;
+    margin:0 20px 20px 0;
 }
 .list311 .item:nth-child(2n+1) .thumbContainer{
     float: right;
 }
-
+.list311 .item .info{
+    margin: 0;
+}
 /**
 * list32只有两栏，继承list3 对内容进行了排版修改 感言
 */
