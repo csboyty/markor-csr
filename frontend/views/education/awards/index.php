@@ -50,17 +50,18 @@ $this->params=[
                 }else{
                     ?>
                     <li class="item">
-                        <div class="info" style="padding-left: 0px">
-                            <p class="excerpt">
-                                <?= $r->excerpt; ?>
-                            </p>
-                        </div>
-                        <div class="thumbContainer">
+                       <div class="thumbContainer">
                             <picture>
                                 <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $r->thumb; ?>" >
                             </picture>
                         </div>
+                        <div class="info">
+                            <p class="excerpt">
+                                <?= $r->excerpt; ?>
+                            </p>
+                        </div>
+                        
                     </li>
                     <?php
                 }
