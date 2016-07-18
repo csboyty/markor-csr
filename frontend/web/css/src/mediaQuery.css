@@ -306,6 +306,9 @@
         font-size: 18px;
         font-size:1.8rem;
     }
+    .list31 .item .info{
+        width:auto;
+    }
     .list4 .item .leftCorner{
         left: inherit;
         top:inherit;
