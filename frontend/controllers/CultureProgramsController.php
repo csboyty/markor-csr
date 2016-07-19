@@ -31,11 +31,20 @@ class CultureProgramsController extends Controller
 
         $query=Post::find();
 
-        $query->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]]);
+        $query->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"],"memo"=>1]);
         $results = $query->orderBy(["date"=>SORT_DESC])->all();
 
         return $this->render('index',[
             "results"=>$results
+        ]);
+    }
+    public function actionPost($id,$pId){
+        $pModel=Post::findOne($pId);
+        $model=Post::findOne($id);
+        //显示详情
+        return $this->render('postDetail',[
+            "model"=>$model,
+            "pModel"=>$pModel
         ]);
     }
 }

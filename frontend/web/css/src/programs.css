@@ -60,6 +60,7 @@
 .pSectionTopList .item{
     width: 30%;
     margin:20px 0px 20px 3%;
+    position: relative;
 }
 .pSectionTopList .item:first-child{
     margin-left:0px;
@@ -67,13 +68,27 @@
 .pSectionTopList .item .info{
     font-size: 14px;
     text-align: left;
+    margin-left: 70px;
 }
 .pSectionTopList .item .title{
     margin: 10px 0px;
     color: #808080;
 }
 .pSectionTopList .item .date{
-    color: #888;
+    color: #808080;
+}
+.pSectionTopList .item .icon{
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    color: #808080;
+    border: 1px solid #808080;
+    border-radius: 50%;
 }
 /*=============================================*/
 .pSectionList1{

@@ -31,7 +31,7 @@ return [
                 '<namespace:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<namespace>/<controller>/<action>',
                 'search/<param:.+>'=>'search/index',
                 '<controller:\w+>/<paramId:\d+>/<id:\d+>'=>'<controller>/index',
-                '<controller:[-a-zA-Z0-9]+>/<paramId:\d+>'=>'<controller>/index',
+                '<controller:[-a-zA-Z]+>/<paramId:\d+>'=>'<controller>/index',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>'
             ),
         ]
