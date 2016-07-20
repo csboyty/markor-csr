@@ -2,17 +2,14 @@
 $this->title = $model->title;
 $this->params=[
     "breadcrumbs"=>[
-        "breadcrumbs"=>[
-            [
-                'label' => '艺术传承',
-                'url' => 'culture-programs/index'
-            ],
-            [
-                'label' => $pModel->title,
-                'url' => 'culture-programs/'.$pModel->id
-            ]
+        [
+            'label' => '艺术传承',
+            'url' => 'culture-programs/index'
+        ],
+        [
+            'label' => $pModel->title,
+            'url' => 'culture-programs/'.$pModel->id
         ]
-
     ]
 ]
 ?>
