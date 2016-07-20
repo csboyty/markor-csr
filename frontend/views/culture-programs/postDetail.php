@@ -1,8 +1,6 @@
 <?php
 $this->title = $model->title;
-print_r($model);
-print_r($pModel);
-/*$this->params=[
+$this->params=[
     "breadcrumbs"=>[
         "breadcrumbs"=>[
             [
@@ -16,7 +14,7 @@ print_r($pModel);
         ]
 
     ]
-]*/
+]
 ?>
 
 <div class="post">
