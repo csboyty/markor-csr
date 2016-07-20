@@ -54,7 +54,7 @@ $section4Posts=explode(",",$content[4]);
                                 <div class="icon">
                                     <span class="icon icon-program-post-<?= $key; ?>"></span>
                                 </div>
-                                <h3 class="title ellipsis"><?= $tp->tilte; ?></h3>
+                                <h3 class="title ellipsis"><?= $tp->title; ?></h3>
                                 <p class="date"><?= $tp->date; ?></p>
                             </div>
                         </a>
