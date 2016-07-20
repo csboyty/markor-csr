@@ -948,9 +948,9 @@ h1,h2,h3,h4,h5,h6{
     word-wrap: break-word;
 }
 .post .content p{
-    line-height: 1.5em;
-    text-indent: 2em;
-    font-size: 1.4rem;
+    line-height: 1.5em!important;
+    text-indent: 2em!important;
+    font-size: 1.4rem!important;
 }
 .post .content img{
     display: block;
