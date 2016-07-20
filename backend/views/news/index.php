@@ -26,6 +26,7 @@ $this->title = '艺术•家动态';
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
+            <th>ID</th>
             <th>标题</th>
             <th>时间</th>
             <th>首页显示</th>

@@ -29,5 +29,6 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
+    'defaultRoute' => 'site/index',
     'params' => $params,
 ];

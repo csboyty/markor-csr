@@ -3,6 +3,8 @@
 /* @var $this yii\web\View */
 
 use frontend\models\Helper;
+use common\models\Category;
+use common\models\Post;
 
 $this->title = '首页';
 /*$this->registerCssFile("@web/css/lib/flexslider.css");*/
@@ -12,16 +14,84 @@ $this->registerCssFile("@web/css/lib/swiper.min.css");
 <ul class="weChatList displayNoneInMobile">
     <?php
         foreach($wechatResults as $wr){
+            $targetId=$wr->memo;
+            $targetPost=Post::findOne($targetId);
+            $url="";
+            $category=Category::findOne($targetPost->category_id);
+            $parentCategory=Category::findOne($category->parent_id);
+
+            switch($targetPost->category_id){
+                case Yii::$app->params["categories"]["artHonor"]:
+                    $url="about/honor";
+                    break;
+                case Yii::$app->params["categories"]["artNews"]:
+                    $url="about/news/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["activityRoom"]:
+                    $url="activities/".$targetPost->category_id."/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["donation"]:
+                    $url="enlightenment/room/donation".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["activityTeacherTrain"]:
+                    $url="activities/".$targetPost->category_id."/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["speechTeacherTrain"]:
+                    $url="speech/".$targetPost->category_id;
+                    break;
+                case Yii::$app->params["categories"]["resultTeacherTrain"]:
+                    $url="works/".$targetPost->category_id;
+                    break;
+                case Yii::$app->params["categories"]["activityVolunteer"]:
+                    $url="activities/".$targetPost->category_id."/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["speechVolunteer"]:
+                    $url="speech/".$targetPost->category_id;
+                    break;
+                case Yii::$app->params["categories"]["volunteerTrain"]:
+                    $url="education/volunteer/train";
+                    break;
+                case Yii::$app->params["categories"]["childDrawCollect"]:
+                    $url="enlightenment/child-draw/collect";
+                    break;
+                case Yii::$app->params["categories"]["resultChildDraw"]:
+                    $url="works/".$targetPost->category_id;
+                    break;
+                case Yii::$app->params["categories"]["videoChildDraw"]:
+                    $url="videos/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["resultCollegeStudent"]:
+                    $url="works/".$targetPost->category_id;
+                    break;
+                case Yii::$app->params["categories"]["speechTrainee"]:
+                    $url="speech/".$targetPost->category_id;
+                    break;
+                case Yii::$app->params["categories"]["recruit"]:
+                    $url="education/trainee/recruits";
+                    break;
+                case Yii::$app->params["categories"]["cultureProgram"]:
+                    $url="culture-programs/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["story"]:
+                    $url="stories/".$targetPost->id;
+                    break;
+                case Yii::$app->params["categories"]["video"]:
+                    $url="videos/".$targetPost->id;
+                    break;
+                default:
+                    if(isset($parentCategory)&&$parentCategory->id==Yii::$app->params["categories"]["childDrawCollect"]){
+                        $url="enlightenment/child-draw/collect";
+                    }
+                    break;
+            }
             ?>
             <li class="item">
-                <a class="link" target="_blank" href="<?= $wr->memo; ?>">
+                <a class="link" href="<?= $url; ?>">
                     <img class="thumb" src="<?= $wr->thumb; ?>">
                     <p class="line-text">
                         <span class="title"><?= $wr->title; ?></span>
                         <span class="date"><?= $wr->date; ?></span>
                     </p>
-                    
-                    
                 </a>
             </li>
             <?php

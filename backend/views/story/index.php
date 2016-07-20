@@ -15,6 +15,7 @@ $this->title = '人物故事';
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
+            <th>ID</th>
             <th>标题</th>
             <th>人物</th>
             <th>操作</th>

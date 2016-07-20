@@ -21,6 +21,7 @@ var newsMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
+                { "mDataProp": "id"},
                 { "mDataProp": "title"},
                 { "mDataProp": "date"},
                 { "mDataProp": "memo",

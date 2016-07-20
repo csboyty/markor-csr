@@ -42,7 +42,7 @@ $this->title = '新建/修改微信头条';
         </div>
     </div>
     <div class="form-group">
-        <label  class="control-label col-md-2">url*</label>
+        <label  class="control-label col-md-2">文章ID*</label>
         <div class="col-md-8">
             <input type="text" class="form-control" value="<?php echo $model->memo; ?>" name="memo">
         </div>

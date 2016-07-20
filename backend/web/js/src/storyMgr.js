@@ -21,6 +21,7 @@ var storyMgr=(function(config,functions){
                 "sUrl":config.dataTable.langUrl
             },
             "aoColumns": [
+                { "mDataProp": "id"},
                 { "mDataProp": "title"},
                 { "mDataProp": "author"},
                 { "mDataProp": "opt",

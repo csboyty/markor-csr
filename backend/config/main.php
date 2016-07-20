@@ -17,5 +17,6 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
+    'defaultRoute' => 'account/home',
     'params' => $params,
 ];
