@@ -942,16 +942,15 @@ h1,h2,h3,h4,h5,h6{
 }
 .post .content{
     color: #808080;
-    font-size: 14px;
-    line-height: 1.5em;
     text-align: left;
     margin-bottom: 30px;
     word-break: break-all;
     word-wrap: break-word;
 }
 .post .content p{
-    line-height: 2em;
+    line-height: 1.5em;
     text-indent: 2em;
+    font-size: 1.4rem;
 }
 .post .content img{
     display: block;
