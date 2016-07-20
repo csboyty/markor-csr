@@ -1,5 +1,7 @@
 <?php
 $this->title = $model->title;
+print_r($model);
+print_r($pModel);
 $this->params=[
     "breadcrumbs"=>[
         "breadcrumbs"=>[
