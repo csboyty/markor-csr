@@ -38,7 +38,7 @@ class CultureProgramsController extends Controller
             "results"=>$results
         ]);
     }
-    public function actionPost($id,$pId){
+    public function actionPosts($id,$pId){
         $pModel=Post::findOne($pId);
         $model=Post::findOne($id);
         //显示详情
