@@ -1,5 +1,6 @@
 <?php
 use frontend\models\Helper;
+use common\models\Post;
 
 $this->title = $model->title;
 $this->params=[
@@ -7,11 +8,20 @@ $this->params=[
         [
             'label' => '艺术传承',
             'url' => 'culture-programs/index'
+        ],
+        [
+            'label' => $model->title
         ]
     ]
 ];
 
 $this->registerCssFile("@web/css/src/programs.css");
+$content=json_decode($model->content);
+$topPosts=explode(",",$content[0]);
+$section1Posts=explode(",",$content[1]);
+$section2Posts=explode(",",$content[2]);
+$section3Posts=explode(",",$content[3]);
+$section4Posts=explode(",",$content[4]);
 ?>
 <div class="program">
     <h2 class="title"><?= $model->title; ?></h2>
@@ -21,113 +31,62 @@ $this->registerCssFile("@web/css/src/programs.css");
     </div>
     <div class="pSection" style="padding-top: 20px;">
         <ul class="pSectionTopList">
-            <li class="item">
-                <a href="#">
+            <?php
+                foreach($topPosts as $key=>$tp){
+                    $tp=Post::findOne($tp);
+                    $url="culture-programs/posts/".$tp->id."?pId=".$model->id;
 
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/5873848794036-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/5873848794036.jpg">
-                    </picture>
-                    <div class="info">
-                        <div class="icon">
-                            <span class="icon-program-post-1"></span>
-                        </div>
-                        <h3 class="title ellipsis">这里是标题这里是标题</h3>
-                        <p class="date">2019-09-09</p>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <div class="icon">
-                            <span class="icon-program-post-2"></span>
-                        </div>
-                        <h3 class="title ellipsis">这里是标题这里是标题</h3>
-                        <p class="date">2019-09-09</p>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <div class="icon">
-                            <span class="icon-program-post-3"></span>
-                        </div>
-                        <h3 class="title ellipsis">这里是标题</h3>
-                        <p class="date">2019-09-09</p>
-                    </div>
-                </a>
-            </li>
+                    if($key==0){
+                        $url="videos/".$tp->id;
+                    }
+                    //pdf的地址存在bg_image中
+                    if($tp->bg_image){
+                        $url=$tp->bg_image;
+                    }
+                    ?>
+                    <li class="item">
+                        <a href="<?= $url; ?>" target="_blank">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($tp->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $tp->thumb; ?>" >
+                            </picture>
+                            <div class="info">
+                                <div class="icon">
+                                    <span class="icon icon-program-post-<?= $key; ?>"></span>
+                                </div>
+                                <h3 class="title ellipsis"><?= $tp->tilte; ?></h3>
+                                <p class="date"><?= $tp->date; ?></p>
+                            </div>
+                        </a>
+                    </li>
+                    <?php
+                }
+            ?>
         </ul>
     </div>
+
 
     <div class="pSection">
         <h3 class="pSectionTitle pst1">标题1</h3>
         <ul class="pSectionList1">
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title"></h3>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                    </div>
-                </a>
-            </li>
+            <?php
+                foreach($section1Posts as $s1p){
+                    $s1p=Post::findOne($s1p);
+                    ?>
+                    <li class="item">
+                        <a href="culture-programs/posts/<?= $s1p->id; ?>?pId<?= $model->id; ?>">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($s1p->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $s1p->thumb; ?>" >
+                            </picture>
+                            <div class="info">
+                                <h3 class="title"><?= $s1p->title; ?></h3>
+                            </div>
+                        </a>
+                    </li>
+                    <?php
+                }
+            ?>
         </ul>
     </div>
 
@@ -135,102 +94,29 @@ $this->registerCssFile("@web/css/src/programs.css");
     <div class="pSection">
         <h3 class="pSectionTitle pst2">标题2</h3>
         <ul class="pSectionList2">
-            <li class="item">
-                <a href="culture-programs/posts/">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是标题
-                        </p>
-                    </div>
-                </a>
+            <?php
+                foreach($section2Posts as $s2p){
+                    $s2p=Post::findOne($s2p);
+                    ?>
+                    <li class="item">
+                        <a href="culture-programs/posts/<?= $s1p->id; ?>?pId<?= $model->id; ?>">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $s2p->thumb; ?>" >
+                            </picture>
+                            <div class="info">
+                                <h3 class="title"><?= $s2p->title; ?></h3>
+                                <p class="date"><?= $s2p->date; ?></p>
+                                <p class="excerpt">
+                                    <?= $s2p->excerpt; ?>
+                                </p>
+                            </div>
+                        </a>
 
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是标题
-                        </p>
-                    </div>
-                </a>
-
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是标题
-                        </p>
-                    </div>
-                </a>
-
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是标题
-                        </p>
-                    </div>
-                </a>
-
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是标题
-                        </p>
-                    </div>
-                </a>
-
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/">
-                    <picture>
-                        <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                        <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                    </picture>
-                    <div class="info">
-                        <h3 class="title">这里是标题</h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是标题
-                        </p>
-                    </div>
-                </a>
-
-            </li>
+                    </li>
+                    <?php
+                }
+            ?>
         </ul>
     </div>
 
@@ -238,82 +124,32 @@ $this->registerCssFile("@web/css/src/programs.css");
     <div class="pSection">
         <h3 class="pSectionTitle pst3">标题3</h3>
         <ul class="pSectionList3">
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
-            </li>
+            <?php
+            foreach($section3Posts as $s3p){
+                $s3p=Post::findOne($s3p);
+                ?>
+                <li class="item">
+                    <a href="culture-programs/posts/<?= $s3p->id; ?>?pId<?= $model->id; ?>">
+                        <div class="thumbContainer">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($s3p->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $s3p->thumb; ?>" >
+                            </picture>
+                        </div>
+                        <div class="info">
+                            <h3 class="title ellipsis">
+                                <?= $s3p->title; ?>
+                            </h3>
+                            <p class="date"><?= $s3p->date; ?></p>
+                            <p class="excerpt">
+                                <?= $s3p->excerpt; ?>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            <?php
+            }
+            ?>
         </ul>
     </div>
 
@@ -321,88 +157,35 @@ $this->registerCssFile("@web/css/src/programs.css");
     <div class="pSection">
         <h3 class="pSectionTitle pst4">标题4</h3>
         <ul class="pSectionList3 pSectionList4">
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
+            <?php
+            foreach($section4Posts as $s4p){
+                $s4p=Post::findOne($s4p);
+                ?>
+                <li class="item">
+                    <a href="culture-programs/posts/<?= $s4p->id; ?>?pId<?= $model->id; ?>">
+                        <div class="thumbContainer">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($s4p->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $s4p->thumb; ?>" >
+                            </picture>
+                        </div>
+                        <div class="info">
+                            <h3 class="title ellipsis">
+                                <?= $s4p->title; ?>
+                            </h3>
+                            <p class="date"><?= $s4p->date; ?></p>
+                            <p class="excerpt">
+                                <?= $s4p->excerpt; ?>
+                            </p>
+                        </div>
+                    </a>
 
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
+                </li>
+            <?php
+            }
+            ?>
 
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
-
-            </li>
-            <li class="item">
-                <a href="culture-programs/posts/#">
-                    <div class="thumbContainer">
-                        <picture>
-                            <source srcset="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950-320x.jpg" media="(max-width: 768px)">
-                            <img class="thumb" src="http://7xqx6h.com1.z0.glb.clouddn.com/14677739190950.jpg">
-                        </picture>
-                    </div>
-                    <div class="info">
-                        <h3 class="title ellipsis">
-                            这里是标题
-                        </h3>
-                        <p class="date">2014-09-09</p>
-                        <p class="excerpt">
-                            这里是描述
-                        </p>
-                    </div>
-                </a>
-
-            </li>
         </ul>
     </div>
-
 
 </div>
