@@ -34,10 +34,10 @@ var cultureProgramMgr=(function(config,functions){
                 aoData.push({
                     name:"category",
                     value:category_id
-                },{
+                }/*,{
                     name:"filter",
                     value:"memo=1"
-                })
+                }*/)
             },
             "fnServerData": function(sSource, aoData, fnCallback) {
 
