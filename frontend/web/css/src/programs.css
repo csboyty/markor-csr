@@ -4,14 +4,14 @@
     margin:auto;
     padding-top: 40px;
 }
-.program .title{
+.program>.title{
     font-size: 24px;
     font-size: 2.4rem;
     color: #666;
     letter-spacing: 0.1em;
     line-height: 1.5em;
 }
-.program .subTitle{
+.program>.subTitle{
     margin: 20px auto 40px auto;
     font-size: 14px;
     color: #999;
@@ -58,17 +58,21 @@
     text-align: center;
 }
 .pSectionTopList .item{
-    width: 30%;
-    margin:20px 0px 20px 3%;
+    margin: 20px 10px;
     position: relative;
+    width: 200px;
 }
-.pSectionTopList .item:first-child{
-    margin-left:0px;
+.pSectionTopList .item .thumb{
+    height: 150px;
+    display: block;
+}
+.pSectionTopList .item:first-child .thumb{
+    object-fit:cover;
 }
 .pSectionTopList .item .info{
-    font-size: 14px;
+    font-size: 1.4rem;
     text-align: left;
-    margin-left: 70px;
+    margin-left: 60px;
 }
 .pSectionTopList .item .title{
     margin: 10px 0px;
@@ -78,10 +82,10 @@
     color: #808080;
 }
 .pSectionTopList .item .icon{
-    font-size: 36px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    font-size: 2.4rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     position: absolute;
     bottom:0px;
@@ -126,7 +130,7 @@
     color: #fff;
 }
 .pSectionList1 .item .title{
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align:center;
     padding: 5px 0px 10px 0px;
     line-height: 1.5em;
@@ -167,7 +171,7 @@
     color: #fff;
 }
 .pSectionList2 .item .title{
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align:center;
     border-bottom: 2px solid #fff;
     padding: 5px 0px 10px 0px;
@@ -175,7 +179,7 @@
     color: #fff;
 }
 .pSectionList2 .item .excerpt{
-    font-size:14px;
+    font-size:1.4rem;
     line-height:1.5em;
     margin:auto;
     color: #fff;
@@ -183,7 +187,7 @@
     overflow: hidden;
 }
 .pSectionList2 .item .date{
-    font-size:14px;
+    font-size:1.4rem;
     margin: 10px 0px;
     position:static;
     text-align:center;
@@ -219,7 +223,7 @@
     transition:all .3s ease-out;
 }
 .pSectionList3 .item .title{
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #666;
     margin: 10px 0px 10px 0px;
 }
@@ -227,7 +231,7 @@
     color: #333;
 }
 .pSectionList3 .item .excerpt{
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height:1.5em;
     color: #808080;
     margin:0px;
