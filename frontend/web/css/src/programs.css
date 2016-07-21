@@ -3,6 +3,7 @@
     width: 70%;
     margin:auto;
     padding-top: 40px;
+    color: #808080;
 }
 .program>.title{
     font-size: 24px;
@@ -10,6 +11,7 @@
     color: #666;
     letter-spacing: 0.1em;
     line-height: 1.5em;
+    text-align: center;
 }
 .program>.subTitle{
     margin: 20px auto 40px auto;
@@ -17,6 +19,12 @@
     color: #999;
     letter-spacing: 0.2em;
     line-height: 2em;
+    text-align: center;
+}
+.program>.excerpt{
+    line-height: 1.5em;
+    text-indent: 2em;
+    font-size: 1.4rem;
 }
 .program .pSection{
     clear: both;
