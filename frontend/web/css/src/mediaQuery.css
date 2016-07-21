@@ -396,6 +396,9 @@
         width:100%;
         margin:10px 0;
     }
+    .pSectionTopList .item:hover .thumb{
+        transform: translateZ(0);
+    }
     .pSectionList1 .item{
         width: 100%;
         margin: 10px 0px;
@@ -404,7 +407,7 @@
     .pSectionList1 .item:first-child{
         width: 100%;
     }
-    .pSectionList1 .item:hover .image{
+    .pSectionList1 .item:hover .thumb{
         transform: translateZ(0);
     }
     .pSectionList1 .item .info{
@@ -422,7 +425,7 @@
         width: 100%;
         margin: 10px 0px;
     }
-    .pSectionList2 .item:hover .image{
+    .pSectionList2 .item:hover .thumb{
         transform: translateZ(0);
     }
     .pSectionList2 .item .info{
