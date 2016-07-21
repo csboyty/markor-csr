@@ -404,6 +404,9 @@
     .pSectionList1 .item:first-child{
         width: 100%;
     }
+    .pSectionList1 .item:hover .image{
+        transform: translateZ(0);
+    }
     .pSectionList1 .item .info{
         position: static;
         opacity: 1;
@@ -418,6 +421,9 @@
     .pSectionList2 .item{
         width: 100%;
         margin: 10px 0px;
+    }
+    .pSectionList2 .item:hover .image{
+        transform: translateZ(0);
     }
     .pSectionList2 .item .info{
         position: static;
