@@ -59,7 +59,7 @@
 }
 /*=======================================================================*/
 .pSectionTopList{
-    background: #f2f2f2;
+    
     width: 100%;
     font-size: 0px;
     margin: 20px 0px;
@@ -69,6 +69,7 @@
     margin: 20px 1%;
     position: relative;
     width: 31.3%;
+    background: #f2f2f2;
 }
 .pSectionTopList .item .ratio43{
     width:100%;
@@ -94,10 +95,12 @@
 .pSectionTopList .item .info{
     font-size: 1.4rem;
     text-align: left;
-    margin-left: 60px;
+    padding: 10px 10px 10px 60px;
+    height: 60px;
+    box-sizing: border-box;
 }
 .pSectionTopList .item .title{
-    margin: 10px 0px;
+    
     color: #808080;
 }
 .pSectionTopList .item .date{
