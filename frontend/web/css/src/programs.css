@@ -75,6 +75,7 @@
     font-size: 0;
     overflow: hidden;
     position: relative;
+    display: block;
 }
 .pSectionTopList .item .ratio43::before{
     content: "";
