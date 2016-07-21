@@ -388,6 +388,9 @@
 }
 
 @media screen and (max-width:600px){
+    .program{
+        width:84%;
+    }
     .pSectionTopList .item{
 /*        width: 304px;*/
         width:100%;
