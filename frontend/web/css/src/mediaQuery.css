@@ -358,11 +358,13 @@
     }
 
     .pSectionTopList .item{
-        width: 112px;
+/*        width: 112px;*/
     }
     .pSectionTopList .item .thumb{
+/*
         height: 84px;
         width: 112px;
+*/
     }
     .pSectionTopList .item .info{
         font-size: .8rem;
