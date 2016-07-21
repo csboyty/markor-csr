@@ -26,7 +26,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="header">
-    <h1 class="logo">美克美家CSR</h1>
+    <h1 class="logo">美克美家CSR网站内容管理</h1>
     <a href="site/logout" class="logout">退出</a>
 </div>
 

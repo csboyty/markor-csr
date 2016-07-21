@@ -65,12 +65,13 @@ label.error{
 *logo
 */
 .logo{
-    width: 90px;
+    padding-left: 90px;
     height: 40px;
+    line-height: 40px;
     margin: 0px;
     display: inline-block;
     color: #fff;
-    font-size: 0;
+    font-size: 18px;
     position: absolute;
     top:15px;
     left: 20px;
