@@ -40,22 +40,22 @@
 .program .pSection .pSectionTitle.pst1{
     background-image: url(../../images/app/sectionTitles/pst1.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/pst1.png) 1x,
-    url(../../images/app/sectionTitles/feature@pst1.png) 2x);
+    url(../../images/app/sectionTitles/pst1@2x.png) 2x);
 }
 .program .pSection .pSectionTitle.pst2{
     background-image: url(../../images/app/sectionTitles/pst2.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/pst2.png) 1x,
-    url(../../images/app/sectionTitles/feature@pst2.png) 2x);
+    url(../../images/app/sectionTitles/pst2@2x.png) 2x);
 }
 .program .pSection .pSectionTitle.pst3{
     background-image: url(../../images/app/sectionTitles/pst3.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/pst3.png) 1x,
-    url(../../images/app/sectionTitles/feature@pst3.png) 2x);
+    url(../../images/app/sectionTitles/pst3@2x.png) 2x);
 }
 .program .pSection .pSectionTitle.pst4{
     background-image: url(../../images/app/sectionTitles/pst4.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/pst4.png) 1x,
-    url(../../images/app/sectionTitles/feature@pst4.png) 2x);
+    url(../../images/app/sectionTitles/pst4@2x.png) 2x);
 }
 /*=======================================================================*/
 .pSectionTopList{
