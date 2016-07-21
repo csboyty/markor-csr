@@ -69,11 +69,8 @@
     margin: 20px 1%;
     position: relative;
     width: 31.3%;
-    background: #f2f2f2;
 }
-.pSectionTopList .item:hover{
-    background:#333;
-}
+
 .pSectionTopList .item .ratio43{
     width:100%;
     font-size: 0;
@@ -103,6 +100,10 @@
     padding: 10px 10px 10px 70px;
     height: 80px;
     box-sizing: border-box;
+    background: #f2f2f2;
+}
+.pSectionTopList .item:hover .info{
+    background:#333;
 }
 .pSectionTopList .item .title{
     font-size: 14px;
