@@ -35,7 +35,7 @@ $this->params=[
                         <h3 class="title ellipsis"><?= $r->title; ?></h3>
                         <p class="date"><?= $r->date; ?></p>
                         <p class="excerpt">
-<!--                            <?= $r->excerpt; ?>-->
+                            <?= $r->excerpt; ?>
                         </p>
                     </a>
                 </li>
