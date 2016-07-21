@@ -409,6 +409,9 @@
         opacity: 1;
         background: #333;
     }
+    .pSectionList1 .item .excerpt{
+        display: block;
+    }
     .pSectionList2 .item{
         width: 100%;
         margin: 10px 0px;
@@ -417,6 +420,9 @@
         position: static;
         opacity: 1;
         background: #333;
+    }
+    .pSectionList2 .item .excerpt{
+        display: block;
     }
     .pSectionList3 .item{
         width: 100%;
