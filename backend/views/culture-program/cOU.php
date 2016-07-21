@@ -24,7 +24,7 @@ $content=$model->content?json_decode($model->content):"";
         <label class="control-label col-md-2">封面图*</label>
         <div class="col-md-10" id="uploadContainer">
             <a href="#" class="btn btn-success" id="uploadBtn">上传</a>
-            <p class="help-block">请上传4:3的jpg，png，宽度400px-800px</p>
+            <p class="help-block">请上传4:3的缩略图，jpg或png格式，宽度400px-800px</p>
             <img  id="image"  style="width:100px"
                   src="<?php echo $model->thumb?$model->thumb:'images/app/defaultThumb.png'; ?>"/>
             <input type="hidden" id="imageUrl" name="thumb" value="<?php echo $model->thumb; ?>">
@@ -52,35 +52,35 @@ $content=$model->content?json_decode($model->content):"";
         <label  class="control-label col-md-2">头部三篇文章</label>
         <div class="col-md-8">
             <input type="text" class="form-control ids" value="<?php echo $content?$content[0]:""; ?>">
-            <p class="help-block">视频、成果展示、项目计划，填写id，用英文逗号隔开</p>
+            <p class="help-block">视频、成果展示、项目计划，填写文章id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">栏目1文章</label>
         <div class="col-md-8">
             <input type="text" class="form-control ids" value="<?php echo $content?$content[1]:""; ?>">
-            <p class="help-block">5篇，填写id，用英文逗号隔开</p>
+            <p class="help-block">5篇，填写文章id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">栏目2文章</label>
         <div class="col-md-8">
             <input type="text" class="form-control ids" value="<?php echo $content?$content[2]:""; ?>">
-            <p class="help-block">6篇，填写id，用英文逗号隔开</p>
+            <p class="help-block">6篇，填写文章id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">栏目3文章</label>
         <div class="col-md-8">
             <input type="text" class="form-control ids" value="<?php echo $content?$content[3]:""; ?>">
-            <p class="help-block">4篇，填写id，用英文逗号隔开</p>
+            <p class="help-block">4篇，填写文章id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">
         <label  class="control-label col-md-2">栏目4文章</label>
         <div class="col-md-8">
             <input type="text" class="form-control ids" value="<?php echo $content?$content[4]:""; ?>">
-            <p class="help-block">4篇，填写id，用英文逗号隔开</p>
+            <p class="help-block">4篇，填写文章id，用英文逗号隔开</p>
         </div>
     </div>
     <div class="form-group">
