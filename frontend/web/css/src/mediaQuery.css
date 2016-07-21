@@ -443,6 +443,9 @@
         width: 100%;
         margin: 10px 0px;
     }
+    .pSectionList3 .item:hover .thumb{
+        transform: translateZ(0);
+    }
     .pSectionList4 .item{
         width: 100%;
         margin: 10px 0px;
