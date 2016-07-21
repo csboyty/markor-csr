@@ -89,6 +89,7 @@
     left: 0;
     object-fit: cover;
     display: block;
+    height: 100%;
 }
 .pSectionTopList .item .info{
     font-size: 1.4rem;
