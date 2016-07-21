@@ -194,7 +194,7 @@
     width: 100%;
     height: auto;
 }
-.pSectionList1 .item:hover .info{
+.pSectionList1 .item:hover .thumb{
     transform: translateZ(100px);
 }
 .pSectionList1 .item .info{
