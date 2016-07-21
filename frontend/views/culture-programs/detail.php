@@ -51,7 +51,7 @@ $section4Posts=explode(",",$content[4]);
                                 <img class="thumb" src="<?= $tp->thumb; ?>" >
                             </picture>
                             <div class="info">
-                                <div class="icon">
+                                <div class="icon-wrapper">
                                     <span class="icon icon-program-post-<?= $key; ?>"></span>
                                 </div>
                                 <h3 class="title ellipsis"><?= $tp->title; ?></h3>

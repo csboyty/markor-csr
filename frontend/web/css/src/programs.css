@@ -89,7 +89,9 @@
 .pSectionTopList .item .date{
     color: #808080;
 }
-.pSectionTopList .item .icon{
+.pSectionTopList .item .icon-wrapper{
+    border: 1px solid #808080;
+    border-radius: 50%;
     font-size: 2.4rem;
     width: 50px;
     height: 50px;
@@ -99,8 +101,16 @@
     bottom:0px;
     left:0px;
     color: #808080;
-    border: 1px solid #808080;
-    border-radius: 50%;
+}
+.pSectionTopList .item .icon::before{
+    width:30px;
+    height:30px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    
 }
 /*=============================================*/
 .pSectionList1{
