@@ -1,17 +1,17 @@
 @media screen and (min-width:1600px){
     .pSectionTopList .item{
-        width: 320px;
+/*        width: 320px;*/
     }
     .pSectionTopList .item .thumb{
-        height: 240px;
+/*        height: 240px;*/
     }
 }
 @media screen and (min-width:1280px){
     .pSectionTopList .item{
-        width: 240px;
+/*        width: 240px;*/
     }
     .pSectionTopList .item .thumb{
-        height: 180px;
+/*        height: 180px;*/
     }
 }
 @media screen and (max-width:1024px){

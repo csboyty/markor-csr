@@ -46,7 +46,7 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="<?= $url; ?>" target="_blank">
-                            <picture>
+                            <picture class="ratio43">
                                 <source srcset="<?= Helper::getSuffixFile($tp->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $tp->thumb; ?>" >
                             </picture>

@@ -60,22 +60,34 @@
 /*=======================================================================*/
 .pSectionTopList{
     background: #f2f2f2;
-    width: 98%;
+    width: 100%;
     font-size: 0px;
     margin: 20px 0px;
     text-align: center;
 }
 .pSectionTopList .item{
-    margin: 20px 10px;
+    margin: 20px 1%;
     position: relative;
-    width: 200px;
+    width: 31.3%;
+}
+.pSectionTopList .item .ratio43{
+    width:100%;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+}
+.pSectionTopList .item .ratio43::before{
+    content: "";
+    display: block;
+    height:0;
+    padding-top: 75%;
 }
 .pSectionTopList .item .thumb{
-    height: 150px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: block;
-}
-.pSectionTopList .item:first-child .thumb{
-    object-fit:cover;
 }
 .pSectionTopList .item .info{
     font-size: 1.4rem;
