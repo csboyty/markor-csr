@@ -8,7 +8,7 @@ body{
     height: 100%;
     position: relative;
     font-family: "Arail","微软雅黑","Heiti";
-    background: #f2f3ea!important;
+    background: #eef1f8!important;
 }
 ul{
     padding:0px;
@@ -37,7 +37,6 @@ label.error{
     border-left: 1px solid #ccccc8;
     background: #efefef;
     padding:50px 30px;
-    border-top:3px solid #5dc05f;
     position: fixed;
     left:180px;
     top:70px;
