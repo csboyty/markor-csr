@@ -220,6 +220,7 @@
 .pSectionList1 .item .title{
     font-size: 1.8rem;
     text-align:center;
+    border-bottom: 1px solid #fff;
     padding: 5px 0px 10px 0px;
     line-height: 1.5em;
     color: #fff;
@@ -291,7 +292,7 @@
 .pSectionList2 .item .title{
     font-size: 1.8rem;
     text-align:center;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
     padding: 5px 0px 10px 0px;
     line-height: 1.5em;
     color: #fff;
