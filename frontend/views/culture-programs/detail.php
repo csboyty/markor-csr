@@ -103,7 +103,7 @@ $section4Posts=explode(",",$content[4]);
                     $s2p=Post::findOne($s2p);
                     ?>
                     <li class="item">
-                        <a href="culture-programs/posts/<?= $s1p->id; ?>?pId=<?= $model->id; ?>">
+                        <a href="culture-programs/posts/<?= $s2p->id; ?>?pId=<?= $model->id; ?>">
                             <picture class="thumbContainer">
                                 <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $s2p->thumb; ?>" >
