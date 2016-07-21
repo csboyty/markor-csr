@@ -2,7 +2,7 @@
     text-align: left;
     width: 70%;
     margin:auto;
-    padding-top: 40px;
+    padding:40px 0;
     color: #808080;
 }
 .program>.title{
@@ -71,7 +71,7 @@
     width: 31.3%;
 }
 
-.pSectionTopList .item .ratio43{
+.pSectionTopList .item .thumbContainer{
     width:100%;
     font-size: 0;
     overflow: hidden;
@@ -79,10 +79,12 @@
     display: block;
     perspective: 1000px;
 }
-.pSectionTopList .item .ratio43::before{
+.pSectionTopList .item .thumbContainer::before{
     content: "";
     display: block;
     height:0;
+}
+.pSectionTopList .item .ratio43::before{
     padding-top: 75%;
 }
 .pSectionTopList .item .thumb{
@@ -180,9 +182,20 @@
 .pSectionList1 .item:first-child{
     width: 48%;
 }
+.pSectionList1 .item .thumbContainer{
+    display: block;
+    perspective: 1000px;
+}
+.pSectionList1 .item .thumb{
+    transition: all 0.3s ease-out;
+    transform: translateZ(0);
+}
 .pSectionList1 .item:first-child .thumb{
     width: 100%;
     height: auto;
+}
+.pSectionList1 .item:hover .info{
+    transform: translateZ(100px);
 }
 .pSectionList1 .item .info{
     width:100%;
@@ -190,14 +203,18 @@
     overflow:hidden;
     box-sizing:border-box;
     padding:20px 20px 30px 20px;
-    filter:alpha(opacity=20);
+    filter:alpha(opacity=0);
+    opacity: 0;
     background: #000;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.5);
     position:absolute;
-    top:100%;
+    top:0;
     left:0;
-    transition:all 0.4s ease-out;
+    transition:all 0.3s ease-out;
     color: #fff;
+}
+.pSectionList1 .item:hover .info{
+    opacity: .7;
 }
 .pSectionList1 .item .title{
     font-size: 1.8rem;
@@ -206,9 +223,7 @@
     line-height: 1.5em;
     color: #fff;
 }
-.pSectionList1 .item:hover .info{
-    top:0;
-}
+
 /*========================================================================*/
 .pSectionList2{
     font-size:0;
@@ -221,24 +236,37 @@
     margin:0 2.33% 2% 0;
     vertical-align: top;
 }
+.pSectionList2 .item .thumbContainer{
+    display: block;
+    perspective: 1000px;
+}
 .pSectionList2 .item .thumb{
     width:100%;
-    transition:all 0.4s ease-out;
+    transform: translateZ(0);
+    transition:all 0.3s ease-out;
 }
+.pSectionList2 .item:hover .thumb{
+    transform: translateZ(100px);
+}
+
 .pSectionList2 .item .info{
     width:100%;
     height: 100%;
     overflow:hidden;
     box-sizing:border-box;
     padding:20px 20px 30px 20px;
-    filter:alpha(opacity=20);
+    filter:alpha(opacity=0);
+    opacity: 0;
     background: #000;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.5);
     position:absolute;
-    top:100%;
+    top:0;
     left:0;
-    transition:all 0.4s ease-out;
+    transition:all 0.3s ease-out;
     color: #fff;
+}
+.pSectionList2 .item:hover .info{
+    opacity: .7;
 }
 .pSectionList2 .item .title{
     font-size: 1.8rem;
@@ -264,17 +292,14 @@
     display:block;
     color: #fff;
 }
-.pSectionList2 .item:hover .info{
-    top:0;
-}
+
 /*=================================================*/
 .pSectionList3{
     font-size: 0px;
 }
 .pSectionList3 .item{
-    width: 23%;
-    margin: 0 2% 2% 0;
-    padding: 2%;
+    width: 25%;
+    padding: 10px;
     box-sizing: border-box;
     vertical-align: top;
     border: 1px solid #fff;
@@ -325,7 +350,6 @@
 }
 .pSectionList4 .item{
     border: none;
-    padding: 0px;
 }
 .pSectionList4 .item:hover{
     border: none;

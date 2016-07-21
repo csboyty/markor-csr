@@ -46,7 +46,7 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="<?= $url; ?>" target="_blank">
-                            <picture class="ratio43">
+                            <picture class="ratio43 thumbContainer">
                                 <source srcset="<?= Helper::getSuffixFile($tp->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $tp->thumb; ?>" >
                             </picture>
@@ -75,7 +75,7 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="culture-programs/posts/<?= $s1p->id; ?>?pId=<?= $model->id; ?>">
-                            <picture>
+                            <picture class="thumbContainer">
                                 <source srcset="<?= Helper::getSuffixFile($s1p->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $s1p->thumb; ?>" >
                             </picture>
@@ -100,7 +100,7 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="culture-programs/posts/<?= $s1p->id; ?>?pId=<?= $model->id; ?>">
-                            <picture>
+                            <picture class="thumbContainer">
                                 <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $s2p->thumb; ?>" >
                             </picture>
@@ -131,7 +131,7 @@ $section4Posts=explode(",",$content[4]);
                 <li class="item">
                     <a href="culture-programs/posts/<?= $s3p->id; ?>?pId=<?= $model->id; ?>">
                         <div class="thumbContainer">
-                            <picture>
+                            <picture class="thumbContainer">
                                 <source srcset="<?= Helper::getSuffixFile($s3p->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $s3p->thumb; ?>" >
                             </picture>
