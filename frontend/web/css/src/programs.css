@@ -237,7 +237,7 @@
 }
 .pSectionList1 .item .date{
     font-size:1.4rem;
-    margin: 10px 0px;
+/*    margin: 10px 0px;*/
     position:static;
     text-align:center;
     display:block;

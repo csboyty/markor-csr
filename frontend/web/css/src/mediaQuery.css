@@ -382,6 +382,9 @@
         height: 25px;
         line-height: 25px;
     }
+    .pSectionList1 .item .excerpt{
+        display: none;
+    }
 }
 
 @media screen and (max-width:600px){

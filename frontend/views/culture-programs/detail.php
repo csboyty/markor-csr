@@ -160,7 +160,7 @@ $section4Posts=explode(",",$content[4]);
 
     <div class="pSection">
         <h3 class="pSectionTitle pst4">标题4</h3>
-        <ul class="pSectionList3 pSectionList4">
+        <ul class="pSectionList3">
             <?php
             foreach($section4Posts as $s4p){
                 $s4p=Post::findOne($s4p);
