@@ -272,6 +272,7 @@
     line-height: 1.5em;
     text-align: left;
     height: 4.5em;
+    overflow: hidden;
 }
 /*
 * 继承list2 在list2的基础上图片100%显示，用于小屏幕
