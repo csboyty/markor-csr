@@ -81,6 +81,10 @@ $section4Posts=explode(",",$content[4]);
                             </picture>
                             <div class="info">
                                 <h3 class="title"><?= $s1p->title; ?></h3>
+                                <p class="date"><?= $s1p->date; ?></p>
+                                <p class="excerpt">
+                                    <?= $s1p->excerpt; ?>
+                                </p>
                             </div>
                         </a>
                     </li>

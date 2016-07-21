@@ -223,7 +223,22 @@
     line-height: 1.5em;
     color: #fff;
 }
-
+.pSectionList1 .item .excerpt{
+    font-size:1.4rem;
+    line-height:1.5em;
+    margin:auto;
+    color: #fff;
+    max-height: 3em;
+    overflow: hidden;
+}
+.pSectionList1 .item .date{
+    font-size:1.4rem;
+    margin: 10px 0px;
+    position:static;
+    text-align:center;
+    display:block;
+    color: #fff;
+}
 /*========================================================================*/
 .pSectionList2{
     font-size:0;
