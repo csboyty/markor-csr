@@ -31,6 +31,7 @@ label.error{
     width:180px;
     bottom: 0;
     overflow:auto;
+    padding-bottom: 20px;
 }
 .right{
     border-left: 1px solid #ccccc8;
@@ -64,13 +65,17 @@ label.error{
 *logo
 */
 .logo{
-    width: 100%;
-    height: 100px;
+    width: 90px;
+    height: 40px;
     margin: 0px;
     display: inline-block;
     color: #fff;
-    line-height: 70px;
-    padding-left: 20px;
+    font-size: 0;
+    position: absolute;
+    top:20px;
+    left: 20px;
+    background:url(../../images/app/logo_white@2x.png) no-repeat left center;
+    background-size: contain;
 }
 .logout{
     position: absolute;
