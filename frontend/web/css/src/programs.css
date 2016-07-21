@@ -230,6 +230,10 @@
     color: #fff;
     max-height: 3em;
     overflow: hidden;
+    display: none;
+}
+.pSectionList1 .item:first-child .excerpt{
+    display: block;
 }
 .pSectionList1 .item .date{
     font-size:1.4rem;
