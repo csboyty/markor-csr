@@ -367,8 +367,10 @@
 */
     }
     .pSectionTopList .item .info{
+/*
         font-size: .8rem;
         margin-left: 30px;
+*/
     }
     .pSectionTopList .item .title{
         margin: 5px 0px 0px 0px;
@@ -384,11 +386,13 @@
 
 @media screen and (max-width:600px){
     .pSectionTopList .item{
-        width: 304px;
+/*        width: 304px;*/
     }
     .pSectionTopList .item .thumb{
+/*
         height: 228px;
         width: 304px;
+*/
     }
 }
 
@@ -480,11 +484,13 @@
     }
 
     .pSectionTopList .item{
-        width: 240px;
+/*        width: 240px;*/
     }
     .pSectionTopList .item .thumb{
+/*
         height: 180px;
         width: 240px;
+*/
     }
     .pSectionList1 .item{
         width: 100%;
