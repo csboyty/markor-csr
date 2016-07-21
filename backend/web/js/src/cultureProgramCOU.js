@@ -32,7 +32,7 @@ var cultureProgramCOU=(function(config,functions){
 $(document).ready(function(){
     $("#date").date_input();
 
-    tinymce.init({
+    /*tinymce.init({
         selector: "#excerpt",
         height:300,
         toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
@@ -48,7 +48,7 @@ $(document).ready(function(){
             });
         }
 
-    });
+    });*/
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
