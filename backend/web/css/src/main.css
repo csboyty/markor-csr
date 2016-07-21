@@ -85,6 +85,7 @@ label.error{
     color: #efefef;
     display: inline-block;
     height: 70px;
+    line-height: 70px;
     width:100px;
     text-align: center;
 }
