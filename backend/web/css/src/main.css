@@ -72,17 +72,21 @@ label.error{
     color: #fff;
     font-size: 0;
     position: absolute;
-    top:20px;
+    top:15px;
     left: 20px;
     background:url(../../images/app/logo_white@2x.png) no-repeat left center;
     background-size: contain;
 }
 .logout{
     position: absolute;
-    right:20px;
-    bottom:30px;
+    right:0;
+    top:0;
     font-size: 12px;
     color: #efefef;
+    display: inline-block;
+    height: 70px;
+    width:100px;
+    text-align: center;
 }
 .logout:hover{
     color: #efefef;
