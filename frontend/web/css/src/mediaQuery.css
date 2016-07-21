@@ -409,6 +409,9 @@
         opacity: 1;
         background: #333;
     }
+    .pSectionList1 .item:hover .info{
+        opacity: 1;
+    }
     .pSectionList1 .item .excerpt{
         display: block;
     }
@@ -420,6 +423,9 @@
         position: static;
         opacity: 1;
         background: #333;
+    }
+    .pSectionList2 .item:hover .info{
+        opacity: 1;
     }
     .pSectionList2 .item .excerpt{
         display: block;
