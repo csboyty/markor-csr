@@ -233,6 +233,10 @@ table.dataTable .thumb{
     border: none;
     box-shadow: 0 4px 0 #018566;
 }
+.btn-success:hover{
+    border:none;
+    background:#009774;
+}
 /**
 *loading
 */
