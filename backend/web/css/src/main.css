@@ -100,7 +100,6 @@ label.error{
 }
 .menu .separate{
     height: 10px;
-    background: #fff;
 }
 .menu .item {
     min-height: 40px;
@@ -108,6 +107,7 @@ label.error{
     border: 1px solid #ccc;
     line-height: 40px;
     position: relative;
+    background: #fff;
 }
 .menu .item .glyphicon{
     padding: 0px 10px;
