@@ -112,7 +112,7 @@ label.error{
     margin-bottom: -1px;
 }
 .menu .item .glyphicon{
-    padding: 0px 10px;
+    padding: 0px 15px;
     cursor: pointer;
 }
 .menu .item .rightIcon{
@@ -123,7 +123,6 @@ label.error{
 .menu .item .link{
     font-size: 16px;
     color: #727171;
-    border-left: 1px solid #edece3;
     display: inline-block;
     position: absolute;
     left:34px;
