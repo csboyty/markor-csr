@@ -233,9 +233,14 @@ table.dataTable .thumb{
     border: none;
     box-shadow: 0 4px 0 #018566;
 }
-.btn-success:hover,.btn-success:active,.btn-success:active:hover{
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:active:hover
+.btn-success:active:focus{
     border:none;
     background:#009774;
+    box-shadow: 0 4px 0 #018566;
 }
 .paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active{
     padding:10px;
