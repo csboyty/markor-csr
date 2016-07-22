@@ -104,7 +104,8 @@ label.error{
 .menu .item {
     min-height: 40px;
     width: 100%;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     line-height: 40px;
     position: relative;
     background: #fff;
