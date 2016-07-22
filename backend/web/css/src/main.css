@@ -205,12 +205,13 @@ table.dataTable tr{
     line-height: 25px!important;
     border-bottom: #f5f5f5 solid 1px;
 }
-table.dataTable tr:hover{
-    background:#f5f5f5;
-    border-bottom: #ddd solid 1px;
-}
+
 table.dataTable tr.odd{
     background:transparent;
+}
+table.dataTable tr:hover,table.dataTable tr.odd:hover{
+    background:#f5f5f5;
+    border-bottom: #ddd solid 1px;
 }
 table.dataTable td {
     padding: 5px 20px!important;
