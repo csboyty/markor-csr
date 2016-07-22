@@ -8,7 +8,7 @@ body{
     height: 100%;
     position: relative;
     font-family: "Arail","微软雅黑","Heiti";
-    background: #f2f3ea!important;
+    background: #ececec!important;
 }
 ul{
     padding:0px;
@@ -25,14 +25,19 @@ label.error{
     display: none;
 }
 .left{
-    width: 180px;
+    position: fixed;
+    top:70px;
+    left: 0;
+    width:180px;
+    bottom: 0;
+    overflow:auto;
+    padding-bottom: 20px;
 }
 .right{
     border-left: 1px solid #ccccc8;
     background: #efefef;
     padding:50px 30px;
-    border-top:3px solid #5dc05f;
-    position: absolute;
+    position: fixed;
     left:180px;
     top:70px;
     bottom: 0px;
@@ -59,20 +64,30 @@ label.error{
 *logo
 */
 .logo{
-    width: 100%;
-    height: 100px;
+    padding-left: 50px;
+    height: 40px;
+    line-height: 40px;
     margin: 0px;
     display: inline-block;
     color: #fff;
-    line-height: 70px;
-    padding-left: 20px;
+    font-size: 18px;
+    position: absolute;
+    top:15px;
+    left: 20px;
+    background:url(../../images/app/logo_white@2x.png) no-repeat left center;
+    background-size: contain;
 }
 .logout{
     position: absolute;
-    right:20px;
-    bottom:30px;
+    right:0;
+    top:0;
     font-size: 12px;
     color: #efefef;
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    width:100px;
+    text-align: center;
 }
 .logout:hover{
     color: #efefef;
@@ -85,26 +100,29 @@ label.error{
 }
 .menu .separate{
     height: 10px;
-    background: #fff;
 }
 .menu .item {
     min-height: 40px;
     width: 100%;
-    border: 1px solid #edece3;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     line-height: 40px;
     position: relative;
+    background: #fff;
+    margin-bottom: -1px;
 }
 .menu .item .glyphicon{
-    padding: 0px 10px;
+    padding: 0px 15px;
     cursor: pointer;
 }
 .menu .item .rightIcon{
-    margin-left: 100px;
+    position: absolute;
+    top:15px;
+    right: 0;
 }
 .menu .item .link{
     font-size: 16px;
     color: #727171;
-    border-left: 1px solid #edece3;
     display: inline-block;
     position: absolute;
     left:34px;
@@ -178,16 +196,20 @@ table.dataTable thead th{
     color: #00A67F;
     border: none;
     font-weight: normal;
-    padding: 5px;
-    text-align: center;
+    padding: 5px 20px;
+    text-align: left;
     line-height: 30px!important;
 }
 table.dataTable tr{
     line-height: 25px!important;
+    border-bottom: #f5f5f5 solid 1px;
+}
+table.dataTable tr.odd{
+    background:transparent;
 }
 table.dataTable td {
-    padding: 5px!important;
-    text-align: center;
+    padding: 5px 20px!important;
+    text-align: left;
 }
 table.dataTable .thumb{
     width: 100px;
@@ -196,7 +218,12 @@ table.dataTable .thumb{
 .dataTables_paginate,.dataTables_info{
     margin-top: 15px;
 }
-/********覆写bootstrap的table*************/
+/********覆写bootstrap*************/
+
+.panel{
+    border-radius: 0;
+}
+
 .table>tbody>tr>td{
     vertical-align: middle;
 }

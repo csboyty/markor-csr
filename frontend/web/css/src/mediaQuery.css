@@ -1,17 +1,17 @@
 @media screen and (min-width:1600px){
     .pSectionTopList .item{
-        width: 320px;
+/*        width: 320px;*/
     }
     .pSectionTopList .item .thumb{
-        height: 240px;
+/*        height: 240px;*/
     }
 }
 @media screen and (min-width:1280px){
     .pSectionTopList .item{
-        width: 240px;
+/*        width: 240px;*/
     }
     .pSectionTopList .item .thumb{
-        height: 180px;
+/*        height: 180px;*/
     }
 }
 @media screen and (max-width:1024px){
@@ -58,11 +58,13 @@
     }
 
     .pSectionTopList .item{
-        width: 144px;
+/*        width: 144px;*/
     }
     .pSectionTopList .item .thumb{
+/*
         height: 108px;
         width: 144px;
+*/
     }
 }
 @media screen and (max-width:768px){
@@ -356,35 +358,97 @@
     }
 
     .pSectionTopList .item{
-        width: 112px;
+/*        width: 112px;*/
     }
     .pSectionTopList .item .thumb{
+/*
         height: 84px;
         width: 112px;
+*/
     }
     .pSectionTopList .item .info{
+/*
         font-size: .8rem;
         margin-left: 30px;
+*/
     }
     .pSectionTopList .item .title{
         margin: 5px 0px 0px 0px;
         color: #808080;
     }
     .pSectionTopList .item .icon{
-        font-size: 1rem;
+/*        font-size: 1rem;*/
         width: 25px;
         height: 25px;
         line-height: 25px;
     }
+    .pSectionList2 .item .excerpt{
+        display: none;
+    }
 }
 
 @media screen and (max-width:600px){
-    .pSectionTopList .item{
-        width: 304px;
+    .program{
+        width:84%;
     }
-    .pSectionTopList .item .thumb{
-        height: 228px;
-        width: 304px;
+    .pSectionTopList .item{
+/*        width: 304px;*/
+        width:100%;
+        margin:10px 0;
+    }
+    .pSectionTopList .item:hover .thumb{
+        transform: translateZ(0);
+    }
+    .pSectionList1 .item{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    
+    .pSectionList1 .item:first-child{
+        width: 100%;
+    }
+    .pSectionList1 .item:hover .thumb{
+        transform: translateZ(0);
+    }
+    .pSectionList1 .item .info{
+        position: static;
+        opacity: 1;
+        background: #333;
+    }
+    .pSectionList1 .item:hover .info{
+        opacity: 1;
+    }
+    .pSectionList1 .item .excerpt{
+        display: block;
+    }
+    .pSectionList2 .item{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .pSectionList2 .item:hover .thumb{
+        transform: translateZ(0);
+    }
+    .pSectionList2 .item .info{
+        position: static;
+        opacity: 1;
+        background: #333;
+    }
+    .pSectionList2 .item:hover .info{
+        opacity: 1;
+    }
+    .pSectionList2 .item .excerpt{
+        display: block;
+    }
+    .pSectionList3 .item{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .pSectionList3 .item:hover .thumb{
+        transform: translateZ(0);
+    }
+    .pSectionList4 .item{
+        width: 100%;
+        margin: 10px 0px;
     }
 }
 
@@ -475,30 +539,5 @@
         padding:20px;
     }
 
-    .pSectionTopList .item{
-        width: 240px;
-    }
-    .pSectionTopList .item .thumb{
-        height: 180px;
-        width: 240px;
-    }
-    .pSectionList1 .item{
-        width: 100%;
-        margin: 10px 0px;
-    }
-    .pSectionList1 .item:first-child{
-        width: 100%;
-    }
-    .pSectionList2 .item{
-        width: 100%;
-        margin: 10px 0px;
-    }
-    .pSectionList3 .item{
-        width: 100%;
-        margin: 10px 0px;
-    }
-    .pSectionList4 .item{
-        width: 100%;
-        margin: 10px 0px;
-    }
+    
 }

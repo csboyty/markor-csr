@@ -46,12 +46,14 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="<?= $url; ?>" target="_blank">
-                            <picture>
-                                <source srcset="<?= Helper::getSuffixFile($tp->thumb); ?>" media="(max-width: 768px)">
-                                <img class="thumb" src="<?= $tp->thumb; ?>" >
-                            </picture>
+                            <div class="ratio43 thumbContainer">
+                                <picture>
+                                    <source srcset="<?= Helper::getSuffixFile($tp->thumb); ?>" media="(max-width: 768px)">
+                                    <img class="thumb" src="<?= $tp->thumb; ?>" >
+                                </picture>
+                            </div>
                             <div class="info">
-                                <div class="icon">
+                                <div class="icon-wrapper">
                                     <span class="icon icon-program-post-<?= $key; ?>"></span>
                                 </div>
                                 <h3 class="title ellipsis"><?= $tp->title; ?></h3>
@@ -75,12 +77,18 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="culture-programs/posts/<?= $s1p->id; ?>" target="_blank">
-                            <picture>
-                                <source srcset="<?= Helper::getSuffixFile($s1p->thumb); ?>" media="(max-width: 768px)">
-                                <img class="thumb" src="<?= $s1p->thumb; ?>" >
-                            </picture>
+                            <div class="thumbContainer">
+                                <picture>
+                                    <source srcset="<?= Helper::getSuffixFile($s1p->thumb); ?>" media="(max-width: 768px)">
+                                    <img class="thumb" src="<?= $s1p->thumb; ?>" >
+                                </picture>
+                            </div>
                             <div class="info">
                                 <h3 class="title"><?= $s1p->title; ?></h3>
+                                <p class="date"><?= $s1p->date; ?></p>
+                                <p class="excerpt">
+                                    <?= $s1p->excerpt; ?>
+                                </p>
                             </div>
                         </a>
                     </li>
@@ -100,10 +108,12 @@ $section4Posts=explode(",",$content[4]);
                     ?>
                     <li class="item">
                         <a href="culture-programs/posts/<?= $s1p->id; ?>"  target="_blank">
-                            <picture>
-                                <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
-                                <img class="thumb" src="<?= $s2p->thumb; ?>" >
-                            </picture>
+                            <div class="thumbContainer">
+                                <picture>
+                                    <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
+                                    <img class="thumb" src="<?= $s2p->thumb; ?>" >
+                                </picture>
+                            </div>
                             <div class="info">
                                 <h3 class="title"><?= $s2p->title; ?></h3>
                                 <p class="date"><?= $s2p->date; ?></p>
@@ -156,7 +166,7 @@ $section4Posts=explode(",",$content[4]);
 
     <div class="pSection">
         <h3 class="pSectionTitle pst4">标题4</h3>
-        <ul class="pSectionList3 pSectionList4">
+        <ul class="pSectionList3">
             <?php
             foreach($section4Posts as $s4p){
                 $s4p=Post::findOne($s4p);
