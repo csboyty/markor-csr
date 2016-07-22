@@ -187,16 +187,23 @@ label.error{
     margin: 10px 0px;
     text-align: right;
     float: right;
+    display: flex;
+    width:50%;
 }
 .tableSearchContainer .col-md-2{
-    width:50%;
+    flex:1;
     display: inline-block;
+    position: absolute;
 }
 .tableSearchContainer label{
     display: inline-block;
+    flex:none;
+    width:60px;
 }
 .tableSearchContainer .btn{
     display: inline-block;
+    width:60px;
+    flex:none;
 }
 table.dataTable{
     margin-top: 20px;
