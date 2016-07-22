@@ -108,6 +108,7 @@ label.error{
     line-height: 40px;
     position: relative;
     background: #fff;
+    margin-bottom: -1px;
 }
 .menu .item .glyphicon{
     padding: 0px 10px;
