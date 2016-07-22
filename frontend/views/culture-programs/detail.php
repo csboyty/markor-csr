@@ -23,6 +23,12 @@ if($content){
     $section2Posts=explode(",",$content[2]);
     $section3Posts=explode(",",$content[3]);
     $section4Posts=explode(",",$content[4]);
+}else{
+    $topPosts="";
+    $section1Posts="";
+    $section2Posts="";
+    $section3Posts="";
+    $section4Posts="";
 }
 
 ?>
