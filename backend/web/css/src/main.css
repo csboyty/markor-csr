@@ -184,7 +184,6 @@ label.error{
 *复写datatable
 */
 .tableSearchContainer{
-    margin: 10px 0px;
     text-align: right;
     float: right;
     position: relative;
