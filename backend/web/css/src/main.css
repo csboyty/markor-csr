@@ -174,10 +174,10 @@ label.error{
     padding-left: 25px;
 }
 .subMenu .sItem:hover .circle {
-    background: #5dc05f;
+    background: #00A67F;
 }
 .subMenu .sItem:hover .sLink{
-    color: #5dc05f;
+    color: #00A67F;
 }
 
 /**
@@ -228,7 +228,11 @@ table.dataTable .thumb{
 .table>tbody>tr>td{
     vertical-align: middle;
 }
-
+.btn-sucess{
+    background: #00A67F;
+    border: none;
+    box-shadow: 0 4px 0 #018566;
+}
 /**
 *loading
 */
