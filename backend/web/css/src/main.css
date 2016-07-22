@@ -185,6 +185,18 @@ label.error{
 */
 .tableSearchContainer{
     margin: 10px 0px;
+    text-align: right;
+    float: right;
+}
+.tableSearchContainer .col-md-2{
+    width:50%;
+    display: inline-block;
+}
+.tableSearchContainer label{
+    display: inline-block;
+}
+.tableSearchContainer .btn{
+    display: inline-block;
 }
 table.dataTable{
     margin-top: 20px;
