@@ -205,6 +205,10 @@ table.dataTable tr{
     line-height: 25px!important;
     border-bottom: #f5f5f5 solid 1px;
 }
+table.dataTable tr:hover{
+    background:#f5f5f5;
+    border-bottom: #ddd solid 1px;
+}
 table.dataTable tr.odd{
     background:transparent;
 }
@@ -221,7 +225,7 @@ table.dataTable td a{
     display: inline-block;
     border: #ddd 1px solid;
     border-radius: 5px;
-    margin-right: 10px;
+    margin:5px 10px 0 0;
     color: #333;
 }
 table.dataTable td a:hover{
