@@ -202,6 +202,10 @@ table.dataTable thead th{
 }
 table.dataTable tr{
     line-height: 25px!important;
+    border-bottom: #f5f5f5 solid 1px;
+}
+table.dataTable tr.odd{
+    background:transparent;
 }
 table.dataTable td {
     padding: 5px!important;
@@ -214,7 +218,12 @@ table.dataTable .thumb{
 .dataTables_paginate,.dataTables_info{
     margin-top: 15px;
 }
-/********覆写bootstrap的table*************/
+/********覆写bootstrap*************/
+
+.panel{
+    border-radius: 0;
+}
+
 .table>tbody>tr>td{
     vertical-align: middle;
 }
