@@ -207,6 +207,9 @@ label.error{
 .tableSearchContainer .btn{
     display: inline-block;
     width:60px;
+    position: absolute;
+    top:0;
+    right: 0;
 }
 table.dataTable{
     margin-top: 20px;
