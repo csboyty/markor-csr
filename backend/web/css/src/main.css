@@ -236,7 +236,7 @@ table.dataTable .thumb{
 .btn-success:hover,
 .btn-success:active,
 .btn-success:focus,
-.btn-success:active:hover
+.btn-success:active:hover,
 .btn-success:active:focus{
     border:none;
     background:#009774;
