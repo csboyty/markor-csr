@@ -199,7 +199,7 @@ label.error{
 }
 .tableSearchContainer label{
     display: inline-block;
-    flex:none;
+    position: absolute;
     width:60px;
     right: 210px;
     top: 0;
@@ -207,8 +207,6 @@ label.error{
 .tableSearchContainer .btn{
     display: inline-block;
     width:60px;
-    right: 0;
-    top: 0;
 }
 table.dataTable{
     margin-top: 20px;
