@@ -228,7 +228,7 @@ table.dataTable .thumb{
 .table>tbody>tr>td{
     vertical-align: middle;
 }
-.btn-sucess{
+.btn-success{
     background: #00A67F;
     border: none;
     box-shadow: 0 4px 0 #018566;
