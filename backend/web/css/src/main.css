@@ -201,6 +201,7 @@ label.error{
     display: inline-block;
     position: absolute;
     width:60px;
+    max-width: 80px;
     right: 210px;
     top: 0;
 }
