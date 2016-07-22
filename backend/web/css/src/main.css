@@ -187,14 +187,13 @@ label.error{
     margin: 10px 0px;
     text-align: right;
     float: right;
-    position: absolute;
-    width:50%;
+    position: relative;
 }
 .tableSearchContainer .col-md-2{
     
     display: inline-block;
     position: absolute;
-    left: 60px;
+    width:150px;
     right: 60px;
     top: 0;
 }
@@ -202,7 +201,7 @@ label.error{
     display: inline-block;
     flex:none;
     width:60px;
-    left: 0;
+    right: 210px;
     top: 0;
 }
 .tableSearchContainer .btn{
