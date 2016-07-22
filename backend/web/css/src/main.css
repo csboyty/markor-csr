@@ -245,6 +245,12 @@ table.dataTable .thumb{
 .paging_full_numbers a.paginate_button:hover{
     background:#f5f5f5;
 }
+.paging_full_numbers a.paginate_active{
+    background:#f5f5f5;
+}
+.paging_full_numbers a.paginate_active:hover{
+    background: #ddd;
+}
 /**
 *loading
 */
