@@ -28,17 +28,18 @@ label.error{
     position: fixed;
     top:70px;
     left: 0;
-    width:180px;
+    width:200px;
     bottom: 0;
     overflow:auto;
-    padding-bottom: 20px;
+    padding: 10px 0 20px;
+    box-sizing: border-box;
 }
 .right{
     border-left: 1px solid #ccccc8;
     background: #efefef;
     padding:50px 30px;
     position: fixed;
-    left:180px;
+    left:200px;
     top:70px;
     bottom: 0px;
     right: 0px;
@@ -104,8 +105,8 @@ label.error{
 .menu .item {
     min-height: 40px;
     width: 100%;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     line-height: 40px;
     position: relative;
     background: #fff;
@@ -143,7 +144,7 @@ label.error{
     display: block;
 }*/
 .subMenu{
-    background: #f9f9f2;
+    background: #eef8f5;
     display: none;
 }
 .subMenu .sItem{
