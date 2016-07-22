@@ -34,7 +34,7 @@ $section4Posts=explode(",",$content[4]);
             <?php
                 foreach($topPosts as $key=>$tp){
                     $tp=Post::findOne($tp);
-                    $url="culture-programs/posts/".$tp->id."?pId=".$model->id;
+                    $url="culture-programs/posts/".$tp->id;
 
                     if($key==0){
                         $url="videos/".$tp->id;
@@ -74,7 +74,7 @@ $section4Posts=explode(",",$content[4]);
                     $s1p=Post::findOne($s1p);
                     ?>
                     <li class="item">
-                        <a href="culture-programs/posts/<?= $s1p->id; ?>?pId=<?= $model->id; ?>">
+                        <a href="culture-programs/posts/<?= $s1p->id; ?>" target="_blank">
                             <picture>
                                 <source srcset="<?= Helper::getSuffixFile($s1p->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $s1p->thumb; ?>" >
@@ -99,7 +99,7 @@ $section4Posts=explode(",",$content[4]);
                     $s2p=Post::findOne($s2p);
                     ?>
                     <li class="item">
-                        <a href="culture-programs/posts/<?= $s1p->id; ?>?pId=<?= $model->id; ?>">
+                        <a href="culture-programs/posts/<?= $s1p->id; ?>"  target="_blank">
                             <picture>
                                 <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
                                 <img class="thumb" src="<?= $s2p->thumb; ?>" >
@@ -129,7 +129,7 @@ $section4Posts=explode(",",$content[4]);
                 $s3p=Post::findOne($s3p);
                 ?>
                 <li class="item">
-                    <a href="culture-programs/posts/<?= $s3p->id; ?>?pId=<?= $model->id; ?>">
+                    <a href="culture-programs/posts/<?= $s3p->id; ?>" target="_blank">
                         <div class="thumbContainer">
                             <picture>
                                 <source srcset="<?= Helper::getSuffixFile($s3p->thumb); ?>" media="(max-width: 768px)">
@@ -162,7 +162,7 @@ $section4Posts=explode(",",$content[4]);
                 $s4p=Post::findOne($s4p);
                 ?>
                 <li class="item">
-                    <a href="culture-programs/posts/<?= $s4p->id; ?>?pId=<?= $model->id; ?>">
+                    <a href="culture-programs/posts/<?= $s4p->id; ?>" target="_blank">
                         <div class="thumbContainer">
                             <picture>
                                 <source srcset="<?= Helper::getSuffixFile($s4p->thumb); ?>" media="(max-width: 768px)">

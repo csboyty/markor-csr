@@ -80,7 +80,16 @@ $this->title = $param;
                     $url="education/trainee/recruits";
                     break;
                 case Yii::$app->params["categories"]["cultureProgram"]:
-                    $url="culture-programs/".$r->id;
+                    if($r->memo==1){
+                        $url="culture-programs/".$r->id;
+                    }else{
+                        if($r->bg_image){
+                            $url=$r->bg_image;
+                        }else{
+                            $url="culture-programs/posts/".$r->id;
+                        }
+                    }
+
                     break;
                 case Yii::$app->params["categories"]["story"]:
                     $url="stories/".$r->id;
