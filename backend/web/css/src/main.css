@@ -196,8 +196,8 @@ table.dataTable thead th{
     color: #00A67F;
     border: none;
     font-weight: normal;
-    padding: 5px;
-    text-align: center;
+    padding: 5px 20px;
+    text-align: left;
     line-height: 30px!important;
 }
 table.dataTable tr{
@@ -208,8 +208,8 @@ table.dataTable tr.odd{
     background:transparent;
 }
 table.dataTable td {
-    padding: 5px!important;
-    text-align: center;
+    padding: 5px 20px!important;
+    text-align: left;
 }
 table.dataTable .thumb{
     width: 100px;
