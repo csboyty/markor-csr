@@ -259,7 +259,7 @@ table.dataTable td a{
     display: inline-block;
     border: #ddd 1px solid;
     border-radius: 5px;
-    margin:5px 10px 0 0;
+    margin:5px 0 0 10px;
     color: #333;
 }
 table.dataTable td a:hover{
