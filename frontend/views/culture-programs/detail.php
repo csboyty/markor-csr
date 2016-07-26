@@ -138,7 +138,7 @@ if($content){
                         $s2p=Post::findOne($s2p);
                         ?>
                         <li class="item">
-                            <a href="culture-programs/posts/<?= $s1p->id; ?>"  target="_blank">
+                            <a href="culture-programs/posts/<?= $s2p->id; ?>"  target="_blank">
                                 <div class="thumbContainer">
                                     <picture>
                                         <source srcset="<?= Helper::getSuffixFile($s2p->thumb); ?>" media="(max-width: 768px)">
