@@ -15,8 +15,8 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="webkit" name="renderer">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="keywords" content="美克美家CSR公益">
     <meta name="description" content="美克美家CSR公益">
     <link rel="shortcut icon" href="images/app/logo_title_32X32.ico" type="image/x-icon" />
