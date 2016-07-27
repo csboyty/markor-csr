@@ -210,7 +210,7 @@ AppAsset::register($this);
                         <br>
                         北京市丰台区西三环南路57号
                         <br>
-                        丽江泽桥美克大厦3楼
+                        丽泽桥美克大厦3楼
                     </p>
                 </td>
                 <td>
@@ -222,7 +222,7 @@ AppAsset::register($this);
         <p class="copyRight displayNoneInMobile">Copyright &copy;2007-<?= date("Y") ?> MARKOR FURNISHINGS</p>
         <p class="copyRight displayInMobile">
             TEL: 010-63862727<br>
-            地址：北京市丰台区三环南路57号丽江泽桥美克大厦3层<br>
+            地址：北京市丰台区三环南路57号丽泽桥美克大厦3层<br>
             Copyright &copy;2007-<?= date("Y") ?> MARKOR FURNISHINGS
         </p>
     </div>
