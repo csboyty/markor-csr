@@ -856,6 +856,7 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
     height: 3em;
     max-width: 600px;
+    font-family: Arail,"微软雅黑","苹方-简";
 }
 .swiper-pagination-bullet-active{
     background: #fff;
