@@ -126,7 +126,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
             foreach($enlightenmentResults as $er){
                 ?>
                 <li class="item">
-                   <a href="activities/<?= $er->category_id; ?>/<?= $er->id; ?>">
+
                     <div class="thumbContainer">
                         <picture>
                             <source srcset="<?= Helper::getSuffixFile($er->thumb); ?>" media="(max-width: 768px)">
@@ -134,15 +134,16 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                         </picture>
                     </div>
                     <div class="info">
+                        <a href="activities/<?= $er->category_id; ?>/<?= $er->id; ?>">
                         <h3 class="title ellipsis">
                             <?= $er->title; ?></h3>
                         <p class="excerpt">
                            
                             <?= $er->excerpt; ?>
                         </p>
+                        </a>
                         <a class="tag" href="enlightenment/index" >艺术启蒙</a>
                     </div>
-                    </a>
                 </li>
                 <?php
             }
@@ -152,7 +153,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
         foreach($educationResults as $er1){
             ?>
             <li class="item">
-               <a href="education/awards/<?= $er1->id; ?>">
+
                 <div class="thumbContainer">
                     <picture>
                         <source srcset="<?= Helper::getSuffixFile($er1->thumb); ?>" media="(max-width: 768px)">
@@ -160,13 +161,14 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                     </picture>
                 </div>
                 <div class="info">
-                    <h3 class="title ellipsis"><?= $er1->title; ?></h3>
-                    <p class="excerpt">
-                        <?= $er1->excerpt; ?>
-                    </p>
+                    <a href="education/awards/<?= $er1->id; ?>">
+                        <h3 class="title ellipsis"><?= $er1->title; ?></h3>
+                        <p class="excerpt">
+                            <?= $er1->excerpt; ?>
+                        </p>
+                    </a>
                     <a class="tag" href="education/index" >艺术教育</a>
                 </div>
-                </a>
             </li>
         <?php
         }
@@ -176,7 +178,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
         foreach($cPResults as $cr){
             ?>
             <li class="item">
-               <a href="culture-programs/<?= $cr->id; ?>">
+
                 <div class="thumbContainer">
                     <picture>
                         <source srcset="<?= Helper::getSuffixFile($cr->thumb); ?>" media="(max-width: 768px)">
@@ -184,13 +186,15 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                     </picture>
                 </div>
                 <div class="info">
-                    <h3 class="title"><?= $cr->title; ?></h3>
-                    <p class="excerpt">
-                        <?= $cr->excerpt; ?>
-                    </p>
+                    <a href="culture-programs/<?= $cr->id; ?>">
+                        <h3 class="title"><?= $cr->title; ?></h3>
+                        <p class="excerpt">
+                            <?= $cr->excerpt; ?>
+                        </p>
+
+                    </a>
                     <a class="tag" href="culture-programs/index" >艺术传承</a>
                 </div>
-                </a>
             </li>
         <?php
         }
@@ -204,7 +208,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
             foreach($storyResults as $sr){
                 ?>
                 <li class="item">
-                   <a href="stories/<?= $sr->id; ?>">
+
                     <div class="thumbContainer">
                         <picture>
                             <source srcset="<?= Helper::getSuffixFile($sr->thumb); ?>" media="(max-width: 768px)">
@@ -213,14 +217,15 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                     </div>
 
                     <div class="info">
-                        <h2 class="title ellipsis"><?= $sr->title; ?></h2>
-                        <p class="author"><?= $sr->author; ?></p>
-                        <p class="excerpt moreEllipsis" data-row="3">
-                            <?= $sr->excerpt; ?>
-                        </p>
+                        <a href="stories/<?= $sr->id; ?>">
+                            <h2 class="title ellipsis"><?= $sr->title; ?></h2>
+                            <p class="author"><?= $sr->author; ?></p>
+                            <p class="excerpt moreEllipsis" data-row="3">
+                                <?= $sr->excerpt; ?>
+                            </p>
+                        </a>
                         <a href="stories/index" class="tag">人物故事</a>
                     </div>
-                    </a>
                 </li>
                 <?php
             }

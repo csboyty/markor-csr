@@ -52,7 +52,6 @@
     /*color: #000;*/
 }
 .list .item:hover .thumb{
-    
     transform: translateZ(100px);
 }
 
@@ -197,7 +196,6 @@
     visibility: hidden;
 /*    transition:all 0.4s ease-out;*/
     color: #fff;
-    opacity: 0;
     filter:alpha(opacity=0);
 }
 .list12 .item .title{
@@ -211,7 +209,6 @@
 }
 .list12 .item:hover .info{
     visibility: visible;
-    opacity: .7;
     filter:alpha(opacity=70);
 }
 .list12 .item .excerpt{

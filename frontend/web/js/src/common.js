@@ -25,7 +25,7 @@ $(document).ready(function(){
         if($(this).find(".subMenu").length!=0||$(this).parent(".subMenu").length!=0){
             $("#subMenuBg").animate({
                 height:"40px"
-            },100);
+            },300);
         }else{
             $("#subMenuBg").height("0px");
         }
@@ -41,4 +41,9 @@ $(document).ready(function(){
             window.location.href=document.getElementsByTagName("base")[0].getAttribute("href")+"search/"+$(this).val();
         }
     });
+
+    //IE9
+    if(navigator.userAgent.indexOf("MSIE 9.0")){
+
+    }
 });

@@ -8,6 +8,7 @@ body{
     padding: 0px;
     font-family: Arail,"微软雅黑","苹方-简";
     font-size: 14px;
+    font-size: 1.4rem;
     background:#fff;
 }
 ul{
@@ -127,6 +128,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'markoricon' !important;
     content: "\e90b";
     font-size: 48px;
+    font-size: 4.8rem;
     position: absolute;
     top:-20px;
     left: -60px;
@@ -136,6 +138,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'markoricon' !important;
     content: "\e90a";
     font-size: 48px;
+    font-size: 4.8rem;
     position: absolute;
     bottom:-20px;
     right: -48px;
@@ -152,6 +155,7 @@ h1,h2,h3,h4,h5,h6{
     padding: 5px;
     text-align: center;
     font-size: 12px;
+    font-size: 1.2rem;
     border: 1px solid #808080;
     transition: all 0.3s ease-out;
 }
@@ -167,6 +171,7 @@ h1,h2,h3,h4,h5,h6{
     padding: 5px;
     text-align: center;
     font-size: 14px;
+    font-size: 1.4rem;
     border: 1px solid #808080;
     transition: all 0.3s ease-out;
 }
@@ -241,6 +246,7 @@ h1,h2,h3,h4,h5,h6{
     z-index: 3;
     overflow: hidden;
     font-size: 0px;
+    transition:all .2s ease-in;
 }
 .menu .subMenu.sp1{
     margin-left: -50px;
@@ -291,6 +297,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .menuMContainer .menuIcon{
     font-size: 40px;
+    font-size: 4rem;
     color: #808080;
     position: absolute;
     top: 0;
@@ -332,6 +339,7 @@ h1,h2,h3,h4,h5,h6{
 .menuM>.item>a{
     padding: 0 10px;
     font-size: 18px;
+    font-size: 1.8rem;
     color: #808080;
     display: block;
     width: 100%;
@@ -372,6 +380,7 @@ h1,h2,h3,h4,h5,h6{
 .menuM .subMenu>.item>a{
     color: #808080;
     font-size: 14px;
+    font-size: 1.4rem;
     height:50px;
     display: inline-block;
     padding-left: 40px;
@@ -380,6 +389,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .menuM>.item>.searchIcon{
     font-size: 24px;
+    font-size: 2.4rem;
     vertical-align: middle;
     border-right:1px solid #808080;
     position: absolute;
@@ -391,6 +401,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .menuM>.item>.searchInput{
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 24px;
     outline: none;
     border: none;
@@ -421,6 +432,7 @@ h1,h2,h3,h4,h5,h6{
     width: 0px;
     height: 50px;
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 40px;
     transition:all 0.3s ease-out;
     padding: 5px;
@@ -435,6 +447,7 @@ h1,h2,h3,h4,h5,h6{
 .searchContainer .ctrl{
     padding:0px 10px;
     font-size: 24px;
+    font-size: 2.4rem;
     position: absolute;
     top:20px;
     right:0;
@@ -499,6 +512,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .section .contentText{
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5em;
     margin: 40px auto;
     text-align: center;
@@ -709,6 +723,7 @@ h1,h2,h3,h4,h5,h6{
     width: 50%;
     margin-left: -25%;
     transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
     text-align: center;
 }
 .pageTop .title{
@@ -719,6 +734,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .pageTop .excerpt{
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5em;
     margin-top: 20px;
     padding:20px;
@@ -896,6 +912,7 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
 }
 .flexslider .detail .title{
+    font-size: 36px;
     font-size: 3.6rem;
     color: #fff;
     line-height: 1.2em
@@ -906,6 +923,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .flexslider .detail .excerpt{
     font-size: 14px;
+    font-size:1.4rem;
     line-height: 1.5em;
     margin: 20px auto;
     color: #fff;
@@ -920,6 +938,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .pagination li a{
     font-size: 20px;
+    font-size:20rem;
     color: #888;
     display: block;
     width: 25px;
@@ -929,6 +948,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .pagination li span{
     font-size: 20px;
+    font-size:20rem;
 }
 .pagination li a:hover{
     color: #000;
@@ -955,6 +975,7 @@ h1,h2,h3,h4,h5,h6{
 .post .subTitle{
     margin: 20px auto 40px auto;
     font-size: 14px;
+    font-size:1.4rem;
     color: #999;
     letter-spacing: 0.2em;
     line-height: 2em;
@@ -969,6 +990,7 @@ h1,h2,h3,h4,h5,h6{
 .post .content p{
     line-height: 1.5em!important;
     text-indent: 2em!important;
+    font-size:14px!important;
     font-size: 1.4rem!important;
 }
 .post .content img{
@@ -1023,6 +1045,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .artItem .title{
     font-size: 24px;
+    font-size:2.4rem;
     font-weight: lighter;
     padding: 0px 0px 10px 0px;
     color: #666;
@@ -1032,6 +1055,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .artItem .excerpt{
     font-size: 14px;
+    font-size:1.4rem;
     line-height: 1.5em;
     color: #808080;
 }
@@ -1048,8 +1072,7 @@ h1,h2,h3,h4,h5,h6{
     transition:all .5s linear;
 }
 .artItem:hover .image{
-    transform:scale(1.05,1.05);
-    -ms-transform:scale(1.05,1.05);
+    transform: translateZ(100px);
 }
 .artRoomItem .icon{
     right:20px;
@@ -1061,9 +1084,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .artRoomItem:hover .icon{
     transform-origin: 100% 100% 0px;
-    -ms-transform-origin: 100% 100% 0px;
     transform:rotate(5deg);
-    -ms-transform:rotate(5deg);
 }
 .teacherTrainItem .info{
     background:#fff;
@@ -1075,6 +1096,7 @@ h1,h2,h3,h4,h5,h6{
     left:0%;
     top: 50%;
     transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%);
 }
 .teacherTrainItem .imageContainer{
     margin-left: auto;
@@ -1123,6 +1145,7 @@ h1,h2,h3,h4,h5,h6{
     right:0%;
     top: 50%;
     transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%);
 }
 .childDrawItem .imageContainer{
     margin-left: auto;
@@ -1160,6 +1183,7 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
 }
 .site-error h2{
+    font-size:24px;
     font-size: 2.4rem;
     color: #666;
     letter-spacing: 0.1em;
