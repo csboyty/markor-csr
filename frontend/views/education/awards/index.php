@@ -28,7 +28,7 @@ $this->params=[
 </div>
 
 <div class="section">
-    <ul class="list3 list31 list311">
+    <ul class="list3 list31">
         <?php
             foreach($results as $key=>$r){
                 if($key%2==0){
@@ -50,18 +50,17 @@ $this->params=[
                 }else{
                     ?>
                     <li class="item">
-                       <div class="thumbContainer">
-                            <picture>
-                                <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
-                                <img class="thumb" src="<?= $r->thumb; ?>" >
-                            </picture>
-                        </div>
                         <div class="info">
                             <p class="excerpt">
                                 <?= $r->excerpt; ?>
                             </p>
                         </div>
-                        
+                        <div class="thumbContainer">
+                            <picture>
+                                <source srcset="<?= Helper::getSuffixFile($r->thumb); ?>" media="(max-width: 768px)">
+                                <img class="thumb" src="<?= $r->thumb; ?>" >
+                            </picture>
+                        </div>
                     </li>
                     <?php
                 }
