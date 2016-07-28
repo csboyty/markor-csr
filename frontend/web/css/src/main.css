@@ -694,10 +694,13 @@ h1,h2,h3,h4,h5,h6{
 .pageTop{
     color: #fff;
     position: relative;
+    font-size: 0;
+    background:#000;
 }
 .pageTop .image{
     width: 100%;
     height: auto;
+    opacity: .7;
 }
 .pageTop .info{
     position: absolute;
