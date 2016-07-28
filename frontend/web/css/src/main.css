@@ -275,7 +275,6 @@ h1,h2,h3,h4,h5,h6{
     left:0px;
     top:100%;
     line-height: 40px;
-    transition:all .3s ease-out;
     overflow: hidden;
     box-sizing: border-box;
     z-index: 2;

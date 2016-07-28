@@ -23,12 +23,18 @@ $(document).ready(function(){
 
     $("#menu .item").hover(function(){
         if($(this).find(".subMenu")){
-            $("#subMenuBg").height("40px");
+            $("#subMenuBg").animate({
+                height:"40px"
+            },300);
         }else{
-            $("#subMenuBg").height("0px");
+            $("#subMenuBg").animate({
+                height:"0px"
+            },300);
         }
     },function(){
-        $("#subMenuBg").height("0px");
+        $("#subMenuBg").animate({
+            height:"0px"
+        },300);
     });
 
     $(".search").keydown(function(e){
