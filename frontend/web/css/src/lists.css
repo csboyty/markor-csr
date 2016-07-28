@@ -27,6 +27,7 @@
 }
 .list .item .title{
     font-size: 18px;
+    font-size:1.8rem;
     color: #666;
     margin: 40px 0px 20px 0px;
 }
@@ -35,6 +36,7 @@
 }
 .list .item .excerpt{
     font-size: 14px;
+    font-size:1.4rem;
     line-height:1.5em;
     color: #808080;
     margin: 10px 0px;
@@ -97,6 +99,7 @@
 }
 .list1 .item .title{
     font-size: 18px;
+    font-size:1.8rem;
     text-align:center;
     border-bottom: 2px solid #fff;
     padding: 5px 0px 10px 0px;
@@ -108,6 +111,7 @@
 }
 .list1 .item .excerpt{
     font-size:14px;
+    font-size:1.4rem;
     line-height:1.5em;
     margin:auto;
     color: #fff;
@@ -116,6 +120,7 @@
 }
 .list1 .item .author{
     font-size:14px;
+    font-size:1.4rem;
     margin: 10px 0px;
     position:static;
     text-align:center;
@@ -135,6 +140,7 @@
     margin: 10px auto auto auto;
     color: #fff;
     font-size: 32px;
+    font-size:3.2rem;
     text-align: center;
     display: block;
     width: 40px;
@@ -242,6 +248,7 @@
     padding:2%;
     box-sizing: border-box;
     font-size: 14px;
+    font-size:1.4rem;
     text-align: center;
     vertical-align: top;
 }
@@ -252,6 +259,7 @@
 .list2 .item .title{
     color: #666;
     font-size: 18px;
+    font-size:1.8rem;
     padding: 10px 0px;
     border-bottom: 1px solid #666;
 }
@@ -266,6 +274,7 @@
 .list2 .item .excerpt{
     color: #808080;
     font-size: 14px;
+    font-size:1.4rem;
     line-height: 1.5em;
     text-align: left;
     height: 4.5em;
@@ -308,11 +317,13 @@
 }
 .list3 .item .date .top{
     font-size: 18px;
+    font-size:1.8rem;
     padding: 0px 0px 4px 0px;
     border-bottom: 1px solid #ccc;
 }
 .list3 .item .date .bottom{
     font-size: 24px;
+    font-size:2.4rem;
     margin-top: 15px;
     font-weight: lighter;
 }
@@ -337,17 +348,20 @@
 }
 .list3 .item .title{
     font-size: 24px;
+    font-size:2.4rem;
     color: #666;
     margin: 0 0 20px 0;
     line-height: 1.5em;
 }
 .list3 .item .author{
     font-size: 18px;
+    font-size:1.8rem;
     margin: 10px 0px 15px 0px;
     color: #666;
 }
 .list3 .item .excerpt{
     font-size: 14px;
+    font-size:1.4rem;
     color: #808080;
     line-height: 1.5em;
     text-align: justify;
@@ -409,14 +423,17 @@
     margin: 10px 0px 50px 0px;
     line-height: 1.5em;
     font-size: 14px;
+    font-size:1.4rem;
 }
 .list32 .hasQuotation:before{
     font-size: 24px;
+    font-size:2.4rem;
     left:0px;
     top:-5px;
 }
 .list32 .hasQuotation:after{
     font-size: 24px;
+    font-size:2.4rem;
     right:0px;
     bottom:0px;
 }
@@ -497,6 +514,7 @@
 }
 .list5 .item .icon{
     font-size: 24px;
+    font-size:2.4rem;
     color: #fff;
     position: absolute;
     top:0px;
@@ -525,6 +543,7 @@
     text-align: center;
     color: #666;
     font-size: 14px;
+    font-size:1.4rem;
     margin: 10px 0px;
 }
 .list5 .item .excerpt{
