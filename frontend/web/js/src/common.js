@@ -21,16 +21,19 @@ $(document).ready(function(){
 
     });
 
-    $("#menu .item,#menu .subMenu").hover(function(){
-        if($(this).hasClass("subMenu")||$(this).find(".subMenu").length!=0){
+    $(".item").hover(function(){
+        if($(this).find(".subMenu").length!=0||$(this).parent(".subMenu").length!=0){
             $("#subMenuBg").animate({
                 height:"40px"
             },100);
         }else{
             $("#subMenuBg").height("0px");
         }
-    },function(){
-        $("#subMenuBg").height("0px");
+    },function(event){
+        if($(this).parent(".subMenu").length==0){
+            $("#subMenuBg").height("0px");
+        }
+
     });
 
     $(".search").keydown(function(e){
