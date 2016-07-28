@@ -21,8 +21,8 @@ $(document).ready(function(){
 
     });
 
-    $("#menu .item").hover(function(){
-        if($(this).find(".subMenu").length!=0){
+    $("#menu .item,#menu .subMenu").hover(function(){
+        if($(this).hasClass("subMenu")||$(this).find(".subMenu").length!=0){
             $("#subMenuBg").animate({
                 height:"40px"
             },100);
