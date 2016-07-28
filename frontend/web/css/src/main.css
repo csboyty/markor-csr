@@ -157,7 +157,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 12px;
     font-size: 1.2rem;
     border: 1px solid #808080;
-    transition: all 0.3s ease-out;
+    transition: background 0.3s ease-out;
 }
 .tag:hover{
     color: #fff;
