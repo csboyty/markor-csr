@@ -209,7 +209,7 @@
 }
 .list12 .item:hover .info{
     visibility: visible;
-    filter:alpha(opacity=70);
+    filter:alpha(opacity=80);
 }
 .list12 .item .excerpt{
     color: #fff;
