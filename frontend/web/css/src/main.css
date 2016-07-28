@@ -204,8 +204,8 @@ h1,h2,h3,h4,h5,h6{
 .menu>.item{
     display: inline-block;
     color: #808080;
+    position:relative;
 }
-
 .menu>.item>a{
     font-size: 14px;
     font-size: 1.4rem;
@@ -232,28 +232,23 @@ h1,h2,h3,h4,h5,h6{
     color: #000;
 }
 .menu .subMenu{
-    background: #eaeaea;
-    position: absolute;
-    width: 100%;
     height: 0px;
-    left:0px;
-    top:100%;
+    position: absolute;
     line-height: 40px;
-    transition:all .3s ease-out;
+    top:90px;
+    left:0px;
+    white-space: nowrap;
+    z-index: 3;
     overflow: hidden;
-    box-sizing: border-box;
-    z-index: 2;
-    text-align: right;
-    margin-top:1px;
 }
 .menu .subMenu.sp1{
-    padding-right: 40%;
+    margin-left: -50px;
 }
 .menu .subMenu.sp2{
-    padding-right: 20%;
+    margin-left: -150px;
 }
 .menu .subMenu.sp3{
-    padding-right: 20%;
+    margin-left: -105px;
 }
 .menu .subMenu>.item{
     padding: 0px 10px;
@@ -271,6 +266,21 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu>.item:hover>a::before{
     height:5px;
+}
+.menu .subMenuBg{
+    background: #eaeaea;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    left:0px;
+    top:100%;
+    line-height: 40px;
+    transition:all .3s ease-out;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 2;
+    text-align: right;
+    margin-top:1px;
 }
 .menu .item:hover .subMenu{
     height: 40px;

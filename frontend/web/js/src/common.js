@@ -21,6 +21,16 @@ $(document).ready(function(){
 
     });
 
+    $("#menu .item").hover(function(){
+        if($(this).find(".subMenu")){
+            $("#subMenuBg").height("40px");
+        }else{
+            $("#subMenuBg").height("0px");
+        }
+    },function(){
+        $("#subMenuBg").height("0px");
+    });
+
     $(".search").keydown(function(e){
         if(e.keyCode==13){
             window.location.href=document.getElementsByTagName("base")[0].getAttribute("href")+"search/"+$(this).val();

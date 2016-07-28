@@ -42,7 +42,7 @@ AppAsset::register($this);
                 <span class="icon-search"></span>
             </div>
         </div>
-        <ul class="menu displayNoneInMobile">
+        <ul class="menu displayNoneInMobile" id="menu">
             <li class="item">
                 <a href="<?php echo Yii::$app->homeUrl; ?>">首页</a>
             </li>
@@ -94,6 +94,7 @@ AppAsset::register($this);
             <li class="item">
                 <a href="stories/index">人物·故事</a>
             </li>
+            <div class="subMenuBg" id="subMenuBg"></div>
         </ul>
         
         <div class="menuMContainer displayInMobile">
