@@ -27,14 +27,10 @@ $(document).ready(function(){
                 height:"40px"
             },300);
         }else{
-            $("#subMenuBg").animate({
-                height:"0px"
-            },300);
+            $("#subMenuBg").height("0px");
         }
     },function(){
-        $("#subMenuBg").animate({
-            height:"0px"
-        },300);
+        $("#subMenuBg").height("0px");
     });
 
     $(".search").keydown(function(e){
