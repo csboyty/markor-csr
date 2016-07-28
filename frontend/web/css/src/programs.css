@@ -81,12 +81,12 @@
     display: block;
     perspective: 1000px;
 }
-.pSectionTopList .item .thumbContainer::before{
+.pSectionTopList .item .thumbContainer:before{
     content: "";
     display: block;
     height:0;
 }
-.pSectionTopList .item .ratio43::before{
+.pSectionTopList .item .ratio43:before{
     padding-top: 75%;
 }
 .pSectionTopList .item .thumb{
@@ -293,6 +293,7 @@
 }
 .pSectionList2 .item:hover .info{
     opacity: .7;
+    filter:alpha(opacity=70);
 }
 .pSectionList2 .item .title{
     font-size:18px;
