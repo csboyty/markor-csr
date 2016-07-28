@@ -450,10 +450,15 @@
         width: 100%;
         margin: 10px 0px;
     }
-    
+    .list5{
+        margin-bottom: 20px;
+    }
     .list5 .item{
         width:100%;
         padding: 0;
+    }
+    .list5 .item .thumb{
+        width: 100%;
     }
 }
 
