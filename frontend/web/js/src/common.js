@@ -22,10 +22,10 @@ $(document).ready(function(){
     });
 
     $("#menu .item").hover(function(){
-        if($(this).find(".subMenu")){
+        if($(this).find(".subMenu").length!=0){
             $("#subMenuBg").animate({
                 height:"40px"
-            },300);
+            },100);
         }else{
             $("#subMenuBg").height("0px");
         }
