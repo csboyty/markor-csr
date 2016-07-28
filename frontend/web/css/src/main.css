@@ -888,6 +888,7 @@ h1,h2,h3,h4,h5,h6{
     top:50%;
     width:50%;
     transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
     text-align: center;
     color: #fff;
     word-break: break-all;
@@ -1014,6 +1015,7 @@ h1,h2,h3,h4,h5,h6{
     left:50%;
     top: 50%;
     transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
 }
 .artItem .icon{
     position: absolute;
@@ -1047,6 +1049,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .artItem:hover .image{
     transform:scale(1.05,1.05);
+    -ms-transform:scale(1.05,1.05);
 }
 .artRoomItem .icon{
     right:20px;
@@ -1058,7 +1061,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .artRoomItem:hover .icon{
     transform-origin: 100% 100% 0px;
+    -ms-transform-origin: 100% 100% 0px;
     transform:rotate(5deg);
+    -ms-transform:rotate(5deg);
 }
 .teacherTrainItem .info{
     background:#fff;
