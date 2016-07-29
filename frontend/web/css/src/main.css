@@ -990,10 +990,13 @@ h1,h2,h3,h4,h5,h6{
     word-wrap: break-word;
 }
 .post .content p{
-    line-height: 1.5em!important;
+    line-height: 2em!important;
     text-indent: 2em!important;
     font-size:14px!important;
     font-size: 1.4rem!important;
+    margin:1em 0;
+    letter-spacing: .05em;
+    text-align: justify;
 }
 .post .content img{
     display: block;
