@@ -460,6 +460,16 @@
     .list5 .item .thumb{
         width: 100%;
     }
+    
+    .flexslider .flex-direction-nav a{
+        width:20px;
+        height:20px;
+        margin:-10px 0 0;
+    }
+    .flexslider .flex-direction-nav a::before{
+        font-size: 20px;
+        line-height: 20px;
+    }
 }
 
 @media screen and (max-width:480px){
