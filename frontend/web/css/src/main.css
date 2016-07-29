@@ -562,7 +562,15 @@ h1,h2,h3,h4,h5,h6{
     padding: 0px 20px;
 }
 
-
+.section.trainPlan{
+    
+}
+.section.trainPlan h3{
+    width:80%;
+    border:#808080 1px solid;
+    padding:10px;
+    box-sizing: border-box;
+}
 
 .section .titleFeature{
     background-image: url(../../images/app/sectionTitles/feature.png);
