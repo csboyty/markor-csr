@@ -21,20 +21,23 @@ $(document).ready(function(){
 
     });
 
-   /* $(".item").hover(function(){
+    $(".item").hover(function(){
         if($(this).find(".subMenu").length!=0||$(this).parent(".subMenu").length!=0){
-            $("#subMenuBg").animate({
+            /*$("#subMenuBg").animate({
                 height:"40px"
-            },300);
+            },300);*/
+            $("#subMenuBg").addClass("active")
         }else{
-            $("#subMenuBg").height("0px");
+            /*$("#subMenuBg").height("0px");*/
+            $("#subMenuBg").removeClass("active")
         }
     },function(event){
         if($(this).parent(".subMenu").length==0){
-            $("#subMenuBg").height("0px");
+            /*$("#subMenuBg").height("0px");*/
+            $("#subMenuBg").removeClass("active")
         }
 
-    });*/
+    });
 
     $(".search").keydown(function(e){
         if(e.keyCode==13){
