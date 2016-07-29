@@ -203,6 +203,7 @@
 /*    transition:all 0.4s ease-out;*/
     color: #fff;
     filter:alpha(opacity=0);
+    opacity: 0;
 }
 .list12 .item .title{
     border-bottom: 1px solid #fff;
@@ -216,6 +217,7 @@
 .list12 .item:hover .info{
     visibility: visible;
     filter:alpha(opacity=90);
+    opacity: 1;
 }
 .list12 .item .excerpt{
     color: #fff;
