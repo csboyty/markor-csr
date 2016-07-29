@@ -23,7 +23,8 @@
     text-align: center;
 }
 .program>.excerpt{
-    line-height: 1.5em;
+    line-height: 2em;
+    letter-spacing: .05em;
     text-indent: 2em;
     font-size:14px;
     font-size: 1.4rem;
