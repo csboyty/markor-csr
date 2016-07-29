@@ -527,7 +527,7 @@
         margin: 20px auto;
     }
     .list3 .item .thumbContainer{
-        width: 30%;
+        width: 100%;
         vertical-align: top;
         display: block;
         margin: 10px auto
