@@ -246,7 +246,7 @@ h1,h2,h3,h4,h5,h6{
     z-index: 3;
     overflow: hidden;
     font-size: 0px;
-    transition:all .2s ease-in;
+    transition:all .3s ease-out;
 }
 .menu .subMenu.sp1{
     margin-left: -50px;
@@ -287,6 +287,7 @@ h1,h2,h3,h4,h5,h6{
     z-index: 2;
     text-align: right;
     margin-top:1px;
+    transition: all 0.3s ease-out;
 }
 .menu .item:hover .subMenu{
     height: 40px;
