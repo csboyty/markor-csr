@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     });
 
-    $(".item").hover(function(){
+   /* $(".item").hover(function(){
         if($(this).find(".subMenu").length!=0||$(this).parent(".subMenu").length!=0){
             $("#subMenuBg").animate({
                 height:"40px"
@@ -34,7 +34,7 @@ $(document).ready(function(){
             $("#subMenuBg").height("0px");
         }
 
-    });
+    });*/
 
     $(".search").keydown(function(e){
         if(e.keyCode==13){
