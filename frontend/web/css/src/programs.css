@@ -28,6 +28,7 @@
     text-indent: 2em;
     font-size:14px;
     font-size: 1.4rem;
+    text-align: justify;
 }
 .program .pSection{
     clear: both;
