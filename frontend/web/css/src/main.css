@@ -930,6 +930,7 @@ h1,h2,h3,h4,h5,h6{
     height: 3em;
     max-width: 600px;
     font-family: Arail,"微软雅黑","苹方-简";
+    white-space: normal;
 }
 /*************************分页********************/
 .pagination{
