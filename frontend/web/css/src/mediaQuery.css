@@ -452,6 +452,9 @@
         width: 100%;
         margin: 10px 0px;
     }
+    .list .item .excerpt{
+        height: auto;
+    }
     .list5 .item{
         width:100%;
         padding: 0;
@@ -460,15 +463,8 @@
     .list5 .item .thumb{
         width: 100%;
     }
-    
-    .flexslider .flex-direction-nav a{
-        width:20px;
-        height:20px;
-        margin:-10px 0 0;
-    }
-    .flexslider .flex-direction-nav a::before{
-        font-size: 20px;
-        line-height: 20px;
+    .flexslider .flex-direction-nav{
+        display: none;
     }
 }
 
