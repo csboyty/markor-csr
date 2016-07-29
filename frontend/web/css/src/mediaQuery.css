@@ -455,6 +455,9 @@
     .list .item .excerpt{
         height: auto;
     }
+    .list1 .item .excerpt{
+        height: auto;
+    }
     .list5 .item{
         width:100%;
         padding: 0;
@@ -494,7 +497,7 @@
         font-size:1.6rem;
     }
     .breadcrumb{
-        padding: 0px 2%;
+        padding: 0px 20px;
     }
     .breadcrumb>li{
         font-size: 12px;
