@@ -13,8 +13,6 @@ $this->params=[
         ]
     ]
 ];
-
-print_r($query);
 ?>
 <div class="section">
     <ul class="list5">

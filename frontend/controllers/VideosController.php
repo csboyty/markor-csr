@@ -38,7 +38,6 @@ class VideosController extends Controller
         $results = $query->orderBy(["date"=>SORT_DESC])->all();
 
         return $this->render('index',[
-            "query"=>$query,
             "results"=>$results
         ]);
     }
