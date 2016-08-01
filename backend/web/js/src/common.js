@@ -1,5 +1,6 @@
 function Mgr(ownTable) {
     this.ownTable = ownTable();
+    this.say="hello";
 }
 Mgr.prototype.tableRedraw = function () {
     this.ownTable.fnSettings()._iDisplayStart = 0;
@@ -48,16 +49,17 @@ Mgr.prototype.published = function (id, value) {
     });
 };
 Mgr.prototype.initFunc=function(){
+    var me=this;
     $("#searchBtn").click(function(){
-        Mgr.prototype.tableRedraw();
+        me.tableRedraw();
     });
 
     $("#myTable").on("click","a.delete",function(){
         if(confirm(config.messages.confirmDelete)){
-            Mgr.prototype.delete($(this).attr("href"));
+            me.delete($(this).attr("href"));
         }
         return false;
     }).on("change",".published",function(){
-            Mgr.prototype.published($(this).data("id"),$(this).val());
+            me.published($(this).data("id"),$(this).val());
         })
 };
