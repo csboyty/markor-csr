@@ -32,7 +32,7 @@ class SearchController extends Controller
             }
         }
 
-        $results=Post::find()->where(["or",['like', 'title', $param],['like', 'excerpt', $param],['like', 'author', $param]])
+        $results=Post::ownFind()->andWhere(["or",['like', 'title', $param],['like', 'excerpt', $param],['like', 'author', $param]])
             ->orderBy(["id"=>SORT_DESC])->all();
 
         return $this->render('index',[

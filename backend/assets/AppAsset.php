@@ -31,7 +31,8 @@ class AppAsset extends AssetBundle
         "js/lib/qiniu.js",
         "js/lib/tinymce.min.js",
         "js/src/config.js",
-        "js/src/functions.js"
+        "js/src/functions.js",
+        "js/src/common.js"
     ];
     public $depends = [
         'yii\web\JqueryAsset',

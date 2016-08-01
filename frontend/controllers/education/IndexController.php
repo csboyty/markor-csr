@@ -22,7 +22,7 @@ class IndexController extends Controller
 
     public function actionIndex()
     {
-        $collegeResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["resultCollegeStudent"]])
+        $collegeResults=Post::ownFind()->andWhere(["category_id"=>Yii::$app->params["categories"]["resultCollegeStudent"]])
             ->limit(3)->orderBy(["id"=>SORT_DESC])->all();
 
 

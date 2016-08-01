@@ -23,7 +23,7 @@ class ChildDrawController extends Controller
 
     public function actionIndex()
     {
-        $baseQuery=Post::find();
+        $baseQuery=Post::ownFind();
         $collectResultsQuery=clone $baseQuery;
         $videoResultsQuery=clone $baseQuery;
         $workResultsQuery=clone $baseQuery;
@@ -34,14 +34,14 @@ class ChildDrawController extends Controller
         foreach($categories as $c){
             array_push($categoriesArray,$c->id);
         }
-        $collectResults=$collectResultsQuery->where(["category_id"=>
+        $collectResults=$collectResultsQuery->andWhere(["category_id"=>
             $categoriesArray])
             ->limit(3)->orderBy(["id"=>SORT_DESC])->all();
 
-        $videoResults=$videoResultsQuery->where(["category_id"=>
+        $videoResults=$videoResultsQuery->andWhere(["category_id"=>
             Yii::$app->params["categories"]["videoChildDraw"]])
             ->orderBy(["id"=>SORT_DESC])->all();
-        $workResults=$workResultsQuery->where(["category_id"=>
+        $workResults=$workResultsQuery->andWhere(["category_id"=>
             Yii::$app->params["categories"]["resultChildDraw"]])
             ->limit(3)->orderBy(["id"=>SORT_DESC])->all();
         return $this->render('index',[
@@ -55,7 +55,7 @@ class ChildDrawController extends Controller
         $categories=Category::find()->where(["parent_id"=>Yii::$app->params["categories"]["childDrawCollect"]])->all();
         $results=array();
         foreach($categories as $c){
-            $results[$c->name]=Post::find()->where(["category_id"=>$c->id])->all();
+            $results[$c->name]=Post::ownFind()->andWhere(["category_id"=>$c->id])->all();
         }
         return $this->render('collect',[
             "results"=>$results

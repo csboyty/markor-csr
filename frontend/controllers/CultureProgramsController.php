@@ -29,9 +29,9 @@ class CultureProgramsController extends Controller
             ]);
         }
 
-        $query=Post::find();
+        $query=Post::ownFind();
 
-        $query->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"],"memo"=>1]);
+        $query->andWhere(["category_id"=>Yii::$app->params["categories"]["cultureProgram"],"memo"=>1]);
         $results = $query->orderBy(["date"=>SORT_DESC])->all();
 
         return $this->render('index',[

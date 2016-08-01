@@ -40,6 +40,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             [['category_id', 'user_id'], 'integer'],
+            [['published'], 'integer'],
             [['date'], 'safe'],
             [['content'], 'string'],
             [['thumb','bg_image'], 'string', 'max' => 128],
@@ -66,7 +67,12 @@ class Post extends \yii\db\ActiveRecord
             'author' => 'Author',
             'content' => 'Content',
             'memo' => 'Memo',
+            'published' => 'Published'
         ];
+    }
+
+    public static function ownFind(){
+        return self::find()->andWhere(["published"=>1]);
     }
 
     /**

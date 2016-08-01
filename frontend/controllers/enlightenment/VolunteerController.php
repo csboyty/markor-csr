@@ -23,18 +23,18 @@ class VolunteerController extends Controller
 
     public function actionIndex()
     {
-        $baseQuery=Post::find();
+        $baseQuery=Post::ownFind();
         $activityResultsQuery=clone $baseQuery;
         $speechResultsQuery=clone $baseQuery;
         $trainResultsQuery=clone $baseQuery;
 
-        $activityResults=$activityResultsQuery->where(["category_id"=>
+        $activityResults=$activityResultsQuery->andWhere(["category_id"=>
             Yii::$app->params["categories"]["activityVolunteer"]])
             ->limit(3)->orderBy(["date"=>SORT_DESC])->all();
-        $speechResults=$speechResultsQuery->where(["category_id"=>
+        $speechResults=$speechResultsQuery->andWhere(["category_id"=>
             Yii::$app->params["categories"]["speechVolunteer"]])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
-        $trainResults=$trainResultsQuery->where(["category_id"=>
+        $trainResults=$trainResultsQuery->andWhere(["category_id"=>
             Yii::$app->params["categories"]["volunteerTrain"]])
             ->limit(3)->orderBy(["id"=>SORT_DESC])->all();
         return $this->render('index',[
@@ -46,8 +46,8 @@ class VolunteerController extends Controller
 
     public function actionTrain(){
 
-        $query=Post::find();
-        $query->where(["category_id"=>Yii::$app->params["categories"]["volunteerTrain"]]);
+        $query=Post::andWhere();
+        $query->andWhere(["category_id"=>Yii::$app->params["categories"]["volunteerTrain"]]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
         Yii::$app->params["perShowCount"]["default"]]);
         $results = $query->orderBy(["id"=>SORT_DESC])->offset($pages->offset)->limit($pages->limit)->all();

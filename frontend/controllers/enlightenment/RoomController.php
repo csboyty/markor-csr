@@ -22,13 +22,13 @@ class RoomController extends Controller
 
     public function actionIndex()
     {
-        $baseQuery=Post::find();
+        $baseQuery=Post::ownFind();
         $activityResultsQuery=clone $baseQuery;
         $donationResultsQuery=clone $baseQuery;
 
-        $activityResults=$activityResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
+        $activityResults=$activityResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
             ->limit(3)->all();
-        $donationResults=$donationResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["donation"]])
+        $donationResults=$donationResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["donation"]])
             ->limit(1)->all();
         return $this->render('index',[
             "activityResults"=>$activityResults,

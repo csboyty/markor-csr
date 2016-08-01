@@ -38,8 +38,8 @@ class WorksController extends Controller
             }
         }
 
-        $query=Post::find();
-        $query->where(["category_id"=>$paramId]);
+        $query=Post::ownFind();
+        $query->andWhere(["category_id"=>$paramId]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
         Yii::$app->params["perShowCount"]["default"]]);
         $results = $query->offset($pages->offset)->limit($pages->limit)->all();

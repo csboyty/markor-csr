@@ -188,28 +188,15 @@ label.error{
     float: right;
     position: relative;
 }
-.tableSearchContainer .col-md-2{
-    
-    display: inline-block;
-    position: absolute;
-    width:150px;
-    right: 60px;
-    top: 0;
-}
 .tableSearchContainer label{
-    display: inline-block;
-    position: absolute;
-    width:60px;
-    max-width: 80px;
-    right: 210px;
-    top: 0;
+    float: left;
+    line-height: 34px;
+    font-weight: normal;
 }
-.tableSearchContainer .btn{
-    display: inline-block;
-    width:60px;
-    position: absolute;
-    top:0;
-    right: 0;
+.tableSearchContainer .col{
+    float: left;
+    width: 100px;
+    margin: 0px 5px;
 }
 table.dataTable{
     margin-top: 20px;
@@ -255,6 +242,14 @@ table.dataTable .thumb{
     height: auto;
 }
 table.dataTable td a{
+    padding: 5px 10px;
+    display: inline-block;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+    margin:5px 0 0 10px;
+    color: #333;
+}
+table.dataTable td select{
     padding: 5px 10px;
     display: inline-block;
     border: #ddd 1px solid;

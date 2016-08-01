@@ -1,10 +1,6 @@
-var cultureProgramPostsMgr=(function(config,functions){
-    var loadedData={};
-    /**
-     * 创建datatable
-     * @returns {*|jQuery}
-     */
-    function createTable(){
+$(document).ready(function(){
+
+    var mgr=new Mgr(function createTable(){
 
         var ownTable=$("#myTable").dataTable({
             "bServerSide": true,
@@ -80,56 +76,8 @@ var cultureProgramPostsMgr=(function(config,functions){
         });
 
         return ownTable;
-    }
-
-    return {
-        ownTable:null,
-        createTable:function(){
-            this.ownTable=createTable();
-        },
-        tableRedraw:function(){
-            this.ownTable.fnSettings()._iDisplayStart=0;
-            this.ownTable.fnDraw();
-        },
-        delete:function(id){
-            functions.showLoading();
-            var me=this;
-            $.ajax({
-                url:config.ajaxUrls.postDelete+"?id="+id,
-                type:"post",
-                dataType:"json",
-                success:function(response){
-                    if(response.success){
-                        $().toastmessage("showSuccessToast",config.messages.optSuccess);
-                        me.ownTable.fnDraw();
-                        functions.hideLoading();
-                    }else{
-                        functions.ajaxReturnErrorHandler(response.error_code);
-                    }
-
-                },
-                error:function(){
-                    functions.ajaxErrorHandler();
-                }
-            });
-        }
-    }
-})(config,functions);
-
-$(document).ready(function(){
-
-    cultureProgramPostsMgr.createTable();
-
-    $("#searchBtn").click(function(e){
-        cultureProgramPostsMgr.tableRedraw();
     });
 
-
-    $("#myTable").on("click","a.delete",function(){
-        if(confirm(config.messages.confirmDelete)){
-            cultureProgramPostsMgr.delete($(this).attr("href"));
-        }
-        return false;
-    })
+    mgr.initFunc();
 });
 

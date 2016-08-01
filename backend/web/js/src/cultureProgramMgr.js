@@ -1,10 +1,6 @@
-var cultureProgramMgr=(function(config,functions){
-    var loadedData={};
-    /**
-     * 创建datatable
-     * @returns {*|jQuery}
-     */
-    function createTable(){
+$(document).ready(function(){
+
+    var mgr=new Mgr(function createTable(){
 
         var ownTable=$("#myTable").dataTable({
             "bServerSide": true,
@@ -23,6 +19,23 @@ var cultureProgramMgr=(function(config,functions){
             "aoColumns": [
                 { "mDataProp": "title"},
                 { "mDataProp": "date"},
+                { "mDataProp": "published",
+                    "fnRender":function(oObj){
+                        var string="<select class='published' data-id='"+oObj.aData.id+"'>";
+
+                        if(oObj.aData.published==0){
+                            string+="<option value='0' selected>"+config.status.published[0]+"</option>" +
+                                "<option value='1'>"+config.status.published[1]+"</option>";
+                        }else{
+                            string+="<option value='0'>"+config.status.published[0]+"</option>" +
+                                "<option value='1' selected>"+config.status.published[1]+"</option>";
+                        }
+
+                        string+="</select>";
+
+                        return string;
+                    }
+                },
                 { "mDataProp": "opt",
                     "fnRender":function(oObj){
                         return '<a href="culture-program/update?id='+oObj.aData.id+'">修改</a>&nbsp;' +
@@ -31,12 +44,16 @@ var cultureProgramMgr=(function(config,functions){
                 }
             ] ,
             "fnServerParams": function ( aoData ) {
+                var filter="memo=1";
+                if($("#filter").val()){
+                    filter+=" and published="+$("#filter").val();
+                }
                 aoData.push({
                     name:"category",
                     value:category_id
                 },{
                     name:"filter",
-                    value:"memo=1"
+                    value:filter
                 })
             },
             "fnServerData": function(sSource, aoData, fnCallback) {
@@ -74,51 +91,8 @@ var cultureProgramMgr=(function(config,functions){
         });
 
         return ownTable;
-    }
+    });
 
-    return {
-        ownTable:null,
-        createTable:function(){
-            this.ownTable=createTable();
-        },
-        tableRedraw:function(){
-            this.ownTable.fnSettings()._iDisplayStart=0;
-            this.ownTable.fnDraw();
-        },
-        delete:function(id){
-            functions.showLoading();
-            var me=this;
-            $.ajax({
-                url:config.ajaxUrls.postDelete+"?id="+id,
-                type:"post",
-                dataType:"json",
-                success:function(response){
-                    if(response.success){
-                        $().toastmessage("showSuccessToast",config.messages.optSuccess);
-                        me.ownTable.fnDraw();
-                        functions.hideLoading();
-                    }else{
-                        functions.ajaxReturnErrorHandler(response.error_code);
-                    }
-
-                },
-                error:function(){
-                    functions.ajaxErrorHandler();
-                }
-            });
-        }
-    }
-})(config,functions);
-
-$(document).ready(function(){
-
-    cultureProgramMgr.createTable();
-
-    $("#myTable").on("click","a.delete",function(){
-        if(confirm(config.messages.confirmDelete)){
-            cultureProgramMgr.delete($(this).attr("href"));
-        }
-        return false;
-    })
+    mgr.initFunc();
 });
 

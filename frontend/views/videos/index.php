@@ -12,7 +12,9 @@ $this->params=[
             //'template' => "<li><b>{link}</b></li>\n", // template for this link only
         ]
     ]
-]
+];
+
+print_r($query);
 ?>
 <div class="section">
     <ul class="list5">

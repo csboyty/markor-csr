@@ -16,10 +16,18 @@ var config={
     ajaxUrls:{
         postGetAll:"post/list",
         postDelete:"post/delete",
+        postPublished:"post/published",
         recruitGetAll:"recruit/list",
         recruitDelete:"recruit/delete",
+        recruitPublished:"recruit/published",
         categoryGetAll:"category/list",
         categoryDelete:"category/delete"
+    },
+    status:{
+        published:{
+            "0":"未发布",
+            "1":"发布"
+        }
     },
     dataTable:{
         langUrl:"lang/de_DE.txt"

@@ -35,6 +35,7 @@ class Recruit extends \yii\db\ActiveRecord
         return [
             [['date'], 'safe'],
             [['user_id'], 'integer'],
+            [['published'], 'integer'],
             [['job'], 'string', 'max' => 32],
             [['job_require', 'internship_require'], 'string', 'max' => 512],
             [['address'], 'string', 'max' => 64]
@@ -54,6 +55,7 @@ class Recruit extends \yii\db\ActiveRecord
             'address' => 'Address',
             'date' => 'Date',
             'user_id' => 'User ID',
+            'published' => 'Published'
         ];
     }
 

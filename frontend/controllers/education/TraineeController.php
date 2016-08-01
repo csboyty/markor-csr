@@ -23,7 +23,7 @@ class TraineeController extends Controller
 
     public function actionIndex()
     {
-        $speechResults=Post::find()->where(["category_id"=>Yii::$app->params["categories"]["speechTrainee"]])
+        $speechResults=Post::ownFind()->andWhere(["category_id"=>Yii::$app->params["categories"]["speechTrainee"]])
             ->orderBy(["id"=>SORT_DESC])->limit(3)->all();
 
         $recruitResults=Recruit::find()->limit(1)->orderBy(["date"=>SORT_DESC])->all();
@@ -36,7 +36,8 @@ class TraineeController extends Controller
 
     public function actionRecruits(){
 
-        $results=Recruit::find()->limit(1)->orderBy(["date"=>SORT_DESC])->all();
+        $results=Recruit::find()->where(["published"=>1])
+            ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
         return $this->render("recruits",[
             "results"=>$results
         ]);

@@ -32,12 +32,13 @@ class VideosController extends Controller
             ]);
         }
 
-        $query=Post::find();
+        $query=Post::ownFind();
 
-        $query->where(["category_id"=>Yii::$app->params["categories"]["video"]]);
+        $query->andWhere(["category_id"=>Yii::$app->params["categories"]["video"]]);
         $results = $query->orderBy(["date"=>SORT_DESC])->all();
 
         return $this->render('index',[
+            "query"=>$query,
             "results"=>$results
         ]);
     }

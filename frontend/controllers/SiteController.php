@@ -27,7 +27,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $baseQuery=Post::find();
+        $baseQuery=Post::ownFind();
         $wechatResultsQuery=clone $baseQuery;
         $rollResultsQuery=clone $baseQuery;
         $storyResultsQuery=clone $baseQuery;
@@ -36,23 +36,23 @@ class SiteController extends Controller
         $educationResultsQuery=clone $baseQuery;
         $enlightenmentResultsQuery=clone $baseQuery;
 
-        $wechatResults=$wechatResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["wechat"]])
+        $wechatResults=$wechatResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["wechat"]])
             ->limit(3)->orderBy(["date"=>SORT_DESC])->all();
-        $rollResults=$rollResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["artNews"],
+        $rollResults=$rollResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["artNews"],
                 "memo"=>1
             ])->limit(3)->orderBy(["date"=>SORT_DESC])->all();
-        $storyResults=$storyResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["story"]])
+        $storyResults=$storyResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["story"]])
             ->limit(6)->orderBy(["date"=>SORT_DESC])->all();
-        $videos=$videosQuery->where(["category_id"=>[
+        $videos=$videosQuery->andWhere(["category_id"=>[
             Yii::$app->params["categories"]["video"],
             Yii::$app->params["categories"]["videoChildDraw"]
         ]])->orderBy(["date"=>SORT_DESC])->limit(1)->all();
 
-        $cPResults=$cPResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]])
+        $cPResults=$cPResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
-        $educationResults=$educationResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["award"]])
+        $educationResults=$educationResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["award"]])
             ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
-        $enlightenmentResults=$enlightenmentResultsQuery->where(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
+        $enlightenmentResults=$enlightenmentResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
             ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
 
         return $this->render('index',[

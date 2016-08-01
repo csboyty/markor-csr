@@ -13,11 +13,23 @@ $this->title = '大学奖学金活动';
     <a class="btn btn-success" href="award/create">
         <span class="glyphicon glyphicon-plus"></span> 新建
     </a>
+    <div class="tableSearchContainer">
+        <label>发布</label>
+        <div class="col">
+            <select class="form-control" id="filter">
+                <option value="">全部</option>
+                <option value="1">发布</option>
+                <option value="0">未发布</option>
+            </select>
+        </div>
+        <button id="searchBtn" class="btn btn-default" type="button">搜索</button>
+    </div>
     <table id="myTable" class="dataTable">
         <thead>
         <tr>
             <th>图片</th>
             <th>名称</th>
+            <th>发布</th>
             <th>操作</th>
         </tr>
         </thead>

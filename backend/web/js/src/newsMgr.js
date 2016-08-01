@@ -1,11 +1,6 @@
-var newsMgr=(function(config,functions){
-    var loadedData={};
-    /**
-     * 创建datatable
-     * @returns {*|jQuery}
-     */
-    function createTable(){
+$(document).ready(function(){
 
+    var mgr=new Mgr(function createTable(){
         var ownTable=$("#myTable").dataTable({
             "bServerSide": true,
             "sAjaxSource": config.ajaxUrls.postGetAll,
@@ -24,6 +19,23 @@ var newsMgr=(function(config,functions){
                 { "mDataProp": "id"},
                 { "mDataProp": "title"},
                 { "mDataProp": "date"},
+                { "mDataProp": "published",
+                    "fnRender":function(oObj){
+                        var string="<select class='published' data-id='"+oObj.aData.id+"'>";
+
+                        if(oObj.aData.published==0){
+                            string+="<option value='0' selected>"+config.status.published[0]+"</option>" +
+                                "<option value='1'>"+config.status.published[1]+"</option>";
+                        }else{
+                            string+="<option value='0'>"+config.status.published[0]+"</option>" +
+                                "<option value='1' selected>"+config.status.published[1]+"</option>";
+                        }
+
+                        string+="</select>";
+
+                        return string;
+                    }
+                },
                 { "mDataProp": "memo",
                     "fnRender":function(oObj){
                         return oObj.aData.memo==1?"是":"否";
@@ -36,12 +48,20 @@ var newsMgr=(function(config,functions){
                 }
             ] ,
             "fnServerParams": function ( aoData ) {
+                var filter=$("#filter").val()?"memo="+$("#filter").val():"";
+                if($("#filter1").val()){
+                    if(filter){
+                        filter+=" and published="+$("#filter1").val();
+                    }else{
+                        filter="published="+$("#filter1").val();
+                    }
+                }
                 aoData.push({
                     name:"category",
                     value:category_id
                 },{
                     name:"filter",
-                    value:$("#filter").val()?"memo="+$("#filter").val():""
+                    value:filter
                 })
             },
             "fnServerData": function(sSource, aoData, fnCallback) {
@@ -79,55 +99,8 @@ var newsMgr=(function(config,functions){
         });
 
         return ownTable;
-    }
-
-    return {
-        ownTable:null,
-        createTable:function(){
-            this.ownTable=createTable();
-        },
-        tableRedraw:function(){
-            this.ownTable.fnSettings()._iDisplayStart=0;
-            this.ownTable.fnDraw();
-        },
-        delete:function(id){
-            functions.showLoading();
-            var me=this;
-            $.ajax({
-                url:config.ajaxUrls.postDelete+"?id="+id,
-                type:"post",
-                dataType:"json",
-                success:function(response){
-                    if(response.success){
-                        $().toastmessage("showSuccessToast",config.messages.optSuccess);
-                        me.ownTable.fnDraw();
-                        functions.hideLoading();
-                    }else{
-                        functions.ajaxReturnErrorHandler(response.error_code);
-                    }
-
-                },
-                error:function(){
-                    functions.ajaxErrorHandler();
-                }
-            });
-        }
-    }
-})(config,functions);
-
-$(document).ready(function(){
-
-    newsMgr.createTable();
-
-    $("#searchBtn").click(function(e){
-        newsMgr.tableRedraw();
     });
 
-    $("#myTable").on("click","a.delete",function(){
-        if(confirm(config.messages.confirmDelete)){
-            newsMgr.delete($(this).attr("href"));
-        }
-        return false;
-    })
+    mgr.initFunc();
 });
 

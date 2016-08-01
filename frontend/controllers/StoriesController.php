@@ -30,9 +30,9 @@ class StoriesController extends Controller
             ]);
         }
 
-        $query=Post::find();
+        $query=Post::ownFind();
 
-        $query->where(["category_id"=>Yii::$app->params["categories"]["story"]]);
+        $query->andWhere(["category_id"=>Yii::$app->params["categories"]["story"]]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
         Yii::$app->params["perShowCount"]["default"]]);
         $results = $query->offset($pages->offset)->limit($pages->limit)->orderBy(["date"=> SORT_DESC])->all();
