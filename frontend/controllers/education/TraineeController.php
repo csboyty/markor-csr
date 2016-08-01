@@ -37,7 +37,7 @@ class TraineeController extends Controller
     public function actionRecruits(){
 
         $results=Recruit::find()->where(["published"=>1])
-            ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
+            ->orderBy(["date"=>SORT_DESC])->all();
         return $this->render("recruits",[
             "results"=>$results
         ]);
