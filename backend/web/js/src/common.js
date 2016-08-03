@@ -28,26 +28,6 @@ Mgr.prototype.delete = function (id) {
         }
     });
 };
-Mgr.prototype.published = function (id, value) {
-    functions.showLoading();
-    $.ajax({
-        url: config.ajaxUrls.postPublished + "?id=" + id + "&published=" + value,
-        type: "post",
-        dataType: "json",
-        success: function (response) {
-            if (response.success) {
-                $().toastmessage("showSuccessToast", config.messages.optSuccess);
-                functions.hideLoading();
-            } else {
-                functions.ajaxReturnErrorHandler(response.error_code);
-            }
-
-        },
-        error: function () {
-            functions.ajaxErrorHandler();
-        }
-    });
-};
 Mgr.prototype.initFunc=function(){
     var me=this;
     $("#searchBtn").click(function(){
@@ -59,7 +39,5 @@ Mgr.prototype.initFunc=function(){
             me.delete($(this).attr("href"));
         }
         return false;
-    }).on("change",".published",function(){
-            me.published($(this).data("id"),$(this).val());
-        })
+    });
 };

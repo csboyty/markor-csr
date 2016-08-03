@@ -51,17 +51,48 @@ $this->registerCssFile("@web/css/lib/date_input.css");
         </div>
     </div>
     <div class="form-group">
+        <label for="name" class="control-label col-md-2">发布*</label>
+        <div class="col-md-8">
+            <select name="published" class="form-control">
+                <?php
+                $values=[
+                    [
+                    "name"=>"发布",
+                    "value"=>1
+                    ],
+                    [
+                        "name"=>"未发布",
+                        "value"=>0
+                    ]
+                ];
+                foreach($values as $v){
+                    ?>
+
+                    <option
+                        <?php if(isset($model)&&$model->published==$v["value"]){
+                            echo "selected";
+                        } ?>
+                        value="<?php echo $v["value"]; ?>"><?php echo $v["name"]; ?>
+                    </option>
+
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
         <label for="name" class="control-label col-md-2">首页显示*</label>
         <div class="col-md-8">
             <select name="memo" class="form-control">
                 <?php
                 $values=[
                     [
-                        "name"=>"否",
+                        "name"=>"不显示",
                         "value"=>0
                     ],
                     [
-                        "name"=>"是",
+                        "name"=>"显示",
                         "value"=>1
                     ]
                 ];
@@ -69,7 +100,7 @@ $this->registerCssFile("@web/css/lib/date_input.css");
                     ?>
 
                     <option
-                        <?php if($model->memo==$v["value"]){
+                        <?php if(isset($model)&&$model->memo==$v["value"]){
                             echo "selected";
                         } ?>
                         value="<?php echo $v["value"]; ?>"><?php echo $v["name"]; ?>

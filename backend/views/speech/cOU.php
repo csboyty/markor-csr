@@ -41,6 +41,37 @@ $this->title = '新建/修改----'.(isset($parentCategory)?$parentCategory->name
         </div>
     </div>
     <div class="form-group">
+        <label for="name" class="control-label col-md-2">发布*</label>
+        <div class="col-md-8">
+            <select name="published" class="form-control">
+                <?php
+                $values=[
+                    [
+                        "name"=>"发布",
+                        "value"=>1
+                    ],
+                    [
+                        "name"=>"未发布",
+                        "value"=>0
+                    ]
+                ];
+                foreach($values as $v){
+                    ?>
+
+                    <option
+                        <?php if(isset($model)&&$model->published==$v["value"]){
+                            echo "selected";
+                        } ?>
+                        value="<?php echo $v["value"]; ?>"><?php echo $v["name"]; ?>
+                    </option>
+
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
         <label  class="control-label col-md-2">内容*</label>
         <div class="col-md-8">
             <textarea class="form-control"  name="excerpt" rows="3"><?php echo $model->excerpt; ?></textarea>

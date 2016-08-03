@@ -24,19 +24,7 @@ $(document).ready(function(){
                 { "mDataProp": "title"},
                 { "mDataProp": "published",
                     "fnRender":function(oObj){
-                        var string="<select class='published' data-id='"+oObj.aData.id+"'>";
-
-                        if(oObj.aData.published==0){
-                            string+="<option value='0' selected>"+config.status.published[0]+"</option>" +
-                                "<option value='1'>"+config.status.published[1]+"</option>";
-                        }else{
-                            string+="<option value='0'>"+config.status.published[0]+"</option>" +
-                                "<option value='1' selected>"+config.status.published[1]+"</option>";
-                        }
-
-                        string+="</select>";
-
-                        return string;
+                        return config.status.published[oObj.aData.published];
                     }
                 },
                 { "mDataProp": "opt",

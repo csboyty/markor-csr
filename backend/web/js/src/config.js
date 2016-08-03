@@ -27,6 +27,10 @@ var config={
         published:{
             "0":"未发布",
             "1":"发布"
+        },
+        homeShow:{
+            "0":"不显示",
+            "1":"显示"
         }
     },
     dataTable:{

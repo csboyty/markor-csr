@@ -119,7 +119,6 @@ class PostController extends \yii\web\Controller
         $data=array();
 
         $params["user_id"]=Yii::$app->user->getId();
-        $params["published"]=1;
 
         //yii自动生成的form参数是Xxx["name"]这种形式，获取后就会是在一个Xxx中
         $data["Post"]=$params;
