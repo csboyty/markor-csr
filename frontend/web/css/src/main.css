@@ -578,36 +578,43 @@ h1,h2,h3,h4,h5,h6{
     background-image: url(../../images/app/sectionTitles/feature.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/feature.png) 1x,
         url(../../images/app/sectionTitles/feature@2x.png) 2x);
+    background-size:187px 68px;
 }
 .section .titleStory{
     background-image: url(../../images/app/sectionTitles/story.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/story.png) 1x,
         url(../../images/app/sectionTitles/story@2x.png) 2x);
+    background-size:237px 68px;
 }
 .section .titleVideo{
     background-image: url(../../images/app/sectionTitles/video.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/video.png) 1x,
         url(../../images/app/sectionTitles/video@2x.png) 2x);
+    background-size:187px 68px;
 }
 .section .titlePartner{
     background-image: url(../../images/app/sectionTitles/partner.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/partner.png) 1x,
         url(../../images/app/sectionTitles/partner@2x.png) 2x);
+    background-size:226px 68px;
 }
 .section .titleOrigin{
     background-image: url(../../images/app/sectionTitles/origin.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/origin.png) 1x,
         url(../../images/app/sectionTitles/origin@2x.png) 2x);
+    background-size:187px 68px;
 }
 .section .titleConcern{
     background-image: url(../../images/app/sectionTitles/concern.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/concern.png) 1x,
         url(../../images/app/sectionTitles/concern@2x.png) 2x);
+    background-size:187px 68px;
 }
 .section .titleProgram{
     background-image: url(../../images/app/sectionTitles/program.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/program.png) 1x,
         url(../../images/app/sectionTitles/program@2x.png) 2x);
+    background-size:187px 68px;
 }
 .section .titleScholarship{
     background-image: url(../../images/app/sectionTitles/scholarship.png);
@@ -618,87 +625,104 @@ h1,h2,h3,h4,h5,h6{
     background-image: url(../../images/app/sectionTitles/collegeWork.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/collegeWork.png) 1x,
         url(../../images/app/sectionTitles/collegeWork@2x.png) 2x);
+    background-size:279px 67px;
 }
 .section .titleTraineeRecruit{
     background-image: url(../../images/app/sectionTitles/traineeRecruit.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/traineeRecruit.png) 1x,
         url(../../images/app/sectionTitles/traineeRecruit@2x.png) 2x);
+    background-size:244px 67px;
 }
 .section .titleArtHonor{
     background-image: url(../../images/app/sectionTitles/honor.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/honor.png) 1x,
         url(../../images/app/sectionTitles/honor@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleActivity{
     background-image: url(../../images/app/sectionTitles/activity.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/activity.png) 1x,
         url(../../images/app/sectionTitles/activity@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleDonationGoods{
     background-image: url(../../images/app/sectionTitles/donationGoods.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/donationGoods.png) 1x,
         url(../../images/app/sectionTitles/donationGoods@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleDonationList{
     background-image: url(../../images/app/sectionTitles/donationList.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/donationList.png) 1x,
         url(../../images/app/sectionTitles/donationList@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleTeacherWorks{
     background-image: url(../../images/app/sectionTitles/teacherWorks.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/teacherWorks.png) 1x,
         url(../../images/app/sectionTitles/teacherWorks@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleTeacherSpeech{
     background-image: url(../../images/app/sectionTitles/teacherSpeech.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/teacherSpeech.png) 1x,
         url(../../images/app/sectionTitles/teacherSpeech@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleVolunteerSpeech{
     background-image: url(../../images/app/sectionTitles/volunteerSpeech.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/volunteerSpeech.png) 1x,
         url(../../images/app/sectionTitles/volunteerSpeech@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleVolunteerTrain{
     background-image: url(../../images/app/sectionTitles/volunteerTrain.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/volunteerTrain.png) 1x,
         url(../../images/app/sectionTitles/volunteerTrain@2x.png) 2x);
+    background-size:244px 67px;
 }
 .section .titleChildDraw{
     background-image: url(../../images/app/sectionTitles/childDraw.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/childDraw.png) 1x,
             url(../../images/app/sectionTitles/childDraw@2x.png) 2x);
+    background-size:320px 67px;
 }
 .section .titleChildDrawWorks{
     background-image: url(../../images/app/sectionTitles/childDrawWorks.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/childDrawWorks.png) 1x,
         url(../../images/app/sectionTitles/childDrawWorks@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleChildDrawVideo{
     background-image: url(../../images/app/sectionTitles/childDrawVideo.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/childDrawVideo.png) 1x,
         url(../../images/app/sectionTitles/childDrawVideo@2x.png) 2x);
+    background-size:272px 67px;
 }
 .section .titleTraineeSpeech{
      background-image: url(../../images/app/sectionTitles/traineeSpeech.png);
      background-image: -webkit-image-set(url(../../images/app/sectionTitles/traineeSpeech.png) 1x,
      url(../../images/app/sectionTitles/traineeSpeech@2x.png) 2x);
+    background-size:225px 67px;
 }
 .section .titleTraineePlan{
     background-image: url(../../images/app/sectionTitles/traineePlan.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/traineePlan.png) 1x,
     url(../../images/app/sectionTitles/traineePlan@2x.png) 2x);
+    background-size:244px 67px;
 }
 .section .titleLoveProducts{
     background-image: url(../../images/app/sectionTitles/loveProducts.png);
     background-image: -webkit-image-set(url(../../images/app/sectionTitles/loveProducts.png) 1x,
     url(../../images/app/sectionTitles/loveProducts@2x.png) 2x);
+    background-size:225px 67px;
 }
 .sectionConcern{
     background-image: url(../../images/app/concernBg.jpg);
     background-image: -webkit-image-set(url(../../images/app/concernBg.jpg) 1x,
         url(../../images/app/concernBg@2x.jpg) 2x);
-    background-size: cover;
+    background-size:187px 68px;
+
 }
 .section.searchResults{
     
@@ -1219,3 +1243,5 @@ h1,h2,h3,h4,h5,h6{
 .site-error p a:hover{
     color: #000;
 }
+
+

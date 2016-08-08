@@ -1,3 +1,83 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+    .logo a{
+        background-image: url(../../images/app/logo@2x.png);
+    }
+    .section .titleFeature{
+        background-image: url(../../images/app/sectionTitles/feature@2x.png);
+    }
+    .section .titleStory{
+        background-image: url(../../images/app/sectionTitles/story@2x.png);
+    }
+    .section .titleVideo{
+        background-image: url(../../images/app/sectionTitles/video@2x.png);
+    }
+    .section .titlePartner{
+        background-image: url(../../images/app/sectionTitles/partner@2x.png);
+    }
+    .section .titleOrigin{
+        background-image: url(../../images/app/sectionTitles/origin@2x.png);
+    }
+    .section .titleConcern{
+        background-image: url(../../images/app/sectionTitles/concern@2x.png);
+    }
+    .section .titleProgram{
+        background-image: url(../../images/app/sectionTitles/program@2x.png);
+    }
+    .section .titleScholarship{
+        background-image: url(../../images/app/sectionTitles/scholarship@2x.png);
+    }
+    .section .titleCollegeWork{
+        background-image: url(../../images/app/sectionTitles/collegeWork@2x.png);
+    }
+    .section .titleTraineeRecruit{
+        background-image: url(../../images/app/sectionTitles/traineeRecruit@2x.png);
+    }
+    .section .titleArtHonor{
+        background-image: url(../../images/app/sectionTitles/honor@2x.png);
+    }
+    .section .titleActivity{
+        background-image: url(../../images/app/sectionTitles/activity@2x.png);
+    }
+    .section .titleDonationGoods{
+        background-image: url(../../images/app/sectionTitles/donationGoods@2x.png);
+    }
+    .section .titleDonationList{
+        background-image: url(../../images/app/sectionTitles/donationList@2x.png);
+    }
+    .section .titleTeacherWorks{
+        background-image: url(../../images/app/sectionTitles/teacherWorks@2x.png);
+    }
+    .section .titleTeacherSpeech{
+        background-image: url(../../images/app/sectionTitles/teacherSpeech@2x.png);
+    }
+    .section .titleVolunteerSpeech{
+        background-image: url(../../images/app/sectionTitles/volunteerSpeech@2x.png);
+    }
+    .section .titleVolunteerTrain{
+        background-image: url(../../images/app/sectionTitles/volunteerTrain@2x.png);
+    }
+    .section .titleChildDraw{
+        background-image: url(../../images/app/sectionTitles/childDraw@2x.png);
+    }
+    .section .titleChildDrawWorks{
+        background-image: url(../../images/app/sectionTitles/childDrawWorks@2x.png);
+    }
+    .section .titleChildDrawVideo{
+        background-image: url(../../images/app/sectionTitles/childDrawVideo@2x.png);
+    }
+    .section .titleTraineeSpeech{
+        background-image: url(../../images/app/sectionTitles/traineeSpeech@2x.png);
+    }
+    .section .titleTraineePlan{
+        background-image: url(../../images/app/sectionTitles/traineePlan@2x.png);
+    }
+    .section .titleLoveProducts{
+        background-image: url(../../images/app/sectionTitles/loveProducts@2x.png);
+    }
+}
 @media screen and (min-width:1600px){
     .pSectionTopList .item{
 /*        width: 320px;*/
