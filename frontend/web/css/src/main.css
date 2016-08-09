@@ -721,7 +721,7 @@ h1,h2,h3,h4,h5,h6{
     background-image: url(../../images/app/concernBg.jpg);
     background-image: -webkit-image-set(url(../../images/app/concernBg.jpg) 1x,
         url(../../images/app/concernBg@2x.jpg) 2x);
-    background-size:187px 68px;
+    background-size:cover;
 
 }
 .section.searchResults{
