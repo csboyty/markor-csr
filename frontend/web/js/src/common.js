@@ -39,6 +39,10 @@ $(document).ready(function(){
 
     });
 
+    $("#searchCtrl").click(function(){
+        $(".searchContainer").toggleClass("active");
+    });
+
     $(".search").keydown(function(e){
         if(e.keyCode==13){
             window.location.href=document.getElementsByTagName("base")[0].getAttribute("href")+"search/"+$(this).val();

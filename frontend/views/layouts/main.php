@@ -38,7 +38,7 @@ AppAsset::register($this);
         </h1>
         <div class="searchContainer displayNoneInMobile">
             <input class="input search" type="text" placeholder="请输入您要搜索的内容">
-            <div class="ctrl">
+            <div class="ctrl" id="searchCtrl">
                 <span class="icon-search"></span>
             </div>
         </div>
