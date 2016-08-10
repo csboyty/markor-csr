@@ -186,7 +186,7 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                     </picture>
                 </div>
                 <div class="info">
-                    <a href="culture-programs/posts/<?= $cr->id; ?>">
+                    <a href="culture-programs/<?= $cr->id; ?>">
                         <h3 class="title"><?= $cr->title; ?></h3>
                         <p class="excerpt">
                             <?= $cr->excerpt; ?>
