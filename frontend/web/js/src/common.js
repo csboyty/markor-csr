@@ -49,6 +49,13 @@ $(document).ready(function(){
         }
     });
 
+    $("body").click(function(event){
+        var target=event.target;
+        if(!$(target).parents(".searchContainer")){
+            $(".searchContainer").toggleClass("active");
+        }
+    });
+
     //IE9
     if(navigator.userAgent.indexOf("MSIE 9.0")){
 
