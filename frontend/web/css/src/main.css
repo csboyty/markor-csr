@@ -980,20 +980,24 @@ h1,h2,h3,h4,h5,h6{
 }
 .pagination li a{
     font-size: 20px;
-    font-size:20rem;
+    font-size:2rem;
     color: #888;
     display: block;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
 }
 .pagination li span{
     font-size: 20px;
-    font-size:20rem;
+    font-size:2rem;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
 }
 .pagination li a:hover{
     color: #000;
+    background: #efefef;
 }
 .pagination>.active>a{
     color: #000;
