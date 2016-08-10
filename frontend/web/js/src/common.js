@@ -52,7 +52,7 @@ $(document).ready(function(){
     $("body").click(function(event){
         var target=event.target;
         if($(target).parents(".searchContainer").length==0){
-            $(".searchContainer").toggleClass("active");
+            $(".searchContainer").removeClass("active");
         }
     });
 

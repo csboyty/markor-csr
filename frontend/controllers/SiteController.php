@@ -48,7 +48,7 @@ class SiteController extends Controller
             Yii::$app->params["categories"]["videoChildDraw"]
         ]])->orderBy(["date"=>SORT_DESC])->limit(1)->all();
 
-        $cPResults=$cPResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]])
+        $cPResults=$cPResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["cultureProgram"],"memo"=>1])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
         $educationResults=$educationResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["resultCollegeStudent"]])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
