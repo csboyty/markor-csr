@@ -51,7 +51,7 @@ class SiteController extends Controller
         $cPResults=$cPResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["cultureProgram"]])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
         $educationResults=$educationResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["resultCollegeStudent"]])
-            ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
+            ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
         $enlightenmentResults=$enlightenmentResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
             ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
 

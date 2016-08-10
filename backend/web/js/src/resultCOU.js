@@ -37,6 +37,8 @@ var resultCOU=(function(config,functions){
 })(config,functions);
 
 $(document).ready(function(){
+    $("#date").date_input();
+
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -68,6 +70,9 @@ $(document).ready(function(){
                 required:true,
                 maxlength:32
             },
+            date:{
+                required:true
+            },
             author:{
                 required:true,
                 maxlength:32
@@ -84,6 +89,9 @@ $(document).ready(function(){
             title:{
                 required:true,
                 maxlength:config.validErrors.maxLength.replace("${max}",32)
+            },
+            date:{
+                required:config.validErrors.required
             },
             author:{
                 required:true,
