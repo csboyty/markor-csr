@@ -474,6 +474,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .searchContainer.active .ctrl{
     border: #ccc 1px solid;
+    cursor: pointer;
 }
 /**
 * breadcrumb
