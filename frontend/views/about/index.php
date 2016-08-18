@@ -72,7 +72,7 @@ $this->params=[
             <div class="icon"><span class="icon-modern-art"></span></div>
             <h3>艺术教育</h3>
             <p class="line-text">
-                美克美家高等艺术院校设立“艺术·家”奖学
+                美克美家在高等艺术院校设立“艺术·家”奖学
                 金，奖励和资助对设计有兴趣和天赋的学
                 生。同期，对合作院校大学生开展实习生
                 项目，为其提供社会实践平台。
