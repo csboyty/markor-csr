@@ -21,8 +21,7 @@ $this->params=[
     <div class="info">
         <h2 class="title">快乐美术教室</h2>
         <p class="excerpt">
-            孩子们的美术课，经常在简陋的教室中度过
-            我们用便利的电教设备、美术教材、图书、光盘全面配置独立的美术教室，为孩子们创造艺术空间
+            孩子们的美术课，经常在简陋的教室中度过。我们用便利的电教设备、美术教材、图书、光盘全面配置独立的美术教室，为孩子们创造艺术空间。
         </p>
     </div>
 </div>
@@ -62,9 +61,7 @@ $this->params=[
 <div class="section bgf4f4f4">
     <h2 class="sectionTitle titleDonationGoods">捐赠</h2>
     <p class="contentText">
-        为学校捐赠了包括多媒体投影仪和DVD机等在内的艺术教育设备
-        艺术普及类图书和光盘，美术课堂所需石膏像、画板工具等等
-        作为传统学校艺术教育的补充
+        为学校捐赠了包括多媒体投影仪和DVD机等在内的艺术教育设备，艺术普及类图书和光盘，美术课堂所需石膏像、画板工具等等，作为传统学校艺术教育的补充。
     </p>
     <table class="contentTable">
         <tr>
@@ -95,8 +92,7 @@ $this->params=[
                style="width: 70%;text-align: center;color: #808080;display: block;margin: auto">
                 <p class="contentText donationLink">捐赠小学名单></p>
                 <p class="contentText donationSummary">
-                    从2009年“艺术·家”项目启动至2015年底
-                    美克美家先后在西安、沈阳、武汉等21个城市的小学捐赠150间“快乐美术教室”
+                    从2009年“艺术·家”项目启动至2015年底，美克美家先后在西安、沈阳、武汉等21个城市的小学捐赠150间“快乐美术教室”。
                 </p>
             </a>
 

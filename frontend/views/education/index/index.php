@@ -18,9 +18,7 @@ $this->params=[
     <div class="info">
         <h2 class="title">艺术教育</h2>
         <p class="excerpt">
-            艺术蕴含着视觉之美、秩序之美、礼仪之美、和谐之美，艺术无处不在
-            我们希望通过对高等艺术教育的支持援助大学生在艺术领域继续探索和深造，启程美丽人生
-            美克美家每年向每所合作高校捐赠，资助5-10名优秀的在读大学生
+            艺术蕴含着视觉之美、秩序之美、礼仪之美、和谐之美，艺术无处不在。我们希望通过对高等艺术教育的支持，援助大学生在艺术领域继续探索和深造，启程美丽人生。美克美家每年向每所合作高校捐赠，资助5-10名优秀的在读大学生。
         </p>
     </div>
 </div>
@@ -28,8 +26,7 @@ $this->params=[
     <h2 class="sectionTitle titleScholarship">高校奖学金活动</h2>
     <img src="images/app/scholarship.jpg" style="margin: auto;display: block" srcset="images/app/scholarship@2x.jpg 2x">
     <p class="contentText">
-        美克美家每年向每所合作高校捐赠，资助5-10名优秀的在读大学生
-        与五所国内艺术设计学院达成奖学金项目战略合作，超过100名优秀大学生获得“艺术·家”奖学金
+        美克美家每年向每所合作高校捐赠，资助5-10名优秀的在读大学生。美克美家已与五所国内艺术设计学院达成奖学金项目战略合作，超过100名优秀大学生获得“艺术·家”奖学金。
     </p>
     <a href="education/awards" class="more">更多</a>
 </div>
@@ -77,8 +74,7 @@ $this->params=[
     </ul>
 
     <p class="contentText">
-        美克美家为大学生提供与创意设计相关的社会实践机会
-        招收毕业生进行人力资源培养和储备，以满足美克美家快速、持续发展对各类人才的需求
+        美克美家为大学生提供与创意设计相关的社会实践机会，招收毕业生进行人力资源培养和储备，以满足美克美家快速、持续发展对各类人才的需求。
     </p>
     <a href="education/trainee" class="more">更多</a>
 </div>
