@@ -6,7 +6,7 @@ if($category->id==Yii::$app->params["categories"]["video"]){
         "breadcrumbs"=>[
             [
                 'label' => "视频",
-                'url' => ['about/index']
+                'url' => ['videos/index']
                 //'template' => "<li><b>{link}</b></li>\n", // template for this link only
             ]
         ]
