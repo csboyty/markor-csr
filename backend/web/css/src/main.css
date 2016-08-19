@@ -185,7 +185,7 @@ label.error{
 */
 .tableSearchContainer{
     text-align: right;
-    float: right;
+    float: right !important;
     position: relative;
 }
 .tableSearchContainer label{
