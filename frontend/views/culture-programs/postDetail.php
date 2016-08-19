@@ -5,6 +5,9 @@ $this->params=[
         [
             'label' => '艺术传承',
             'url' => 'culture-programs/index'
+        ],
+        [
+            'lable' => $model->title
         ]
     ]
 ]
