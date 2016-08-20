@@ -31,12 +31,13 @@ body{
     display: block;
     font-size: 0px;
     background: url(../../images/app/logo_white@2x.png) no-repeat center #373737;
+    background-size: 40%;
     width: 100px;
     height: 100px;
     border-radius: 50px;
     position: absolute;
     left:50%;
-    top:50%;
+    top:0;
     transform: translate(-50%,-50%);
 }
 .logo{
