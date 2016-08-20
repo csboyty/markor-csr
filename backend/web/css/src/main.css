@@ -283,6 +283,9 @@ table.dataTable td a.delete:hover{
 .table>tbody>tr>td{
     vertical-align: middle;
 }
+.text-success{
+    color:#00A67F;
+}
 .btn-success{
     background: #00A67F;
     border: none;

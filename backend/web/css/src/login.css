@@ -29,7 +29,7 @@ body{
 .loginIcon{
     display: block;
     font-size: 0px;
-    background: url(../../images/app/logo_white@2x.png) no-repeat center #00A67F;
+    background: url(../../images/app/logo_black@2x.png) no-repeat center #fff;
     background-size: 40%;
     width: 100px;
     height: 100px;
@@ -38,6 +38,7 @@ body{
     left:50%;
     top:0;
     transform: translate(-50%,-50%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 .logo{
     text-align: center;
@@ -70,7 +71,7 @@ body{
     margin-left: 46px;
 }
 .ctrlBtn:hover{
-    background: #4cae4c;
+    background: #018566;
     cursor: pointer;
 }
 .icon1{
