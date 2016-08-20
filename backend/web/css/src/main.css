@@ -187,6 +187,7 @@ label.error{
     text-align: right;
     float: right !important;
     position: relative;
+    width:60% !important;
 }
 .tableSearchContainer label{
     float: left;
@@ -326,7 +327,13 @@ table.dataTable td a.delete:hover{
 }
 .loading .text{
     position: absolute;
-    left:50%;
-    top:50%;
-    color:#fff;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    display: block;
+    width: 200px;
+    border: #fff 1px solid;
+    text-align: center;
+    padding: 10px;
+    transform: translate(-50%,-50%);
 }
