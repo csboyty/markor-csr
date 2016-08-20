@@ -9,7 +9,6 @@ body{
     position: relative;
     font-family: "Arail","微软雅黑","Heiti";
     background: #373737;
-    border-top:3px solid #5dc05f;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -30,7 +29,7 @@ body{
 .loginIcon{
     display: block;
     font-size: 0px;
-    background: url(../../images/app/logo_white@2x.png) no-repeat center #373737;
+    background: url(../../images/app/logo_white@2x.png) no-repeat center #00A67F;
     background-size: 40%;
     width: 100px;
     height: 100px;
@@ -65,8 +64,8 @@ body{
     height: 36px;
     color: #fff;
     font-size: 16px;
-    border: 1px solid #4cae4c;
-    background: #5cb85c;
+    border: none;
+    background: #00A67F;
     border-radius: 4px;
     margin-left: 46px;
 }
