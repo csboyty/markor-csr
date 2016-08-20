@@ -176,15 +176,19 @@ AppAsset::register($this);
 
         
        
-       <?= Breadcrumbs::widget([
-        'itemTemplate' => "<li>{link}</li>", // template for all links
-        'activeItemTemplate'=>"<li>{link}</li>",
-        'homeLink'=>[
-            'label' =>'首页',
-            'url'=>Yii::$app->homeUrl
-        ],
-        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-    ]) ?>
+    <?php
+        if(isset($this->params['breadcrumbs'])){
+            echo Breadcrumbs::widget([
+                'itemTemplate' => "<li>{link}</li>", // template for all links
+                'activeItemTemplate'=>"<li>{link}</li>",
+                'homeLink'=>[
+                    'label' =>'首页',
+                    'url'=>Yii::$app->homeUrl
+                ],
+                'links' => $this->params['breadcrumbs'],
+            ]);
+        }
+    ?>
     <?= $content ?>
 
     <div class="footer">

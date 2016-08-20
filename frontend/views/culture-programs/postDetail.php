@@ -1,16 +1,5 @@
 <?php
 $this->title = $model->title;
-$this->params=[
-    "breadcrumbs"=>[
-        [
-            'label' => '艺术传承',
-            'url' => 'culture-programs/index'
-        ],
-        [
-            'lable' => $model->title
-        ]
-    ]
-]
 ?>
 
 <div class="post">
