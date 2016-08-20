@@ -43,6 +43,7 @@ body{
 .logo{
     text-align: center;
     margin: 70px auto 20px;
+    font-size: 24px;
 }
 .row{
     width: 70%;
@@ -88,5 +89,5 @@ label.error{
     display: block;
     text-align: center;
     width:250px;
-    margin:auto;
+    margin:5px auto;
 }
