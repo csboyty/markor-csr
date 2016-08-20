@@ -71,9 +71,12 @@ $(document).ready(function(){
         multiSelection:false,
         multipartParams:null,
         uploadContainer:"uploadFileContainer",
-        fileAddCb:null,
+        fileAddCb:function(files,up){
+            functions.showLoading();
+        },
         progressCb:null,
         uploadedCb:function(info,file,up){
+            functions.hideLoading();
             $("#fileUrl").val(info.url);
 
             $("#filename").text(file.name);
