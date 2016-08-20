@@ -43,7 +43,7 @@ $(document).ready(function(){
         }
 
     });
-    
+
     $("#loading .text").text("上传中...");
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
