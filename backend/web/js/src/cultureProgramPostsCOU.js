@@ -43,6 +43,8 @@ $(document).ready(function(){
         }
 
     });
+    
+    $("#loading .text").text("上传中...");
     functions.createQiNiuUploader({
         maxSize:config.uploader.sizes.img,
         filter:config.uploader.filters.img,
@@ -71,10 +73,10 @@ $(document).ready(function(){
         multiSelection:false,
         multipartParams:null,
         uploadContainer:"uploadFileContainer",
-        fileAddCb:function(files,up){
+        fileAddCb:null,
+        progressCb:function(file){
             functions.showLoading();
         },
-        progressCb:null,
         uploadedCb:function(info,file,up){
             functions.hideLoading();
             $("#fileUrl").val(info.url);
