@@ -91,5 +91,7 @@ label.error{
     color: red;
     font-size: 14px;
     display: block;
-    margin-left: 46px;
+    text-align: center;
+    width:250px;
+    margin:auto;
 }
