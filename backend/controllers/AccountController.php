@@ -39,5 +39,26 @@ class AccountController extends \yii\web\Controller
     public function actionHome(){
         return $this->render("home");
     }
+    public function actionEditPwd(){
+        if($params=Yii::$app->request->post()){
 
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            $model=User::findOne(Yii::$app->user->getId());
+            $model->setPassword($params["password"]);
+
+            if($model->save()){
+                return [
+                    "success"=>true
+                ];
+            }else{
+                return [
+                    "success"=>false,
+                    "error_code"=>1
+                ];
+            }
+        }else{
+            return $this->render("editPwd");
+        }
+
+    }
 }
