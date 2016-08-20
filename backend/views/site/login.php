@@ -6,12 +6,10 @@ $this->title="登录";
     <span class="loginIcon">登录图标</span>
     <h1 class="logo">美克美家CSR</h1>
     <div class="row">
-        <label class="ctrlLabel">邮箱</label>
-        <input class="ctrlInput icon1 bgLc" type="text" name="email">
+        <input class="ctrlInput" type="text" name="email" placeholder="用户名／邮箱">
     </div>
     <div class="row">
-        <label  class="ctrlLabel">密码</label>
-        <input id="password" class="ctrlInput icon2 bgLc" type="password" name="password">
+        <input id="password" class="ctrlInput" type="password" name="password" placeholder="密码">
     </div>
     <div class="row">
         <input type="submit" class="ctrlBtn" value="登录">
