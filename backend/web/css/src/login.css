@@ -66,6 +66,10 @@ body{
     background: #f4f5f7;
     box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
 }
+.ctrlInput.error {
+    border: #e76565 solid 1px;
+    background: #f7e3e3;
+}
 .ctrlBtn{
     width: 100%;
     height: 40px;
