@@ -42,7 +42,7 @@ body{
 }
 .logo{
     text-align: center;
-    margin: 70px 0px 50px 0px;
+    margin: 70px auto 20px;
 }
 .row{
     width: 80%;
@@ -73,7 +73,9 @@ body{
     margin-left: 46px;
 }
 .ctrlBtn:hover{
-    background: #018566;
+    border:none;
+    background:#009774;
+    box-shadow: 0 4px 0 #018566;
     cursor: pointer;
 }
 .icon1{
