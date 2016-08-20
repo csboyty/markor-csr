@@ -27,7 +27,14 @@ AppAsset::register($this);
 
 <div class="header">
     <h1 class="logo">美克美家CSR网站内容管理</h1>
-    <a href="site/logout" class="logout">退出</a>
+    <nav class="topNav">
+        <ul>
+            <li><a href="account/edit-pwd" class="editpwd">修改密码</a></li>
+            <li><a href="site/logout" class="logout">退出</a></li>
+        </ul>
+    </nav>
+    
+    
 </div>
 
 <div class="left">
