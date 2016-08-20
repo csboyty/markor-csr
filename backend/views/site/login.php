@@ -13,15 +13,17 @@ $this->title="登录";
     </div>
     <div class="row">
         <input type="submit" class="ctrlBtn" value="登录">
-    </div>
-
-    <?php
+        
+        <?php
         if($model->getErrors("password")[0]=="loginError"){
             ?>
             <label class="error">用户名或者密码错误</label>
             <?php
         }
     ?>
+    </div>
+
+    
 
 </form>
 
