@@ -67,6 +67,8 @@ body{
     font-size: 16px;
     border: none;
     background: #00A67F;
+    border: none;
+    box-shadow: 0 4px 0 #018566;
     border-radius: 4px;
     margin-left: 46px;
 }
