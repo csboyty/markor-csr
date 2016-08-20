@@ -9,15 +9,15 @@ $this->title = '修改密码';
 
     <form class="form-horizontal" id="myForm" action="account/edit-pwd" method="post">
         <div class="form-group">
-            <label for="name" class="control-label col-md-2">请输入旧密码*</label>
+            <label for="name" class="control-label col-md-2">请输入新密码*</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="password" id="password">
+                <input type="password" class="form-control" name="password" id="password">
             </div>
         </div>
         <div class="form-group">
-            <label for="name" class="control-label col-md-2">请输入新密码*</label>
+            <label for="name" class="control-label col-md-2">请再次确认新密码*</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="newPwd">
+                <input type="password" class="form-control" name="newPwd">
             </div>
         </div>
         <div class="form-group">
