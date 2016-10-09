@@ -46,7 +46,7 @@ class VolunteerController extends Controller
 
     public function actionTrain(){
 
-        $query=Post::andWhere();
+        $query=Post::ownFind();
         $query->andWhere(["category_id"=>Yii::$app->params["categories"]["volunteerTrain"]]);
         $pages = new Pagination(['totalCount'=>$query->count(), 'pageSize' =>
         Yii::$app->params["perShowCount"]["default"]]);

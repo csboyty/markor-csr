@@ -28,7 +28,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'request' => [
+            'baseUrl' => '/markor-csr',
+        ]
     ],
+    'homeUrl' => '/markor-csr',
     'defaultRoute' => 'site/index',
     'params' => $params,
 ];

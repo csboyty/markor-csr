@@ -19,7 +19,7 @@ AppAsset::register($this);
     <link rel="icon" href="images/app/logo_title.png" type=" image/png" >
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode("MARKOR-CSR | ".$this->title) ?></title>
-    <base href="<?php echo Yii::$app->request->hostInfo.Yii::$app->homeUrl; ?>">
+    <base href="<?php echo Yii::$app->request->hostInfo.Yii::$app->request->baseUrl; ?>/">
     <?php $this->head() ?>
 </head>
 <body>
