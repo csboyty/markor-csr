@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="webkit" name="renderer">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>MARKOR-CSR</title>
+    <link type="text/css" rel="stylesheet" href="css/lib/flexslider.css">
+    <link type="text/css" rel="stylesheet" href="css/src/icons.css">
+    <link type="text/css" rel="stylesheet" href="css/src/lists.css">
+    <link type="text/css" rel="stylesheet" href="css/src/main.css">
+    <link type="text/css" rel="stylesheet" href="css/src/mediaQuery.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">
+            <a href="/">MARKOR-CSR</a>
+        </h1>
+        <ul class="menu displayNoneInMobile">
+            <li class="item">
+                <a href="#">首页</a>
+            </li>
+            <li class="item">
+                <a href="artAbout.html">关于艺术·家</a>
+                <ul class="subMenu" style="padding-left: 60%;">
+                    <li class="item">
+                        <a href="artHonor.html">艺术·家荣誉</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">艺术·家动态</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="artEnlightenment.html">艺术启蒙</a>
+                <ul class="subMenu"  style="padding-left: 65%">
+                    <li class="item">
+                        <a href="artRoom.html">快乐美术教室</a>
+                    </li>
+                    <li class="item">
+                        <a href="teacherTrain.html">教师培训</a>
+                    </li>
+                    <li class="item">
+                        <a href="volunteer.html">志愿者活动</a>
+                    </li>
+                    <li class="item">
+                        <a href="childDraw.html">儿童画征集与产品开发</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="artEducation.html">艺术教育</a>
+                <ul class="subMenu"  style="padding-left: 72%">
+                    <li class="item">
+                        <a href="collegeAward.html">高校奖学金活动</a>
+                    </li>
+                    <li class="item">
+                        <a href="collegeWork.html">大学生作品</a>
+                    </li>
+                    <li class="item">
+                        <a href="traineeRecruit.html">实习生招募</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="artInherit.html">艺术传承</a>
+            </li>
+            <li class="item">
+                <a href="artStory.html">人物·故事</a>
+            </li>
+        </ul>
+        <div class="searchContainer displayNoneInMobile">
+            <input class="input" type="text" placeholder="请输入您要搜索的内容">
+            <div class="ctrl">
+                <span class="icon-search"></span>
+            </div>
+        </div>
+        <div class="menuMContainer displayInMobile">
+            <span class="menuIcon" id="menuIcon">
+                <em class="icon-menu"></em>
+            </span>
+            <ul class="menuM" id="menuM">
+                <li class="item">
+                    <a href="#">首页</a>
+                </li>
+                <li class="item">
+                    <span class="subMenuIcon plus"></span>
+                    <a href="artAbout.html">关于艺术·家</a>
+                    <ul class="subMenu">
+                        <li class="item">
+                            <a href="artHonor.html">艺术·家荣誉</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">艺术·家动态</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <span class="subMenuIcon plus"></span>
+                    <a href="artEnlightenment.html">艺术启蒙</a>
+                    <ul class="subMenu">
+                        <li class="item">
+                            <a href="artRoom.html">快乐美术教室</a>
+                        </li>
+                        <li class="item">
+                            <a href="teacherTrain.html">教师培训</a>
+                        </li>
+                        <li class="item">
+                            <a href="volunteer.html">志愿者活动</a>
+                        </li>
+                        <li class="item">
+                            <a href="childDraw.html">儿童画征集与产品开发</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <span class="subMenuIcon plus"></span>
+                    <a href="artEducation.html">艺术教育</a>
+                    <ul class="subMenu">
+                        <li class="item">
+                            <a href="collegeAward.html">高校奖学金活动</a>
+                        </li>
+                        <li class="item">
+                            <a href="collegeWork.html">大学生作品</a>
+                        </li>
+                        <li class="item">
+                            <a href="traineeRecruit.html">实习生招募</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="artInherit.html">艺术传承</a>
+                </li>
+                <li class="item">
+                    <a href="artStory.html">人物·故事</a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="images/app/weixinGray.png" style="vertical-align: middle">&nbsp;&nbsp;美克美家
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="images/app/weiboGray.png" style="vertical-align: middle">&nbsp;&nbsp;我爱艺术家
+                    </a>
+                </li>
+                <li class="item">
+                    <span class="searchIcon"><em class="icon-search"></em></span>
+                    <input type="text" class="searchInput" placeholder="search">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--微信推荐文章--->
+    <ul class="weChatList displayNoneInMobile">
+        <li class="item">
+            <a class="link" href="#">
+                <img class="thumb" src="data/square/1.jpg">
+                <h3 class="title">远方 生活不止是眼前的苟且</h3>
+            </a>
+        </li>
+        <li class="item">
+            <a class="link" href="#">
+                <img class="thumb" src="data/square/2.jpg">
+                <h3 class="title">他用400元办了一场美术展览</h3>
+            </a>
+        </li>
+        <li class="item">
+            <a class="link" href="#">
+                <img class="thumb" src="data/square/3.jpg">
+                <h3 class="title">远方 生活不止是眼前的苟且</h3>
+            </a>
+        </li>
+    </ul>
+    <!--滚动图片-->
+    <div id="slider" class="flexslider">
+        <ul class="slides">
+            <li>
+                <a href="#">
+                    <img src="data/roll/1.jpg" />
+                    <div class="detail">
+                        <h2 class="title">xxxxxxxxx</h2>
+                        <p class="excerpt">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="data/roll/2.jpg" />
+                    <div class="detail">
+                        <h2 class="title">xxxxxxxxx</h2>
+                        <p class="excerpt">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="data/roll/3.jpg" />
+                    <div class="detail">
+                        <h2 class="title">xxxxxxxxx</h2>
+                        <p class="excerpt">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="sectionTitle titleFeature">热点</h2>
+        <ul class="list">
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="data/square/1.jpg">
+                </div>
+                <div class="info">
+                    <h3 class="title"><a href="#">新通道三江源项目</a></h3>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
+                        一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
+                    </p>
+                    <a class="tag" href="artInherit.html" >艺术传承</a>
+                </div>
+            </li>
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="data/square/1.jpg">
+                </div>
+                <div class="info">
+                    <h3 class="title"><a href="#">新通道三江源项目</a></h3>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
+                        一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
+                    </p>
+                    <a class="tag" href="artInherit.html" >艺术传承</a>
+                </div>
+            </li>
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="data/square/1.jpg">
+                </div>
+                <div class="info">
+                    <h3 class="title"><a href="#">新通道三江源项目</a></h3>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
+                        一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
+                    </p>
+                    <a class="tag" href="#" >艺术传承</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="section bgf4f4f4">
+        <h2 class="sectionTitle titleStory">人物·故事</h2>
+        <ul class="list1">
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="data/square/1.jpg">
+                </div>
+
+                <div class="info">
+                    <h2 class="title ellipsis"><a href="#">这里是标题</a></h2>
+                    <p class="author">杨媛媛</p>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、
+                        及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
+                        一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
+                    </p>
+                    <a href="#" class="tag">人物故事</a>
+                </div>
+            </li>
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="data/square/1.jpg">
+                </div>
+                <div class="info">
+                    <h2 class="title ellipsis"><a href="#">这里是标题这里是标题这里是标题这里是标题</a></h2>
+                    <p class="author">杨媛媛</p>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、
+                        及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
+                        一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
+                    </p>
+                    <a href="#" class="tag">人物故事</a>
+                </div>
+            </li>
+            <li class="item">
+                <div class="thumbContainer">
+                    <img class="thumb" src="data/square/1.jpg">
+                </div>
+                <div class="info">
+                    <h2 class="title"><a href="#">这里是标题</a></h2>
+                    <p class="author">杨媛媛</p>
+                    <p class="excerpt moreEllipsis" data-row="3">
+                        展览当日，几十平米的“新通道”项目展区直观呈现了在保护侗锦、
+                        及传统手工艺等国家级非物质文化遗产过程中所取得的成果，
+                        一件件作品将侗族传统文化艺术元素融入现代生活中，创新的形式与内容将人们引入到一个充满艺术与传统的世界中。
+                    </p>
+                    <a href="#" class="tag">人物故事</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2 class="sectionTitle titleVideo">视频</h2>
+        <ul class="list1 list11">
+            <li class="item">
+                <a href="#">
+                    <img class="thumb" src="data/videoBg/1.jpg">
+                    <div class="info">
+                        <h2 class="title">这里是标题</h2>
+                        <p href="#" class="icon">
+                            <span class="icon-play"></span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="videoMore.html" class="more">更多</a>
+    </div>
+    <div class="section bgf4f4f4 sectionMobile">
+        <h2 class="sectionTitle titlePartner displayNoneInMobile">合作伙伴</h2>
+        <table class="contentTable">
+            <tr>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/industry-design.png" srcset="images/app/partners/industry-design@2x.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/hnu.png" srcset="images/app/partners/hnu@2x.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/tj.png" srcset="images/app/partners/tj@2x.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/desis-china.png" srcset="images/app/partners/desis-china@2x.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/youth.png" srcset="images/app/partners/youth@2x.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/china-academy.png" srcset="images/app/partners/china-academy@2x.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img src="images/app/partners/sc.png" srcset="images/app/partners/sc@2x.png">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <table class="contactInfo displayNoneInMobile">
+            <tr>
+                <td>
+                    <p class="icon">
+                        <span class="icon-tel"></span>
+                    </p>
+                    <p class="content">
+                        TEL:010-63862727
+                        <br>
+                        csr@markorhome.com
+                    </p>
+                </td>
+                <td>
+                    <p class="icon">
+                        <span class="icon-address"></span>
+                    </p>
+                    <p class="content">
+                        www.markorhome.com/csr
+                        <br>
+                        北京市丰台区西三环南路57号
+                        <br>
+                        丽江泽桥美克大厦3楼
+                    </p>
+                </td>
+                <td>
+                    <p><img src="images/app/weixin.png" class="iconWeb">&nbsp;&nbsp;美克美家</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/app/weibo.png" class="iconWeb">&nbsp;&nbsp;我爱艺术家</p>
+                </td>
+            </tr>
+        </table>
+        <p class="copyRight displayNoneInMobile">Copyright &copy;2007-2020 MARKOR FURNISHINGS</p>
+        <p class="copyRight displayInMobile">
+            TEL: 010-63862727<br>
+            地址：北京市丰台区三环南路57号丽江泽桥美克大厦3层<br>
+            Copyright &copy;2007-2020 MARKOR FURNISHINGS
+        </p>
+    </div>
+
+<script src="js/lib/jquery-1.11.1.min.js"></script>
+<script src="js/lib/jquery.flexslider-min.js"></script>
+<script src="js/lib/jquery.ellipsis.js"></script>
+<script src="js/src/common.js"></script>
+<script src="js/src/index.js"></script>
+</body>
+</html>
