@@ -27,7 +27,7 @@ class RoomController extends Controller
         $donationResultsQuery=clone $baseQuery;
 
         $activityResults=$activityResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
-            ->limit(3)->all();
+            ->limit(3)->orderBy(["date"=>SORT_DESC])->all();
         $donationResults=$donationResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["donation"]])
             ->limit(1)->all();
         return $this->render('index',[

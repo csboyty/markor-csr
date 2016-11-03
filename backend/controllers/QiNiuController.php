@@ -2,7 +2,6 @@
 
 namespace backend\controllers;
 
-use backend\models\QuiNiu;
 use Yii;
 use yii\web\Controller;
 use yii\filters\AccessControl;
@@ -39,20 +38,29 @@ class QiNiuController extends Controller
         ];
     }
 
+    /**
+     * 部署后从七牛初始化所有的文件
+     */
+    public function actionDownloadFiles(){
+        $qiNiu=new QiNiu();
+        //$qiNiu->downloadFromQiNiu();
+
+        return true;
+    }
 
     public function actionUpToken(){
 
-        $quiNiu=new QiNiu();
+        $qiNiu=new QiNiu();
 
-        $encodedPutPolicy = $quiNiu->URLSafeBase64Encode($quiNiu->createReturnBody());
+        $encodedPutPolicy = $qiNiu->URLSafeBase64Encode($qiNiu->createReturnBody());
 
         //hmac_sha1这个函数没有，用其他函数实现
         //$sign=mhash(MHASH_SHA1,$encodedPutPolicy, $this->secretKey);
-        $sign=hash_hmac('sha1', $encodedPutPolicy, $quiNiu->secretKey, true);
+        $sign=hash_hmac('sha1', $encodedPutPolicy, $qiNiu->secretKey, true);
 
-        $encodedSign =$quiNiu->URLSafeBase64Encode($sign);
+        $encodedSign =$qiNiu->URLSafeBase64Encode($sign);
 
-        $uploadToken=$quiNiu->accessKey.":".$encodedSign.":".$encodedPutPolicy;
+        $uploadToken=$qiNiu->accessKey.":".$encodedSign.":".$encodedPutPolicy;
 
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 

@@ -17,10 +17,10 @@ return [
             'errorAction' => 'site/error',
         ],
         'request' => [
-            'baseUrl' => '/markor-csr/admin',
+            //'baseUrl' => '/markor-csr/admin',
         ]
     ],
-    'homeUrl' => '/markor-csr/admin',
+    //'homeUrl' => '/markor-csr/admin',
     'defaultRoute' => 'account/home',
     'params' => $params,
 ];

@@ -9,8 +9,8 @@ return [
         ],
         "bgImage"=>[
             [
-                "suffix"=>"-half",
-                "handle"=>"imageMogr2/thumbnail/!50p"
+                "suffix"=>"-760x",
+                "handle"=>"imageMogr2/thumbnail/760x"
             ]
         ]
 

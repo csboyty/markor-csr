@@ -52,8 +52,9 @@ class SiteController extends Controller
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
         $educationResults=$educationResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["resultCollegeStudent"]])
             ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
-        $enlightenmentResults=$enlightenmentResultsQuery->andWhere(["category_id"=>Yii::$app->params["categories"]["activityRoom"]])
-            ->limit(1)->orderBy(["id"=>SORT_DESC])->all();
+        $enlightenmentResults=$enlightenmentResultsQuery->andWhere(["category_id"=>[Yii::$app->params["categories"]["activityRoom"],
+            Yii::$app->params["categories"]["activityTeacherTrain"],Yii::$app->params["categories"]["activityVolunteer"]]])
+            ->limit(1)->orderBy(["date"=>SORT_DESC])->all();
 
         return $this->render('index',[
             "wechatResults"=>$wechatResults,

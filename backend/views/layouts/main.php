@@ -46,6 +46,10 @@ AppAsset::register($this);
                 <span class="glyphicon glyphicon-flag"></span>
                 <a class="link" href="category/index">分类</a>
             </li>
+            <li class="item">
+                <span class="glyphicon glyphicon-cog"></span>
+                <a class="link" href="setting/index">设置</a>
+            </li>
 
         <?php
             }else{

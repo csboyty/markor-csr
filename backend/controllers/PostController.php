@@ -9,6 +9,7 @@ use common\models\Post;
 use common\models\User;
 use backend\models\QiNiu;
 use common\models\Category;
+use common\models\Setting;
 
 /**
  * Class PostController 文章控制器
@@ -47,6 +48,7 @@ class PostController extends \yii\web\Controller
         $filter=isset($params["filter"])?$params["filter"]:false;
         $sEcho = $params["sEcho"];
         $query=Post::find();
+        $setting = Setting::find()->one();
 
         if($parentCategoryFlag){
             //如果传过来的是父分类
@@ -112,9 +114,14 @@ class PostController extends \yii\web\Controller
             }
 
         }
-        /*if(isset($params["bg_image"])){
-            $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
-        }*/
+        if(isset($params["bg_image"])){
+            if($model->bg_image!=$params["bg_image"]){
+                $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
+            }
+        }
+
+        //下载文件到本机服务器
+        $qiNiu->downloadFromQiNiu();
 
         $data=array();
 

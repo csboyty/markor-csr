@@ -105,7 +105,11 @@ $this->registerCssFile("@web/css/lib/flexslider.css");
                 ?>
                 <li>
                     <a href="about/news/<?= $rr->id; ?>">
-                        <img src="<?= $rr->bg_image; ?>" />
+                        <picture>
+                            <source srcset="<?= Helper::getSuffixFile($rr->bg_image,
+                                Yii::$app->params["imageSizes"]["bgImage"][0]["suffix"]); ?>" media="(max-width: 768px)">
+                            <img src="<?= $rr->bg_image; ?>" >
+                        </picture>
                         <div class="detail">
                             <h2 class="title"><?= $rr->title; ?></h2>
                             <p class="date"><?= $rr->date; ?></p>

@@ -1,6 +1,5 @@
 function Mgr(ownTable) {
     this.ownTable = ownTable();
-    this.say="hello";
 }
 Mgr.prototype.tableRedraw = function () {
     this.ownTable.fnSettings()._iDisplayStart = 0;
