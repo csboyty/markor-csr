@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use common\components\AccessRule;
 use common\models\User;
 use backend\models\QiNiu;
+use backend\models\Download;
 
 /**
  * Class QiNiuController 七牛相关操作控制器
@@ -39,11 +40,11 @@ class QiNiuController extends Controller
     }
 
     /**
-     * 部署后从七牛初始化所有的文件
+     * 部署后从七牛初始化所有的文件，这个需要超长的执行时间，在本机执行，并且需要修改php的配置
      */
-    public function actionDownloadFiles(){
-        $qiNiu=new QiNiu();
-        //$qiNiu->downloadFromQiNiu();
+    public function actionDownloadAllFiles(){
+        $download=new Download();
+        //$download->downloadAllFilesFromQiNiu();
 
         return true;
     }

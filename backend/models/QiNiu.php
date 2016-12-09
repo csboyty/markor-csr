@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use linslin\yii2\curl;
 use common\models\Setting;
+use common\models\ToDownload;
 
 /**
  * LoginForm is the model behind the login form.
@@ -136,99 +137,4 @@ class QiNiu extends Model
             ->post($this->handleUrl);
         }
     }
-
-    public function listFile($marker=""){
-
-        $curl = new curl\Curl();
-
-        $dataArray=array(
-            "bucket"=> $this->bucket,
-            "limit"=>30
-        );
-        if($marker){
-            $dataArray["marker"]=$marker;
-        }
-        $data=http_build_query($dataArray);
-
-        $url=$this->listFileUrl."?".$data;
-
-        //使用的是get请求，参数都在路径上，http body为空
-        $accessToken=$this->createAccessToken($url,"",
-            "application/x-www-form-urlencoded");
-
-
-        $response = $curl->setOption(
-            CURLOPT_HTTPHEADER,
-            array(
-                "Host: ".$this->manageHost,
-                "Content-Type: application/x-www-form-urlencoded",
-                "Authorization: QBox ".$accessToken
-            )
-        )
-        ->get($url);
-
-        return json_decode($response);
-    }
-
-    public function downloadFile($key){
-        $targetPath = "../../uploads/".$key;
-        $sourcePath =$this->bucketDomain.$key;
-
-        file_put_contents($targetPath,file_get_contents($sourcePath));
-
-        //写日志
-        file_put_contents('../../uploads/downfile.log', date("Y-m-d H:i:s"). " " . $key. "\r\n", FILE_APPEND | LOCK_EX);
-    }
-
-    public function downloadFromQiNiu()
-    {
-        $qiNiu=new QiNiu();
-        $setting = Setting::find()->one();
-        $response=$qiNiu->listFile($setting->qiniu_marker);
-
-        if(isset($response->marker)){
-            //marker存在，说明还有文件
-            $setting->qiniu_marker=$response->marker;
-
-            foreach($response->items as $value){
-                //下载文件
-                $this->downloadFile($value->key);
-            }
-
-            $setting->save();
-
-            $this->downloadFromQiNiu();
-        }else{
-            /*marker不存在，说明后面没有文件了，然后如果记录了时间，
-            则要比较，如果没有记录时间，那么就是初始化时，直接全部保存*/
-
-            //七牛返回的数据不是根据时间排序的，这里要根据时间排序
-            foreach ($response->items as $key=>$value){
-                $time[$key] = strval($value->putTime);
-            }
-
-            array_multisort($time,SORT_STRING,SORT_ASC,$response->items);
-
-            if($setting->last_time){
-                foreach($response->items as $value){
-                    //下载文件
-                    if($setting->last_time<$value->putTime){
-                        $this->downloadFile($value->key);
-                    }
-                }
-            }else{
-                foreach($response->items as $value){
-                    //下载文件
-                    $this->downloadFile($value->key);
-                }
-            }
-
-            $setting->last_time=strval($response->items[count($response->items)-1]->putTime);
-
-            $setting->save();
-
-        }
-
-    }
-
 }

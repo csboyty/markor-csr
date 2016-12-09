@@ -1,0 +1,17 @@
+2016-12-09   后台下载文件漏掉文件，每次提交的时候获取出文件，然后下载，由于切图是异步的，在通知中下载
+
+    修改数据库
+
+    删除setting表中的qiniu_marker，last_time字段
+    添加to_download表记录需要下载的文件
+    update.sql
+
+
+
+    修改文件列表
+
+    common/models/ToDownload.php
+    backend/models/Download.php
+    backend/models/QiNiu.php
+    backend/controller/QiNiuController.php
+
