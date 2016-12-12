@@ -116,6 +116,7 @@ class QiNiu extends Model
             $data=http_build_query(array(
                 "bucket"=> $this->bucket,
                 "key"=>$key,
+                "notifyURL"=>Yii::$app->request->hostInfo.Yii::$app->homeUrl."qi-niu/fop-notify",
                 "fops"=>$fops
             ));
 
@@ -137,4 +138,38 @@ class QiNiu extends Model
             ->post($this->handleUrl);
         }
     }
+
+    public function listFile($marker=""){
+
+        $curl = new curl\Curl();
+
+        $dataArray=array(
+            "bucket"=> $this->bucket,
+            "limit"=>30
+        );
+        if($marker){
+            $dataArray["marker"]=$marker;
+        }
+        $data=http_build_query($dataArray);
+
+        $url=$this->listFileUrl."?".$data;
+
+        //使用的是get请求，参数都在路径上，http body为空
+        $accessToken=$this->createAccessToken($url,"",
+            "application/x-www-form-urlencoded");
+
+
+        $response = $curl->setOption(
+            CURLOPT_HTTPHEADER,
+            array(
+                "Host: ".$this->manageHost,
+                "Content-Type: application/x-www-form-urlencoded",
+                "Authorization: QBox ".$accessToken
+            )
+        )
+            ->get($url);
+
+        return json_decode($response);
+    }
+
 }

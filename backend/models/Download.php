@@ -15,13 +15,22 @@ class Download extends Model
 {
     public $qiniu_marker;
 
-    public function downloadFiles($list){
+    public function getKey($url){
+        $pathInfo=pathinfo($url);
 
+        return $pathInfo["basename"];
+    }
+    public function downloadFiles($list){
+        foreach($list as $l){
+            $key=$this->getKey($l);
+            $this->downloadFile($key);
+        }
     }
 
     public function downloadFile($key){
+        $qiNiu=new QiNiu();
         $targetPath = "../../uploads/".$key;
-        $sourcePath =$this->bucketDomain.$key;
+        $sourcePath =$qiNiu->bucketDomain.$key;
 
         if(file_put_contents($targetPath,file_get_contents($sourcePath))){
             //写日志
@@ -54,7 +63,26 @@ class Download extends Model
 
     }
 
+    /**
+     * 解析出src，使用DOMDocument，把content当做xml处理getElementsByTagName，getAttribute
+     * 还可以用正则表达式处理
+     * @param $content
+     * @return mixed
+     */
     public function handleContentToFindFiles($content){
+
+        $doc= new \DOMDocument();
+
+        $doc->loadHTML("<div>".$content."</div>");
+
+        $results=$doc->getElementsByTagName("img");
+        $resultsSrc=array();
+        foreach($results as $i){
+            $src=$i->getAttribute("src");
+            array_push($resultsSrc,$src);
+        }
+
+        return $resultsSrc;
 
     }
 }

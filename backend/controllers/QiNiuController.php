@@ -27,6 +27,7 @@ class QiNiuController extends Controller
                 'ruleConfig' => [
                     'class' => AccessRule::className(),
                 ],
+                'except' => ['fop-notify'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -47,6 +48,19 @@ class QiNiuController extends Controller
         //$download->downloadAllFilesFromQiNiu();
 
         return true;
+    }
+
+    public function actionFopNotify(){
+        $down=new Download();
+
+        $data=file_get_contents('php://input');
+
+        $data=json_decode($data);
+        $items=$data->items;
+
+        foreach($items as $i){
+            $down->downloadFile($i->key);
+        }
     }
 
     public function actionUpToken(){

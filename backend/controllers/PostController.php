@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\Download;
 use Yii;
 use yii\filters\AccessControl;
 use common\components\AccessRule;
@@ -96,7 +97,11 @@ class PostController extends \yii\web\Controller
      * @return array
      */
     public function actionSubmit(){
+        $qiNiu=new QiNiu();
+        $down=new Download();
+
         $params=Yii::$app->request->post();
+        $images=array();
 
         if(isset($params["id"])){
             $model = $this->findModel($params["id"]);
@@ -105,23 +110,30 @@ class PostController extends \yii\web\Controller
         }
 
         //切图
-        $qiNiu=new QiNiu();
         if(isset($params["thumb"])){
 
             //如果是修改的时候，没有更新图片不需要切图
             if($model->thumb!=$params["thumb"]){
                 $qiNiu->handleImage($params["thumb"],Yii::$app->params["imageSizes"]["thumbnail"]);
+
+                array_push($images,$params["thumb"]);
             }
 
         }
         if(isset($params["bg_image"])){
             if($model->bg_image!=$params["bg_image"]){
                 $qiNiu->handleImage($params["bg_image"],Yii::$app->params["imageSizes"]["bgImage"]);
+
+                array_push($images,$params["bg_image"]);
             }
         }
 
         //下载文件到本机服务器
-        $qiNiu->downloadFromQiNiu();
+        if(isset($params["content"])){
+            $images=array_merge($images,$down->handleContentToFindFiles($params["content"]));
+        }
+
+        $down->downloadFiles($images);
 
         $data=array();
 

@@ -4,7 +4,8 @@
 
     删除setting表中的qiniu_marker，last_time字段
     添加to_download表记录需要下载的文件
-    update.sql
+
+    readme/update.sql
 
 
 
@@ -14,4 +15,5 @@
     backend/models/Download.php
     backend/models/QiNiu.php
     backend/controller/QiNiuController.php
+    backend/controller/PostController.php
 
