@@ -29,6 +29,17 @@ AppAsset::register($this);
     <!--[if IE 8]>
         <link rel="stylesheet" type="text/css" href="css/src/ie.css">
     <![endif]-->
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0396c573ad1bfd6f80c42ecd1769bc22";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 </head>
 <body>
 <?php $this->beginBody() ?>

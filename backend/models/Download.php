@@ -70,7 +70,7 @@ class Download extends Model
      * @return mixed
      */
     public function handleContentToFindFiles($content){
-
+        $qiNiu=new QiNiu();
         $doc= new \DOMDocument();
 
         $doc->loadHTML("<div>".$content."</div>");
@@ -79,7 +79,11 @@ class Download extends Model
         $resultsSrc=array();
         foreach($results as $i){
             $src=$i->getAttribute("src");
-            array_push($resultsSrc,$src);
+
+            //只有是上传到指定的七牛库的文件才下载
+            if(strstr($src,$qiNiu->bucketDomain)!==false){
+                array_push($resultsSrc,$src);
+            }
         }
 
         return $resultsSrc;

@@ -85,7 +85,7 @@ CREATE TABLE `post` (
   `excerpt` varchar(512) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `author` varchar(32) DEFAULT NULL,
-  `content` mediumtext,
+  `content` longtext,
   `memo` varchar(255) DEFAULT NULL COMMENT '备注，主要放url，职务等',
   `published` int(4) DEFAULT '1',
   PRIMARY KEY (`id`),
